@@ -10,7 +10,7 @@ module.exports = {
         'index': {
             entry: './src/main.js',
             template: 'public/index.html',
-            title: 'Controller',
+            title: 'Presenter',
             chunks: [ 'chunk-vendors', 'chunk-common', 'index' ]
         },
         'display': {
@@ -20,5 +20,5 @@ module.exports = {
             chunks: [ 'chunk-vendors', 'chunk-common', 'display' ]
         }
     },
-    publicPath: '/assets/public/script/slider/'
+    publicPath: '/Bazaar/Apps/slider/dist/'
 }
