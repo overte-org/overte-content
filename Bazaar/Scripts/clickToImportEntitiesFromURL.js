@@ -17,7 +17,7 @@
     
     var defaultUserData = {
         "useConfirmDialog": false,
-        "confirmDialogMessage": "Are you sure you want to open this link?",
+        "confirmDialogMessage": "Are you sure you want to import these entities?",
         "options": {
             "url": null,
             "entityHostType": "avatar"

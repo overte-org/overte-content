@@ -466,8 +466,8 @@ export default {
             }
         },
         slides: {
-            handler: function (newSlides) {
-                this.sendSync(newSlides);
+            handler: function () {
+                this.sendSync(this.slides);
             },
             deep: true
         }
@@ -610,7 +610,6 @@ export default {
             if (!slidesToSync) {
                 slidesToSync = this.slides;
             }
-            // console.log("TRIGGERING SYNC: " + JSON.stringify(slidesToSync));
             this.sendAppMessage("web-to-script-sync-state", { 
                 "slides": slidesToSync, 
                 "presentationChannel": this.presentationChannel,

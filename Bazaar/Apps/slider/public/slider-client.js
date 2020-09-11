@@ -15,11 +15,11 @@
 
     // VARIABLES
     var presentationChannel = "default-presentation-channel";
-    var lastMessageReceivedData = null;
+    var lastMessageSentOrReceivedData = null;
     var readyToSendAgain = true;
     
     // We use a timeout because it's possible the server hasn't fully saved our data to userData or ATP.
-    var PROCESSING_MSG_DEBOUNCE_TIME = 200; // 200ms
+    var PROCESSING_MSG_DEBOUNCE_TIME = 500; // 500ms
     // Upon receiving a message, we will wait before allowing any updates 
     // to be sent as it's possible our app will try to send a repeat of the 
     // same message that was sent to all clients prior. 
@@ -43,6 +43,7 @@
                     // This data has to be stringified because userData only takes JSON strings and not actual objects.
                     // console.log("web-to-script-sync-state" + JSON.stringify(eventJSON.data));
                     presentationChannel = eventJSON.data.presentationChannel;
+                    // console.log("########################### SAVING STATE.");
                     saveState(eventJSON.data);
                 }
                     
@@ -70,18 +71,31 @@
     function sendMessage(dataToSend) {
         dataToSend.data.senderEntityID = _this.entityID;
         dataToSend.data.senderUUID = MyAvatar.sessionUUID;
-        // console.log("Sending message from client:" + JSON.stringify(dataToSend));
+        // console.log("Sending message from client, data:" + JSON.stringify(dataToSend.data));
         // console.log("On channel:" + presentationChannel);
-        // console.log("lastMessageReceivedData: "+ JSON.stringify(lastMessageReceivedData));
-        // if (dataToSend.command === "display-slide" && lastMessageReceivedData) {
-        //     if (dataToSend.data.slide !== lastMessageReceivedData.slide 
-        //         || dataToSend.data.currentSlide !== lastMessageReceivedData.currentSlide
-        //         || dataToSend.data.slideChannel !== lastMessageReceivedData.slideChannel) {
-        
-        if (debounceSend()) {
-            // We're trying to prevent any possible crazy loops.
-            Messages.sendMessage(presentationChannel, JSON.stringify(dataToSend));
+        // console.log("lastMessageSentOrReceivedData: "+ JSON.stringify(lastMessageSentOrReceivedData));
+        if (dataToSend.command === "display-slide") {
+            // console.log("Sending display-slide command");
+            if (lastMessageSentOrReceivedData) {
+                // console.log("CLEAR 1");
+                if (dataToSend.data.currentSlide != lastMessageSentOrReceivedData.currentSlide ||
+                    dataToSend.data.slideChannel != lastMessageSentOrReceivedData.slideChannel ||
+                    dataToSend.data.slide != lastMessageSentOrReceivedData.slide
+                ) {
+                    // console.log("CLEAR 2: SENDING");
+                    lastMessageSentOrReceivedData = dataToSend.data;
+                    Messages.sendMessage(presentationChannel, JSON.stringify(dataToSend));
+                }
+            } else {
+                // console.log("BYPASS 1: SENDING");
+                lastMessageSentOrReceivedData = dataToSend.data;
+                Messages.sendMessage(presentationChannel, JSON.stringify(dataToSend));
+            }
         }
+        // if (debounceSend()) {
+        //     // We're trying to prevent any possible crazy loops.
+        //     Messages.sendMessage(presentationChannel, JSON.stringify(dataToSend));
+        // }
     }
     
     // FUNCTIONS
@@ -161,11 +175,12 @@
             if (messageJSON.command === "display-slide" ) { // We are receiving a slide.
                 if (messageJSON.data.senderEntityID === _this.entityID && MyAvatar.sessionUUID != sender) {
                     // We got a message that this entity changed a slide, so let's update all instances of this entity for everyone.
-                    lastMessageReceivedData = messageJSON.data;
-                    updateFromStorage();
                     Script.setTimeout(function () {
-                        debounceSend();
+                        lastMessageSentOrReceivedData = messageJSON.data;
+                        updateFromStorage();
                         sendToWeb('script-to-web-update-slide-state', messageJSON.data);
+                        // console.log("PASSING MESSAGE IN.");
+                        // console.log("lastMessageSentOrReceivedData: "+ JSON.stringify(lastMessageSentOrReceivedData));
                     }, PROCESSING_MSG_DEBOUNCE_TIME);
                 }
                 // console.log("FULL MESSAGE RECEIVED: " + JSON.stringify(messageJSON.data));
@@ -234,6 +249,7 @@
     };
     
     this.unload = function(entityID) {
+        Entities.webEventReceived.disconnect(onWebAppEventReceived);
         Messages.messageReceived.disconnect(onMessageReceived);
         Messages.unsubscribe(presentationChannel);
     };
