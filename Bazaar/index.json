@@ -1,6 +1,14 @@
 {
-    "Assets": {
-        location: "/Assets",
-        directories: ["/Audio"]
-    }
+	"Apps": {
+		"location": "/Apps",
+	},
+	"Assets": {
+		"location": "/Assets",
+	},
+	"Scripts": {
+		"location": "/Scripts"
+	},
+	"Worlds": {
+		"location": "/Worlds"
+	}
 }
