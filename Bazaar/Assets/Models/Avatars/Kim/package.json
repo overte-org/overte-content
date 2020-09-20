@@ -1,0 +1,65 @@
+{
+    "name": "Kim VanDuyn",
+    "version": "1.0.0",
+    "description": "Kim's a police detective in Los Angeles. In her pastime she likes to rock climb and hike. She's a member of the Sierra Club. She likes reading and playing with her dogs. She's single but isn't looking for any attachments.",
+    "homepage": "http://www.vircadia.com",
+    "bugs": "",
+    "keywords": [
+        "Female",
+		"Avatar"
+    ],
+    "icon": "img/icon.png",
+    "images": [
+        "img/Kim.jpg"
+    ],
+    "author": {
+        "name": "Haptic Monkey",
+        "email": "",
+        "url": "http://hapticmonkey.com",
+        "license": "CC0"		
+    },
+    "sublicense": [
+		{
+		"name": "Lace Choker by punkduck",
+        "email": "",
+        "url": "",
+        "license": "CC BY 3.0"
+		},
+		{
+		"name": "Blouse by punkduck",
+        "email": "",
+        "url": "",
+        "license": "CC BY 3.0"
+		},
+		{
+		"name": "Winter Boots by punkduck",
+        "email": "",
+        "url": "",
+        "license": "CC BY 3.0"
+		},	
+		{
+		"name": "Tight Jeans by punkduck",
+        "email": "",
+        "url": "",
+        "license": "CC BY 3.0"
+		}			
+	],	
+    "contributors": [
+        {
+            "name": "Haptic Monkey",
+            "url": "https://hapticmonkey.com"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/whatever/testing.git"
+    },
+    "main": "fbx/Kim.fst",
+    "type": "model",
+    "meta": {
+    },
+    "dependencies": {       
+    },
+    "engines": {
+    }
+}
