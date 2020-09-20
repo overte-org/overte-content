@@ -1,9 +1,9 @@
 {
 	"Apps": {
-		"location": "/Apps",
+		"location": "/Apps"
 	},
 	"Assets": {
-		"location": "/Assets",
+		"location": "/Assets"
 	},
 	"Scripts": {
 		"location": "/Scripts"

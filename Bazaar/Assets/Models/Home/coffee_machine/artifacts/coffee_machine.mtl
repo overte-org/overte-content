@@ -1,0 +1,51 @@
+# Blender MTL File: 'coffee_machine.blend'
+# Material Count: 5
+
+newmtl black_plastic
+Ns 11.764706
+Ka 0.000000 0.000000 0.000000
+Kd 0.072667 0.072667 0.072667
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl metal
+Ns 978.431373
+Ka 0.000000 0.000000 0.000000
+Kd 0.465162 0.465162 0.465162
+Ks 0.738095 0.738095 0.738095
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd mechanika_espresso_texture.png
+
+newmtl metal_mechanika_espresso_texture.png
+Ns 978.431373
+Ka 0.000000 0.000000 0.000000
+Kd 0.465162 0.465162 0.465162
+Ks 0.738095 0.738095 0.738095
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd mechanika_espresso_texture.png
+
+newmtl metal_textured
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd mechanika_espresso_texture.png
+
+newmtl watch
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd mechanika_espresso_texture.png

@@ -1,0 +1,52 @@
+# Blender MTL File: 'reflex_camera_cycles.blend'
+# Material Count: 5
+
+newmtl camera
+Ns 11.764706
+Ka 0.000000 0.000000 0.000000
+Kd 0.281009 0.281009 0.281009
+Ks 0.154639 0.154639 0.154639
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd reflex_camera_map.jpg
+
+newmtl camera_rubber
+Ns 0.000000
+Ka 0.000000 0.000000 0.000000
+Kd 0.281009 0.281009 0.281009
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd reflex_camera_map.jpg
+
+newmtl objective
+Ns 25.490196
+Ka 0.000000 0.000000 0.000000
+Kd 0.041774 0.041774 0.041774
+Ks 0.210484 0.210484 0.210484
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd reflex_camera_objective.jpg
+
+newmtl objective_lens
+Ns 125.490196
+Ka 0.000000 0.000000 0.000000
+Kd 0.041774 0.041774 0.041774
+Ks 0.295161 0.295161 0.295161
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd reflex_camera_objective.jpg
+
+newmtl objective_rubber
+Ns 0.000000
+Ka 0.000000 0.000000 0.000000
+Kd 0.041774 0.041774 0.041774
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd reflex_camera_objective.jpg

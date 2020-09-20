@@ -1,0 +1,56 @@
+{
+	"Animals": {
+		"location": "/Assets/Models/Animals"
+	},
+	"Avatars": {
+		"location": "/Assets/Models/Avatars"
+	},
+	"Buildings": {
+		"location": "/Assets/Models/Buildings"
+	},
+	"Business": {
+		"location": "/Assets/Models/Business"
+	},	
+	"Food": {
+		"location": "/Assets/Models/Food"
+	},
+	"Furniture": {
+		"location": "/Assets/Models/Furniture"
+	},
+	"Garden": {
+		"location": "/Assets/Models/Garden"
+	},
+	"Home": {
+		"location": "/Assets/Models/Home"
+	},
+	"Industrial": {
+		"location": "/Assets/Models/Industrial"
+	},
+	"Kits": {
+		"location": "/Assets/Models/Kits"
+	},
+	"Medical": {
+		"location": "/Assets/Models/Medical"
+	},	
+	"Minerals": {
+		"location": "/Assets/Models/Minerals"
+	},
+	"Misc": {
+		"location": "/Assets/Models/Misc"
+	},
+	"Plants": {
+		"location": "/Assets/Models/Plants"
+	},
+	"Schoolastic": {
+		"location": "/Assets/Models/Schoolastic"
+	},	
+	"Sports": {
+		"location": "/Assets/Models/Sports"
+	},
+	"Vehicles": {
+		"location": "/Assets/Models/Vehicles"
+	},
+	"Wearables": {
+		"location": "/Assets/Models/Wearables"
+	}
+}
