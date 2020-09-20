@@ -1,4 +1,4 @@
-Vircadia is a metaverse engine and platform based on the principles of open-source and decentralization. 
+Vircadia is a metaverse engine and platform based on the principles of open-source and decentralization.
 
 Download
 ========
@@ -9,6 +9,8 @@ If you prefer to build from source, you can find the codebase for Vircadia in th
 vircadia-content
 ========
 In this repository you'll find our content projects built for worlds that run on the Vircadia platform. We welcome community contributions if you have created content that you would like to share with the developer community. You can find specific information about where specific content is used in the subdirectory readme files.
+
+*All content in this repo is available under free and open licenses. The majority of it will be Apache 2.0, CC0, and CC-BY. Licensing is defined within the package.json files for items.*
 
 Our file structure is designed to store projects related to how they are deployed within Vircadia, but recognize that not all content will fit neatly into a specific category. 
 
