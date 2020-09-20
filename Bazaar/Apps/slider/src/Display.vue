@@ -31,7 +31,8 @@
                         :key="index"
                     >
                         <v-img
-                            :src="slide"
+                            :src="slide.slide"
+                            @click="slide.link"
                             height="100%"
                             class="grey darken-4"
                             lazy-src="./assets/logo.png"
@@ -129,7 +130,12 @@ export default {
     },
     data: () => ({
         drawer: null,
-        slides: ['./assets/logo.png'], // Default slide on load...
+        slides: [
+            {
+                'slide': './assets/logo.png',
+                'link': "https://vircadia.com/"
+            }
+        ], // Default slides on load...
         currentSlide: 0,
         presentationChannel: 'default-presentation-channel',
         // Change Presentation Channel Dialog
