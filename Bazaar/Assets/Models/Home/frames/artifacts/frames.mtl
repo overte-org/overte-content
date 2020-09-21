@@ -1,0 +1,78 @@
+# Blender3D MTL File: frames.blend
+# Material Count: 7
+newmtl cuir_black
+Ns 184.313725
+Ka 0.000000 0.000000 0.000000
+Kd 0.141273 0.141273 0.141273
+Ks 0.744439 0.744439 0.744439
+Ni 1.200000
+d 1.000000
+illum 2
+map_Kd cuero_bump.jpg
+
+
+newmtl wood_sq1
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.523938 0.199552 0.077713
+Ks 0.000000 0.000000 0.000000
+Ni 1.150000
+d 1.000000
+illum 1
+map_Kd burlwood2_tileable.jpg
+
+
+newmtl wood_sq2black
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.092124 0.092124 0.092124
+Ks 0.000000 0.000000 0.000000
+Ni 1.150000
+d 1.000000
+illum 1
+map_Kd tilewood.jpg
+
+
+newmtl conglomerado
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.994455 0.915051 0.606358
+Ks 0.000000 0.000000 0.000000
+Ni 1.200000
+d 1.000000
+illum 1
+
+
+newmtl picture
+Ns 407.843137
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.833772 0.833772 0.833772
+Ni 1.200000
+d 1.000000
+illum 2
+map_Kd elephant.jpg
+
+
+newmtl wood_sq1_vert
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.523938 0.199552 0.077713
+Ks 0.000000 0.000000 0.000000
+Ni 1.150000
+d 1.000000
+illum 1
+map_Kd burlwood2_tileable.jpg
+
+
+newmtl wood_sq2
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.684128 0.585371 0.035957
+Ks 0.000000 0.000000 0.000000
+Ni 1.150000
+d 1.000000
+illum 1
+map_Kd tilewood.jpg
+
+

@@ -1,0 +1,68 @@
+{
+	"Air Conditioning 1": {
+		"location": "/Assets/Models/Home/air_conditioning1"
+	},
+	"Air Conditioning 2": {
+		"location": "/Assets/Models/Home/air_conditioning2"
+	},	
+	"Bathroom Vanity": {
+		"location": "/Assets/Models/Home/bathroom_vanity"
+	},
+	"Bathroom 1": {
+		"location": "/Assets/Models/Home/bathroom1"
+	},
+	"Bathroom 2": {
+		"location": "/Assets/Models/Home/bathroom2"
+	},
+	"Bathroom 3": {
+		"location": "/Assets/Models/Home/bathroom3"
+	},
+	"Bathroom 4": {
+		"location": "/Assets/Models/Home/bathroom4"
+	},
+	"Combination Bathroom 1": {
+		"location": "/Assets/Models/Home/com_bath1"
+	},
+	"Combination Bathroom 2": {
+		"location": "/Assets/Models/Home/com_bath2"
+	},
+	"Combination Bathroom 3": {
+		"location": "/Assets/Models/Home/com_bath3"
+	},
+	"Complements 1": {
+		"location": "/Assets/Models/Home/complements1"
+	},	
+	"Complements 2": {
+		"location": "/Assets/Models/Home/complements2"
+	},	
+	"Complements 3": {
+		"location": "/Assets/Models/Home/complements3"
+	},	
+	"Complements 4": {
+		"location": "/Assets/Models/Home/complements4"
+	},		
+	"Corner Bathtub": {
+		"location": "/Assets/Models/Home/corner_bathtub"
+	},
+	"Double Bathroom Vanity": {
+		"location": "/Assets/Models/Home/double_vanity"
+	},
+	"Frames": {
+		"location": "/Assets/Models/Home/frames"
+	},		
+	"Jacuzzi": {
+		"location": "/Assets/Models/Home/jacuzzi"
+	},
+	"Kitchen Tools": {
+		"location": "/Assets/Models/Home/kitchen_tools"
+	},	
+	"Letters Box": {
+		"location": "/Assets/Models/Home/letters_box"
+	},
+	"Pottery": {
+		"location": "/Assets/Models/Home/pottery"
+	},	
+	"Small Lavatory": {
+		"location": "/Assets/Models/Home/small_lavatory"
+	}	
+}

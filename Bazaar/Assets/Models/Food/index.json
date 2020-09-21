@@ -1,0 +1,8 @@
+{
+	"Apple": {
+		"location": "/Assets/Models/Food/apple"
+	},
+	"Birthday Cake": {
+		"location": "/Assets/Models/Food/birthday_cake"
+	}
+}
