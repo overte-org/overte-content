@@ -1,0 +1,54 @@
+ESPAÑOL:
+
+DESCRIPCIÓN:
+Título: Lavatorio pequeño para baño.
+Este modelo no usa mapa de texturas en los materiales.
+La imagen del render ha sido obtenida mediante el Yafaray Render Beta 0.1.2 bajo Blender 2.64, utilizando para el entorno una imagen transformada, descargada de pixabay.com bajo licencia pública.
+
+
+LICENCIA:
+Realizada por irenka (Irene Coremberg). www.3dfenix.com
+CC-BY-SA:
+Esta obra está licenciada bajo la Licencia Creative Commons Atribución-CompartirIgual 3.0 Unported. 
+Para ver una copia de esta licencia, visita http://creativecommons.org/licenses/by-sa/3.0/.
+
+Eres libre de:
+	Compartir: Copiar, distribuir y comunicar publicamente la obra
+	Derivar: Adaptar la obra
+	Hacer uso comercial derivado de la misma
+
+Bajo las condiciones siguientes:
+	
+	Atribución —  Debe atribuir la obra de la forma especificada por el autor: Atribuible a Irene C. Coremberg,
+	www.3dfenix.com. (Pero no de forma que sugiera que el autor le entregó la obra o endosó su uso).
+	Compartir igual — Si altera, transforma o hace agregados a esta obra, debe distribuir el resultado sólo bajo
+	la misma o similar licencia que el original.
+
+
+-------------------------------------------------
+
+ENGLISH:
+
+DESCRIPTION:
+Title: Small lavatory for bathroom.
+This model doesn't include any textures in the materials.
+The render picture has been obtained by using Yafaray Render Beta 0.1.2 under Blender 2.64, using a modified image for the world environment , obtained from pixabay.com under public license.
+
+LICENSE:
+Author: irenka (Irene Coremberg). www.3dfenix.com
+CC-BY-SA:
+This work is licensed under Attribution-ShareAlike 3.0 Unported license:
+You can see the description of the license here: http://creativecommons.org/licenses/by-sa/3.0/.
+
+You are free:
+	to Share — to copy, distribute and transmit the work 
+	to Remix — to adapt the work 
+ 	to make commercial use of the work
+
+Under the following conditions:
+
+	Attribution —  You must attribute the work in the manner specified by the author or licensor (but not in any
+	way that suggests that they endorse you or your use of the work). 
+	Share Alike — If you alter, transform, or build upon this work, you may distribute the resulting work only 		under the same or similar license to this one.
+
+

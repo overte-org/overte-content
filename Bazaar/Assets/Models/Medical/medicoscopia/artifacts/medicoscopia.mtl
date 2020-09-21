@@ -1,0 +1,77 @@
+# Blender3D MTL File: medicoscopia.blend
+# Material Count: 7
+newmtl tap_blue_bump_ralletes_tap.jpg
+Ns 45.098039
+Ka 0.000000 0.000000 0.000000
+Kd 0.145512 0.181915 0.600695
+Ks 0.422784 0.422784 0.422784
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd ralletes_tap.jpg
+
+
+newmtl iode_tap_bump_ralletes_tap.jpg
+Ns 80.392157
+Ka 0.000000 0.000000 0.000000
+Kd 0.104174 0.104174 0.104174
+Ks 0.649209 0.649209 0.649209
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd ralletes_tap.jpg
+
+
+newmtl Material_caja_mediscopia.jpg
+Ns 349.019608
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.171741 0.171741 0.171741
+Ni 1.200000
+d 1.000000
+illum 2
+map_Kd caja_mediscopia.jpg
+
+
+newmtl iode_tap
+Ns 80.392157
+Ka 0.000000 0.000000 0.000000
+Kd 0.104174 0.104174 0.104174
+Ks 0.649209 0.649209 0.649209
+Ni 1.000000
+d 1.000000
+illum 2
+
+
+newmtl bottlewhite_agua_scopiada.jpg
+Ns 45.098039
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.154209 0.154209 0.154209
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd agua_scopiada.jpg
+
+
+newmtl tap_blue
+Ns 45.098039
+Ka 0.000000 0.000000 0.000000
+Kd 0.145512 0.181915 0.600695
+Ks 0.422784 0.422784 0.422784
+Ni 1.000000
+d 1.000000
+illum 2
+
+
+newmtl iode_iodo.jpg
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.759983 0.122860
+Ks 0.141899 0.141899 0.141899
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd iodo.jpg
+
+

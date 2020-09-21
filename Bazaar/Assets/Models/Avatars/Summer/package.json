@@ -1,0 +1,71 @@
+{
+    "name": "Summer Delvory",
+    "version": "1.0.0",
+    "description": "Summer is a girl on the go. She is smart and savvy. She's very cautious and doesn't like to be in extremely crowded areas. Her favorite music is Death Metal and Death Note is her favorite band. She doesn't like to be stuck at home and you can find her hanging out in the mall with her friends.",
+    "homepage": "http://www.vircadia.com",
+    "bugs": "",
+    "keywords": [
+        "Female",
+		"Avatar"
+    ],
+    "icon": "img/icon.png",
+    "images": [
+        "img/Summer.jpg"
+    ],
+    "author": {
+        "name": "Haptic Monkey",
+        "email": "",
+        "url": "http://hapticmonkey.com",
+        "license": "CC0"		
+    },
+    "sublicense": [
+		{
+		"name": "Shirt by o4saken",
+        "email": "",
+        "url": "",
+        "license": "CC BY 3.0"
+		},
+		{
+		"name": "Shoes by punkduck",
+        "email": "",
+        "url": "",
+        "license": "CC BY 3.0"
+		},
+		{
+		"name": "Perl bracelet CC0 by Elvaerwyn",
+        "email": "",
+        "url": "",
+        "license": "CC0"
+		},	
+		{
+		"name": "Trousers CC BY 4.0 hm08",
+        "email": "",
+        "url": "",
+        "license": "CC BY 4.0"
+		},			
+		{
+		"name": "Elegant Fingernails By grinsegold",
+        "email": "",
+        "url": "",
+        "license": "CC0"
+		}			
+	],	
+    "contributors": [
+        {
+            "name": "Haptic Monkey",
+            "url": "https://hapticmonkey.com"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/whatever/testing.git"
+    },
+    "main": "fbx/Summer.fst",
+    "type": "model",
+    "meta": {
+    },
+    "dependencies": {       
+    },
+    "engines": {
+    }
+}

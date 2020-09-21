@@ -1,0 +1,756 @@
+{
+  "DataVersion": 0,
+  "Entities": [
+    {
+    "id": "{4700e4d3-fb1a-4478-bbd8-aa2e5d3857d1}",
+    "type": "Shape",
+    "lastEdited": 1574132023220850,
+    "parentID": "{a5530a9b-250f-4763-963c-0b10459f1b78}",
+    "name": "Smartboard Palette Square",
+    "userData": "{\"textureURL\":\"https://content.highfidelity.com/Experiences/Releases/usefulUtilities/airAndWhiteboardDraw/2019-08-22_14-25-00/entityResources/resources/textures/yellow.png\"}",
+    "position": {
+        "x": -0.0588836669921875,
+        "y": -1.2196044921875,
+        "z": 0.08147893100976944
+    },
+    "dimensions": {
+        "x": 0.10934999585151672,
+        "y": 0.014579998329281807,
+        "z": 0.10934999585151672
+    },
+    "rotation": {
+        "x": 0.012222528457641602,
+        "y": 0.7029068470001221,
+        "z": 0.7108415365219116,
+        "w": -0.021805167198181152
+    },
+    "created": 1574122140665064,
+    "lastEditedBy": "{50bde34e-17ba-4a6d-8ce7-abc745dc90bf}",
+    "queryAACube": {
+        "x": 156.8045654296875,
+        "y": -98.29463195800781,
+        "z": -364.7550048828125,
+        "scale": 0.15533003211021423
+    },
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionMask": 7,
+    "collidesWith": "static,dynamic,kinematic,",
+    "script": "https://content.highfidelity.com/Experiences/Releases/usefulUtilities/smartBoard/v1.6/scripts/whiteboardMode/drawSphereSpawnerClient.js",
+    "serverScripts": "https://content.highfidelity.com/Experiences/Releases/modules/empty/v1.0.0/empty.js",
+    "scriptTimestamp": 1574130501423,
+    "color": {
+        "red": 255,
+        "green": 237,
+        "blue": 0
+    },
+    "shape": "Cylinder",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{f5f4d936-ac9c-4123-a200-7138b3c9682c}",
+    "type": "Shape",
+    "lastEdited": 1574132023220850,
+    "parentID": "{a5530a9b-250f-4763-963c-0b10459f1b78}",
+    "name": "Smartboard Palette Square",
+    "userData": "{\"textureURL\":\"https://content.highfidelity.com/Experiences/Releases/usefulUtilities/airAndWhiteboardDraw/2019-08-22_14-25-00/entityResources/resources/textures/magenta.png\"}",
+    "position": {
+        "x": -0.2202301025390625,
+        "y": -1.2198410034179688,
+        "z": 0.08667183667421341
+    },
+    "dimensions": {
+        "x": 0.10934999585151672,
+        "y": 0.014579998329281807,
+        "z": 0.10934999585151672
+    },
+    "rotation": {
+        "x": -0.0173494815826416,
+        "y": 0.6999161243438721,
+        "z": -0.7139543890953064,
+        "w": -0.00926220417022705
+    },
+    "created": 1574122140664279,
+    "lastEditedBy": "{50bde34e-17ba-4a6d-8ce7-abc745dc90bf}",
+    "queryAACube": {
+        "x": 156.64321899414062,
+        "y": -98.29486846923828,
+        "z": -364.74981689453125,
+        "scale": 0.15533003211021423
+    },
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionMask": 7,
+    "collidesWith": "static,dynamic,kinematic,",
+    "script": "https://content.highfidelity.com/Experiences/Releases/usefulUtilities/smartBoard/v1.6/scripts/whiteboardMode/drawSphereSpawnerClient.js",
+    "serverScripts": "https://content.highfidelity.com/Experiences/Releases/modules/empty/v1.0.0/empty.js",
+    "scriptTimestamp": 1574130496313,
+    "color": {
+        "red": 255,
+        "green": 66,
+        "blue": 167
+    },
+    "shape": "Cylinder",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{e6cdf48b-1dc3-4f3c-8c9e-b5d7c9ca49fe}",
+    "type": "Shape",
+    "lastEdited": 1574132023220850,
+    "parentID": "{a5530a9b-250f-4763-963c-0b10459f1b78}",
+    "name": "Smartboard Palette Square",
+    "userData": "{\"textureURL\":\"https://content.highfidelity.com/Experiences/Releases/usefulUtilities/airAndWhiteboardDraw/2019-08-22_14-25-00/entityResources/resources/textures/blue.png\"}",
+    "position": {
+        "x": 0.4195098876953125,
+        "y": -1.2193756103515625,
+        "z": 0.08204417675733566
+    },
+    "dimensions": {
+        "x": 0.10934999585151672,
+        "y": 0.014579998329281807,
+        "z": 0.10934999585151672
+    },
+    "rotation": {
+        "x": 0.012253046035766602,
+        "y": 0.7028152942657471,
+        "z": 0.7109330892562866,
+        "w": -0.021744132041931152
+    },
+    "created": 1574122140665977,
+    "lastEditedBy": "{50bde34e-17ba-4a6d-8ce7-abc745dc90bf}",
+    "queryAACube": {
+        "x": 157.282958984375,
+        "y": -98.29441833496094,
+        "z": -364.7544250488281,
+        "scale": 0.15533003211021423
+    },
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionMask": 7,
+    "collidesWith": "static,dynamic,kinematic,",
+    "script": "https://content.highfidelity.com/Experiences/Releases/usefulUtilities/smartBoard/v1.6/scripts/whiteboardMode/drawSphereSpawnerClient.js",
+    "serverScripts": "https://content.highfidelity.com/Experiences/Releases/modules/empty/v1.0.0/empty.js",
+    "scriptTimestamp": 1574130515816,
+    "color": {
+        "red": 23,
+        "green": 41,
+        "blue": 131
+    },
+    "shape": "Cylinder",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{f376a93d-b70d-46c9-8352-0d55c05b3100}",
+    "type": "Shape",
+    "lastEdited": 1574132023220850,
+    "parentID": "{a5530a9b-250f-4763-963c-0b10459f1b78}",
+    "name": "Smartboard Palette Square",
+    "userData": "{\"textureURL\":\"https://content.highfidelity.com/Experiences/Releases/usefulUtilities/airAndWhiteboardDraw/2019-08-22_14-25-00/entityResources/resources/textures/cyan.png\"}",
+    "position": {
+        "x": 0.260009765625,
+        "y": -1.2193984985351562,
+        "z": 0.08183541893959045
+    },
+    "dimensions": {
+        "x": 0.10934999585151672,
+        "y": 0.014579998329281807,
+        "z": 0.10934999585151672
+    },
+    "rotation": {
+        "x": 0.012130975723266602,
+        "y": 0.7029068470001221,
+        "z": 0.7108415365219116,
+        "w": -0.021835684776306152
+    },
+    "created": 1574122140665473,
+    "lastEditedBy": "{50bde34e-17ba-4a6d-8ce7-abc745dc90bf}",
+    "queryAACube": {
+        "x": 157.1234588623047,
+        "y": -98.29444122314453,
+        "z": -364.754638671875,
+        "scale": 0.15533003211021423
+    },
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionMask": 7,
+    "collidesWith": "static,dynamic,kinematic,",
+    "script": "https://content.highfidelity.com/Experiences/Releases/usefulUtilities/smartBoard/v1.6/scripts/whiteboardMode/drawSphereSpawnerClient.js",
+    "serverScripts": "https://content.highfidelity.com/Experiences/Releases/modules/empty/v1.0.0/empty.js",
+    "scriptTimestamp": 1574130512017,
+    "color": {
+        "red": 0,
+        "green": 158,
+        "blue": 224
+    },
+    "shape": "Cylinder",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{d0ac5ecf-82af-4ce7-bc6f-75bf04e38399}",
+    "type": "Shape",
+    "lastEdited": 1574132023220850,
+    "parentID": "{a5530a9b-250f-4763-963c-0b10459f1b78}",
+    "name": "Smartboard Palette Square",
+    "userData": "{\"textureURL\":\"https://content.highfidelity.com/Experiences/Releases/usefulUtilities/airAndWhiteboardDraw/2019-08-22_14-25-00/entityResources/resources/textures/black.png\"}",
+    "position": {
+        "x": 0.7415618896484375,
+        "y": -1.21917724609375,
+        "z": 0.08020329475402832
+    },
+    "dimensions": {
+        "x": 0.10934999585151672,
+        "y": 0.014579998329281807,
+        "z": 0.10934999585151672
+    },
+    "rotation": {
+        "x": 0.019760489463806152,
+        "y": 0.7062637805938721,
+        "z": 0.7073320150375366,
+        "w": -0.021927237510681152
+    },
+    "created": 1574122140665238,
+    "lastEditedBy": "{50bde34e-17ba-4a6d-8ce7-abc745dc90bf}",
+    "queryAACube": {
+        "x": 157.60501098632812,
+        "y": -98.29423522949219,
+        "z": -364.7562561035156,
+        "scale": 0.15533003211021423
+    },
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionMask": 7,
+    "collidesWith": "static,dynamic,kinematic,",
+    "script": "https://content.highfidelity.com/Experiences/Releases/usefulUtilities/smartBoard/v1.6/scripts/whiteboardMode/drawSphereSpawnerClient.js",
+    "serverScripts": "https://content.highfidelity.com/Experiences/Releases/modules/empty/v1.0.0/empty.js",
+    "scriptTimestamp": 1574130783081,
+    "color": {
+        "red": 0,
+        "green": 0,
+        "blue": 0
+    },
+    "shape": "Cylinder",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{af76ee17-9584-4771-b4b3-e5f171771cd5}",
+    "type": "Shape",
+    "lastEdited": 1574132023220850,
+    "parentID": "{a5530a9b-250f-4763-963c-0b10459f1b78}",
+    "name": "Smartboard Palette Square",
+    "userData": "{\"textureURL\":\"https://content.highfidelity.com/Experiences/Releases/usefulUtilities/airAndWhiteboardDraw/2019-08-22_14-25-00/entityResources/resources/textures/red.png\"}",
+    "position": {
+        "x": 0.579010009765625,
+        "y": -1.21929931640625,
+        "z": 0.08234448730945587
+    },
+    "dimensions": {
+        "x": 0.10934999585151672,
+        "y": 0.014579998329281807,
+        "z": 0.11663998663425446
+    },
+    "rotation": {
+        "x": 0.012192010879516602,
+        "y": 0.7028458118438721,
+        "z": 0.7109025716781616,
+        "w": -0.021774649620056152
+    },
+    "created": 1574122140664370,
+    "lastEditedBy": "{50bde34e-17ba-4a6d-8ce7-abc745dc90bf}",
+    "queryAACube": {
+        "x": 157.43984985351562,
+        "y": -98.29695892333984,
+        "z": -364.7567138671875,
+        "scale": 0.16054558753967285
+    },
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionMask": 7,
+    "collidesWith": "static,dynamic,kinematic,",
+    "script": "https://content.highfidelity.com/Experiences/Releases/usefulUtilities/smartBoard/v1.6/scripts/whiteboardMode/drawSphereSpawnerClient.js",
+    "serverScripts": "https://content.highfidelity.com/Experiences/Releases/modules/empty/v1.0.0/empty.js",
+    "scriptTimestamp": 1574130786413,
+    "color": {
+        "red": 255,
+        "green": 0,
+        "blue": 26
+    },
+    "shape": "Cylinder",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{627f4ad6-96e4-43c2-a2a8-f1242489d4e1}",
+    "type": "Shape",
+    "lastEdited": 1574132023220850,
+    "parentID": "{a5530a9b-250f-4763-963c-0b10459f1b78}",
+    "name": "Smartboard Palette Square",
+    "userData": "{\"textureURL\":\"https://content.highfidelity.com/Experiences/Releases/usefulUtilities/airAndWhiteboardDraw/2019-08-22_14-25-00/entityResources/resources/textures/green.png\"}",
+    "position": {
+        "x": 0.100616455078125,
+        "y": -1.2195205688476562,
+        "z": 0.08165717124938965
+    },
+    "dimensions": {
+        "x": 0.10934999585151672,
+        "y": 0.014579998329281807,
+        "z": 0.10934999585151672
+    },
+    "rotation": {
+        "x": 0.012130975723266602,
+        "y": 0.7029068470001221,
+        "z": 0.7108415365219116,
+        "w": -0.021835684776306152
+    },
+    "created": 1574122140665721,
+    "lastEditedBy": "{50bde34e-17ba-4a6d-8ce7-abc745dc90bf}",
+    "queryAACube": {
+        "x": 156.9640655517578,
+        "y": -98.2945556640625,
+        "z": -364.75482177734375,
+        "scale": 0.15533003211021423
+    },
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "collisionMask": 7,
+    "collidesWith": "static,dynamic,kinematic,",
+    "script": "https://content.highfidelity.com/Experiences/Releases/usefulUtilities/smartBoard/v1.6/scripts/whiteboardMode/drawSphereSpawnerClient.js",
+    "serverScripts": "https://content.highfidelity.com/Experiences/Releases/modules/empty/v1.0.0/empty.js",
+    "scriptTimestamp": 1574130778834,
+    "color": {
+        "red": 0,
+        "green": 144,
+        "blue": 54
+    },
+    "shape": "Cylinder",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{2100f491-b8a4-4d8c-af39-561887635518}",
+    "type": "Model",
+    "lastEdited": 1574132023218529,
+    "parentID": "{a5530a9b-250f-4763-963c-0b10459f1b78}",
+    "name": "Smartboard Button Erase",
+    "position": {
+        "x": -0.53399658203125,
+        "y": -1.2183609008789062,
+        "z": 0.09226617217063904
+    },
+    "dimensions": {
+        "x": 0.4406021535396576,
+        "y": 0.13003230094909668,
+        "z": 0.024325169622898102
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1574123278017927,
+    "lastEditedBy": "{50bde34e-17ba-4a6d-8ce7-abc745dc90bf}",
+    "queryAACube": {
+        "x": 156.17710876464844,
+        "y": -98.44573211669922,
+        "z": -364.8965759277344,
+        "scale": 0.46003299951553345
+    },
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "script": "https://content.highfidelity.com/Experiences/Releases/usefulUtilities/smartBoard/v1.6/scripts/whiteboardMode/smartboardReset.js",
+    "serverScripts": "https://content.highfidelity.com/Experiences/Releases/modules/empty/v1.0.0/empty.js",
+    "scriptTimestamp": 1574125977536,
+    "modelURL": "https://hifi-content.s3.us-west-1.amazonaws.com/Experiences/Releases/usefulUtilities/smartBoard/v1.6/resources/models/button-erase.fbx",
+    "animation": {
+        "allowTranslation": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{a703dfc7-f542-4249-9ea4-d4598c4aeeb3}",
+    "type": "Model",
+    "lastEdited": 1574181736153798,
+    "parentID": "{a5530a9b-250f-4763-963c-0b10459f1b78}",
+    "name": "Smartboard Palette Background",
+    "position": {
+        "x": 0.0393829345703125,
+        "y": -1.2191085815429688,
+        "z": 0.07314465194940567
+    },
+    "dimensions": {
+        "x": 1.6130547523498535,
+        "y": 0.15086126327514648,
+        "z": 0.0216071754693985
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": 0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": -1
+    },
+    "created": 1574123119099729,
+    "lastEditedBy": "{f9a3cd98-737a-4797-951d-81560c42ab8f}",
+    "queryAACube": {
+        "x": 156.17037963867188,
+        "y": -99.02659606933594,
+        "z": -365.49578857421875,
+        "scale": 1.620238184928894
+    },
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "modelURL": "https://hifi-content.s3.us-west-1.amazonaws.com/Experiences/Releases/usefulUtilities/smartBoard/v1.6/resources/models/whiteboard-button-container.fbx",
+    "animation": {
+        "allowTranslation": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{5afb1429-a043-43c9-a0b3-18a970a365e6}",
+    "type": "Model",
+    "lastEdited": 1574181660236061,
+    "parentID": "{a5530a9b-250f-4763-963c-0b10459f1b78}",
+    "name": "Smartboard Status Icon",
+    "position": {
+        "x": -1.6075897216796875,
+        "y": 1.1640472412109375,
+        "z": 0.065
+    },
+    "dimensions": {
+        "x": 0.29498255252838135,
+        "y": 0.29498255252838135,
+        "z": 0.029281865805387497
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1574127466693545,
+    "lastEditedBy": "{609ba8e7-0e4c-4c3e-a66c-1f1176d61d4d}",
+    "queryAACube": {
+        "x": 155.12451171875,
+        "y": -96.04236602783203,
+        "z": -364.8932800292969,
+        "scale": 0.4181947410106659
+    },
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "serverScripts": "https://content.highfidelity.com/Experiences/Releases/modules/empty/v1.0.0/empty.js",
+    "modelURL": "https://content.highfidelity.com/Experiences/Releases/usefulUtilities/smartBoard/v1.6/resources/models/button-state-whiteboard.fbx",
+    "animation": {
+        "allowTranslation": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{15d465e3-e301-4b50-b5b6-e1dda7978f5b}",
+    "type": "Zone",
+    "lastEdited": 1574133269829594,
+    "parentID": "{a5530a9b-250f-4763-963c-0b10459f1b78}",
+    "name": "Smartboard Zone",
+    "userData": "{\"whiteBoardOnlyZone\":false}",
+    "position": {
+        "x": 0.0193634033203125,
+        "y": 0.12866973876953125,
+        "z": 2.8572134971618652
+    },
+    "dimensions": {
+        "x": 6,
+        "y": 3.1362438201904297,
+        "z": 6.021794319152832
+    },
+    "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 1
+    },
+    "created": 1574122140664479,
+    "lastEditedBy": "{615e00d6-0f2d-4508-9773-335b33df22f2}",
+    "queryAACube": {
+        "x": 152.4300537109375,
+        "y": -101.39900970458984,
+        "z": -366.4320373535156,
+        "scale": 9.060796737670898
+    },
+    "ignorePickIntersection": true,
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "script": "https://content.highfidelity.com/Experiences/Releases/usefulUtilities/smartBoard/v1.6/scripts/smartboardZoneClient.js",
+    "scriptTimestamp": 1574133198357,
+    "serverScripts": "https://content.highfidelity.com/Experiences/Releases/usefulUtilities/smartBoard/v1.6/scripts/smartboardZoneServer.js",
+    "shapeType": "box",
+    "keyLight": {
+        "direction": {
+            "x": 0,
+            "y": -0.7071067690849304,
+            "z": 0.7071067690849304
+        },
+        "castShadows": true
+    },
+    "screenshare": "enabled",
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+},
+    {
+    "id": "{a5530a9b-250f-4763-963c-0b10459f1b78}",
+    "type": "Model",
+    "lastEdited": 1574132023218529,
+    "name": "Smartboard",
+    "dimensions": {
+        "x": 3.9139657020568848,
+        "y": 2.481144428253174,
+        "z": 0.14636510610580444
+    },
+    "rotation": {
+        "x": -0.0000152587890625,
+        "y": -0.0000152587890625,
+        "z": -0.0000152587890625,
+        "w": 1
+    },
+    "created": 1574122735106828,
+    "lastEditedBy": "{50bde34e-17ba-4a6d-8ce7-abc745dc90bf}",
+    "queryAACube": {
+        "x": -2.318222761154175,
+        "y": -2.318222761154175,
+        "z": -2.318222761154175,
+        "scale": 4.63644552230835
+    },
+    "grab": {
+        "grabbable": false,
+        "equippableLeftRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        },
+        "equippableRightRotation": {
+            "x": -0.0000152587890625,
+            "y": -0.0000152587890625,
+            "z": -0.0000152587890625,
+            "w": 1
+        }
+    },
+    "damping": 0,
+    "angularDamping": 0,
+    "modelURL": "https://content.highfidelity.com/Experiences/Releases/usefulUtilities/smartBoard/v1.6/resources/models/smart-board.fbx",
+    "animation": {
+        "allowTranslation": false
+    },
+    "clientOnly": false,
+    "avatarEntity": false,
+    "localEntity": false,
+    "faceCamera": false,
+    "isFacingAvatar": false
+}
+    ],
+  "Id": "{2ac626ef-65d6-40bb-832c-4caecf17ce61}",
+  "Version": 125
+}

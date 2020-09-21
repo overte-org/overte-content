@@ -1,0 +1,29 @@
+{
+	"Basic Camera": {
+		"location": "/Assets/Models/Tech/basic_camera"
+	},
+	"Electrical Office Floor": {
+		"location": "/Assets/Models/Tech/elec_office_floor"
+	},
+	"Electrical Office Table": {
+		"location": "/Assets/Models/Tech/elec_office_table"
+	},
+	"Electrical Office Wall": {
+		"location": "/Assets/Models/Tech/elec_office_wall"
+	},
+	"Intercom With Screen": {
+		"location": "/Assets/Models/Tech/intercom_with_screen"
+	},
+	"Mini Stereo": {
+		"location": "/Assets/Models/Tech/mini_stereo"
+	},
+	"MP3 Base for iPad": {
+		"location": "/Assets/Models/Tech/mp3_base_for_ipad"
+	},
+	"Reflex Camera": {
+		"location": "/Assets/Models/Tech/reflex_camera"
+	},
+	"Samsung TV": {
+		"location": "/Assets/Models/Tech/samsung_tv"
+	}	
+}
