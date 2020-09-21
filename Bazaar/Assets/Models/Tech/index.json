@@ -25,5 +25,8 @@
 	},
 	"Samsung TV": {
 		"location": "/Assets/Models/Tech/samsung_tv"
+	},
+	"TV and DVD": {
+		"location": "/Assets/Models/Tech/tv_and_dvd"
 	}	
 }

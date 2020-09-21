@@ -4,5 +4,8 @@
 	},
 	"Birthday Cake": {
 		"location": "/Assets/Models/Food/birthday_cake"
-	}
+	},
+	"Wine Bottle": {
+		"location": "/Assets/Models/Food/wine_bottle"
+	}	
 }

@@ -1,0 +1,24 @@
+# Blender MTL File: 'coffee_table-course.blend'
+# Material Count: 2
+
+newmtl marble
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.144444 0.144444 0.144444
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd grey-marble-1024-diffuse.jpg
+
+newmtl wood
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd seamless-oak-green-1024.jpg

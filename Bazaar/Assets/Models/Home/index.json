@@ -64,5 +64,8 @@
 	},	
 	"Small Lavatory": {
 		"location": "/Assets/Models/Home/small_lavatory"
+	},
+	"Squeezer": {
+		"location": "/Assets/Models/Home/squeezer"
 	}	
 }

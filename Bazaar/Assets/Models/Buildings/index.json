@@ -1,0 +1,11 @@
+{
+	"Building 1": {
+		"location": "/Assets/Models/Buildings/building1"
+	},
+	"Edifici Prat": {
+		"location": "/Assets/Models/Buildings/edifici_prat"
+	},
+	"Macba": {
+		"location": "/Assets/Models/Buildings/macba"
+	}
+}

@@ -1,5 +1,11 @@
 {
 	"Glasses": {
 		"location": "/Assets/Models/Food/glasses"
+	},
+	"Sneakers": {
+		"location": "/Assets/Models/Food/sneakers"
+	},
+	"Woman Shoes": {
+		"location": "/Assets/Models/Food/woman_shoes"
 	}
 }

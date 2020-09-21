@@ -1,0 +1,41 @@
+{
+    "name": "Office Chair",
+    "version": "1.0.0",
+    "description": "A basic office chair.",
+    "homepage": "http://www.scopia.es",
+    "bugs": "",
+    "keywords": [
+        "Office",
+		"Chair"
+    ],
+    "icon": "img/icon.png",
+    "images": [
+        "img/office_chair.jpg"
+    ],
+    "author": {
+        "name": "Scopia Visual Interfaces Systems",
+        "email": "joe@whatever.com",
+        "url": "http://www.scopia.es",
+        "license": "CC BY 3.0"		
+    },
+    "sublicense": [
+	],	
+    "contributors": [
+        {
+            "name": "Haptic Monkey",
+            "url": "https://hapticmonkey.com"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/whatever/testing.git"
+    },
+    "main": "gltf/office_chair.glb",
+    "type": "model",
+    "meta": {
+    },
+    "dependencies": {       
+    },
+    "engines": {
+    }
+}

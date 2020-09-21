@@ -1,0 +1,52 @@
+
+LICENSE
+
+SPANISH
+
+Este archivo esta bajo licencia Creative Commons 4.0.	
+
+https://creativecommons.org/licenses/by/4.0/
+	
+Eres libre de:
+
+	Copiar, distribuir y comunicar publicamente la obra
+
+	Hacer archivos derivados
+
+Bajo las condiciones siguientes:
+	
+	Esta permitido realizar cualquier trabajo personal
+	o comercial.
+	
+	Reconocimiento: Los archivos pueden usarse en renders o
+	animaciones sin reconocimiento alguno. Sólo en caso de querer 
+	redistribuir los archivos se debe
+	reconocer la autoria de Scopia Visual Interfaces
+	Systems, s.l. (https://www.scopia.es)
+
+Diseño:
+Este modelo 3d está basado en uno visto en la página web oficial de IKEA. Todos los diseños, y la propiedad intelectual, de este mobiliario son propiedad de IKEA.
+		
+ENGLISH
+
+This file is under the Creative Commons 4.0 Unported 
+license:
+	
+https://creativecommons.org/licenses/by/4.0/
+	
+Your are free:
+	
+	To share - to copy, distribute and trasmit the work
+	
+	To Remix - to adapt the work
+	
+Under the following conditions:
+	
+	You are free to make personal or commercial works.
+	
+	Attribution: The models can be used in renders or animations without attribution.
+	If you want distribute the model files themselves you must attribute them to Scopia Visual
+	Interfaces Systems, s.l. (https://www.scopia.es)
+
+Design:
+This model is based on one viewed at IKEA web and all the furniture designs are property of IKEA.

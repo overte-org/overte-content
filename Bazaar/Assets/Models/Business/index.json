@@ -1,0 +1,23 @@
+{
+	"Office Box": {
+		"location": "/Assets/Models/Business/office_box"
+	},
+	"Office Chair": {
+		"location": "/Assets/Models/Business/office_chair"
+	},
+	"Office Furniture 1": {
+		"location": "/Assets/Models/Business/office_furniture1"
+	},
+	"Office Tables": {
+		"location": "/Assets/Models/Business/office_tables"
+	},	
+	"Plastic Chair": {
+		"location": "/Assets/Models/Business/plastic_chair"
+	},	
+	"Tubular Chair": {
+		"location": "/Assets/Models/Business/tubular_chair"
+	},	
+	"Wooden Office Tables": {
+		"location": "/Assets/Models/Business/wooden_office_tables"
+	}	
+}
