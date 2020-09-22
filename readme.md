@@ -4,13 +4,13 @@ Download
 ========
 You can download Vircadia from our [website](https://vircadia.com/download-vircadia). 
 
-If you prefer to build from source, you can find the codebase for Vircadia in the [project-athena](https://github.com/kasenvr/project-athena) repository. 
+If you prefer to build from source, you can find the codebase for Vircadia in the [project-athena](https://github.com/kasenvr/project-athena) repository.
 
 vircadia-content
 ========
 In this repository you'll find our content projects built for worlds that run on the Vircadia platform. We welcome community contributions if you have created content that you would like to share with the developer community. You can find specific information about where specific content is used in the subdirectory readme files.
 
-*All content in this repo is available under free and open licenses. The majority of it will be Apache 2.0, CC0, and CC-BY. Licensing is defined within the package.json files for items.*
+***All content in this repo is available under free and open licenses. The majority of it will be Apache 2.0, CC0, and CC-BY. Licensing is defined within the package.json files for items.***
 
 Our file structure is designed to store projects related to how they are deployed within Vircadia, but recognize that not all content will fit neatly into a specific category. 
 
@@ -37,7 +37,6 @@ Documentation is available at [docs.vircadia.com](https://docs.vircadia.com). If
 
 There is also detailed [documentation on our coding standards](https://github.com/kasenvr/project-athena/blob/master/CODING_STANDARD.md).
 
-
-
-
-
+Moving Hosted Content
+========
+Currently, all content in this repository is hosted at **https://cdn-1.vircadia.com/us-e-1/**. If you intend to rehost some or all of this content, then you will need to do a mass search and replace across the content you are rehosting to change from the Vircadia URL base to yours. e.g. **https://cdn-1.vircadia.com/us-e-1/** becomes **https://cdn.yourwebsite.com/**
