@@ -16,5 +16,8 @@
 	},
 	"Tanya": {
 		"location": "/Assets/Models/Avatars/Tanya"
+	},
+    "Woody": {
+		"location": "/Assets/Models/Avatars/Woody"
 	}
 }
