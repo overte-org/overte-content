@@ -20,5 +20,5 @@ module.exports = {
             chunks: [ 'chunk-vendors', 'chunk-common', 'display' ]
         }
     },
-    publicPath: '/Bazaar/Apps/slider/dist/'
+    publicPath: '/us-e-1/Bazaar/Apps/slider/dist/'
 }
