@@ -32,7 +32,7 @@
                     >
                         <v-img
                             :src="slide.slide"
-                            @click="slide.link"
+                            @click="triggerClick(slide.link)"
                             height="100%"
                             class="grey darken-4"
                             lazy-src="./assets/logo.png"
@@ -140,7 +140,7 @@ export default {
         presentationChannel: 'default-presentation-channel',
         // Change Presentation Channel Dialog
         changePresentationChannelDialogShow: false,
-        changePresentationChannelDialogText: '',
+        changePresentationChannelDialogText: ''
     }),
     watch: {
     },
@@ -178,6 +178,11 @@ export default {
             this.sendAppMessage("web-to-script-sync-state", { 
                 "presentationChannel": this.presentationChannel,
                 "currentSlide": this.slides[this.currentSlide]
+            });
+        },
+        triggerClick: function (urlToPost) {
+            this.sendAppMessage("web-to-script-trigger-click", { 
+                "url": urlToPost
             });
         },
         sendAppMessage: function(command, data) {
