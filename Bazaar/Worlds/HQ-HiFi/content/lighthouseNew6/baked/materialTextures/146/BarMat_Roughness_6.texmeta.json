@@ -1,0 +1,9 @@
+{
+    "compressed": {
+        "COMPRESSED_R11_EAC": "BarMat_Roughness_6_COMPRESSED_R11_EAC.ktx",
+        "COMPRESSED_RED_RGTC1": "BarMat_Roughness_6_COMPRESSED_RED_RGTC1.ktx"
+    },
+    "original": "BarMat_Roughness_6.png",
+    "uncompressed": "",
+    "version": 1
+}

@@ -1,0 +1,9 @@
+{
+    "compressed": {
+        "COMPRESSED_SRGB8_ALPHA8_ETC2_EAC": "RipplingSandDunes_768-AO_11_COMPRESSED_SRGB8_ALPHA8_ETC2_EAC.ktx",
+        "COMPRESSED_SRGB_S3TC_DXT1_EXT": "RipplingSandDunes_768-AO_11_COMPRESSED_SRGB_S3TC_DXT1_EXT.ktx"
+    },
+    "original": "RipplingSandDunes_768-AO_11.png",
+    "uncompressed": "",
+    "version": 1
+}

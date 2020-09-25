@@ -1,0 +1,1 @@
+{"materials":[{"albedo":{"blue":0.2602977752685547,"green":0.02639131434261799,"red":1},"defaultFallthrough":false,"model":"hifi_pbr","name":"02___Default","roughness":0.3392156958580017},{"albedo":{"blue":0.4252704977989197,"green":0.7056270241737366,"red":0.969927966594696},"defaultFallthrough":false,"model":"hifi_pbr","name":"01___Default","roughness":0.9901960492134094}]}

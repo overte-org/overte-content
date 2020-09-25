@@ -23,7 +23,7 @@
             var eventJSON = JSON.parse(event);
             if (eventJSON.app === "slider-display-web") { // This is our web app!
                 // print("inventory.js received a web event: " + event);
-        
+
                 if (eventJSON.command === "ready") {
                     // console.info("Got init request message.");
                     initializeSliderDisplayApp();
@@ -37,6 +37,10 @@
                         updatePresentationChannel(eventJSON.data.presentationChannel);
                     }
                     Entities.editEntity(_this.entityID, { "userData": JSON.stringify(eventJSON.data) });
+                }
+                
+                if (eventJSON.command === "web-to-script-trigger-click") {
+                    handleTriggerLink(eventJSON.data.url)
                 }
             }
         }
@@ -88,6 +92,18 @@
         Messages.subscribe(presentationChannel);
     }
     
+    function handleTriggerLink (url) {
+        var confirm = Window.confirm("Open this link?");
+        if (confirm) {
+            var overlayWebWindow = new OverlayWebWindow({
+                title: "Browser",
+                source: url,
+                width: 1920,
+                height: 1080
+            });
+        }
+    }
+    
     // Standard preload and unload, initialize the entity script here.
     
     this.preload = function (ourID) {
@@ -99,6 +115,7 @@
     };
     
     this.unload = function(entityID) {
+        Entities.webEventReceived.disconnect(onWebAppEventReceived);
         Messages.messageReceived.disconnect(onMessageReceived);
         Messages.unsubscribe(presentationChannel);
     };

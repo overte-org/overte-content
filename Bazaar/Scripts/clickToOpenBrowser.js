@@ -67,7 +67,7 @@
     }
 
     function onMousePressOnEntity(pressedEntityID, event) {
-        if (_this.entityID === pressedEntityID) {
+        if (_this.entityID === pressedEntityID && event.isPrimaryButton) {
             var userData = getAndParseUserData();
 
             if (userData.useConfirmDialog === true) {

@@ -80,6 +80,7 @@
         </v-app-bar>
         
         <!-- Main Slider Control Area -->
+
         <v-main>
             <v-container
                 class="fill-height"
@@ -92,7 +93,7 @@
                         :key="index"
                     >
                         <v-img
-                            :src="slide"
+                            :src="slide.slide"
                             height="100%"
                             class="grey darken-4"
                             lazy-src="./assets/logo.png"
@@ -114,7 +115,7 @@
         <!-- End Main Slider Control Area -->
         
         <!-- Add Slide by URL Dialog -->
-        
+
         <v-dialog v-model="addSlidesByURLDialogShow" persistent>
             <v-card>
                 <v-toolbar>
@@ -126,7 +127,12 @@
 
                 <v-text-field
                     placeholder="Enter URL Here"
-                    v-model="addSlideByURLField"
+                    v-model="addSlideByURLSlideField"
+                    filled
+                ></v-text-field>
+                <v-text-field
+                    placeholder="Enter A Link Here (optional)"
+                    v-model="addSlideByURLLinkField"
                     filled
                 ></v-text-field>
             </v-card>
@@ -179,19 +185,19 @@
             <br />
             <v-progress-circular indeterminate color="blue" size="64"></v-progress-circular>
         </v-overlay>
-        
+
         <!-- Add Slide by Upload Dialog -->
         
         <!-- Manage Slides Dialog -->
         
-        <v-dialog v-model="manageSlidesDialogShow" persistent>
+        <v-dialog v-model="manageSlidesDialogShow" persistent fullscreen>
             <v-card>
                 <v-toolbar>
                     <v-toolbar-title>Manage Slides for {{ slideChannel }}</v-toolbar-title>
                     <v-spacer></v-spacer>
                     <v-btn class="mx-2" color="green" @click="manageSlidesDialogShow = false">Done</v-btn>
                 </v-toolbar>
-                <v-list subheader>
+                <v-list subheader :three-line="true">
                     <v-subheader>{{ slides[slideChannel].length }} Slides</v-subheader>
 
                     <v-list-item
@@ -199,12 +205,18 @@
                         :key="i"
                     >
                         <v-list-item-avatar size="64">
-                            <v-img :src="slide"></v-img>
+                            <v-img :src="slide.slide"></v-img>
                         </v-list-item-avatar>
 
                         <v-list-item-content>
                             <v-list-item-subtitle>Slide {{i + 1}}</v-list-item-subtitle>
-                            <v-list-item-title v-text="slide"></v-list-item-title>
+                            <v-text-field
+                                label="Slide Link"
+                                single-line
+                                dense
+                                v-model="slide.link"
+                            ></v-text-field>
+                            <v-list-item-title><span class="text-caption">Image Source</span> {{slide.slide}}</v-list-item-title>
                         </v-list-item-content>
 
                         <v-list-item-icon>
@@ -253,7 +265,7 @@
         
         <!-- Change Slide Channel Dialog -->
         
-        <v-dialog v-model="changeSlideChannelDialogShow" persistent>
+        <v-dialog v-model="changeSlideChannelDialogShow" persistent fullscreen>
             <v-card>
                 <v-toolbar>
                     <v-toolbar-title>Change Slide Channel</v-toolbar-title>
@@ -269,12 +281,12 @@
                         :key="index"
                     >
                         <v-list-item-avatar size="64">
-                            <v-img :src="channel[0]"></v-img>
+                            <v-img :src="channel[0].slide"></v-img>
                         </v-list-item-avatar>
 
                         <v-list-item-content>
                             <v-list-item-subtitle>Channel {{ i }}</v-list-item-subtitle>
-                            <v-list-item-title>{{ slides[i][0] }}</v-list-item-title>
+                            <v-list-item-title>{{ slides[i][0].slide }}</v-list-item-title>
                         </v-list-item-content>
 
                         <v-list-item-icon>
@@ -403,7 +415,10 @@ export default {
         drawer: null,
         slides: {
             'default': [
-                './assets/logo.png'
+                {
+                    'slide': './assets/logo.png',
+                    'link': "https://vircadia.com/"
+                }
             ]
             // 'Slide Deck 1': [
             //     'https://wallpapertag.com/wallpaper/full/d/5/e/154983-anime-girl-wallpaper-hd-1920x1200-for-hd.jpg',
@@ -427,7 +442,8 @@ export default {
         slideChannel: 'default',
         // Add Slides Dialog
         addSlidesByURLDialogShow: false,
-        addSlideByURLField: '',
+        addSlideByURLSlideField: '',
+        addSlideByURLLinkField: '',
         // Upload Slides Dialog
         uploadSlidesDialogShow: false,
         uploadSlidesDialogImgBBAPIKey: '3c004374cf70ad588aad5823ac2baaca', // Make this pull from UserData later.
@@ -506,9 +522,14 @@ export default {
             this.$set(this.slides, this.changeSlideChannelDialogText, ['./assets/logo.png']);
         },
         addSlideByURL: function () {
-            this.slides[this.slideChannel].push(this.addSlideByURLField);
+            var objectToPush = {
+                'slide': this.addSlideByURLSlideField,
+                'link': this.addSlideByURLLinkField
+            }
+            this.slides[this.slideChannel].push(objectToPush);
             vue_this.currentSlide = vue_this.slides[vue_this.slideChannel].length - 1; // The array starts at 0, so the length will always be +1, so we account for that.
-            this.addSlideByURLField = '';
+            this.addSlideByURLSlideField = '';
+            this.addSlideByURLLinkField = '';
         },
         uploadSlide: function () {
             // ImgBB Upload
