@@ -1,0 +1,9 @@
+{
+    "compressed": {
+        "COMPRESSED_SRGB8_ALPHA8_ETC2_EAC": "splat_0_COMPRESSED_SRGB8_ALPHA8_ETC2_EAC.ktx",
+        "COMPRESSED_SRGB_S3TC_DXT1_EXT": "splat_0_COMPRESSED_SRGB_S3TC_DXT1_EXT.ktx"
+    },
+    "original": "splat_0.jpg",
+    "uncompressed": "",
+    "version": 1
+}

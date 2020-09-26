@@ -1,0 +1,9 @@
+{
+    "compressed": {
+        "COMPRESSED_SRGB8_ALPHA8_ETC2_EAC": "Agave_attenuata_leaf_SU_2_COMPRESSED_SRGB8_ALPHA8_ETC2_EAC.ktx",
+        "COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT": "Agave_attenuata_leaf_SU_2_COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT.ktx"
+    },
+    "original": "Agave_attenuata_leaf_SU_2.png",
+    "uncompressed": "",
+    "version": 1
+}

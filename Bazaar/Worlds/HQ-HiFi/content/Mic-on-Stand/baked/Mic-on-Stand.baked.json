@@ -1,0 +1,1 @@
+{"materials":[{"albedo":{"blue":0.598726212978363,"green":0.598726212978363,"red":0.598726212978363},"defaultFallthrough":false,"metallic":1,"model":"hifi_pbr","name":"phong1","roughness":0.3549019694328308},{"albedo":{"blue":0,"green":0,"red":0},"defaultFallthrough":false,"model":"hifi_pbr","name":"Mat.Black","roughness":0.7941176295280457}]}
