@@ -450,7 +450,7 @@
     "lastEdited": 1601257171038745,
     "name": "Sound Emitter",
     "locked": true,
-    "userData": "{\"soundURL\":\"https://www.dropbox.com/s/w3a9narxp2vtf33/468407__onderwish__sci-fi-survival-dreamscape.mp3?dl=1\",\"shouldLoop\":true,\"volume\":0.18,\"refreshInterval\":100,\"grabbableKey\":{\"grabbable\":false}}",
+    "userData": "{\"soundURL\":\"https://cdn-1.vircadia.com/us-e-1/DomainContent/Tutorial/Sounds/468407__onderwish__sci-fi-survival-dreamscape.mp3?dl=1\",\"shouldLoop\":true,\"volume\":0.18,\"refreshInterval\":100,\"grabbableKey\":{\"grabbable\":false}}",
     "position": {
         "x": 18.58538055419922,
         "y": 5.378335952758789,
@@ -1371,7 +1371,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "static-mesh",
-    "modelURL": "https://www.dropbox.com/s/r506dl7lnwce62j/dome2_glass.glb?dl=1",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/DomainContent/Tutorial/Models/dome2_glass.glb",
     "blendshapeCoefficients": "{\n}\n",
     "animation": {
         "allowTranslation": false
