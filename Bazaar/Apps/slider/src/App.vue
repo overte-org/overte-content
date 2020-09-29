@@ -25,7 +25,7 @@
                         <v-list-item-title>Add Slide by URL</v-list-item-title>
                     </v-list-item-content>
                 </v-list-item>
-                <v-list-item link @click="uploadSlidesDialogShow = !uploadSlidesDialogShow">
+                <v-list-item link disabled @click="uploadSlidesDialogShow = !uploadSlidesDialogShow">
                     <v-list-item-action>
                     <v-icon>mdi-upload</v-icon>
                     </v-list-item-action>
@@ -565,7 +565,11 @@ export default {
                 .done(function (result) {
                     vue_this.uploadSlidesDialogFiles = null; // Reset the file upload dialog field.
                     vue_this.uploadProcessingOverlay = false;
-                    vue_this.slides[vue_this.slideChannel].push(result.data.display_url);
+                    var objectToPush = {
+                        'slide': result.data.display_url,
+                        'link': ""
+                    }
+                    vue_this.slides[vue_this.slideChannel].push(objectToPush);
                     vue_this.currentSlide = vue_this.slides[vue_this.slideChannel].length - 1; // The array starts at 0, so the length will always be +1, so we account for that.
                     // console.info('success:', result);
                     return true;
