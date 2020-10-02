@@ -60,6 +60,15 @@
                         <v-list-item-title>Presentation Channel</v-list-item-title>
                     </v-list-item-content>
                 </v-list-item>
+                <v-subheader>IMPORT/EXPORT</v-subheader>
+                <v-list-item link @click="importExportDialogShow = !importExportDialogShow; parseSlideDataIntoDialog()">
+                    <v-list-item-action>
+                    <v-icon>mdi-swap-vertical-bold</v-icon>
+                    </v-list-item-action>
+                    <v-list-item-content>
+                        <v-list-item-title>Import / Export Data</v-list-item-title>
+                    </v-list-item-content>
+                </v-list-item>
             </v-list>
         </v-navigation-drawer>
 
@@ -363,6 +372,26 @@
         
         <!-- Confirm Delete Slide Deck Dialog -->
         
+        <!-- Import Export Data Dialog -->
+
+        <v-dialog v-model="importExportDialogShow" persistent>
+            <v-card>
+                <v-toolbar>
+                    <v-toolbar-title>Import</v-toolbar-title>
+                    <v-spacer></v-spacer>
+                    <v-btn class="mx-2" color="red darken-1" @click="importExportDialogShow = false">Close</v-btn>
+                    <v-btn class="mx-2" color="green darken-1" @click="importExportDialogShow = false; importSlideDataFromDialog()">Import</v-btn>
+                </v-toolbar>
+
+                <v-textarea
+                    v-model="importExportDialogSlideData"
+                    filled
+                ></v-textarea>
+            </v-card>
+        </v-dialog>
+        
+        <!-- Import Export Data Dialog -->
+        
         <v-footer
             color="primary"
             app
@@ -471,7 +500,10 @@ export default {
         confirmDeleteSlideChannelDialogWhich: '',
         // Confirm Delete Slide Dialog
         confirmDeleteSlideDialogShow: false,
-        confirmDeleteSlideDialogWhich: ''
+        confirmDeleteSlideDialogWhich: '',
+        // Import Export Data Dialog
+        importExportDialogShow: false,
+        importExportDialogSlideData: ''
     }),
     watch: {
         currentSlide: function (newSlide, oldSlide) {
@@ -609,6 +641,18 @@ export default {
         // 
         // 
         // },
+        // BEGIN Import Export Data Dialog
+        parseSlideDataIntoDialog: function () {
+            if (JSON.stringify(this.slides)) {
+                this.importExportDialogSlideData = JSON.stringify(this.slides);
+            }
+        },
+        importSlideDataFromDialog: function () {
+            if (JSON.parse(this.importExportDialogSlideData)) {
+                this.slides = JSON.parse(this.importExportDialogSlideData);
+            }
+        },
+        // END Import Export Data Dialog
         changePresentationChannel: function () {
             this.presentationChannel = this.changePresentationChannelDialogText;
             this.changePresentationChannelDialogText = '';
