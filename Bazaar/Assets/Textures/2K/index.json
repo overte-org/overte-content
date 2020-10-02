@@ -1,8 +1,32 @@
 {
-	"2K": {
-		"location": "/Assets/Textures/2K",
+	"Ground037": {
+		"location": "/Assets/Textures/2K/Ground037"
 	},
-	"Defaults": {
-		"location": "/Assets/Textures/Defaults",
-	}
+	"Marble006": {
+		"location": "/Assets/Textures/2K/Marble006"
+	},
+	"Metal032": {
+		"location": "/Assets/Textures/2K/Metal032"
+	},
+ 	"Moss001": {
+		"location": "/Assets/Textures/2K/Moss001"
+	},
+ 	"PavingStones083": {
+		"location": "/Assets/Textures/2K/PavingStones083"
+	},
+ 	"Plastic006": {
+		"location": "/Assets/Textures/2K/Plastic006"
+	},
+ 	"Plastic010": {
+		"location": "/Assets/Textures/2K/Plastic010"
+	},
+ 	"Wood046": {
+		"location": "/Assets/Textures/2K/Wood046"
+	},
+ 	"WoodFloor040": {
+		"location": "/Assets/Textures/2K/WoodFloor040"
+	},
+ 	"WoodFloor041": {
+		"location": "/Assets/Textures/2K/WoodFloor041"
+	}  	
 }

@@ -1,8 +1,8 @@
 {
 	"2K": {
-		"location": "/Assets/Textures/2K",
+		"location": "/Assets/Textures/2K"
 	},
 	"Defaults": {
-		"location": "/Assets/Textures/Defaults",
+		"location": "/Assets/Textures/Defaults"
 	}
 }

@@ -1,0 +1,45 @@
+{
+    "name": "Kit Desk",
+    "version": "1.0.0",
+    "description": "A glass desk with phone, mousepad, mouse, paper tray and cup.",
+    "homepage": "http://www.scopia.es",
+    "bugs": "",
+    "keywords": [
+        "Glass",
+		"Desk",
+		"Phone",
+		"Mousepad",
+		"Mouse",
+		"Cup"
+    ],
+    "icon": "img/icon.png",
+    "images": [
+        "img/kit_desk.jpg"
+    ],
+    "author": {
+        "name": "Scopia Visual Interfaces Systems",
+        "email": "joe@whatever.com",
+        "url": "http://www.scopia.es",
+        "license": "CC BY 3.0"		
+    },
+    "sublicense": [
+	],	
+    "contributors": [
+        {
+            "name": "Haptic Monkey",
+            "url": "https://hapticmonkey.com"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/whatever/testing.git"
+    },
+    "main": "gltf/kit_desk.glb",
+    "type": "model",
+    "meta": {
+    },
+    "dependencies": {       
+    },
+    "engines": {
+    }
+}
