@@ -511,11 +511,12 @@ export default {
         currentSlide: function (newSlide, oldSlide) {
             if (newSlide !== oldSlide) {
                 this.sendSlideChange(newSlide);
+                this.sendSync(this.slides);
             }
         },
         slideChannel: function (newChannel, oldChannel) {
             if (newChannel !== oldChannel) {
-                this.sendSlideChange(this.currentSlide)
+                this.sendSlideChange(this.currentSlide);
             }
         },
         slides: {
@@ -538,6 +539,11 @@ export default {
 
             if (parsedUserData.presentationChannel) {
                 this.presentationChannel = parsedUserData.presentationChannel;
+            }
+            
+            if (parsedUserData.currentSlideState) {
+                this.currentSlide = parsedUserData.currentSlideState.currentSlide;
+                this.slideChannel = parsedUserData.currentSlideState.slideChannel;
             }
 
             if (parsedUserData.atp) {
@@ -687,6 +693,10 @@ export default {
             this.sendAppMessage("web-to-script-sync-state", { 
                 "slides": slidesToSync, 
                 "presentationChannel": this.presentationChannel,
+                "currentSlideState": {
+                    "currentSlide": this.currentSlide,
+                    "slideChannel": this.slideChannel
+                },
                 "atp": this.atp
             });
         },
