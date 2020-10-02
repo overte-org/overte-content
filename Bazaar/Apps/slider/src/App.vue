@@ -17,12 +17,13 @@
             app
         >
             <v-list>
+                <v-subheader>ADD</v-subheader>
                 <v-list-item link @click="addSlidesByURLDialogShow = !addSlidesByURLDialogShow">
                     <v-list-item-action>
                     <v-icon>mdi-plus</v-icon>
                     </v-list-item-action>
                     <v-list-item-content>
-                        <v-list-item-title>Add Slide by URL</v-list-item-title>
+                        <v-list-item-title>Add Slide</v-list-item-title>
                     </v-list-item-content>
                 </v-list-item>
                 <v-list-item link disabled @click="uploadSlidesDialogShow = !uploadSlidesDialogShow">
@@ -33,6 +34,7 @@
                         <v-list-item-title>Upload Slide</v-list-item-title>
                     </v-list-item-content>
                 </v-list-item>
+                <v-subheader>MANAGE</v-subheader>
                 <v-list-item link @click="manageSlidesDialogShow = !manageSlidesDialogShow">
                     <v-list-item-action>
                     <v-icon>mdi-pencil</v-icon>
@@ -41,20 +43,21 @@
                         <v-list-item-title>Manage Slides</v-list-item-title>
                     </v-list-item-content>
                 </v-list-item>
+                <v-list-item link @click="changeSlideChannelDialogShow = !changeSlideChannelDialogShow">
+                    <v-list-item-action>
+                    <v-icon>mdi-database</v-icon>
+                    </v-list-item-action>
+                    <v-list-item-content>
+                        <v-list-item-title>Slide Deck</v-list-item-title>
+                    </v-list-item-content>
+                </v-list-item>
+                <v-subheader>DISPLAY</v-subheader>
                 <v-list-item link @click="changePresentationChannelDialogShow = !changePresentationChannelDialogShow">
                     <v-list-item-action>
                     <v-icon>mdi-remote</v-icon>
                     </v-list-item-action>
                     <v-list-item-content>
                         <v-list-item-title>Presentation Channel</v-list-item-title>
-                    </v-list-item-content>
-                </v-list-item>
-                <v-list-item link @click="changeSlideChannelDialogShow = !changeSlideChannelDialogShow">
-                    <v-list-item-action>
-                    <v-icon>mdi-database</v-icon>
-                    </v-list-item-action>
-                    <v-list-item-content>
-                        <v-list-item-title>Slide Channel</v-list-item-title>
                     </v-list-item-content>
                 </v-list-item>
             </v-list>
@@ -119,7 +122,7 @@
         <v-dialog v-model="addSlidesByURLDialogShow" persistent>
             <v-card>
                 <v-toolbar>
-                    <v-toolbar-title>Add Slide by URL</v-toolbar-title>
+                    <v-toolbar-title>Add Slide</v-toolbar-title>
                     <v-spacer></v-spacer>
                     <v-btn class="mx-2" color="red darken-1" @click="addSlidesByURLDialogShow = false">Close</v-btn>
                     <v-btn class="mx-2" color="green darken-1" @click="addSlidesByURLDialogShow = false; addSlideByURL()">Add</v-btn>
@@ -131,7 +134,7 @@
                     filled
                 ></v-text-field>
                 <v-text-field
-                    placeholder="Enter A Link Here (optional)"
+                    placeholder="Enter A Clickable Link Here (optional)"
                     v-model="addSlideByURLLinkField"
                     filled
                 ></v-text-field>
@@ -216,7 +219,7 @@
                                 dense
                                 v-model="slide.link"
                             ></v-text-field>
-                            <v-list-item-title><span class="text-caption">Image Source</span> {{slide.slide}}</v-list-item-title>
+                            <v-list-item-title><span class="text-caption">Slide Image Source</span> {{slide.slide}}</v-list-item-title>
                         </v-list-item-content>
 
                         <v-list-item-icon>
@@ -263,18 +266,18 @@
         
         <!-- Change Presentation Channel Dialog -->
         
-        <!-- Change Slide Channel Dialog -->
+        <!-- Change Slide Deck Dialog -->
         
         <v-dialog v-model="changeSlideChannelDialogShow" persistent fullscreen>
             <v-card>
                 <v-toolbar>
-                    <v-toolbar-title>Change Slide Channel</v-toolbar-title>
+                    <v-toolbar-title>Change Slide Deck</v-toolbar-title>
                     <v-spacer></v-spacer>
                     <v-btn class="mx-2" color="green darken-1" @click="changeSlideChannelDialogShow = false">Done</v-btn>
                 </v-toolbar>
 
                 <v-list subheader>
-                    <v-subheader>{{ Object.keys(slides).length }} Slide Channels</v-subheader>
+                    <v-subheader>{{ Object.keys(slides).length }} Slide Decks</v-subheader>
                     <v-list-item
                         v-for="(channel, i, index) in slides"
                         track-by="$index"
@@ -317,12 +320,12 @@
                         </template>
                     </v-text-field>
                     <v-spacer></v-spacer>
-                    <div>Current Slide Channel: <b>{{ slideChannel }}</b></div>
+                    <div>Current Slide Deck: <b>{{ slideChannel }}</b></div>
                 </v-footer>
             </v-card>
         </v-dialog>
         
-        <!-- Change Slide Channel Dialog -->
+        <!-- Change Slide Deck Dialog -->
         
         <!-- Confirm Delete Slide Dialog -->
         
@@ -342,29 +345,29 @@
         
         <!-- Confirm Delete Slide Dialog -->
         
-        <!-- Confirm Delete Slide Channel Dialog -->
+        <!-- Confirm Delete Slide Deck Dialog -->
         
         <v-dialog v-model="confirmDeleteSlideChannelDialogShow" persistent>
             <v-card>
                 <v-toolbar>
-                    <v-toolbar-title>Delete Slide Channel</v-toolbar-title>
+                    <v-toolbar-title>Delete Slide Deck</v-toolbar-title>
                     <v-spacer></v-spacer>
                     <v-btn class="mx-2" color="primary" @click="confirmDeleteSlideChannelDialogShow = false">Close</v-btn>
                     <v-btn class="mx-2" color="red darken-1" @click="confirmDeleteSlideChannelDialogShow = false; deleteSlideChannel(confirmDeleteSlideChannelDialogWhich)">Delete</v-btn>
                 </v-toolbar>
 
-                <v-card-title>Are you sure you want to delete the slide channel {{ confirmDeleteSlideChannelDialogWhich }}?</v-card-title>
+                <v-card-title>Are you sure you want to delete the slide desk {{ confirmDeleteSlideChannelDialogWhich }}?</v-card-title>
                 <v-card-subtitle>You cannot undo this action.</v-card-subtitle>
             </v-card>
         </v-dialog>
         
-        <!-- Confirm Delete Slide Channel Dialog -->
+        <!-- Confirm Delete Slide Deck Dialog -->
         
         <v-footer
             color="primary"
             app
         >
-            <span class="">Current Slide Channel: <b>{{ slideChannel }}</b></span>
+            <span class="">Current Slide Deck: <b>{{ slideChannel }}</b></span>
         </v-footer>
     </v-app>
 </template>
@@ -460,10 +463,10 @@ export default {
         // Change Presentation Channel Dialog
         changePresentationChannelDialogShow: false,
         changePresentationChannelDialogText: '',
-        // Change Slide Channel Dialog
+        // Change Slide Deck Dialog
         changeSlideChannelDialogShow: false,
         changeSlideChannelDialogText: '',
-        // Confirm Delete Slide Channel Dialog
+        // Confirm Delete Slide Deck Dialog
         confirmDeleteSlideChannelDialogShow: false,
         confirmDeleteSlideChannelDialogWhich: '',
         // Confirm Delete Slide Dialog

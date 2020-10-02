@@ -181,6 +181,7 @@ export default {
             });
         },
         triggerClick: function (urlToPost) {
+            if (urlToPost === "") { return }
             this.sendAppMessage("web-to-script-trigger-click", { 
                 "url": urlToPost
             });
