@@ -505,7 +505,9 @@ export default {
         confirmDeleteSlideDialogWhich: '',
         // Import Export Data Dialog
         importExportDialogShow: false,
-        importExportDialogSlideData: ''
+        importExportDialogSlideData: '',
+        // DEBOUNCER
+        readyToSendAgain: true
     }),
     watch: {
         currentSlide: function (newSlide, oldSlide) {
@@ -524,7 +526,9 @@ export default {
         },
         slides: {
             handler: function () {
-                this.sendSync(this.slides);
+                if (this.debounceProcessing() === true) {
+                    this.sendSync(this.slides);
+                }
             },
             deep: true
         }
@@ -565,7 +569,12 @@ export default {
             this.$delete(this.slides, slideChannelKey);
         },
         addSlideChannel: function () {
-            this.$set(this.slides, this.changeSlideChannelDialogText, ['./assets/logo.png']);
+            this.$set(this.slides, this.changeSlideChannelDialogText, [
+                {
+                    'slide': './assets/logo.png',
+                    'link': "https://vircadia.com/"
+                }
+            ]);
         },
         addSlideByURL: function () {
             var objectToPush = {
@@ -687,6 +696,23 @@ export default {
                     'slideChannel': this.slideChannel,
                     'currentSlide': this.currentSlide
                 });
+            }
+        },
+        sendNoticeToUpdateState: function () {
+            this.sendAppMessage("web-to-script-notify-to-update", {});
+        },
+        debounceProcessing: function () {
+            if (this.readyToSendAgain) {
+                // console.log("Ready.");
+                this.readyToSendAgain = false;
+                setTimeout(function() {
+                    vue_this.readyToSendAgain = true;
+                    vue_this.sendSync(this.slides);
+                }, 1000); // 1 second
+                return true;
+            } else {
+                // console.log("Not ready.");
+                return false;
             }
         },
         sendSync: function (slidesToSync) {

@@ -55,6 +55,14 @@
                     }
                     sendMessage(dataPacket);
                 }
+                
+                if (eventJSON.command === "web-to-script-notify-to-update") {
+                    var dataPacket = {
+                        command: "update-from-storage",
+                        data: eventJSON.data
+                    }
+                    sendMessage(dataPacket);
+                }
             }
         }
     }
@@ -80,7 +88,7 @@
                 // console.log("CLEAR 1");
                 if (dataToSend.data.currentSlide != lastMessageSentOrReceivedData.currentSlide ||
                     dataToSend.data.slideChannel != lastMessageSentOrReceivedData.slideChannel ||
-                    dataToSend.data.slide != lastMessageSentOrReceivedData.slide
+                    dataToSend.data.slide.slide != lastMessageSentOrReceivedData.slide.slide
                 ) {
                     // console.log("CLEAR 2: SENDING");
                     lastMessageSentOrReceivedData = dataToSend.data;
@@ -92,10 +100,54 @@
                 Messages.sendMessage(presentationChannel, JSON.stringify(dataToSend));
             }
         }
+        
+        if (dataToSend.command === "update-from-storage") {
+            Messages.sendMessage(presentationChannel, JSON.stringify(dataToSend));
+        }
         // if (debounceSend()) {
         //     // We're trying to prevent any possible crazy loops.
         //     Messages.sendMessage(presentationChannel, JSON.stringify(dataToSend));
         // }
+    }
+    
+    function onMessageReceived(channel, message, sender, localOnly) {
+        if (channel === presentationChannel) {
+            var messageJSON = JSON.parse(message);
+            if (messageJSON.command === "display-slide" ) { // We are receiving a slide.
+                if (messageJSON.data.senderEntityID === _this.entityID && MyAvatar.sessionUUID != sender) {
+                    // We got a message that this entity changed a slide, so let's update all instances of this entity for everyone.
+                    Script.setTimeout(function () {
+                        lastMessageSentOrReceivedData = messageJSON.data;
+                        updateFromStorage();
+                        sendToWeb('script-to-web-update-slide-state', messageJSON.data);
+                        // console.log("PASSING MESSAGE IN.");
+                        // console.log("lastMessageSentOrReceivedData: "+ JSON.stringify(lastMessageSentOrReceivedData));
+                    }, PROCESSING_MSG_DEBOUNCE_TIME);
+                }
+                // console.log("FULL MESSAGE RECEIVED: " + JSON.stringify(messageJSON.data));
+                // console.log("Who are they?" + sender);
+                // console.log("Who are we? " + MyAvatar.sessionUUID);
+            }
+            
+            if (messageJSON.command === "update-from-storage" ) { // We are being told to update from storage.
+                if (messageJSON.data.senderEntityID === _this.entityID && MyAvatar.sessionUUID != sender) {
+                    // We got a message that this entity changed a slide, so let's update all instances of this entity for everyone.
+                    Script.setTimeout(function () {
+                        updateFromStorage();
+                        console.log("PASSING MESSAGE IN.");
+                    }, PROCESSING_MSG_DEBOUNCE_TIME);
+                }
+                // console.log("FULL MESSAGE RECEIVED: " + JSON.stringify(messageJSON.data));
+                // console.log("Who are they?" + sender);
+                // console.log("Who are we? " + MyAvatar.sessionUUID);
+            }
+
+            // print("Message received on Slider Presenter App:");
+            // print("- channel: " + channel);
+            // print("- message: " + message);
+            // print("- sender: " + sender);
+            // print("- localOnly: " + localOnly);
+        }
     }
     
     // FUNCTIONS
@@ -168,32 +220,6 @@
             return false;
         }
     };
-    
-    function onMessageReceived(channel, message, sender, localOnly) {
-        if (channel === presentationChannel) {
-            var messageJSON = JSON.parse(message);
-            if (messageJSON.command === "display-slide" ) { // We are receiving a slide.
-                if (messageJSON.data.senderEntityID === _this.entityID && MyAvatar.sessionUUID != sender) {
-                    // We got a message that this entity changed a slide, so let's update all instances of this entity for everyone.
-                    Script.setTimeout(function () {
-                        lastMessageSentOrReceivedData = messageJSON.data;
-                        updateFromStorage();
-                        sendToWeb('script-to-web-update-slide-state', messageJSON.data);
-                        // console.log("PASSING MESSAGE IN.");
-                        // console.log("lastMessageSentOrReceivedData: "+ JSON.stringify(lastMessageSentOrReceivedData));
-                    }, PROCESSING_MSG_DEBOUNCE_TIME);
-                }
-                // console.log("FULL MESSAGE RECEIVED: " + JSON.stringify(messageJSON.data));
-                // console.log("Who are they?" + sender);
-                // console.log("Who are we? " + MyAvatar.sessionUUID);
-            } 
-        }
-        // print("Message received on Slider Presenter App:");
-        // print("- channel: " + channel);
-        // print("- message: " + message);
-        // print("- sender: " + sender);
-        // print("- localOnly: " + localOnly);
-    }
     
     function updatePresentationChannel (newChannel) {
         Messages.unsubscribe(presentationChannel);
