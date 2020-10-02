@@ -519,6 +519,9 @@ export default {
                 this.sendSlideChange(this.currentSlide);
             }
         },
+        presentationChannel: function () {
+            this.sendSync(this.slides);
+        },
         slides: {
             handler: function () {
                 this.sendSync(this.slides);
