@@ -103,12 +103,14 @@
                         v-for="(slide, index) in slides[slideChannel]"
                         track-by="$index"
                         :key="index"
+                        height="100%"
                     >
                         <v-img
                             :src="slide.slide"
-                            height="100%"
+                            height="87vh"
                             class="grey darken-4"
                             lazy-src="./assets/logo.png"
+                            contain
                         >
                             <template v-slot:placeholder>
                                 <v-row
