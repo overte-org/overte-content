@@ -1,8 +1,8 @@
 {
 	"Models": {
-		"location": "/Assets/Models",
+		"location": "/Assets/Models"
 	},
 	"Textures": {
-		"location": "/Assets/Textures",
+		"location": "/Assets/Textures"
 	}
 }

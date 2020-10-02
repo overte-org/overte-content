@@ -2,9 +2,6 @@
 	"Animals": {
 		"location": "/Assets/Models/Animals"
 	},
-	"Avatars": {
-		"location": "/Assets/Models/Avatars"
-	},
 	"Buildings": {
 		"location": "/Assets/Models/Buildings"
 	},
