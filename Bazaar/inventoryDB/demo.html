@@ -186,28 +186,52 @@ function getSub($sub) {
                     console.log("Type >> " + JSON.stringify($rec[item].doc.r_type));					
                     if ($rec[item].doc.r_type == "folder") {					
                         $name = $rec[item].doc.name;
-						document.getElementById('modelUL').innerHTML += "<li id='t"+$name+"'><span class='caret'>" +$name + "</span><\li>";
+						document.getElementById('modelUL').innerHTML += "<li id='f_"+$name+"'><span class='caret'>" +$name + "</span><ul id='"+$name+"_nested' class='nested'><ul>";
                         printTree($name)
                     };
                 }
             }
         };
     });
+	document.getElementById('modelUL').innerHTML += "</li>";	
 };		
 
-function printTree(res2){
-    $length = res2.total_rows;			
-	console.log(">>> " + res2);
-	inventoryDB.find({ //Using pouchDB-find
-        selector: {
-		     parent: res2,
-			 r_type: 'folder'
-		}
-	}).then(function (data) {
-            // print to page
+function printTree(res2) {
+    $length = res2.total_rows;
+    inventoryDB.search({
+        query: res2,
+        fields: ['name'],
+        include_docs: true
+    }).then(function (data) {
+        // Send to print as child and check for sub folders
+        $length = data.total_rows;
+        console.log($length);
+        //        while ($i < $length) {
+        for (const key1 of Object.keys(data)) {
+            console.log(">> " + JSON.stringify(key1));
+            console.log("Key " + key1);
+            if (key1 != "total_rows") {
+                $rec1 = data[key1];
+                for (const item of Object.keys($rec1)) {					
+                    if ($rec1[item].doc.r_type == "resource") {			
+						console.log("Name >> " + JSON.stringify($rec1[item].doc.name));
+						console.log("Type >> " + JSON.stringify($rec1[item].doc.r_type));					
+                        $name = $rec1[item].doc.name;
+						$Nid = $rec1[item].doc._id;
+						$Nid = $Nid.replace("r_", "");
+						console.log("Nested " + $Nid);
+						$id = $Nid.charAt(0).toUpperCase() + $Nid.slice(1);
+						$parent = $id+"_nested";
+						console.log("Nested " + $parent);
+						document.getElementById($parent).innerHTML += "<li id='r"+$id+"'>"+$name + "<\li>";
+                    };
+                }
+            }
+        };
     });
-	getSub(res2)	
-}	
+getSub(res2)	
+};
+
 
 // Create a folder in tree
 function makeFolder(res) {
@@ -276,6 +300,7 @@ function openTab(evt, tabName) {
 	// Reset Category Tree ...
 	document.getElementById('modelUL').innerHTML = "";
 	getSub(tabName); 
+	document.getElementById($cTab).className += " active";
 }
 
 // Toggle Tree
@@ -284,6 +309,7 @@ var i;
 
 for (i = 0; i < toggler.length; i++) {
   toggler[i].addEventListener("click", function() {
+    console.log("Clicked " + i);
     this.parentElement.querySelector(".nested").classList.toggle("active");
     this.classList.toggle("caret-down");
   });
