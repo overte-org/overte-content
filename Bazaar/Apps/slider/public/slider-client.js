@@ -34,14 +34,14 @@
             if (eventJSON.app === "slider-client-web") { // This is our web app!
                 // print("inventory.js received a web event: " + event);
         
-                if (eventJSON.command === "ready") {
+                if (eventJSON.command === "ready" || eventJSON.command === "web-to-script-request-sync") {
                     // console.info("Got init request message.");
                     initializeSliderClientApp();
                 }
         
-                if (eventJSON.command === "web-to-script-sync-state") {
+                if (eventJSON.command === "web-to-script-upload-state") {
                     // This data has to be stringified because userData only takes JSON strings and not actual objects.
-                    // console.log("web-to-script-sync-state" + JSON.stringify(eventJSON.data));
+                    // console.log("web-to-script-upload-state" + JSON.stringify(eventJSON.data));
                     presentationChannel = eventJSON.data.presentationChannel;
                     // console.log("########################### SAVING STATE.");
                     saveState(eventJSON.data);
@@ -122,6 +122,7 @@
                     // We got a message that this entity changed a slide, so let's update all instances of this entity for everyone.
                     Script.setTimeout(function () {
                         lastMessageSentOrReceivedData = messageJSON.data;
+                        sendToWeb('script-to-web-latest-slides-checksum', messageJSON.data.slidesChecksum);
                         updateFromStorage();
                         sendToWeb('script-to-web-update-slide-state', messageJSON.data);
                         // console.log("PASSING MESSAGE IN.");
@@ -137,6 +138,7 @@
                 if (messageJSON.data.senderEntityID === _this.entityID && MyAvatar.sessionUUID != sender) {
                     // We got a message that this entity changed a slide, so let's update all instances of this entity for everyone.
                     Script.setTimeout(function () {
+                        sendToWeb('script-to-web-latest-slides-checksum', messageJSON.data.slidesChecksum);
                         updateFromStorage();
                         console.log("PASSING MESSAGE IN.");
                     }, PROCESSING_MSG_DEBOUNCE_TIME);
@@ -191,8 +193,6 @@
                             // console.log("Triggering an update for presentation channel to:" + retrievedUserData.presentationChannel);
                             updatePresentationChannel(result.response.presentationChannel)
                         }
-                        
-                        result.response.atp = retrievedUserData.atp;
 
                         sendToWeb("script-to-web-initialize", { userData: result.response });
                     }
@@ -261,13 +261,14 @@
                     }
                 }
             );
-            
+
+            // Disable reapplying the ATP for now, some weird bug...
             // We want to add the latest ATP state back in whenever syncing.
             var retrievedUserData = Entities.getEntityProperties(_this.entityID).userData;
             if (retrievedUserData != "") {
                 retrievedUserData = JSON.parse(retrievedUserData);
             }
-            
+
             retrievedUserData.atp = data.atp;
             
             Entities.editEntity(_this.entityID, { "userData": JSON.stringify(retrievedUserData) });

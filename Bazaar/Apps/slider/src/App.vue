@@ -409,6 +409,23 @@
         
         <!-- Import Export Data Dialog -->
         
+        <!-- Sync Failed Dialog -->
+
+        <v-dialog v-model="syncFailedDialogShow" persistent>
+            <v-card>
+                <v-toolbar>
+                    <v-toolbar-title>Slides Failed to Sync</v-toolbar-title>
+                    <v-spacer></v-spacer>
+                    <v-btn class="mx-2" color="green darken-1" @click="manuallyAttemptToSync()">Retry</v-btn>
+                </v-toolbar>
+
+                <v-card-title>You can retry syncing the slides yourself.</v-card-title>
+                <v-card-subtitle>Last Received Checksum: {{ lastReceivedSlidesChecksum }}<br/>Current Checksum: {{ stringToHash(JSON.stringify(this.slides)) }}</v-card-subtitle>
+            </v-card>
+        </v-dialog>
+        
+        <!-- Sync Failed Dialog -->
+        
         <v-footer
             color="primary"
             app
@@ -450,15 +467,14 @@ if (!browserDevelopment()) {
 
         receivedCommand = JSON.parse(receivedCommand);
         // alert("RECEIVED COMMAND:" + receivedCommand.command)
-        if (receivedCommand.app === "slider-client-app") {
+        if (receivedCommand.app === 'slider-client-app') {
         // We route the data based on the command given.
             if (receivedCommand.command === 'script-to-web-initialize') {
                 // alert("SLIDES RECEIVED ON APP:" + JSON.stringify(receivedCommand.data));
                 vue_this.initializeWebApp(receivedCommand.data);
             }
-            
+
             if (receivedCommand.command === 'script-to-web-channel') {
-                // alert("SLIDES RECEIVED ON APP:" + JSON.stringify(receivedCommand.data));
                 vue_this.receiveChannelUpdate(receivedCommand.data);
             }
             
@@ -467,13 +483,16 @@ if (!browserDevelopment()) {
             }
             
             if (receivedCommand.command === 'script-to-web-updating-from-storage') {
-                // alert("SLIDES RECEIVED ON APP:" + JSON.stringify(receivedCommand.data));
                 vue_this.isSyncing = true;
             }
             
             if (receivedCommand.command === 'script-to-web-can-edit') {
-                // alert("SLIDES RECEIVED ON APP:" + JSON.stringify(receivedCommand.data));
                 vue_this.canEdit = receivedCommand.data;
+            }
+            
+            if (receivedCommand.command === 'script-to-web-latest-slides-checksum') {
+                console.log("script-to-web-latest-slides-checksum" + JSON.stringify(receivedCommand.data));
+                vue_this.lastReceivedSlidesChecksum = receivedCommand.data;
             }
         }
     });
@@ -541,23 +560,29 @@ export default {
         // Import Export Data Dialog
         importExportDialogShow: false,
         importExportDialogSlideData: '',
+        // Sync Failed Dialog
+        syncFailedDialogShow: false,
         // DEBOUNCER
         readyToSendAgain: true,
         // Sync State
         isSyncing: false,
         isSynced: true,
+        lastReceivedSlidesChecksum: null,
+        timesAttemptedToSync: 0,
+        MAX_ATTEMPTS_TO_SYNC: 3,
+        TIME_BETWEEN_SYNC_ATTEMPTS: 500, // ms
         // Data Handling
         atp: {
             'use': null,
             'path': null
         },
-        canEdit: false
+        canEdit: false,
     }),
     watch: {
         currentSlide: function (newSlide, oldSlide) {
             if (newSlide !== oldSlide) {
                 this.sendSlideChange(newSlide);
-                this.sendSync(this.slides);
+                this.uploadState(this.slides);
             }
         },
         slideChannel: function (newChannel, oldChannel) {
@@ -566,17 +591,18 @@ export default {
             }
         },
         presentationChannel: function () {
-            this.sendSync(this.slides);
+            this.uploadState(this.slides);
         },
         slides: {
             handler: function () {
                 if (this.debounceProcessing() === true) {
-                    this.sendSync(this.slides);
+                    this.uploadState(this.slides);
                 }
             },
             deep: true
         },
         isSyncing: function () {
+            this.canEdit = !this.isSyncing;
             // console.log("Is Syncing: " + this.isSyncing);
         },
         drawer: function (newState) {
@@ -590,7 +616,7 @@ export default {
             // The data should already be parsed.
             // console.log("DATA RECEIVED ON INIT:" + JSON.stringify(data));
             var parsedUserData = data.userData; 
-            
+
             // We are receiving the full slides, including slideChannels within.
             for (let i in parsedUserData.slides) {
                 this.$set(this.slides, i, parsedUserData.slides[i]);
@@ -599,19 +625,18 @@ export default {
             if (parsedUserData.presentationChannel) {
                 this.presentationChannel = parsedUserData.presentationChannel;
             }
-            
+
             if (parsedUserData.currentSlideState) {
                 this.currentSlide = parsedUserData.currentSlideState.currentSlide;
                 this.slideChannel = parsedUserData.currentSlideState.slideChannel;
             }
 
             if (parsedUserData.atp) {
-                // console.log("setting userData for ATP: " + parsedUserData.atp.use + parsedUserData.atp.path);
+                // console.log("setting ATP: " + parsedUserData.atp.use + parsedUserData.atp.path);
                 this.atp = parsedUserData.atp;
             }
-
-            this.isSyncing = false;
-            this.isSynced = true;
+            
+            this.checkIfSynced();
         },
         deleteSlide: function (slideIndex) {
             this.slides[this.slideChannel].splice(slideIndex, 1);
@@ -759,13 +784,48 @@ export default {
         checkForEditRights: function () {
             this.sendAppMessage("web-to-script-check-for-edit-rights", {});
         },
+        checkIfSynced: function () {
+            if (this.lastReceivedSlidesChecksum !== null && this.stringToHash(JSON.stringify(this.slides)) !== this.lastReceivedSlidesChecksum) {
+                this.retrySyncing();
+            } else {
+                this.isSyncing = false;
+                this.syncFailedDialogShow = false;
+                this.isSynced = true;
+            }
+        },
+        retrySyncing: function () {
+            if (this.timesAttemptedToSync < this.MAX_ATTEMPTS_TO_SYNC) {
+                setTimeout(function(){
+                    vue_this.sendAppMessage('web-to-script-request-sync', {});
+                    vue_this.timesAttemptedToSync++;
+                }, vue_this.TIME_BETWEEN_SYNC_ATTEMPTS);
+            } else {
+                this.syncFailedDialogShow = true;
+            }
+        },
+        manuallyAttemptToSync: function () {
+            vue_this.sendAppMessage('web-to-script-request-sync', {});
+        },
+        stringToHash: function (string) {       
+            var hash = 0; 
+
+            if (string.length == 0) return hash; 
+
+            for (var i = 0; i < string.length; i++) { 
+                var char = string.charCodeAt(i); 
+                hash = ((hash << 5) - hash) + char; 
+                hash = hash & hash; 
+            } 
+
+            return hash; 
+        },
         debounceProcessing: function () {
             if (this.readyToSendAgain) {
                 // console.log("Ready.");
                 this.readyToSendAgain = false;
                 setTimeout(function() {
                     vue_this.readyToSendAgain = true;
-                    vue_this.sendSync(this.slides);
+                    vue_this.uploadState(this.slides);
                 }, 1000); // 1 second
                 return true;
             } else {
@@ -773,11 +833,12 @@ export default {
                 return false;
             }
         },
-        sendSync: function (slidesToSync) {
+        uploadState: function (slidesToSync) {
             if (!slidesToSync) {
                 slidesToSync = this.slides;
             }
-            this.sendAppMessage("web-to-script-sync-state", { 
+
+            this.sendAppMessage("web-to-script-upload-state", { 
                 "slides": slidesToSync, 
                 "presentationChannel": this.presentationChannel,
                 "currentSlideState": {
@@ -788,6 +849,8 @@ export default {
             });
         },
         sendAppMessage: function(command, data) {
+            data.slidesChecksum = this.stringToHash(JSON.stringify(this.slides));
+
             var JSONtoSend = {
                 "app": "slider-client-web",
                 "command": command,
@@ -805,7 +868,7 @@ export default {
     created: function () {
         vue_this = this;
         
-        this.sendAppMessage("ready", "");
+        this.sendAppMessage("ready", {});
     }
 }
 </script>
