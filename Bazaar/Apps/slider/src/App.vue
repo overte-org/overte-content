@@ -141,6 +141,7 @@
                 </v-carousel>
             </v-container>
         </v-main>
+
         <!-- End Main Slider Control Area -->
         
         <!-- Add Slide by URL Dialog -->
@@ -420,7 +421,8 @@
                 </v-toolbar>
 
                 <v-card-title>You can retry syncing the slides yourself.</v-card-title>
-                <v-card-subtitle>Last Received Checksum: {{ lastReceivedSlidesChecksum }}<br/>Current Checksum: {{ getCurrentSlidesHash }}</v-card-subtitle>
+                <!-- <v-card-subtitle>Last Received Checksum: {{ lastReceivedSlidesChecksum }}<br/>Current Checksum: {{ computeGetCurrentSlidesHash }}</v-card-subtitle>
+                <v-card-subtitle>{{ computeSlides }}</v-card-subtitle> -->
             </v-card>
         </v-dialog>
         
@@ -508,8 +510,8 @@ export default {
         slides: {
             'default': [
                 {
-                    'slide': './assets/logo.png',
-                    'link': "https://vircadia.com/"
+                    'link': "https://vircadia.com/",
+                    'slide': './assets/logo.png'
                 }
             ]
             // 'Slide Deck 1': [
@@ -569,7 +571,7 @@ export default {
         isSynced: true,
         lastReceivedSlidesChecksum: null,
         timesAttemptedToSync: 0,
-        MAX_ATTEMPTS_TO_SYNC: 3,
+        MAX_ATTEMPTS_TO_SYNC: 7,
         TIME_BETWEEN_SYNC_ATTEMPTS: 500, // ms
         // Data Handling
         atp: {
@@ -578,16 +580,24 @@ export default {
         },
         canEdit: false,
     }),
+    computed: {
+        computeGetCurrentSlidesHash: function () {
+            return this.getCurrentSlidesHash();
+        },
+        computeSlides: function () {
+            return JSON.stringify(this.slides);
+        }
+    },
     watch: {
         currentSlide: function (newSlide, oldSlide) {
             if (newSlide !== oldSlide) {
-                this.sendSlideChange(newSlide);
                 this.uploadState(this.slides);
+                this.sendSlideChange(newSlide);
             }
         },
         slideDeck: function (newDeck, oldDeck) {
             if (newDeck !== oldDeck) {
-                this.sendSlideChange(this.currentSlide);
+                this.currentSlide = 0;
             }
         },
         presentationChannel: function () {
@@ -618,9 +628,7 @@ export default {
             var parsedUserData = data.userData; 
 
             // We are receiving the full slides, including slideDecks within.
-            for (let i in parsedUserData.slides) {
-                this.$set(this.slides, i, parsedUserData.slides[i]);
-            }
+            this.importSlidesFromObject(parsedUserData.slides);
 
             if (parsedUserData.presentationChannel) {
                 this.presentationChannel = parsedUserData.presentationChannel;
@@ -635,7 +643,7 @@ export default {
                 // console.log("setting ATP: " + parsedUserData.atp.use + parsedUserData.atp.path);
                 this.atp = parsedUserData.atp;
             }
-            console.log("THIS.SLIDES%%%%%%%%% : : : " + JSON.stringify(this.slides));
+
             this.checkIfSynced();
         },
         deleteSlide: function (slideIndex) {
@@ -651,15 +659,15 @@ export default {
         addSlideDeck: function () {
             this.$set(this.slides, this.changeSlideDeckDialogText, [
                 {
-                    'slide': './assets/logo.png',
-                    'link': "https://vircadia.com/"
+                    'link': "https://vircadia.com/",
+                    'slide': './assets/logo.png'
                 }
             ]);
         },
         addSlideByURL: function () {
             var objectToPush = {
-                'slide': this.addSlideByURLSlideField,
-                'link': this.addSlideByURLLinkField
+                'link': this.addSlideByURLLinkField,
+                'slide': this.addSlideByURLSlideField
             }
             this.slides[this.slideDeck].push(objectToPush);
             vue_this.currentSlide = vue_this.slides[vue_this.slideDeck].length - 1; // The array starts at 0, so the length will always be +1, so we account for that.
@@ -701,8 +709,8 @@ export default {
                     vue_this.uploadSlidesDialogFiles = null; // Reset the file upload dialog field.
                     vue_this.uploadProcessingOverlay = false;
                     var objectToPush = {
-                        'slide': result.data.display_url,
-                        'link': ""
+                        'link': '',
+                        'slide': result.data.display_url
                     }
                     vue_this.slides[vue_this.slideDeck].push(objectToPush);
                     vue_this.currentSlide = vue_this.slides[vue_this.slideDeck].length - 1; // The array starts at 0, so the length will always be +1, so we account for that.
@@ -749,10 +757,16 @@ export default {
         },
         importSlideDataFromDialog: function () {
             if (JSON.parse(this.importExportDialogSlideData)) {
-                this.slides = JSON.parse(this.importExportDialogSlideData);
+                this.importSlidesFromObject(JSON.parse(this.importExportDialogSlideData));
             }
         },
         // END Import Export Data Dialog
+        importSlidesFromObject: function (objectToImport) {
+            this.slideDeck = Object.getOwnPropertyNames(objectToImport)[0];
+            for (let i in objectToImport) {
+                this.$set(this.slides, i, objectToImport[i]);
+            }
+        },
         changePresentationChannel: function () {
             this.presentationChannel = this.changePresentationChannelDialogText;
             this.changePresentationChannelDialogText = '';
@@ -874,7 +888,7 @@ export default {
     },
     created: function () {
         vue_this = this;
-        console.log("THIS.SLIDES%%%%%%%%% : : : " + JSON.stringify(this.slides));
+
         this.sendAppMessage("ready", {});
     }
 }

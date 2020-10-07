@@ -33,7 +33,7 @@
             var eventJSON = JSON.parse(event);
             if (eventJSON.app === "slider-client-web") { // This is our web app!
                 // print("inventory.js received a web event: " + event);
-        
+                // Window.alert("Sending... " + eventJSON.data.slidesChecksum);
                 if (eventJSON.command === "ready" || eventJSON.command === "web-to-script-request-sync") {
                     // console.info("Got init request message.");
                     initializeSliderClientApp();
@@ -121,6 +121,7 @@
                 if (messageJSON.data.senderEntityID === _this.entityID && MyAvatar.sessionUUID != sender) {
                     // We got a message that this entity changed a slide, so let's update all instances of this entity for everyone.
                     Script.setTimeout(function () {
+                        // Window.alert("Receiving... " + messageJSON.data.slidesChecksum);
                         lastMessageSentOrReceivedData = messageJSON.data;
                         sendToWeb('script-to-web-latest-slides-checksum', messageJSON.data.slidesChecksum);
                         updateFromStorage();
@@ -138,6 +139,7 @@
                 if (messageJSON.data.senderEntityID === _this.entityID && MyAvatar.sessionUUID != sender) {
                     // We got a message that this entity changed a slide, so let's update all instances of this entity for everyone.
                     Script.setTimeout(function () {
+                        Window.alert("Receiving... " + messageJSON.data.slidesChecksum);
                         sendToWeb('script-to-web-latest-slides-checksum', messageJSON.data.slidesChecksum);
                         updateFromStorage();
                         console.log("PASSING MESSAGE IN.");
