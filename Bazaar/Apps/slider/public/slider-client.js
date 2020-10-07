@@ -153,14 +153,16 @@
     // FUNCTIONS
     
     function updateFromStorage () {
+        sendToWeb("script-to-web-updating-from-storage", "");
+
         var retrievedUserData = Entities.getEntityProperties(_this.entityID).userData;
         if (retrievedUserData != "") {
             retrievedUserData = JSON.parse(retrievedUserData);
         }
-        
+
         // console.log("THIS IS OUR RETRIEVAL PATH: " + retrievedUserData.atp.path);
         // console.log("IS VALID PATH: " + Assets.isValidFilePath(retrievedUserData.atp.path));
-        
+
         if (retrievedUserData.atp && retrievedUserData.atp.use === true) {
             Assets.getAsset(
                 {
@@ -219,7 +221,7 @@
             // console.log("Not ready.");
             return false;
         }
-    };
+    }
     
     function updatePresentationChannel (newChannel) {
         Messages.unsubscribe(presentationChannel);

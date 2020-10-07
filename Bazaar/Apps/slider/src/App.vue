@@ -398,7 +398,21 @@
             color="primary"
             app
         >
-            <span class="">Current Slide Deck: <b>{{ slideChannel }}</b></span>
+            <span>Current Slide Deck: <b>{{ slideChannel }}</b></span>
+            <v-spacer></v-spacer>
+            <span v-text="isSyncing ? 'Syncing Data' : 'Synced'" class="mr-2"></span>
+            <v-progress-circular
+                v-show="isSyncing"
+                indeterminate
+                color="red"
+            ></v-progress-circular>
+            <v-icon
+                v-show="!isSyncing && isSynced"
+                large
+                color="green"
+            >
+                mdi-check-bold
+            </v-icon>
         </v-footer>
     </v-app>
 </template>
@@ -435,6 +449,11 @@ if (!browserDevelopment()) {
             
             if (receivedCommand.command === 'script-to-web-update-slide-state') {
                 vue_this.updateSlideState(receivedCommand.data);
+            }
+            
+            if (receivedCommand.command === 'script-to-web-updating-from-storage') {
+                // alert("SLIDES RECEIVED ON APP:" + JSON.stringify(receivedCommand.data));
+                vue_this.isSyncing = true;
             }
         }
     });
@@ -507,7 +526,10 @@ export default {
         importExportDialogShow: false,
         importExportDialogSlideData: '',
         // DEBOUNCER
-        readyToSendAgain: true
+        readyToSendAgain: true,
+        // Sync State
+        isSyncing: false,
+        isSynced: true
     }),
     watch: {
         currentSlide: function (newSlide, oldSlide) {
@@ -531,6 +553,9 @@ export default {
                 }
             },
             deep: true
+        },
+        isSyncing: function () {
+            // console.log("Is Syncing: " + this.isSyncing);
         }
     },
     methods: {
@@ -557,6 +582,9 @@ export default {
                 // console.log("setting userData for ATP: " + parsedUserData.atp.use + parsedUserData.atp.path);
                 this.atp = parsedUserData.atp;
             }
+
+            this.isSyncing = false;
+            this.isSynced = true;
         },
         deleteSlide: function (slideIndex) {
             this.slides[this.slideChannel].splice(slideIndex, 1);
