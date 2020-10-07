@@ -18,7 +18,7 @@
         >
             <v-list>
                 <v-subheader>ADD</v-subheader>
-                <v-list-item link @click="addSlidesByURLDialogShow = !addSlidesByURLDialogShow">
+                <v-list-item :disabled="!canEdit" link @click="addSlidesByURLDialogShow = !addSlidesByURLDialogShow">
                     <v-list-item-action>
                     <v-icon>mdi-plus</v-icon>
                     </v-list-item-action>
@@ -35,7 +35,7 @@
                     </v-list-item-content>
                 </v-list-item>
                 <v-subheader>MANAGE</v-subheader>
-                <v-list-item link @click="manageSlidesDialogShow = !manageSlidesDialogShow">
+                <v-list-item :disabled="!canEdit" link @click="manageSlidesDialogShow = !manageSlidesDialogShow">
                     <v-list-item-action>
                     <v-icon>mdi-pencil</v-icon>
                     </v-list-item-action>
@@ -43,7 +43,7 @@
                         <v-list-item-title>Manage Slides</v-list-item-title>
                     </v-list-item-content>
                 </v-list-item>
-                <v-list-item link @click="changeSlideChannelDialogShow = !changeSlideChannelDialogShow">
+                <v-list-item :disabled="!canEdit" link @click="changeSlideChannelDialogShow = !changeSlideChannelDialogShow">
                     <v-list-item-action>
                     <v-icon>mdi-database</v-icon>
                     </v-list-item-action>
@@ -52,7 +52,7 @@
                     </v-list-item-content>
                 </v-list-item>
                 <v-subheader>DISPLAY</v-subheader>
-                <v-list-item link @click="changePresentationChannelDialogShow = !changePresentationChannelDialogShow">
+                <v-list-item :disabled="!canEdit" link @click="changePresentationChannelDialogShow = !changePresentationChannelDialogShow">
                     <v-list-item-action>
                     <v-icon>mdi-remote</v-icon>
                     </v-list-item-action>
@@ -61,7 +61,7 @@
                     </v-list-item-content>
                 </v-list-item>
                 <v-subheader>IMPORT/EXPORT</v-subheader>
-                <v-list-item link @click="importExportDialogShow = !importExportDialogShow; parseSlideDataIntoDialog()">
+                <v-list-item :disabled="!canEdit" link @click="importExportDialogShow = !importExportDialogShow; parseSlideDataIntoDialog()">
                     <v-list-item-action>
                     <v-icon>mdi-swap-vertical-bold</v-icon>
                     </v-list-item-action>
@@ -81,11 +81,21 @@
             <v-toolbar-title>Presenter Panel</v-toolbar-title>
             <v-spacer></v-spacer>
             <div v-show="slides[slideChannel].length > 0">
-                <v-btn medium fab @click="currentSlide--">
+                <v-btn 
+                    :disabled="!canEdit" 
+                    medium 
+                    fab 
+                    @click="currentSlide--"
+                >
                     <v-icon>mdi-arrow-left</v-icon>
                 </v-btn>
                 <span class="mx-4">{{ currentSlide + 1 }} / {{ slides[slideChannel].length }}</span>
-                <v-btn medium fab @click="currentSlide++">
+                <v-btn 
+                    :disabled="!canEdit" 
+                    medium 
+                    fab 
+                    @click="currentSlide++"
+                >
                     <v-icon>mdi-arrow-right</v-icon>
                 </v-btn>
             </div>
@@ -98,7 +108,12 @@
                 class="fill-height"
                 fluid
             >
-                <v-carousel v-model="currentSlide" height="100%">
+                <v-carousel 
+                    v-model="currentSlide" 
+                    height="100%"
+                    :hide-delimiters="!canEdit"
+                    :show-arrows="canEdit"
+                >
                     <v-carousel-item
                         v-for="(slide, index) in slides[slideChannel]"
                         track-by="$index"
@@ -455,6 +470,11 @@ if (!browserDevelopment()) {
                 // alert("SLIDES RECEIVED ON APP:" + JSON.stringify(receivedCommand.data));
                 vue_this.isSyncing = true;
             }
+            
+            if (receivedCommand.command === 'script-to-web-can-edit') {
+                // alert("SLIDES RECEIVED ON APP:" + JSON.stringify(receivedCommand.data));
+                vue_this.canEdit = receivedCommand.data;
+            }
         }
     });
 }
@@ -485,10 +505,6 @@ export default {
             //     'https://images3.alphacoders.com/729/729085.jpg',
             //     'https://mangadex.org/images/groups/9766.jpg?1572281708'
             // ]
-        },
-        atp: {
-            'use': null,
-            'path': null
         },
         currentSlide: 0,
         presentationChannel: 'default-presentation-channel',
@@ -529,7 +545,13 @@ export default {
         readyToSendAgain: true,
         // Sync State
         isSyncing: false,
-        isSynced: true
+        isSynced: true,
+        // Data Handling
+        atp: {
+            'use': null,
+            'path': null
+        },
+        canEdit: false
     }),
     watch: {
         currentSlide: function (newSlide, oldSlide) {
@@ -556,6 +578,11 @@ export default {
         },
         isSyncing: function () {
             // console.log("Is Syncing: " + this.isSyncing);
+        },
+        drawer: function (newState) {
+            if (newState === true) {
+                this.checkForEditRights();
+            }
         }
     },
     methods: {
@@ -728,6 +755,9 @@ export default {
         },
         sendNoticeToUpdateState: function () {
             this.sendAppMessage("web-to-script-notify-to-update", {});
+        },
+        checkForEditRights: function () {
+            this.sendAppMessage("web-to-script-check-for-edit-rights", {});
         },
         debounceProcessing: function () {
             if (this.readyToSendAgain) {

@@ -63,6 +63,10 @@
                     }
                     sendMessage(dataPacket);
                 }
+                
+                if (eventJSON.command === "web-to-script-check-for-edit-rights") {
+                    sendToWeb("script-to-web-can-edit", canEdit());
+                }
             }
         }
     }
@@ -206,7 +210,12 @@
     }
     
     function initializeSliderClientApp () {
+        sendToWeb("script-to-web-can-edit", canEdit());
         updateFromStorage();
+    }
+    
+    function canEdit () {
+        return Entities.canWriteAssets();
     }
     
     function debounceSend() {
@@ -231,6 +240,10 @@
     
     function saveState (data) {
         // console.log("SAVING STATE: " + JSON.stringify(data));
+        if (!canEdit()) {
+            return;    
+        }
+
         if (data.atp && data.atp.use === true) {
             // If ATP is activated, save there...
             // console.log("SAVING TO ATP!");
