@@ -91,7 +91,7 @@
             if (lastMessageSentOrReceivedData) {
                 // console.log("CLEAR 1");
                 if (dataToSend.data.currentSlide != lastMessageSentOrReceivedData.currentSlide ||
-                    dataToSend.data.slideChannel != lastMessageSentOrReceivedData.slideChannel ||
+                    dataToSend.data.slideDeck != lastMessageSentOrReceivedData.slideDeck ||
                     dataToSend.data.slide.slide != lastMessageSentOrReceivedData.slide.slide
                 ) {
                     // console.log("CLEAR 2: SENDING");
