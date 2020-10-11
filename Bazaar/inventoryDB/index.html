@@ -42,6 +42,29 @@
 
 <p>The script searches recursively for an index.json.  The index.json tells the script what folders exist in each subfolder provided. When the app does not find an index.json in a folder it looks for a package.json file.  The package.json file tells the app what kind of resource is in this folder and provides details for accessing it.  Categories and subcategories are created from the index.json files. These categories are populated with resources based upon what is provided in the package.json files.  All this information is written to an in memory database. It's this database that we will export and upload to your file repository.</p>
 
+<p>The database holds two types of records, folder and resource.  The fields are as below:</p>
+
+<pre>
+var folders = {
+  "_id": "bazaar",
+  "r_type": "folder";
+  "name": "Bazaar",
+  "parent": "repo",
+  "type": "index",
+  "path": "https://"
+};
+
+var resource = {
+  "_id": "kim",
+  "r_type": "resource";
+  "name": "Kim",
+  "parent": "Avatars",
+  "type": "avatar",
+  "path": "https://",
+  "tags": ["Female","Avatar"]
+};
+</pre>
+
 <h3>Understanding Errors</h3>
 
 </p>Watch the results of this script in the browser console. If no index.json or package.json is present you will see GET errors in the console. This is to be expected. What you do need to look for in your console are JSON errors. If you get a JSON parse error you will need to run your json file in a json validator or lint to determine why... Failure to provide properly formed json will result in inaccurate or incomplete data in the inventory app. If you have to correct your JSON, just re-run the download script afterwards and update your repository with the new GZ file. Uncaught (in promise) errors occur when you are trying to load a record that already exists. <font color=red>You will need to flush your cache before you reset this page.</font> 
@@ -64,7 +87,11 @@ This will whipe the database and you will be loading it freshly.</p>
 <hr>
 If you have any questions about this repository or scripts feel free to ask in the <a target="_blank" href="https://discord.com/channels/564926326025224212/710570540129320971">Vircadia Discord channel.</a>
 <hr>
-<br>
+<h3>References</h3>
+<a href="https://pouchdb.com/" target="_blank">PouchDB</a><br>
+<a href="https://github.com/pouchdb-community/pouchdb-quick-search" target="_blank">pouchdb-quick-search</a><br>
+<a href="https://github.com/nolanlawson/pouchdb-find" target="_blank">pouchdb-find</a><br> 
+<a href="https://github.com/nodeca/pako" target="_blank">pako</a><br><br><br><br>
 </body>
 
 <script type="text/javascript" src="pouchdb-7.2.1.min.js"></script>
@@ -115,11 +142,15 @@ function mkDB() {
     var $data = getJSON($index);
     var $obj = JSON.parse($data);
     for (key in $obj) {
-        $id = key.toLowerCase();
+	    $name = key;
+		key = key.replace(/-/g, "_");
+		key = key.toLowerCase().replace(/\s/g, "_");
+		key = key.replace(/'/, "_");
+        $id = "f_"+key;		
         var folders = {
             "_id": $id,
             "r_type": "folder",
-            "name": key,
+            "name": $name,
             "parent": "Bazzar",
             "type": "index",
             "path": $repo + "/" + key
@@ -167,7 +198,6 @@ function getJSON($url) {
     }
 
 };
-
 // Lower level indexes are parsed here
 // If not found look for and parse resource.json
 function sub($obj) {
@@ -201,8 +231,10 @@ function parseresource($data, $path) {
     var $tags = $obj.keywords;
     let $subindex = $path + "/resource.json";
     var cat = $subindex.match(/.*\/(.*)\/(.*)\/.*$/);
-    var $Parent = cat[1];
+    var $Parent = "f_" + cat[1];
     var $id = "r_" + cat[2];
+	var $url = $path;
+	$name = cat[2];	
     console.log($Parent + " -> " + $id);
     console.log($subindex);
     $id = $id.toLowerCase();
@@ -212,7 +244,7 @@ function parseresource($data, $path) {
         "name": $name,
         "parent": $Parent,
         "type": $type,
-        "path": $path,
+        "path": $url,
 		"tags": $tags
     };
 	$path = "";
@@ -226,17 +258,20 @@ function parseIndex($data) {
     var $obj = JSON.parse($data);
     for (key in $obj) {
         let $subindex = $repo + $obj[key].location + "/index.json";
-        var cat = $subindex.match(/.*\/(.*)\/.*\/.*$/);
+        var cat = $subindex.match(/.*\/(.*)\/(.*)\/.*$/);
         var $Parent = cat[1];
-        console.log($Parent + " -> " + key);
-        $id = key.toLowerCase();
+        console.log($Parent + " -> " + cat[1]);
+		console.log($name + " -> " + cat[2]);
+		var $id = "f_" + cat[2];
+		var $url = $repo + "/" + cat[1] + "/" + cat[2];
+		$name = cat[2];
         var folders = {
             "_id": $id,
             "r_type": "folder",
-            "name": key,
+            "name": $name,
             "parent": $Parent,
             "type": "index",
-            "path": $repo + "/" + key
+            "path": $url
         };
         inventoryDB.put(folders);
         console.log(folders);

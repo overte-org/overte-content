@@ -1,0 +1,42 @@
+{
+    "name": "Woody",
+    "version": "1.0.0",
+    "description": "Woody is the default Vircadia avatar.",
+    "homepage": "http://www.vircadia.com",
+    "bugs": "",
+    "keywords": [
+        "Manniquin",
+		"Avatar",
+		"Default"
+    ],
+    "icon": "img/icon.png",
+    "images": [
+        "img/woody.jpg"
+    ],
+    "author": {
+        "name": "High Fidelity",
+        "email": "",
+        "url": "http://www.highfidelity.com",
+        "license": "Apache 2.0"		
+    },
+    "sublicense": [
+	],	
+    "contributors": [
+        {
+            "name": "Haptic Monkey",
+            "url": "https://hapticmonkey.com"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/whatever/testing.git"
+    },
+    "main": "fbx/woody.fst",
+    "type": "model",
+    "meta": {
+    },
+    "dependencies": {       
+    },
+    "engines": {
+    }
+}
