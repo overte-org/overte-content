@@ -1,0 +1,11 @@
+{
+	"Broom": {
+		"location": "/Assets/Models/Misc/broom"
+	},
+	"Pencil": {
+		"location": "/Assets/Models/Misc/pencil"
+	},
+	"SilverShop": {
+		"location": "/Assets/Models/Misc/silvershop"
+	}
+}

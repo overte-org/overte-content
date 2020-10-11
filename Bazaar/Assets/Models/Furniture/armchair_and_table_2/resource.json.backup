@@ -1,0 +1,41 @@
+{
+    "name": "Armchair and Table 2",
+    "version": "1.0.0",
+    "description": "A small dining table and chair.",
+    "homepage": "http://www.vircadia.com",
+    "bugs": "",
+    "keywords": [
+        "Dining Table",
+		"Chair"
+    ],
+    "icon": "img/icon.png",
+    "images": [
+        "img/armchair_and_table2.jpg"
+    ],
+    "author": {
+        "name": "Scopia Visual Interfaces Systems",
+        "email": "joe@whatever.com",
+        "url": "http://www.scopia.es",
+        "license": "CC BY 3.0"		
+    },
+    "sublicense": [
+	],	
+    "contributors": [
+        {
+            "name": "Haptic Monkey",
+            "url": "https://hapticmonkey.com"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/whatever/testing.git"
+    },
+    "main": "gltf/armchair_and_table2.glb",
+    "type": "model",
+    "meta": {
+    },
+    "dependencies": {       
+    },
+    "engines": {
+    }
+}

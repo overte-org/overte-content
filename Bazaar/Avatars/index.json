@@ -1,23 +1,23 @@
 {
 	"Kim": {
-		"location": "/Avatars/Kim"
+		"location": "/Avatars/kim"
 	},
 	"Mason": {
-		"location": "/Avatars/Mason"
+		"location": "/Avatars/mason"
 	},
 	"Mike": {
-		"location": "/Avatars/Mike"
+		"location": "/Avatars/mike"
 	},
 	"Sean": {
-		"location": "/Avatars/Sean"
+		"location": "/Avatars/sean"
 	},
 	"Summer": {
-		"location": "/Avatars/Summer"
+		"location": "/Avatars/summer"
 	},
 	"Tanya": {
-		"location": "/Avatars/Tanya"
+		"location": "/Avatars/tanya"
 	},
     "Woody": {
-		"location": "/Avatars/Woody"
+		"location": "/Avatars/woody"
 	}
 }

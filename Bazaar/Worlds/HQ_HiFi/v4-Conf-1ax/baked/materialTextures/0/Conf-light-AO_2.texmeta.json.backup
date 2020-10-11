@@ -1,0 +1,9 @@
+{
+    "compressed": {
+        "COMPRESSED_SRGB8_ALPHA8_ETC2_EAC": "Conf-light-AO_2_COMPRESSED_SRGB8_ALPHA8_ETC2_EAC.ktx",
+        "COMPRESSED_SRGB_S3TC_DXT1_EXT": "Conf-light-AO_2_COMPRESSED_SRGB_S3TC_DXT1_EXT.ktx"
+    },
+    "original": "Conf-light-AO_2.jpg",
+    "uncompressed": "",
+    "version": 1
+}

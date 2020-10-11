@@ -1,0 +1,9 @@
+{
+    "compressed": {
+        "COMPRESSED_R11_EAC": "pk02_wall02a_H-512_7_COMPRESSED_R11_EAC.ktx",
+        "COMPRESSED_RED_RGTC1": "pk02_wall02a_H-512_7_COMPRESSED_RED_RGTC1.ktx"
+    },
+    "original": "pk02_wall02a_H-512_7.png",
+    "uncompressed": "",
+    "version": 1
+}

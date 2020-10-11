@@ -90,7 +90,9 @@ ul, #myUL {
 <div id="tcat" class="tab"></div>
 <div id="dump"></div>
 <h3>Category Tree</h3>
-<div id="treecat" class="tab"><ul id="modelUL"></ul></div>
+<div id="treecat" class="tab"><ul id="folderUL"></ul></div>
+<h3>Category Avatars</h3>
+<div id="avatars"></div>
 </body>
 <!-- You can link these scripts to the repository files in your program. Example: -->
 <!-- script type="text/javascript" src="https://yourRepo.s3-us-west-1.amazonaws.com/repo/Bazaar/inventoryDB/pako.min.js"></script -->
@@ -108,12 +110,13 @@ ul, #myUL {
 //  See the accompanying file LICENSE or http://www.apache.org/licenses/LICENSE-2.0.html
 //
 //
-
+// https://hapticmonkey.s3-us-west-1.amazonaws.com/repo/Bazaar
 // Create in memory DB, call it "inventory"
 var inventoryDB = new PouchDB('inventory');
 
 // Import exported GZ file
-data = Get("https://hapticmonkey.s3-us-west-1.amazonaws.com/repo/Bazaar/inventoryDB/inventoryDB.gz");
+let $repo = "https://hapticmonkey.s3-us-west-1.amazonaws.com/repo/Bazaar"
+data = Get($repo + "/inventoryDB/inventoryDB.gz");
 
 // Unzip import and load into inventoryDB
 function mkDB(data) {
@@ -143,7 +146,6 @@ inventoryDB.info().then(function (info) {
     var records = info.doc_count;
     infoDiv.innerHTML += "Database Name: " + dbName + "<br>";
     infoDiv.innerHTML += "Total Records: " + records + "<br>";
-    console.log(info);
 })
 
 
@@ -151,7 +153,8 @@ inventoryDB.info().then(function (info) {
 function getTcat() {
     inventoryDB.search({
         query: 'Bazzar',
-        fields: ['parent']
+        fields: ['parent'],
+        include_docs: true
     }).then(function (res) {
         printCats(res)
     });
@@ -159,11 +162,9 @@ function getTcat() {
 };
 
 // DB Function to get sub-categories from a given Category
-function getSub($sub) {
-    console.log("> " + JSON.stringify($sub));
+function getSub($sub, $cat) {
     if (typeof $sub === 'object') {
         $sub = $sub.docs[0].name
-            console.log("> " + JSON.stringify($sub));
     };
     var subCatDiv = document.getElementById('tLevel');
     // Find all folders who call this parent
@@ -174,29 +175,45 @@ function getSub($sub) {
     }).then(function (res) {
         // Send to print as child and check for sub folders
         $length = res.total_rows;
-        console.log($length);
         //        while ($i < $length) {
         for (const key of Object.keys(res)) {
-            console.log("> " + JSON.stringify(key));
-            console.log("Key " + key);
             if (key != "total_rows") {
                 $rec = res[key];
-                for (const item of Object.keys($rec)) {
-                    console.log("Name >> " + JSON.stringify($rec[item].doc.name));
-                    console.log("Type >> " + JSON.stringify($rec[item].doc.r_type));					
-                    if ($rec[item].doc.r_type == "folder") {					
-                        $name = $rec[item].doc.name;
-						document.getElementById('modelUL').innerHTML += "<li id='f_"+$name+"'><span class='caret'>" +$name + "</span><ul id='"+$name+"_nested' class='nested'><ul>";
-                        printTree($name)
-                    };
+                for (const item of Object.keys($rec)) {                   
+                    if ($rec[item].doc.r_type == "folder") {
+						$parent = $rec[item].doc.parent;
+						$lparent = $parent.replace(/-/g, "_");
+						$lparent = $lparent.replace(/'/g, "_");
+						$name = $rec[item].doc.name;
+						$pname = $name.replace(/_/g, " ");						
+						$pname = $pname[0].toUpperCase() + $name.substr(1);
+						$pname = $pname.replace(/_/g, " ");						
+						$lname = "f_" + $name + "_nested";							
+						$id = $rec[item].doc._id;
+						if ($parent == $cat){$folderUL = "folderUL"}else{$folderUL = "f_"+$parent+"_nested"};
+                        document.getElementById($folderUL).innerHTML += "<li id='" + $id + "'><span class='caret'>" + $pname + "</span><ul id='" + $lname + "' class='nested'><ul>";
+	                    printTree($name, $cat)
+                    };						
                 }
             }
         };
     });
-	document.getElementById('modelUL').innerHTML += "</li>";	
-};		
+    document.getElementById('folderUL').innerHTML += "</li>";
 
-function printTree(res2) {
+    // Toggle Tree
+    var toggler = document.getElementsByClassName("caret");
+    var i;
+
+    for (i = 0; i < toggler.length; i++) {
+        toggler[i].addEventListener("click", function () {
+            this.parentElement.querySelector(".nested").classList.toggle("active");
+            this.classList.toggle("caret-down");
+        }, true);
+    }
+
+};
+
+function printTree(res2, $cat) {
     $length = res2.total_rows;
     inventoryDB.search({
         query: res2,
@@ -204,49 +221,46 @@ function printTree(res2) {
         include_docs: true
     }).then(function (data) {
         // Send to print as child and check for sub folders
-        $length = data.total_rows;
-        console.log($length);
-        //        while ($i < $length) {
         for (const key1 of Object.keys(data)) {
-            console.log(">> " + JSON.stringify(key1));
-            console.log("Key " + key1);
             if (key1 != "total_rows") {
                 $rec1 = data[key1];
-                for (const item of Object.keys($rec1)) {					
-                    if ($rec1[item].doc.r_type == "resource") {			
-						console.log("Name >> " + JSON.stringify($rec1[item].doc.name));
-						console.log("Type >> " + JSON.stringify($rec1[item].doc.r_type));					
+                for (const item of Object.keys($rec1)) {
+                    var $path = $rec1[item].doc.path.match(/.*\/(.*)\/(.*)$/);
+                    var $parent = $rec1[item].doc.parent;
+                    if ($rec1[item].doc.r_type == "resource") {
                         $name = $rec1[item].doc.name;
-						$Nid = $rec1[item].doc._id;
-						$Nid = $Nid.replace("r_", "");
-						console.log("Nested " + $Nid);
-						$id = $Nid.charAt(0).toUpperCase() + $Nid.slice(1);
-						$parent = $id+"_nested";
-						console.log("Nested " + $parent);
-						document.getElementById($parent).innerHTML += "<li id='r"+$id+"'>"+$name + "<\li>";
+                        $id = $rec1[item].doc._id;
+                        $pname = $name[0].toUpperCase() + $name.substr(1);
+                        $parent = "f_" + $name + "_nested";
+                        var $path = $rec1[item].doc.path;
+                        console.log($path)
+                        // Get the model JSON and parse it...
+                        $modelData = Get($path + "/resource.json");
+                        $model = JSON.parse($modelData)
+                            $description = $model.description;
+                        $author = $model.author.name;
+                        $license = $model.author.license;
+                        $sublicense = $model.sublicense;
+						$subs = "";
+                        for ($a = 0; $a < $sublicense.length; $a++) {
+                            var $slicense = $sublicense[$a].license;
+                            var $sname = $sublicense[$a].name;
+							
+                            if (!$sname.includes("undefined")) {
+                                var $subs = $slicense + " " + $sname + " | " + $subs;
+                            }
+                        }
+                        // icon.png is only 90px wide so we bump it up
+                        document.getElementById($parent).innerHTML += "<table><tr><td style='padding: 15px;vertical-align: top;'><img width='150px' height='auto' src = '" + $path + "/img/icon.png'></td><td style='padding: 15px;vertical-align: top;'>" + $description + "<br>" + $license + " " + $author + "</td></tr><tr><td colspan='2'><p>" + $subs + "</p></td></tr></table>";
+                        $subs = "";
                     };
+
                 }
             }
         };
     });
-getSub(res2)	
+    getSub(res2, $cat)
 };
-
-
-// Create a folder in tree
-function makeFolder(res) {
-    var subCatDiv = document.getElementById('treecat');
-	    $name = res.docs[0].name;	
-        console.log($name);		
-        getSub($name);
-    };
-
-
-// Create a resource in tree
-function makeResorce($resid){
-	var subCatDiv = document.getElementById('treecat');
-}
-
 
 // Create top level tabs
 function printCats(res) {
@@ -255,10 +269,9 @@ function printCats(res) {
 	$length = res.total_rows;	
     $i = 0;
     while ($i < $length) {
-        $cat = res.rows[$i].id;
+        $cat = res.rows[$i].doc.name;
         $Cat = $cat[0].toUpperCase() + $cat.substr(1);
         $cTab = $cat + $i;
-        console.log($Cat + " " + $cTab);
         // Add tabs
         topCatDiv.innerHTML += "<button id=\"" + $cTab + "\" class=\"tablinks\" onclick=\"openTab(event, '" + $Cat + "')\">" + $Cat + "</button>";
         // Build blocks for content
@@ -270,8 +283,6 @@ function printCats(res) {
         }
         $i = $i + 1;
     };
-    console.log();
-    console.log("--------------------");
 };
 
 // Tab Support
@@ -298,29 +309,63 @@ function openTab(evt, tabName) {
     evt.currentTarget.className += " active";
     
 	// Reset Category Tree ...
-	document.getElementById('modelUL').innerHTML = "";
-	getSub(tabName); 
+	document.getElementById('folderUL').innerHTML = "";
+	$cat = tabName;
+	getSub(tabName, $cat); 
 	document.getElementById($cTab).className += " active";
 }
 
-// Toggle Tree
-var toggler = document.getElementsByClassName("caret");
-var i;
-
-for (i = 0; i < toggler.length; i++) {
-  toggler[i].addEventListener("click", function() {
-    console.log("Clicked " + i);
-    this.parentElement.querySelector(".nested").classList.toggle("active");
-    this.classList.toggle("caret-down");
-  });
+// Get all models under parent (Category)
+function getAvatars(){
+    inventoryDB.search({
+        query: 'Avatars',
+        fields: ['parent'],
+        include_docs: true
+    }).then(function (data) {
+	  displayAvatars(data);
+	});
 }
+
+// Display avatars
+function displayAvatars(data){
+    $length = data.total_rows;
+	$i = 0;
+	while ($i < $length) {
+	  $aurl = data.rows[$i].doc.path;
+	  $apath = data.rows[$i].doc.path + "/resource.json";
+	  $adata = Get($apath);
+	  if (!$adata.includes("<Error>")){
+		$aresource = JSON.parse($adata);
+		$aname = $aresource.name;
+		$adescription = $aresource.description;
+		$aversion = $aresource.version;
+		$apic = $aurl + "/" + $aresource.images;
+		$aauthor = $aresource.author.name;
+		$alicense = $aresource.author.license;
+		$asublicense = $aresource.sublicense;
+		$acontributor = $aresource.contributors.name;
+		$amain = $aurl + "/" +$aresource.main;
+		var $subs;
+		for ($a = 0; $a < $asublicense.length; $a++) {
+		  console.log(JSON.stringify($asublicense[$a]))
+		  var $slicense = $asublicense[$a].license;
+		  var $sname = $asublicense[$a].name;
+		  if($sname != "undefined"){
+			$subs = $slicense + " " + $sname + " | " + $subs;
+		  }
+		}
+document.getElementById("avatars").innerHTML += "<span style='display: inline-block; border: 2px solid black;' width='500px'><table border='0' width='500px'><tr><td style='padding: 15px;vertical-align: top;'><center><img width='90%' height='auto' src = '"+$apic+"'></center></td></tr><tr><td style='padding: 15px;vertical-align: top;'><a href='"+$amain+"'>"+$aname+"</a> version: "+$aversion+" - "+$adescription+"<br>"+$alicense+" "+$aauthor+"</td></tr><tr><td style='padding: 15px;vertical-align: top;'>"+$subs+"</td></tr></table></span><br><br>";
+		$subs = "";
+	  }
+	  $i++;
+	};
+};
 
 // Call function to load DB
 mkDB(data);
 // Call to create top level categories
 getTcat();
-// Call to create sub-category tree from a given category
-//$sub = "Models"
-//getSub($sub) 
+// Call to display Avatars
+getAvatars();
 </script>
 </html>

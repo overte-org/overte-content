@@ -1,0 +1,9 @@
+{
+    "compressed": {
+        "COMPRESSED_RG11_EAC": "lambert1_Normal_OpenGL_3_COMPRESSED_RG11_EAC.ktx",
+        "COMPRESSED_RG_RGTC2": "lambert1_Normal_OpenGL_3_COMPRESSED_RG_RGTC2.ktx"
+    },
+    "original": "lambert1_Normal_OpenGL_3.png",
+    "uncompressed": "",
+    "version": 1
+}
