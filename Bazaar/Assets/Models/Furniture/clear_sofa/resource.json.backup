@@ -1,0 +1,41 @@
+{
+    "name": "Clear Sofa",
+    "version": "1.0.0",
+    "description": "A beige sofa with tan pillows and a foot stool.",
+    "homepage": "http://www.vircadia.com",
+    "bugs": "",
+    "keywords": [
+        "Sofa",
+		"Foot Stool"
+    ],
+    "icon": "img/icon.png",
+    "images": [
+        "img/clear_sofa.jpg"
+    ],
+    "author": {
+        "name": "Scopia Visual Interfaces Systems",
+        "email": "joe@whatever.com",
+        "url": "http://www.scopia.es",
+        "license": "CC BY 3.0"		
+    },
+    "sublicense": [
+	],	
+    "contributors": [
+        {
+            "name": "Haptic Monkey",
+            "url": "https://hapticmonkey.com"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/whatever/testing.git"
+    },
+    "main": "gltf/clear_sofa.glb",
+    "type": "model",
+    "meta": {
+    },
+    "dependencies": {       
+    },
+    "engines": {
+    }
+}

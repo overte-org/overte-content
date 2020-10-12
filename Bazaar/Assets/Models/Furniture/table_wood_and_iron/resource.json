@@ -1,0 +1,43 @@
+{
+    "name": "Table Wood And Iron",
+    "version": "1.0.0",
+    "description": "A glass table with wood frame and iron legs.",
+    "homepage": "http://www.vircadia.com",
+    "bugs": "",
+    "keywords": [
+        "Table",
+		"Glass",
+		"Wood",
+		"Iron"
+    ],
+    "icon": "img/icon.png",
+    "images": [
+        "img/table_wood_and_iron.jpg"
+    ],
+    "author": {
+        "name": "Scopia Visual Interfaces Systems",
+        "email": "joe@whatever.com",
+        "url": "http://www.scopia.es",
+        "license": "CC BY 3.0"		
+    },
+    "sublicense": [
+	],	
+    "contributors": [
+        {
+            "name": "Haptic Monkey",
+            "url": "https://hapticmonkey.com"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/whatever/testing.git"
+    },
+    "main": "gltf/table_wood_and_iron.glb",
+    "type": "model",
+    "meta": {
+    },
+    "dependencies": {       
+    },
+    "engines": {
+    }
+}

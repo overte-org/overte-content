@@ -1,0 +1,20 @@
+# Blender MTL File: 'SVARTA_Day-bed_frame_silver-colour_cycles.blend'
+# Material Count: 2
+
+newmtl mattress
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.764315 0.764315 0.764315
+Ks 0.070470 0.070470 0.070470
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl silver_metal
+Ns 198.039216
+Ka 0.928793 0.928793 0.928793
+Kd 0.761271 0.761271 0.761271
+Ks 0.517746 0.517746 0.517746
+Ni 1.000000
+d 1.000000
+illum 5

@@ -1,0 +1,9 @@
+{
+    "compressed": {
+        "COMPRESSED_R11_EAC": "RoofMat_Roughness_6_COMPRESSED_R11_EAC.ktx",
+        "COMPRESSED_RED_RGTC1": "RoofMat_Roughness_6_COMPRESSED_RED_RGTC1.ktx"
+    },
+    "original": "RoofMat_Roughness_6.png",
+    "uncompressed": "",
+    "version": 1
+}

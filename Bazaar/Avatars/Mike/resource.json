@@ -1,0 +1,41 @@
+{
+    "name": "Mike",
+    "version": "1.0.0",
+    "description": "Mike is a real estate developer living in Miami.  You can find him at the Club Tropican telling war stories over a beer.",
+    "homepage": "http://www.vircadia.com",
+    "bugs": "",
+    "keywords": [
+        "Male",
+		"Avatar"
+    ],
+    "icon": "img/icon.png",
+    "images": [
+        "img/Mike.jpg"
+    ],
+    "author": {
+        "name": "Haptic Monkey",
+        "email": "",
+        "url": "http://hapticmonkey.com",
+        "license": "CC0"		
+    },
+    "sublicense": [		
+	],	
+    "contributors": [
+        {
+            "name": "Haptic Monkey",
+            "url": "https://hapticmonkey.com"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/whatever/testing.git"
+    },
+    "main": "fbx/Mike.fst",
+    "type": "avatar",
+    "meta": {
+    },
+    "dependencies": {       
+    },
+    "engines": {
+    }
+}

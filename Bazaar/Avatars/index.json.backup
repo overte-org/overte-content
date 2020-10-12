@@ -1,0 +1,23 @@
+{
+	"Kim": {
+		"location": "/Avatars/Kim"
+	},
+	"Mason": {
+		"location": "/Avatars/Mason"
+	},
+	"Mike": {
+		"location": "/Avatars/Mike"
+	},
+	"Sean": {
+		"location": "/Avatars/Sean"
+	},
+	"Summer": {
+		"location": "/Avatars/Summer"
+	},
+	"Tanya": {
+		"location": "/Avatars/Tanya"
+	},
+    "Woody": {
+		"location": "/Avatars/Woody"
+	}
+}

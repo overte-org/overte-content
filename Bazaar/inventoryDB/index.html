@@ -1,0 +1,283 @@
+<!doctype html public "-//w3c//dtd html 5//en">
+
+<html>
+
+<head>
+<title>InventoryDB</title>
+
+</head>
+
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#ff0000">
+
+<h3>Introduction</h3>
+
+<p>The Vircadia inventory app has been created to work without the need of a database server. Instead it loads a database file into memory and uses a javascript database application called pouchDB. pouchDB pulls the database from the Bazaar/inventoryDB folder. This script is used to help pouchDB create the database file.  In order for the database to be up to date, you must run this script each time the repo is changed. You will download the DB file and upload it to the inventoryDB folder in the repository.</p>
+
+<h3>Permissions</h3>
+
+<p>You must ensure that this script has read access to all the Bazaar folders and files on the internet. The script does not work against local copies. If your distribution is on an Amazon S3 bucket you can make the entire bucket readonly to the public.</p>
+
+1) Open your bucket in the AWS S3 interface.<br>
+2) Click on the Permissions tab at the top.<br>
+3) Click on the Bucket Policy button.<br>
+4) Enter the following changing #bucket# with the name of your bucket.<br>
+<pre>
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::#bucket#/*"
+        }
+    ]
+}
+</pre>
+<br><br>
+5) Don't forget to click the Save button.<br>
+
+<h3>How it works</h3>
+
+<p>The script searches recursively for an index.json.  The index.json tells the script what folders exist in each subfolder provided. When the app does not find an index.json in a folder it looks for a package.json file.  The package.json file tells the app what kind of resource is in this folder and provides details for accessing it.  Categories and subcategories are created from the index.json files. These categories are populated with resources based upon what is provided in the package.json files.  All this information is written to an in memory database. It's this database that we will export and upload to your file repository.</p>
+
+<p>The database holds two types of records, folder and resource.  The fields are as below:</p>
+
+<pre>
+var folders = {
+  "_id": "bazaar",
+  "r_type": "folder";
+  "name": "Bazaar",
+  "parent": "repo",
+  "type": "index",
+  "path": "https://"
+};
+
+var resource = {
+  "_id": "kim",
+  "r_type": "resource";
+  "name": "Kim",
+  "parent": "Avatars",
+  "type": "avatar",
+  "path": "https://",
+  "tags": ["Female","Avatar"]
+};
+</pre>
+
+<h3>Understanding Errors</h3>
+
+</p>Watch the results of this script in the browser console. If no index.json or package.json is present you will see GET errors in the console. This is to be expected. What you do need to look for in your console are JSON errors. If you get a JSON parse error you will need to run your json file in a json validator or lint to determine why... Failure to provide properly formed json will result in inaccurate or incomplete data in the inventory app. If you have to correct your JSON, just re-run the download script afterwards and update your repository with the new GZ file. Uncaught (in promise) errors occur when you are trying to load a record that already exists. <font color=red>You will need to flush your cache before you reset this page.</font> 
+This will whipe the database and you will be loading it freshly.</p>
+
+<h3>Download the Database</h3>
+
+<p>Click on the button provided and the script will recurse the repository you provide it.  Note that this only works if you have followed the Vircadia pattern of placing an index.json to define the folders and the package.json to define the assets. Only valid JSON will do. It will generate a database and export the database in a gzip file.  You will need to upload this file into the inventoryDB folder.</p>
+
+<p>Enter the path to your repository and press the Download button... It may take a few minutes before the download begins.  Do not click on the button more than once unless you want to download the export several times.</p> 
+<h2><center><font color=red>Do not close this window before the export occurs!</font></center></h2>
+
+<label for="repo">Enter the URL of your repo (no trailing forward slash): </label><br>
+<i>example: https://yourbucket.s3-us-west-1.amazonaws.com/repo/Bazaar </i>
+<p><input type="url" size="100" id="repo" name="repo">&nbsp;&nbsp;&nbsp;<button id="mkDBbutton" type="button">Download</button></p>
+<p>Place the gzip database file in the Bazaar/inventoryDB folder. You can use the link below to test the database once you have uploaded it to your repository.</p>
+<a target="_blank"  href="demo.html">Demo Page</a>
+<br>
+<br>
+<hr>
+If you have any questions about this repository or scripts feel free to ask in the <a target="_blank" href="https://discord.com/channels/564926326025224212/710570540129320971">Vircadia Discord channel.</a>
+<hr>
+<h3>References</h3>
+<a href="https://pouchdb.com/" target="_blank">PouchDB</a><br>
+<a href="https://github.com/pouchdb-community/pouchdb-quick-search" target="_blank">pouchdb-quick-search</a><br>
+<a href="https://github.com/nolanlawson/pouchdb-find" target="_blank">pouchdb-find</a><br> 
+<a href="https://github.com/nodeca/pako" target="_blank">pako</a><br><br><br><br>
+</body>
+
+<script type="text/javascript" src="pouchdb-7.2.1.min.js"></script>
+<script type="text/javascript" src="pako.min.js"></script>
+
+<script>
+//
+//  Created by Haptic Monkey on 2020/09/29
+//  Copyright 2020
+//
+//  Distributed under the Apache License, Version 2.0.
+//  See the accompanying file LICENSE or http://www.apache.org/licenses/LICENSE-2.0.html
+//
+//
+
+// Create database for inventoryDB
+var inventoryDB = new PouchDB('inventory');
+
+// Write new inventory status to console
+inventoryDB.info().then(function (info) {
+    console.log(info);
+})
+
+// Global variables
+let $repo
+// Event listener for button
+document.getElementById("mkDBbutton").onclick = function () {
+    mkDB();
+}
+
+// Top level index
+var folders = {
+    "_id": "bazzar",
+    "r_type": "folder",
+    "name": "Bazzar",
+    "parent": "repo",
+    "type": "index",
+    "path": $repo
+};
+inventoryDB.put(folders);
+
+// Top level index
+function mkDB() {
+    var $input = document.getElementById("repo");
+    $repo = $input.value;
+    var $index = $repo + "/index.json"
+        console.log($index);
+    var $data = getJSON($index);
+    var $obj = JSON.parse($data);
+    for (key in $obj) {
+	    $name = key;
+		key = key.replace(/-/g, "_");
+		key = key.toLowerCase().replace(/\s/g, "_");
+		key = key.replace(/'/, "_");
+        $id = "f_"+key;		
+        var folders = {
+            "_id": $id,
+            "r_type": "folder",
+            "name": $name,
+            "parent": "Bazzar",
+            "type": "index",
+            "path": $repo + "/" + key
+        };
+        inventoryDB.put(folders);
+        console.log(key);
+    }	
+    sub($obj);
+	inventoryDB.info().then(function (info) {
+		console.log(info);
+	})	
+	console.log("Finished");
+
+inventoryDB.allDocs({include_docs: true}, (error, doc) => {
+    if (error) console.error(error);
+    else {
+		$output = JSON.stringify(doc.rows.map(({doc}) => doc));
+		$output = pako.gzip($output, {to: 'string'})  
+		var url = window.URL || window.webkitURL;
+        var blob1 = new Blob([$output], {
+            type: "text/plain;charset=utf-8"
+        });		
+        var link = url.createObjectURL(blob1);
+        var a = document.createElement("a");
+        a.download = 'inventoryDB.gz';
+        a.href = link;
+        document.body.appendChild(a);
+        a.click();		
+	  }
+  });	
+};
+
+// Simple function to get json files..
+function getJSON($url) {
+    var Httpreq = new XMLHttpRequest();
+    Httpreq.open("GET", $url, false);
+    Httpreq.send(null);
+    // Test to see if json exists
+    if (Httpreq.readyState === 4) {
+        if (Httpreq.status === 200) {
+            return Httpreq.responseText;
+        } else {
+            return "NoSuchKey";
+        }
+    }
+
+};
+// Lower level indexes are parsed here
+// If not found look for and parse resource.json
+function sub($obj) {
+    for (key in $obj) {
+        let $subindex = $repo + $obj[key].location + "/index.json";
+        let $path = $repo + $obj[key].location;
+        // find category in $subindex...
+        var $data = getJSON($subindex);
+        $subindex = "";
+        // If no index.json
+        if ($data.includes("NoSuchKey")) {
+            console.log('Index does not exist: ')
+            // test to see if there is a resource.json
+            let $resource = $repo + $obj[key].location + "/resource.json";
+            var $data = getJSON($resource);
+            if ($data.includes("NoSuchKey")) {
+                console.log('Resource does not exist: ')
+            } else {
+                parseresource($data, $path)
+            }
+        } else {
+            parseIndex($data)
+        }; // recursion going on here
+    }
+};
+
+function parseresource($data, $path) {
+    var $obj = JSON.parse($data);
+    var $name = $obj.name;
+    var $type = $obj.type;
+    var $tags = $obj.keywords;
+    let $subindex = $path + "/resource.json";
+    var cat = $subindex.match(/.*\/(.*)\/(.*)\/.*$/);
+    var $Parent = "f_" + cat[1];
+    var $id = "r_" + cat[2];
+	var $url = $path;
+	$name = cat[2];	
+    console.log($Parent + " -> " + $id);
+    console.log($subindex);
+    $id = $id.toLowerCase();
+    var resources = {
+        "_id": $id,
+        "r_type": "resource",
+        "name": $name,
+        "parent": $Parent,
+        "type": $type,
+        "path": $url,
+		"tags": $tags
+    };
+	$path = "";
+    inventoryDB.put(resources);
+    console.log(key);
+    console.log(resources);
+    console.log("Item");
+};
+
+function parseIndex($data) {
+    var $obj = JSON.parse($data);
+    for (key in $obj) {
+        let $subindex = $repo + $obj[key].location + "/index.json";
+        var cat = $subindex.match(/.*\/(.*)\/(.*)\/.*$/);
+        var $Parent = cat[1];
+        console.log($Parent + " -> " + cat[1]);
+		console.log($name + " -> " + cat[2]);
+		var $id = "f_" + cat[2];
+		var $url = $repo + "/" + cat[1] + "/" + cat[2];
+		$name = cat[2];
+        var folders = {
+            "_id": $id,
+            "r_type": "folder",
+            "name": $name,
+            "parent": $Parent,
+            "type": "index",
+            "path": $url
+        };
+        inventoryDB.put(folders);
+        console.log(folders);
+    }	
+    sub($obj); // more recursion ....
+};
+
+</script >
+</html>

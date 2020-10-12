@@ -1,0 +1,122 @@
+{
+	"Armchair and Table 1": {
+		"location": "/Assets/Models/Furniture/armchair_and_table_1"
+	},
+	"Armchair and Table 2": {
+		"location": "/Assets/Models/Furniture/armchair_and_table_2"
+	},
+	"Armchair 1": {
+		"location": "/Assets/Models/Furniture/armchair_1"
+	},
+	"Armchair 2": {
+		"location": "/Assets/Models/Furniture/armchair_2"
+	},
+	"Baby Crib": {
+		"location": "/Assets/Models/Furniture/baby_crib"
+	},
+	"Baby High Chair": {
+		"location": "/Assets/Models/Furniture/baby_high_chair"
+	},
+	"Bed 1": {
+		"location": "/Assets/Models/Furniture/bed_1"
+	},
+	"Beige Sofa": {
+		"location": "/Assets/Models/Furniture/beige_sofa"
+	},
+	"Box Room": {
+		"location": "/Assets/Models/Furniture/box_room"
+	},
+	"Burlap Sofa": {
+		"location": "/Assets/Models/Furniture/burlap_sofa"
+	},
+	"Changing Table": {
+		"location": "/Assets/Models/Furniture/changing-table"
+	},
+	"Clear Sofa": {
+		"location": "/Assets/Models/Furniture/clear_sofa"
+	},
+	"Coffee Table": {
+		"location": "/Assets/Models/Furniture/coffee_table"
+	},
+	"Contempory Living Room": {
+		"location": "/Assets/Models/Furniture/contemp_living_room"
+	},
+	"Dining Room": {
+		"location": "/Assets/Models/Furniture/dining_room"
+	},
+	"Door": {
+		"location": "/Assets/Models/Furniture/door"
+	},
+	"IKEA LATT Children's Table With 2 Chairs": {
+		"location": "/Assets/Models/Furniture/ikea_latt_children_s_table_with_2_chairs"
+	},
+	"IKEA PS 2012 Three-seat Sofa White-Beige": {
+		"location": "/Assets/Models/Furniture/ikea_ps_2012_three_seat_sofa_white_beige"
+	},
+	"Iron Bed": {
+		"location": "/Assets/Models/Furniture/iron_bed"
+	},
+	"Kids Desk": {
+		"location": "/Assets/Models/Furniture/kids_desk"
+	},
+	"Kids Shelves": {
+		"location": "/Assets/Models/Furniture/kids_shelves"
+	},
+	"Kids Wooden Desk": {
+		"location": "/Assets/Models/Furniture/kids_wooden_desk"
+	},
+	"Kit Desk": {
+		"location": "/Assets/Models/Furniture/kit_desk"
+	},
+	"Kitchen Module": {
+		"location": "/Assets/Models/Furniture/kitchen_module"
+	},
+	"Kitchen Stool": {
+		"location": "/Assets/Models/Furniture/kitchen_stool"
+	},
+	"Leather Sofa": {
+		"location": "/Assets/Models/Furniture/leather_sofa"
+	},
+	"Living Room Module": {
+		"location": "/Assets/Models/Furniture/living_room_module"
+	},
+	"Living Room Table": {
+		"location": "/Assets/Models/Furniture/living_room_table"
+	},
+	"Metal Glass Table": {
+		"location": "/Assets/Models/Furniture/metal_glass_table"
+	},
+	"Modern Armchair": {
+		"location": "/Assets/Models/Furniture/modern_armchair"
+	},
+	"Saloon Table": {
+		"location": "/Assets/Models/Furniture/saloon_table"
+	},
+	"Simple Sofa": {
+		"location": "/Assets/Models/Furniture/simple_sofa"
+	},
+	"Simple Orange Lamp": {
+		"location": "/Assets/Models/Furniture/simple-orange-lamp"
+	},
+	"Stool": {
+		"location": "/Assets/Models/Furniture/stool"
+	},
+	"SVARTA Day-bed Frame": {
+		"location": "/Assets/Models/Furniture/svarta_day_bed_frame"
+	},
+	"Table and Chairs": {
+		"location": "/Assets/Models/Furniture/table_and_chairs"
+	},
+	"Table and Chairs 2": {
+		"location": "/Assets/Models/Furniture/table_and_chairs_2"
+	},
+	"Table Wood and Iron": {
+		"location": "/Assets/Models/Furniture/table_wood_and_iron"
+	},
+	"Wardrobe 1": {
+		"location": "/Assets/Models/Furniture/wardrobe_1"
+	},
+	"White Kitchen Table": {
+		"location": "/Assets/Models/Furniture/white_kitchen_table"
+	}
+}

@@ -1,0 +1,47 @@
+{
+    "name": "Tanya",
+    "version": "1.0.0",
+    "description": "Tanya's speaks four languages and travels frequently to Spain where her uncle lives. She's a Raiders fan and loves to watch football with the guys. Tanya's an interpreter at the United Nations where she has worked for the past four years. Her real passion however is collecting cat figurines which she stores in an antique hutch her grandmother gave her.",
+    "homepage": "http://www.vircadia.com",
+    "bugs": "",
+    "keywords": [
+        "Female",
+		"Avatar"
+    ],
+    "icon": "img/icon.png",
+    "images": [
+        "img/Tanya.jpg"
+    ],
+    "author": {
+        "name": "Haptic Monkey",
+        "email": "",
+        "url": "http://hapticmonkey.com",
+        "license": "CC0"		
+    },
+    "sublicense": [
+		{
+			"name": "Dress is by Mindfront (Sweden)",
+			"email": "",
+			"url": "",
+			"license": "CC By 4.0"
+		}
+	],	
+    "contributors": [
+        {
+            "name": "Haptic Monkey",
+            "url": "https://hapticmonkey.com"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/whatever/testing.git"
+    },
+    "main": "fbx/Tanya.fst",
+    "type": "avatar",
+    "meta": {
+    },
+    "dependencies": {       
+    },
+    "engines": {
+    }
+}

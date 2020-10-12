@@ -1,0 +1,35 @@
+# Blender3D MTL File: office_box.blend
+# Material Count: 3
+newmtl taronja_etiqueta_cajones.
+Ns 170.588235
+Ka 0.000000 0.000000 0.000000
+Kd 0.183480 0.183480 0.183480
+Ks 1.535886 1.535886 1.535886
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd etiqueta_cajones.tga
+
+
+newmtl armario_beige.001_etiqueta_cajones.
+Ns 158.823529
+Ka 0.000000 0.000000 0.000000
+Kd 0.735533 0.732935 0.614330
+Ks 1.130191 1.130191 1.130191
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd etiqueta_cajones.tga
+
+
+newmtl plastico_negro.002_etiqueta_cajones.
+Ns 84.313725
+Ka 0.000000 0.000000 0.000000
+Kd 0.146245 0.146245 0.146245
+Ks 0.251958 0.251958 0.251958
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd etiqueta_cajones.tga
+
+

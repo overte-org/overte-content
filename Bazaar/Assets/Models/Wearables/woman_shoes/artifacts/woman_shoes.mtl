@@ -1,0 +1,20 @@
+# Blender MTL File: 'woman_shoes_internal.blend'
+# Material Count: 2
+
+newmtl black-glossy
+Ns 101.960784
+Ka 0.000000 0.000000 0.000000
+Kd 0.006370 0.006370 0.006370
+Ks 0.839056 0.839056 0.839056
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl inside
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.639282 0.360629 0.166910
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 2

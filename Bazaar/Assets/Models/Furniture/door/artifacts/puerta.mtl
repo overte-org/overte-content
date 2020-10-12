@@ -1,0 +1,57 @@
+# Blender3D MTL File: puerta.blend
+# Material Count: 5
+newmtl madera_puerta3
+Ns 125.490196
+Ka 0.000000 0.000000 0.000000
+Kd 0.685168 0.643734 0.405819
+Ks 0.268981 0.268981 0.268981
+Ni 1.200000
+d 1.000000
+illum 2
+map_Kd tilewood.jpg
+
+
+newmtl madera_puerta2
+Ns 125.490196
+Ka 0.000000 0.000000 0.000000
+Kd 0.685168 0.643734 0.405819
+Ks 0.268981 0.268981 0.268981
+Ni 1.200000
+d 1.000000
+illum 2
+map_Kd tilewood.jpg
+
+
+newmtl cromado
+Ns 398.039216
+Ka 0.000000 0.000000 0.000000
+Kd 0.316688 0.299622 0.129817
+Ks 1.583090 1.581454 1.263120
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd pulido2.jpg
+
+
+newmtl madera_puerta
+Ns 125.490196
+Ka 0.000000 0.000000 0.000000
+Kd 0.685168 0.643734 0.405819
+Ks 0.268981 0.268981 0.268981
+Ni 1.200000
+d 1.000000
+illum 2
+map_Kd tilewood.jpg
+
+
+newmtl madera_puerta4
+Ns 125.490196
+Ka 0.000000 0.000000 0.000000
+Kd 0.685168 0.643734 0.405819
+Ks 0.268981 0.268981 0.268981
+Ni 1.200000
+d 1.000000
+illum 2
+map_Kd tilewood.jpg
+
+

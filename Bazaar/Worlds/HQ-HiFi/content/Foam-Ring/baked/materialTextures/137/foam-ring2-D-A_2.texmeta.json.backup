@@ -1,0 +1,9 @@
+{
+    "compressed": {
+        "COMPRESSED_SRGB8_ALPHA8_ETC2_EAC": "foam-ring2-D-A_2_COMPRESSED_SRGB8_ALPHA8_ETC2_EAC.ktx",
+        "COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT": "foam-ring2-D-A_2_COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT.ktx"
+    },
+    "original": "foam-ring2-D-A_2.png",
+    "uncompressed": "",
+    "version": 1
+}

@@ -1,0 +1,13 @@
+# Blender3D MTL File: edifici_prat.blend
+# Material Count: 1
+newmtl ladrillos_edi_prat_2.jpg
+Ns 52.941176
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.151162 0.151162 0.151162
+Ni 1.000000
+d 1.000000
+illum 0
+map_Kd edi_prat_2.jpg
+
+

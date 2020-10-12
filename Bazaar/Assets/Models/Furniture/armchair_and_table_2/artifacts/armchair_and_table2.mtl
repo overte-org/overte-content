@@ -1,0 +1,56 @@
+# Blender3D MTL File: armchair_and_table2.blend
+# Material Count: 5
+newmtl silla_co
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd telas_groges.jpg
+
+
+newmtl metall
+Ns 80.392157
+Ka 0.000000 0.000000 0.000000
+Kd 0.063199 0.063199 0.063199
+Ks 1.268975 1.268975 1.268975
+Ni 1.000000
+d 1.000000
+illum 2
+
+
+newmtl lateral_mesa_lat_metal_table.jpg
+Ns 80.392157
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 1.268975 1.268975 1.268975
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd lat_metal_table.jpg
+
+
+newmtl mesa_recta_planos
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.085936 0.085936 0.085936
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd telas_groges.jpg
+
+
+newmtl mesa_recta
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd telas_groges.jpg
+
+
