@@ -95,11 +95,16 @@
                 var webRotation;
 
                 if (relative === true) {
+                    loaderEntityProps.position;
+                    loaderEntityProps.rotation;
+
                     webPosition = {
-                        "x": loaderEntityProps.position.x + webEntitiesToLoad[i].position[0],
-                        "y": loaderEntityProps.position.y + webEntitiesToLoad[i].position[1],
-                        "z": loaderEntityProps.position.z + webEntitiesToLoad[i].position[2]
+                        "x": webEntitiesToLoad[i].position[0],
+                        "y": webEntitiesToLoad[i].position[1],
+                        "z": webEntitiesToLoad[i].position[2]
                     }
+
+                    webPosition = Vec3.sum(loaderEntityProps.position, Vec3.multiplyQbyV(loaderEntityProps.rotation, webPosition));
                 } else {
                     webPosition = {
                         "x": webEntitiesToLoad[i].position[0],
@@ -109,12 +114,16 @@
                 }
 
                 if (relative === true) {
+                    var loaderEntityRotation = loaderEntityProps.rotation;
+                    
                     webRotation = {
-                        "x": loaderEntityProps.rotation.x + webEntitiesToLoad[i].rotation[0],
-                        "y": loaderEntityProps.rotation.y + webEntitiesToLoad[i].rotation[1],
-                        "z": loaderEntityProps.rotation.z + webEntitiesToLoad[i].rotation[2],
+                        "x": webEntitiesToLoad[i].rotation[0],
+                        "y": webEntitiesToLoad[i].rotation[1],
+                        "z": webEntitiesToLoad[i].rotation[2],
                         "w": 1
                     }
+                    
+                    webRotation = Quat.multiply(loaderEntityRotation, webRotation);
                 } else {
                     webRotation = {
                         "x": webEntitiesToLoad[i].rotation[0],
@@ -132,6 +141,7 @@
                 
                 var webEntity = Entities.addEntity({
                     type: "Web",
+                    parentID: _this.entityID,
                     position: webPosition,
                     rotation: webRotation,
                     dimensions: webDimensions,
@@ -166,14 +176,14 @@
         Entities.enterEntity.connect(onZoneEnter);
         Entities.leaveEntity.connect(onZoneLeave);
         
-        Window.domainChanged.connect(function() {
-            destroyAllWebEntities();
-        });
+        Window.domainChanged.connect(destroyAllWebEntities);
     };
 
     this.unload = function (entityID) {
         Entities.enterEntity.disconnect(onZoneEnter);
         Entities.leaveEntity.disconnect(onZoneLeave);
+        
+        Window.domainChanged.disconnect(destroyAllWebEntities);
         
         destroyAllWebEntities();
     };
