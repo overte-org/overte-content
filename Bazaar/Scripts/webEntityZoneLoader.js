@@ -17,6 +17,7 @@
 
     var zoneToHandle;
     var maxFPS;
+    var relative;
     var webEntitiesToLoad = [];
     var webEntitiesActive = [];
 
@@ -26,6 +27,8 @@
         "webEntitiesToLoad": [
             {
                 "url": "https://google.com/",
+                "script": "https://lol.com/script.js",
+                "serverScripts": "https://lol.com/script.js",
                 "position": [400, 22, 400],
                 "rotation": [0, 0, 0],
                 "dimensions": [2, 2],
@@ -33,6 +36,7 @@
             }
         ],
         "options": {
+            "relative": true,
             "maxFPS": 30,
             "zoneToHandle": ""
         }
@@ -71,11 +75,36 @@
 
     function onZoneEnter (zoneID) {
         if (zoneID === zoneToHandle) {
+            var userData = getAndParseUserData();
+
+            if (userData.options.maxFPS) {
+                maxFPS = userData.options.maxFPS;
+            }
+
+            if (userData.options.relative) {
+                relative = userData.options.relative;
+            }
+
+            if (userData.webEntitiesToLoad) {
+                webEntitiesToLoad = userData.webEntitiesToLoad;
+            }
+
             for (i = 0; i < webEntitiesToLoad.length; i++) {
-                var webPosition = {
-                    "x": webEntitiesToLoad[i].position[0],
-                    "y": webEntitiesToLoad[i].position[1],
-                    "z": webEntitiesToLoad[i].position[2]
+                var loaderEntityPosition = Entities.getEntityProperties(_this.entityID, ["position"]).position;
+                var webPosition;
+
+                if (relative === true) {
+                    webPosition = {
+                        "x": loaderEntityPosition.x + webEntitiesToLoad[i].position[0],
+                        "y": loaderEntityPosition.y + webEntitiesToLoad[i].position[1],
+                        "z": loaderEntityPosition.z + webEntitiesToLoad[i].position[2]
+                    }
+                } else {
+                    webPosition = {
+                        "x": webEntitiesToLoad[i].position[0],
+                        "y": webEntitiesToLoad[i].position[1],
+                        "z": webEntitiesToLoad[i].position[2]
+                    }
                 }
                 
                 var webRotation = {
@@ -97,6 +126,8 @@
                     rotation: webRotation,
                     dimensions: webDimensions,
                     sourceUrl: webEntitiesToLoad[i].url,
+                    script: webEntitiesToLoad[i].script,
+                    serverScripts: webEntitiesToLoad[i].serverScripts,
                     dpi: webEntitiesToLoad[i].dpi,
                     maxFPS: maxFPS
                 }, "local");
@@ -121,15 +152,7 @@
         if (userData.options.zoneToHandle) {
             zoneToHandle = userData.options.zoneToHandle;
         }
-        
-        if (userData.options.maxFPS) {
-            maxFPS = userData.options.maxFPS;
-        }
-        
-        if (userData.webEntitiesToLoad) {
-            webEntitiesToLoad = userData.webEntitiesToLoad;
-        }
-        
+
         Entities.enterEntity.connect(onZoneEnter);
         Entities.leaveEntity.connect(onZoneLeave);
         
