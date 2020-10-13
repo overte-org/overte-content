@@ -90,14 +90,15 @@
             }
 
             for (i = 0; i < webEntitiesToLoad.length; i++) {
-                var loaderEntityPosition = Entities.getEntityProperties(_this.entityID, ["position"]).position;
+                var loaderEntityProps = Entities.getEntityProperties(_this.entityID, ["position", "rotation"]);
                 var webPosition;
+                var webRotation;
 
                 if (relative === true) {
                     webPosition = {
-                        "x": loaderEntityPosition.x + webEntitiesToLoad[i].position[0],
-                        "y": loaderEntityPosition.y + webEntitiesToLoad[i].position[1],
-                        "z": loaderEntityPosition.z + webEntitiesToLoad[i].position[2]
+                        "x": loaderEntityProps.position.x + webEntitiesToLoad[i].position[0],
+                        "y": loaderEntityProps.position.y + webEntitiesToLoad[i].position[1],
+                        "z": loaderEntityProps.position.z + webEntitiesToLoad[i].position[2]
                     }
                 } else {
                     webPosition = {
@@ -106,14 +107,23 @@
                         "z": webEntitiesToLoad[i].position[2]
                     }
                 }
-                
-                var webRotation = {
-                    "x": webEntitiesToLoad[i].rotation[0],
-                    "y": webEntitiesToLoad[i].rotation[1],
-                    "z": webEntitiesToLoad[i].rotation[2],
-                    "w": 1
+
+                if (relative === true) {
+                    webRotation = {
+                        "x": loaderEntityProps.rotation.x + webEntitiesToLoad[i].rotation[0],
+                        "y": loaderEntityProps.rotation.y + webEntitiesToLoad[i].rotation[1],
+                        "z": loaderEntityProps.rotation.z + webEntitiesToLoad[i].rotation[2],
+                        "w": 1
+                    }
+                } else {
+                    webRotation = {
+                        "x": webEntitiesToLoad[i].rotation[0],
+                        "y": webEntitiesToLoad[i].rotation[1],
+                        "z": webEntitiesToLoad[i].rotation[2],
+                        "w": 1
+                    }
                 }
-                
+
                 var webDimensions = {
                     "x": webEntitiesToLoad[i].dimensions[0],
                     "y": webEntitiesToLoad[i].dimensions[1],
