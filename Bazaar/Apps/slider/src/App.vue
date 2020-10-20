@@ -412,15 +412,15 @@
         
         <!-- Sync Failed Dialog -->
 
-        <v-dialog v-model="syncFailedDialogShow" persistent>
+        <v-dialog v-model="syncRequiredDialogShow" persistent>
             <v-card>
                 <v-toolbar>
-                    <v-toolbar-title>Slides Failed to Sync</v-toolbar-title>
+                    <v-toolbar-title>Sync Required</v-toolbar-title>
                     <v-spacer></v-spacer>
-                    <v-btn class="mx-2" color="green darken-1" @click="manuallyAttemptToSync()">Retry</v-btn>
+                    <v-btn class="mx-2" color="green darken-1" @click="manuallyAskToSync()">Sync</v-btn>
                 </v-toolbar>
 
-                <v-card-title>You can retry syncing the slides yourself.</v-card-title>
+                <v-card-title>A user has updated the slides, you need to sync to be up to date with them.</v-card-title>
                 <!-- <v-card-subtitle>Last Received Checksum: {{ lastReceivedSlidesChecksum }}<br/>Current Checksum: {{ computeGetCurrentSlidesHash }}</v-card-subtitle>
                 <v-card-subtitle>{{ computeSlides }}</v-card-subtitle> -->
             </v-card>
@@ -434,7 +434,16 @@
         >
             <span>Current Slide Deck: <b>{{ slideDeck }}</b></span>
             <v-spacer></v-spacer>
-            <span v-text="isSyncing ? 'Syncing Data' : 'Synced'" class="mr-2"></span>
+            <span>Current Presentation Channel: <b>{{ presentationChannel }}</b></span>
+            <v-btn 
+                class="mx-2" 
+                color="green darken-1" 
+                @click="uploadState(slides); canSave = false;"
+                @disabled="!canEdit || !canSave"
+            >
+                Save
+            </v-btn>
+            <!-- <span v-text="isSyncing ? 'Syncing Data' : 'Synced'" class="mr-2"></span>
             <v-progress-circular
                 v-show="isSyncing"
                 indeterminate
@@ -446,7 +455,7 @@
                 color="green"
             >
                 mdi-check-bold
-            </v-icon>
+            </v-icon> -->
         </v-footer>
     </v-app>
 </template>
@@ -481,7 +490,9 @@ if (!browserDevelopment()) {
             }
             
             if (receivedCommand.command === 'script-to-web-update-slide-state') {
-                vue_this.updateSlideState(receivedCommand.data);
+                if (vue_this.isSynced) {
+                    vue_this.updateSlideState(receivedCommand.data);
+                }
             }
             
             if (receivedCommand.command === 'script-to-web-updating-from-storage') {
@@ -493,9 +504,17 @@ if (!browserDevelopment()) {
             }
             
             if (receivedCommand.command === 'script-to-web-latest-slides-checksum') {
-                console.log("script-to-web-latest-slides-checksum" + JSON.stringify(receivedCommand.data));
                 vue_this.lastReceivedSlidesChecksum = receivedCommand.data;
             }
+            
+            if (receivedCommand.command === 'script-to-web-needs-syncing') {
+                vue_this.syncRequiredDialogShow = true;
+                vue_this.isSynced = false;
+            }
+            
+            // if (receivedCommand.command === 'script-to-web-upload-succeeded') {
+            // 
+            // }
         }
     });
 }
@@ -563,22 +582,21 @@ export default {
         importExportDialogShow: false,
         importExportDialogSlideData: '',
         // Sync Failed Dialog
-        syncFailedDialogShow: false,
+        syncRequiredDialogShow: false,
         // DEBOUNCER
         readyToSendAgain: true,
         // Sync State
         isSyncing: false,
         isSynced: true,
         lastReceivedSlidesChecksum: null,
-        timesAttemptedToSync: 0,
-        MAX_ATTEMPTS_TO_SYNC: 7,
-        TIME_BETWEEN_SYNC_ATTEMPTS: 500, // ms
         // Data Handling
         atp: {
             'use': null,
             'path': null
         },
         canEdit: false,
+        canSave: false,
+        initialized: false
     }),
     computed: {
         computeGetCurrentSlidesHash: function () {
@@ -591,28 +609,30 @@ export default {
     watch: {
         currentSlide: function (newSlide, oldSlide) {
             if (newSlide !== oldSlide) {
-                this.uploadState(this.slides);
                 this.sendSlideChange(newSlide);
             }
         },
         slideDeck: function (newDeck, oldDeck) {
-            if (newDeck !== oldDeck) {
+            // console.log("THIS.INITIALIZED" + this.initialized);
+            if (newDeck !== oldDeck && this.initialized === true) {
                 this.currentSlide = 0;
             }
         },
         presentationChannel: function () {
-            this.uploadState(this.slides);
+            if (this.initialized === true) {
+                this.uploadState(this.slides);
+            }
         },
         slides: {
-            handler: function () {
-                if (this.debounceProcessing() === true) {
-                    this.uploadState(this.slides);
+            handler: function (newValue, oldValue) {
+                if (newValue !== oldValue) {
+                    this.canSave = true;
                 }
             },
             deep: true
         },
         isSyncing: function () {
-            this.canEdit = !this.isSyncing;
+            // this.canEdit = !this.isSyncing;
             // console.log("Is Syncing: " + this.isSyncing);
         },
         drawer: function (newState) {
@@ -623,12 +643,17 @@ export default {
     },
     methods: {
         initializeWebApp: function (data) {
+            // We want to prevent any messages being sent out as a result of these changes...
+            this.initialized = false;
+            
             // The data should already be parsed.
-            // console.log("DATA RECEIVED ON INIT:" + JSON.stringify(data));
+            console.log("DATA RECEIVED ON INIT:" + JSON.stringify(data));
             var parsedUserData = data.userData; 
 
             // We are receiving the full slides, including slideDecks within.
-            this.importSlidesFromObject(parsedUserData.slides);
+            if (parsedUserData.slides) {
+                this.importSlidesFromObject(parsedUserData.slides);
+            }
 
             if (parsedUserData.presentationChannel) {
                 this.presentationChannel = parsedUserData.presentationChannel;
@@ -644,7 +669,8 @@ export default {
                 this.atp = parsedUserData.atp;
             }
 
-            this.checkIfSynced();
+            console.log("Proceeding to complete sync.");
+            this.completeSyncing();
         },
         deleteSlide: function (slideIndex) {
             this.slides[this.slideDeck].splice(slideIndex, 1);
@@ -798,26 +824,13 @@ export default {
         checkForEditRights: function () {
             this.sendAppMessage("web-to-script-check-for-edit-rights", {});
         },
-        checkIfSynced: function () {
-            if (this.lastReceivedSlidesChecksum !== null && this.getCurrentSlidesHash() !== this.lastReceivedSlidesChecksum) {
-                this.retrySyncing();
-            } else {
-                this.isSyncing = false;
-                this.syncFailedDialogShow = false;
-                this.isSynced = true;
-            }
+        completeSyncing: function () {
+            this.initialized = true;
+            this.isSyncing = false;
+            this.syncRequiredDialogShow = false;
+            this.isSynced = true;
         },
-        retrySyncing: function () {
-            if (this.timesAttemptedToSync < this.MAX_ATTEMPTS_TO_SYNC) {
-                setTimeout(function(){
-                    vue_this.sendAppMessage('web-to-script-request-sync', {});
-                    vue_this.timesAttemptedToSync++;
-                }, vue_this.TIME_BETWEEN_SYNC_ATTEMPTS);
-            } else {
-                this.syncFailedDialogShow = true;
-            }
-        },
-        manuallyAttemptToSync: function () {
+        manuallyAskToSync: function () {
             vue_this.sendAppMessage('web-to-script-request-sync', {});
         },
         getCurrentSlidesHash: function () {
@@ -840,13 +853,13 @@ export default {
 
             return hash; 
         },
-        debounceProcessing: function () {
+        attemptUpload: function () {
             if (this.readyToSendAgain) {
                 // console.log("Ready.");
+                vue_this.uploadState(this.slides);
                 this.readyToSendAgain = false;
                 setTimeout(function() {
                     vue_this.readyToSendAgain = true;
-                    vue_this.uploadState(this.slides);
                 }, 1000); // 1 second
                 return true;
             } else {
@@ -858,6 +871,8 @@ export default {
             if (!slidesToSync) {
                 slidesToSync = this.slides;
             }
+            
+            vue_this.sendNoticeToUpdateState();
 
             this.sendAppMessage("web-to-script-upload-state", { 
                 "slides": slidesToSync, 

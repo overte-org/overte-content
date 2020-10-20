@@ -17,6 +17,14 @@
     var presentationChannel = "default-presentation-channel";
     var lastMessageSentOrReceivedData = null;
     var readyToSendAgain = true;
+    var defaultUserData = {
+        presentationChannel: presentationChannel,
+        atp: {
+            use: false,
+            path: ''
+        }
+    };
+    var dataToSave = {};
     
     // We use a timeout because it's possible the server hasn't fully saved our data to userData or ATP.
     var PROCESSING_MSG_DEBOUNCE_TIME = 500; // 500ms
@@ -44,11 +52,18 @@
                     // console.log("web-to-script-upload-state" + JSON.stringify(eventJSON.data));
                     presentationChannel = eventJSON.data.presentationChannel;
                     // console.log("########################### SAVING STATE.");
-                    saveState(eventJSON.data);
+                    dataToSave = eventJSON.data;
+                    saveState(dataToSave);
                 }
                     
                 if (eventJSON.command === "web-to-script-slide-changed") {
                     // console.log("web-to-script-slide-changed:" + eventJSON.data);
+                    // dataToSave.currentSlideState = {};
+                    // dataToSave.currentSlideState.slide = eventJSON.data.slide;
+                    // dataToSave.currentSlideState.slideDeck = eventJSON.data.slideDeck;
+                    // 
+                    // saveState(dataToSave);
+
                     var dataPacket = {
                         command: "display-slide",
                         data: eventJSON.data
@@ -61,6 +76,7 @@
                         command: "update-from-storage",
                         data: eventJSON.data
                     }
+                    // Window.alert('notifying to update');
                     sendMessage(dataPacket);
                 }
                 
@@ -124,7 +140,6 @@
                         // Window.alert("Receiving... " + messageJSON.data.slidesChecksum);
                         lastMessageSentOrReceivedData = messageJSON.data;
                         sendToWeb('script-to-web-latest-slides-checksum', messageJSON.data.slidesChecksum);
-                        updateFromStorage();
                         sendToWeb('script-to-web-update-slide-state', messageJSON.data);
                         // console.log("PASSING MESSAGE IN.");
                         // console.log("lastMessageSentOrReceivedData: "+ JSON.stringify(lastMessageSentOrReceivedData));
@@ -139,10 +154,8 @@
                 if (messageJSON.data.senderEntityID === _this.entityID && MyAvatar.sessionUUID != sender) {
                     // We got a message that this entity changed a slide, so let's update all instances of this entity for everyone.
                     Script.setTimeout(function () {
-                        Window.alert("Receiving... " + messageJSON.data.slidesChecksum);
                         sendToWeb('script-to-web-latest-slides-checksum', messageJSON.data.slidesChecksum);
-                        updateFromStorage();
-                        console.log("PASSING MESSAGE IN.");
+                        sendToWeb('script-to-web-needs-syncing');
                     }, PROCESSING_MSG_DEBOUNCE_TIME);
                 }
                 // console.log("FULL MESSAGE RECEIVED: " + JSON.stringify(messageJSON.data));
@@ -159,6 +172,29 @@
     }
     
     // FUNCTIONS
+    
+    function getEntityUserData() {
+        return Entities.getEntityProperties(_this.entityID, ["userData"]).userData;
+    }
+
+    function setDefaultUserData() {
+        Entities.editEntity(_this.entityID, {
+            userData: JSON.stringify(defaultUserData)
+        });
+    }
+
+    function getAndParseUserData() {
+        var userData = getEntityUserData();
+
+        try {
+            userData = Object(JSON.parse(userData)); 
+        } catch (e) {
+            userData = defaultUserData;
+            setDefaultUserData();
+        }
+
+        return userData;
+    }
     
     function updateFromStorage () {
         sendToWeb("script-to-web-updating-from-storage", "");
@@ -242,6 +278,7 @@
     
     function saveState (data) {
         // console.log("SAVING STATE: " + JSON.stringify(data));
+        // Window.alert("SAVING STATE");
         if (!canEdit()) {
             return;    
         }
@@ -258,8 +295,9 @@
                 function (error, result) {
                     if (error) {
                         print("ERROR: Slider data not uploaded or mapping not set: " + error);
+                        sendToWeb("script-to-web-upload-failed", {});
                     } else {
-                        // print("Successfully saved: " + result.url); 
+                        sendToWeb("script-to-web-upload-succeeded", {});
                     }
                 }
             );
@@ -279,6 +317,7 @@
             // console.log("NOT SAVING TO ATP!");
             // console.log("data.atp - " + JSON.stringify(data.atp));
             Entities.editEntity(_this.entityID, { "userData": JSON.stringify(data) });
+            sendToWeb("script-to-web-upload-succeeded", {});
         }
     }
     
@@ -286,6 +325,8 @@
     
     this.preload = function (ourID) {
         this.entityID = ourID;
+        
+        getAndParseUserData();
         
         Entities.webEventReceived.connect(onWebAppEventReceived);
         Messages.messageReceived.connect(onMessageReceived);
