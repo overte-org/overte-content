@@ -285,7 +285,6 @@
                 ></v-text-field>
                 
                 <v-footer>
-                    <v-spacer></v-spacer>
                     <div>Current Channel: <b>{{ presentationChannel }}</b></div>
                 </v-footer>
             </v-card>
@@ -315,8 +314,8 @@
                         </v-list-item-avatar>
 
                         <v-list-item-content>
-                            <v-list-item-subtitle>Deck {{ i }}</v-list-item-subtitle>
-                            <v-list-item-title>{{ slides[i][0].slide }}</v-list-item-title>
+                            <v-list-item-title>Deck <b>{{ i }}</b></v-list-item-title>
+                            <v-list-item-subtitle>{{ slides[i][0].slide }}</v-list-item-subtitle>
                         </v-list-item-content>
 
                         <v-list-item-icon>
@@ -405,6 +404,10 @@
                     v-model="importExportDialogSlideData"
                     filled
                 ></v-textarea>
+                
+                <v-footer>
+                    <div>Export the slide data by copying and pasting it into a file. Import it by pasting it in above and clicking <b>Import</b>.</div>
+                </v-footer>
             </v-card>
         </v-dialog>
         
@@ -434,12 +437,13 @@
         >
             <span>Current Slide Deck: <b>{{ slideDeck }}</b></span>
             <v-spacer></v-spacer>
-            <span>Current Presentation Channel: <b>{{ presentationChannel }}</b></span>
+            <span v-show="false">Current Presentation Channel: <b>{{ presentationChannel }}</b></span>
+            <span v-show="canSave && canEdit">You have unsaved changes.</span>
             <v-btn 
                 class="mx-2" 
                 color="green darken-1" 
                 @click="uploadState(slides); canSave = false;"
-                @disabled="!canEdit || !canSave"
+                :disabled="!canSave || !canEdit"
             >
                 Save
             </v-btn>
@@ -594,9 +598,11 @@ export default {
             'use': null,
             'path': null
         },
-        canEdit: false,
         canSave: false,
-        initialized: false
+        canEdit: (false || browserDevelopment()),
+        initialized: false,
+        slidesInitialized: false,
+        TIMEOUT_FOR_SLIDE_INITIALIZATION: 500
     }),
     computed: {
         computeGetCurrentSlidesHash: function () {
@@ -608,7 +614,7 @@ export default {
     },
     watch: {
         currentSlide: function (newSlide, oldSlide) {
-            if (newSlide !== oldSlide) {
+            if (newSlide !== oldSlide && this.initialized === true) {
                 this.sendSlideChange(newSlide);
             }
         },
@@ -624,9 +630,11 @@ export default {
             }
         },
         slides: {
-            handler: function (newValue, oldValue) {
-                if (newValue !== oldValue) {
-                    this.canSave = true;
+            handler: function () {
+                if (this.slidesInitialized === true) {
+                    console.log("Why though?");
+                    this.slidesChanged = true;
+                    this.computeCanSave();
                 }
             },
             deep: true
@@ -645,9 +653,8 @@ export default {
         initializeWebApp: function (data) {
             // We want to prevent any messages being sent out as a result of these changes...
             this.initialized = false;
-            
+
             // The data should already be parsed.
-            console.log("DATA RECEIVED ON INIT:" + JSON.stringify(data));
             var parsedUserData = data.userData; 
 
             // We are receiving the full slides, including slideDecks within.
@@ -669,7 +676,6 @@ export default {
                 this.atp = parsedUserData.atp;
             }
 
-            console.log("Proceeding to complete sync.");
             this.completeSyncing();
         },
         deleteSlide: function (slideIndex) {
@@ -788,10 +794,16 @@ export default {
         },
         // END Import Export Data Dialog
         importSlidesFromObject: function (objectToImport) {
+            this.slidesInitialized = false;
             this.slideDeck = Object.getOwnPropertyNames(objectToImport)[0];
             for (let i in objectToImport) {
                 this.$set(this.slides, i, objectToImport[i]);
             }
+            setTimeout(
+                function(){ 
+                    vue_this.slidesInitialized = true;
+                }, 
+            vue_this.TIMEOUT_FOR_SLIDE_INITIALIZATION);
         },
         changePresentationChannel: function () {
             this.presentationChannel = this.changePresentationChannelDialogText;
@@ -832,6 +844,20 @@ export default {
         },
         manuallyAskToSync: function () {
             vue_this.sendAppMessage('web-to-script-request-sync', {});
+        },
+        computeCanSave: function () {
+            var allowSaving = true;
+
+            if (this.lastReceivedSlidesChecksum !== null) {
+                if (this.lastReceivedSlidesChecksum === this.getCurrentSlidesHash()) {
+                    allowSaving = false;
+                }
+            }
+
+            if (this.slidesChanged === true && allowSaving) {
+                this.slidesChanged = false;
+                this.canSave = true;
+            }
         },
         getCurrentSlidesHash: function () {
             if (this.slides) {
