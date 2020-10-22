@@ -317,7 +317,13 @@
                         </v-list-item-content>
 
                         <v-list-item-icon>
-                            <v-btn @click="changeSlideDeckDialogShow = false; slideDeck = i" color="green" class="mx-2" fab medium>
+                            <v-btn 
+                                @click="changeSlideDeckDialogShow = false; slideDeck = i; slideChannel = 0;"
+                                color="green" 
+                                class="mx-2" 
+                                fab 
+                                medium
+                            >
                                 <v-icon>mdi-cursor-default-click</v-icon>
                             </v-btn>
                             <!-- <v-btn :disabled="index === 0" @click="rearrangeSlideDeck(i, 'up')" color="blue" class="mx-2" fab medium>
@@ -640,6 +646,7 @@ export default {
                 if (this.currentSlide > newDeck.length) {
                     this.currentSlide = 0;
                 }
+                this.sendSlideChange(this.currentSlide);
             }
         },
         presentationChannel: function () {
@@ -676,7 +683,7 @@ export default {
 
             // We are receiving the full slides, including slideDecks within.
             if (parsedUserData.slides) {
-                this.importSlidesFromObject(parsedUserData.slides);
+                this.importSlidesFromObject(parsedUserData.slides, false);
             }
 
             if (parsedUserData.presentationChannel) {
@@ -806,12 +813,15 @@ export default {
         },
         importSlideDataFromDialog: function () {
             if (JSON.parse(this.importExportDialogSlideData)) {
-                this.importSlidesFromObject(JSON.parse(this.importExportDialogSlideData));
+                this.importSlidesFromObject(JSON.parse(this.importExportDialogSlideData), true);
             }
         },
         // END Import Export Data Dialog
-        importSlidesFromObject: function (objectToImport) {
-            this.slidesInitialized = false;
+        importSlidesFromObject: function (objectToImport, shouldUpdate) {
+            if (!shouldUpdate) {
+                this.slidesInitialized = false;
+            }
+
             this.slideDeck = Object.getOwnPropertyNames(objectToImport)[0];
             for (let i in objectToImport) {
                 this.$set(this.slides, i, objectToImport[i]);
@@ -915,8 +925,8 @@ export default {
                 slidesToSync = this.slides;
             }
             
-            vue_this.sendNoticeToUpdateState();
-
+            this.sendNoticeToUpdateState();
+            console.log("ATP AT TIME OF UPLOAD: " + JSON.stringify(this.atp));
             this.sendAppMessage("web-to-script-upload-state", { 
                 "slides": slidesToSync, 
                 "presentationChannel": this.presentationChannel,
