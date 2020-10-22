@@ -43,7 +43,7 @@
                         <v-list-item-title>Manage Slides</v-list-item-title>
                     </v-list-item-content>
                 </v-list-item>
-                <v-list-item :disabled="!canEdit" link @click="changeSlideDeckDialogShow = !changeSlideDeckDialogShow">
+                <v-list-item link @click="changeSlideDeckDialogShow = !changeSlideDeckDialogShow">
                     <v-list-item-action>
                     <v-icon>mdi-database</v-icon>
                     </v-list-item-action>
@@ -52,7 +52,7 @@
                     </v-list-item-content>
                 </v-list-item>
                 <v-subheader>DISPLAY</v-subheader>
-                <v-list-item :disabled="!canEdit" link @click="changePresentationChannelDialogShow = !changePresentationChannelDialogShow">
+                <v-list-item disabled link @click="changePresentationChannelDialogShow = !changePresentationChannelDialogShow">
                     <v-list-item-action>
                     <v-icon>mdi-remote</v-icon>
                     </v-list-item-action>
@@ -81,19 +81,17 @@
             <v-toolbar-title>Presenter Panel</v-toolbar-title>
             <v-spacer></v-spacer>
             <div v-show="slides[slideDeck].length > 0">
-                <v-btn 
-                    :disabled="!canEdit" 
-                    medium 
-                    fab 
+                <v-btn
+                    medium
+                    fab
                     @click="currentSlide--"
                 >
                     <v-icon>mdi-arrow-left</v-icon>
                 </v-btn>
                 <span class="mx-4">{{ currentSlide + 1 }} / {{ slides[slideDeck].length }}</span>
-                <v-btn 
-                    :disabled="!canEdit" 
-                    medium 
-                    fab 
+                <v-btn
+                    medium
+                    fab
                     @click="currentSlide++"
                 >
                     <v-icon>mdi-arrow-right</v-icon>
@@ -328,7 +326,15 @@
                             <v-btn :disabled="index === Object.keys(slides).length - 1" @click="rearrangeSlideDeck(i, 'down')" color="blue" class="mx-2" fab medium>
                                 <v-icon>mdi-arrow-collapse-down</v-icon>
                             </v-btn> -->
-                            <v-btn :disabled="i === slideDeck || i === 'default'" @click="confirmDeleteSlideDeckDialogShow = true; confirmDeleteSlideDeckDialogWhich = i" color="red" class="mx-2" fab medium>
+                            <v-btn 
+                                :disabled="i === slideDeck || i === 'default' || !canEdit" 
+                                @click="confirmDeleteSlideDeckDialogShow = true; 
+                                confirmDeleteSlideDeckDialogWhich = i" 
+                                color="red" 
+                                class="mx-2" 
+                                fab 
+                                medium
+                            >
                                 <v-icon>mdi-delete</v-icon>
                             </v-btn>
                         </v-list-item-icon>
@@ -340,9 +346,17 @@
                         placeholder="Create new slide deck here"
                         v-model="changeSlideDeckDialogText"
                         filled
+                        :disabled="!canEdit"
                     >
                         <template slot="append-outer">
-                            <v-btn class="mx-2" color="green darken-1" @click="addSlideDeck()">Add</v-btn>
+                            <v-btn 
+                                class="mx-2" 
+                                color="green darken-1" 
+                                @click="addSlideDeck()"
+                                :disabled="!canEdit"
+                            >
+                                Add
+                            </v-btn>
                         </template>
                     </v-text-field>
                     <v-spacer></v-spacer>
@@ -610,6 +624,9 @@ export default {
         },
         computeSlides: function () {
             return JSON.stringify(this.slides);
+        },
+        viewerOnlyMode: function () {
+            return !this.canEdit;
         }
     },
     watch: {
@@ -619,20 +636,20 @@ export default {
             }
         },
         slideDeck: function (newDeck, oldDeck) {
-            // console.log("THIS.INITIALIZED" + this.initialized);
             if (newDeck !== oldDeck && this.initialized === true) {
-                this.currentSlide = 0;
+                if (this.currentSlide > newDeck.length) {
+                    this.currentSlide = 0;
+                }
             }
         },
         presentationChannel: function () {
-            if (this.initialized === true) {
-                this.uploadState(this.slides);
-            }
+            // if (this.initialized === true) {
+            //     this.uploadState(this.slides);
+            // }
         },
         slides: {
             handler: function () {
                 if (this.slidesInitialized === true) {
-                    console.log("Why though?");
                     this.slidesChanged = true;
                     this.computeCanSave();
                 }
