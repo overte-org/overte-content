@@ -134,18 +134,18 @@
         if (channel === presentationChannel) {
             var messageJSON = JSON.parse(message);
             if (messageJSON.command === "display-slide" ) { // We are receiving a slide.
-                if (messageJSON.data.senderEntityID === _this.entityID && MyAvatar.sessionUUID != sender) {
-                    // We got a message that this entity changed a slide, so let's update all instances of this entity for everyone.
-                    Script.setTimeout(function () {
-                        // Window.alert("Receiving... " + messageJSON.data.slidesChecksum);
-                        lastMessageSentOrReceivedData = messageJSON.data;
-                        sendToWeb('script-to-web-latest-slides-checksum', messageJSON.data.slidesChecksum);
-                        sendToWeb('script-to-web-update-slide-state', messageJSON.data);
-                        // console.log("PASSING MESSAGE IN.");
-                        // console.log("lastMessageSentOrReceivedData: "+ JSON.stringify(lastMessageSentOrReceivedData));
-                    }, PROCESSING_MSG_DEBOUNCE_TIME);
-                }
-                // console.log("FULL MESSAGE RECEIVED: " + JSON.stringify(messageJSON.data));
+                // if (messageJSON.data.senderEntityID === _this.entityID && MyAvatar.sessionUUID != sender) {
+                //     // We got a message that this entity changed a slide, so let's update all instances of this entity for everyone.
+                //     Script.setTimeout(function () {
+                //         // Window.alert("Receiving... " + messageJSON.data.slidesChecksum);
+                //         lastMessageSentOrReceivedData = messageJSON.data;
+                //         sendToWeb('script-to-web-latest-slides-checksum', messageJSON.data.slidesChecksum);
+                //         sendToWeb('script-to-web-update-slide-state', messageJSON.data);
+                //         console.log("PASSING MESSAGE IN.");
+                //         console.log("lastMessageSentOrReceivedData: "+ JSON.stringify(lastMessageSentOrReceivedData));
+                //     }, PROCESSING_MSG_DEBOUNCE_TIME);
+                // }
+                // console.log("FULL MESSAGE RECEIVED, DISPLAY-SLIDE: " + JSON.stringify(messageJSON.data));
                 // console.log("Who are they?" + sender);
                 // console.log("Who are we? " + MyAvatar.sessionUUID);
             }
@@ -158,16 +158,16 @@
                         sendToWeb('script-to-web-needs-syncing');
                     }, PROCESSING_MSG_DEBOUNCE_TIME);
                 }
-                // console.log("FULL MESSAGE RECEIVED: " + JSON.stringify(messageJSON.data));
-                // console.log("Who are they?" + sender);
-                // console.log("Who are we? " + MyAvatar.sessionUUID);
+                console.log("FULL MESSAGE RECEIVED, UPDATE FROM STORAGE: " + JSON.stringify(messageJSON.data));
+                console.log("Who are they?" + sender);
+                console.log("Who are we? " + MyAvatar.sessionUUID);
             }
 
-            // print("Message received on Slider Presenter App:");
-            // print("- channel: " + channel);
-            // print("- message: " + message);
-            // print("- sender: " + sender);
-            // print("- localOnly: " + localOnly);
+            print("Message received on Slider Presenter App:");
+            print("- channel: " + channel);
+            print("- message: " + message);
+            print("- sender: " + sender);
+            print("- localOnly: " + localOnly);
         }
     }
     

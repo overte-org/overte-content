@@ -326,12 +326,12 @@
                             >
                                 <v-icon>mdi-cursor-default-click</v-icon>
                             </v-btn>
-                            <!-- <v-btn :disabled="index === 0" @click="rearrangeSlideDeck(i, 'up')" color="blue" class="mx-2" fab medium>
+                            <v-btn :disabled="index === 0" @click="rearrangeSlideDeck(i, 'up')" color="blue" class="mx-2" fab medium>
                                 <v-icon>mdi-arrow-collapse-up</v-icon>
                             </v-btn>
                             <v-btn :disabled="index === Object.keys(slides).length - 1" @click="rearrangeSlideDeck(i, 'down')" color="blue" class="mx-2" fab medium>
                                 <v-icon>mdi-arrow-collapse-down</v-icon>
-                            </v-btn> -->
+                            </v-btn>
                             <v-btn 
                                 :disabled="i === slideDeck || i === 'default' || !canEdit" 
                                 @click="confirmDeleteSlideDeckDialogShow = true; 
@@ -449,7 +449,7 @@
             </v-card>
         </v-dialog>
         
-        <!-- Sync Failed Dialog -->
+        <!-- Sync Requested Dialog -->
         
         <v-footer
             color="primary"
@@ -803,7 +803,8 @@ export default {
         //         newPosition = slideDeckIndex + 1; // Down means higher in the array... down the list.
         //     }
         // 
-        // 
+        //     var slideDeckToMove = this.slides.splice(slideDeckIndex, 1)[0];
+        //     this.slides.splice(newPosition, 0, slideDeckToMove);
         // },
         // BEGIN Import Export Data Dialog
         parseSlideDataIntoDialog: function () {
