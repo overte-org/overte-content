@@ -251,7 +251,7 @@
                             <v-btn :disabled="i === 0" @click="rearrangeSlide(i, 'up')" color="blue" class="mx-2" fab medium>
                                 <v-icon>mdi-arrow-collapse-up</v-icon>
                             </v-btn>
-                            <v-btn :disabled="i === slides.length - 1" @click="rearrangeSlide(i, 'down')" color="blue" class="mx-2" fab medium>
+                            <v-btn :disabled="i === computeCurrentSlideDeck.length - 1" @click="rearrangeSlide(i, 'down')" color="blue" class="mx-2" fab medium>
                                 <v-icon>mdi-arrow-collapse-down</v-icon>
                             </v-btn>
                             <v-btn @click="confirmDeleteSlideDialogShow = true; confirmDeleteSlideDialogWhich = i" color="red" class="mx-2" fab medium>
@@ -313,7 +313,7 @@
 
                         <v-list-item-content>
                             <v-list-item-title>Deck <b>{{ Object.keys(slides[i])[0] }}</b></v-list-item-title>
-                            <v-list-item-subtitle>{{ getSpecifiedSlideDeck(i)[0].slide }}</v-list-item-subtitle>
+                            <v-list-item-subtitle>{{ getSpecifiedSlideDeck(i).length }} slides</v-list-item-subtitle>
                         </v-list-item-content>
 
                         <v-list-item-icon>
@@ -326,10 +326,10 @@
                             >
                                 <v-icon>mdi-cursor-default-click</v-icon>
                             </v-btn>
-                            <v-btn :disabled="index === 0" @click="rearrangeSlideDeck(i, 'up')" color="blue" class="mx-2" fab medium>
+                            <v-btn :disabled="i === 0" @click="rearrangeSlideDeck(i, 'up')" color="blue" class="mx-2" fab medium>
                                 <v-icon>mdi-arrow-collapse-up</v-icon>
                             </v-btn>
-                            <v-btn :disabled="index === Object.keys(slides).length - 1" @click="rearrangeSlideDeck(i, 'down')" color="blue" class="mx-2" fab medium>
+                            <v-btn :disabled="i === Object.keys(slides).length - 1" @click="rearrangeSlideDeck(i, 'down')" color="blue" class="mx-2" fab medium>
                                 <v-icon>mdi-arrow-collapse-down</v-icon>
                             </v-btn>
                             <v-btn 
@@ -443,7 +443,7 @@
                     <v-btn class="mx-2" color="green darken-1" @click="manuallyAskToSync()">Sync</v-btn>
                 </v-toolbar>
 
-                <v-card-title>A user has updated the slides, you need to sync to be up to date with them.</v-card-title>
+                <v-card-title>A user has updated the slides, please sync now.</v-card-title>
                 <!-- <v-card-subtitle>Last Received Checksum: {{ lastReceivedSlidesChecksum }}<br/>Current Checksum: {{ computeGetCurrentSlidesHash }}</v-card-subtitle>
                 <v-card-subtitle>{{ computeSlides }}</v-card-subtitle> -->
             </v-card>
@@ -703,6 +703,8 @@ export default {
             // We are receiving the full slides, including slideDecks within.
             if (parsedUserData.slides) {
                 this.importSlidesFromObject(parsedUserData.slides, false);
+            } else {
+                this.slidesInitialized = true;
             }
 
             if (parsedUserData.presentationChannel) {
@@ -733,11 +735,14 @@ export default {
         },
         addSlideDeck: function () {
             var objectToPush = {
-                [vue_this.changeSlideDeckDialogText]: {
-                    'link': 'https://vircadia.com/',
-                    'slide': './assets/logo.png'
-                }
+                [vue_this.changeSlideDeckDialogText]: [
+                    {
+                        'link': 'https://vircadia.com/',
+                        'slide': './assets/logo.png'
+                    }
+                ]
             }
+            vue_this.changeSlideDeckDialogText = '';
             this.slides.push(objectToPush);
         },
         addSlideByURL: function () {
@@ -810,9 +815,9 @@ export default {
             } else if (direction === "down") {
                 newPosition = slideIndex + 1; // Down means higher in the array... down the list.
             }
-            
-            var slideToMove = Object.keys(this.slides[this.slideDeck])[0].splice(slideIndex, 1)[0];
-            Object.keys(this.slides[this.slideDeck])[0].splice(newPosition, 0, slideToMove);
+
+            var slideToMove = this.computeCurrentSlideDeck.splice(slideIndex, 1)[0];
+            this.computeCurrentSlideDeck.splice(newPosition, 0, slideToMove);
         },
         rearrangeSlideDeck: function (slideDeckIndex, direction) {
             var newPosition;
@@ -825,6 +830,7 @@ export default {
             
             var slideDeckToMove = this.slides.splice(slideDeckIndex, 1)[0];
             this.slides.splice(newPosition, 0, slideDeckToMove);
+            this.slideDeck = newPosition;
         },
         getSpecifiedSlideDeck: function (slideDeck) {
             return this.slides[slideDeck][Object.keys(this.slides[slideDeck])[0]];
@@ -875,7 +881,7 @@ export default {
         sendSlideChange: function (slideIndex) {
             if (this.slides[this.slideDeck]) {
                 this.sendAppMessage("web-to-script-slide-changed", {
-                    'slide': this.slides[this.slideDeck][slideIndex],
+                    'slide': this.computeCurrentSlideDeck[slideIndex],
                     'slideDeck': this.slideDeck,
                     'currentSlide': this.currentSlide
                 });
