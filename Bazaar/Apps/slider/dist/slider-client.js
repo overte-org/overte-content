@@ -124,10 +124,6 @@
         if (dataToSend.command === "update-from-storage") {
             Messages.sendMessage(presentationChannel, JSON.stringify(dataToSend));
         }
-        // if (debounceSend()) {
-        //     // We're trying to prevent any possible crazy loops.
-        //     Messages.sendMessage(presentationChannel, JSON.stringify(dataToSend));
-        // }
     }
     
     function onMessageReceived(channel, message, sender, localOnly) {

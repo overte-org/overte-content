@@ -20,6 +20,6 @@ module.exports = {
             chunks: [ 'chunk-vendors', 'chunk-common', 'display' ]
         }
     },
-    // publicPath: '/us-e-1/Bazaar/Apps/slider/dist/'
-    publicPath: '/assets/public/script/slider/'
+    publicPath: '/us-e-1/Bazaar/Apps/slider/dist/'
+    // publicPath: '/assets/public/script/slider/'
 }
