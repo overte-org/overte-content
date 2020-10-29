@@ -69,6 +69,15 @@
                         <v-list-item-title>Import / Export Data</v-list-item-title>
                     </v-list-item-content>
                 </v-list-item>
+                <v-subheader>HELP</v-subheader>
+                <v-list-item link @click="manuallyAskToSync()">
+                    <v-list-item-action>
+                    <v-icon>mdi-sync-circle</v-icon>
+                    </v-list-item-action>
+                    <v-list-item-content>
+                        <v-list-item-title>Reload From Storage</v-list-item-title>
+                    </v-list-item-content>
+                </v-list-item>
             </v-list>
         </v-navigation-drawer>
 
@@ -558,27 +567,27 @@ export default {
                         'slide': './assets/logo.png'
                     }
                 ]
-            },
-            {
-                'Slide Deck 1': [
-                    {
-                        'link': "https://vircadia.com/",
-                        'slide': 'https://wallpapertag.com/wallpaper/full/d/5/e/154983-anime-girl-wallpaper-hd-1920x1200-for-hd.jpg'
-                    },
-                    {
-                        'link': "https://vircadia.com/",
-                        'slide': 'https://wallpapertag.com/wallpaper/full/7/3/0/234884-anime-girls-wallpaper-3840x2160-ipad.jpg'
-                    },
-                    {
-                        'link': "https://vircadia.com/",
-                        'slide': 'http://getwallpapers.com/wallpaper/full/2/7/b/596546.jpg'
-                    },
-                    {
-                        'link': "https://vircadia.com/",
-                        'slide': 'https://images4.alphacoders.com/671/671041.jpg'
-                    }
-                ]
             }
+            // {
+            //     'Slide Deck 1': [
+            //         {
+            //             'link': "https://vircadia.com/",
+            //             'slide': 'https://wallpapertag.com/wallpaper/full/d/5/e/154983-anime-girl-wallpaper-hd-1920x1200-for-hd.jpg'
+            //         },
+            //         {
+            //             'link': "https://vircadia.com/",
+            //             'slide': 'https://wallpapertag.com/wallpaper/full/7/3/0/234884-anime-girls-wallpaper-3840x2160-ipad.jpg'
+            //         },
+            //         {
+            //             'link': "https://vircadia.com/",
+            //             'slide': 'http://getwallpapers.com/wallpaper/full/2/7/b/596546.jpg'
+            //         },
+            //         {
+            //             'link': "https://vircadia.com/",
+            //             'slide': 'https://images4.alphacoders.com/671/671041.jpg'
+            //         }
+            //     ]
+            // }
             // 'Slide Deck 2': [
             //     'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapersite.com%2Fimages%2Fwallpapers%2Fquna-2560x1440-phantasy-star-online-2-4k-2336.jpg&f=1&nofb=1',
             //     'https://hdqwalls.com/wallpapers/anime-girl-aqua-blue-4k-gu.jpg',
