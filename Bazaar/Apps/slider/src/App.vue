@@ -80,7 +80,7 @@
             <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
             <v-toolbar-title>Presenter Panel</v-toolbar-title>
             <v-spacer></v-spacer>
-            <div v-show="slides[slideDeck].length > 0">
+            <div v-show="computeCurrentSlideDeck.length > 0">
                 <v-btn
                     medium
                     fab
@@ -88,7 +88,7 @@
                 >
                     <v-icon>mdi-arrow-left</v-icon>
                 </v-btn>
-                <span class="mx-4">{{ currentSlide + 1 }} / {{ slides[slideDeck].length }}</span>
+                <span class="mx-4">{{ currentSlide + 1 }} / {{ computeCurrentSlideDeck.length }}</span>
                 <v-btn
                     medium
                     fab
@@ -113,7 +113,7 @@
                     :show-arrows="canEdit"
                 >
                     <v-carousel-item
-                        v-for="(slide, index) in slides[slideDeck]"
+                        v-for="(slide, index) in computeCurrentSlideDeck"
                         track-by="$index"
                         :key="index"
                         height="100%"
@@ -221,15 +221,15 @@
         <v-dialog v-model="manageSlidesDialogShow" persistent fullscreen>
             <v-card>
                 <v-toolbar>
-                    <v-toolbar-title>Manage Slides for {{ slideDeck }}</v-toolbar-title>
+                    <v-toolbar-title>Manage Slides for {{ Object.keys(slides[slideDeck])[0] }}</v-toolbar-title>
                     <v-spacer></v-spacer>
                     <v-btn class="mx-2" color="green" @click="manageSlidesDialogShow = false">Done</v-btn>
                 </v-toolbar>
                 <v-list subheader :three-line="true">
-                    <v-subheader>{{ slides[slideDeck].length }} Slides</v-subheader>
+                    <v-subheader>{{ computeCurrentSlideDeck.length }} Slides</v-subheader>
 
                     <v-list-item
-                        v-for="(slide, i) in slides[slideDeck]"
+                        v-for="(slide, i) in computeCurrentSlideDeck"
                         :key="i"
                     >
                         <v-list-item-avatar size="64">
@@ -301,19 +301,19 @@
                 </v-toolbar>
 
                 <v-list subheader>
-                    <v-subheader>{{ Object.keys(slides).length }} Slide Decks</v-subheader>
+                    <v-subheader>{{ slides.length }} Slide Decks</v-subheader>
                     <v-list-item
                         v-for="(deck, i, index) in slides"
                         track-by="$index"
                         :key="index"
                     >
                         <v-list-item-avatar size="64">
-                            <v-img :src="deck[0].slide"></v-img>
+                            <v-img :src="getSpecifiedSlideDeck(i)[0].slide"></v-img>
                         </v-list-item-avatar>
 
                         <v-list-item-content>
-                            <v-list-item-title>Deck <b>{{ i }}</b></v-list-item-title>
-                            <v-list-item-subtitle>{{ slides[i][0].slide }}</v-list-item-subtitle>
+                            <v-list-item-title>Deck <b>{{ Object.keys(slides[i])[0] }}</b></v-list-item-title>
+                            <v-list-item-subtitle>{{ getSpecifiedSlideDeck(i)[0].slide }}</v-list-item-subtitle>
                         </v-list-item-content>
 
                         <v-list-item-icon>
@@ -333,7 +333,7 @@
                                 <v-icon>mdi-arrow-collapse-down</v-icon>
                             </v-btn>
                             <v-btn 
-                                :disabled="i === slideDeck || i === 'default' || !canEdit" 
+                                :disabled="i === slideDeck || Object.keys(slides[i])[0] === 'default' || !canEdit" 
                                 @click="confirmDeleteSlideDeckDialogShow = true; 
                                 confirmDeleteSlideDeckDialogWhich = i" 
                                 color="red" 
@@ -366,7 +366,7 @@
                         </template>
                     </v-text-field>
                     <v-spacer></v-spacer>
-                    <div>Current Slide Deck: <b>{{ slideDeck }}</b></div>
+                    <div>Current Slide Deck: <b>{{ Object.keys(slides[slideDeck])[0] }}</b></div>
                 </v-footer>
             </v-card>
         </v-dialog>
@@ -402,7 +402,7 @@
                     <v-btn class="mx-2" color="red darken-1" @click="confirmDeleteSlideDeckDialogShow = false; deleteSlideDeck(confirmDeleteSlideDeckDialogWhich)">Delete</v-btn>
                 </v-toolbar>
 
-                <v-card-title>Are you sure you want to delete the slide desk {{ confirmDeleteSlideDeckDialogWhich }}?</v-card-title>
+                <v-card-title>Are you sure you want to delete the slide deck {{ confirmDeleteSlideDeckDialogWhich }}?</v-card-title>
                 <v-card-subtitle>You cannot undo this action.</v-card-subtitle>
             </v-card>
         </v-dialog>
@@ -455,7 +455,7 @@
             color="primary"
             app
         >
-            <span>Current Slide Deck: <b>{{ slideDeck }}</b></span>
+            <span>Current Slide Deck: <b>{{ Object.keys(slides[slideDeck])[0] }}</b></span>
             <v-spacer></v-spacer>
             <span v-show="false">Current Presentation Channel: <b>{{ presentationChannel }}</b></span>
             <span v-show="canSave && canEdit">You have unsaved changes.</span>
@@ -550,29 +550,45 @@ export default {
     },
     data: () => ({
         drawer: null,
-        slides: {
-            'default': [
-                {
-                    'link': "https://vircadia.com/",
-                    'slide': './assets/logo.png'
-                }
-            ]
-            // 'Slide Deck 1': [
-            //     'https://wallpapertag.com/wallpaper/full/d/5/e/154983-anime-girl-wallpaper-hd-1920x1200-for-hd.jpg',
-            //     'https://wallpapertag.com/wallpaper/full/7/3/0/234884-anime-girls-wallpaper-3840x2160-ipad.jpg',
-            //     'http://getwallpapers.com/wallpaper/full/2/7/b/596546.jpg',
-            //     'https://images4.alphacoders.com/671/671041.jpg'
-            // ],
+        slides: [
+            {
+                "default": [
+                    {
+                        'link': "https://vircadia.com/",
+                        'slide': './assets/logo.png'
+                    }
+                ]
+            },
+            {
+                'Slide Deck 1': [
+                    {
+                        'link': "https://vircadia.com/",
+                        'slide': 'https://wallpapertag.com/wallpaper/full/d/5/e/154983-anime-girl-wallpaper-hd-1920x1200-for-hd.jpg'
+                    },
+                    {
+                        'link': "https://vircadia.com/",
+                        'slide': 'https://wallpapertag.com/wallpaper/full/7/3/0/234884-anime-girls-wallpaper-3840x2160-ipad.jpg'
+                    },
+                    {
+                        'link': "https://vircadia.com/",
+                        'slide': 'http://getwallpapers.com/wallpaper/full/2/7/b/596546.jpg'
+                    },
+                    {
+                        'link': "https://vircadia.com/",
+                        'slide': 'https://images4.alphacoders.com/671/671041.jpg'
+                    }
+                ]
+            }
             // 'Slide Deck 2': [
             //     'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapersite.com%2Fimages%2Fwallpapers%2Fquna-2560x1440-phantasy-star-online-2-4k-2336.jpg&f=1&nofb=1',
             //     'https://hdqwalls.com/wallpapers/anime-girl-aqua-blue-4k-gu.jpg',
             //     'https://images3.alphacoders.com/729/729085.jpg',
             //     'https://mangadex.org/images/groups/9766.jpg?1572281708'
             // ]
-        },
+        ],
         currentSlide: 0,
         presentationChannel: 'default-presentation-channel',
-        slideDeck: 'default',
+        slideDeck: 0,
         // Add Slides Dialog
         addSlidesByURLDialogShow: false,
         addSlideByURLSlideField: '',
@@ -630,6 +646,9 @@ export default {
         },
         computeSlides: function () {
             return JSON.stringify(this.slides);
+        },
+        computeCurrentSlideDeck: function () {
+            return this.slides[this.slideDeck][Object.keys(this.slides[this.slideDeck])[0]];
         },
         viewerOnlyMode: function () {
             return !this.canEdit;
@@ -703,22 +722,23 @@ export default {
             this.completeSyncing();
         },
         deleteSlide: function (slideIndex) {
-            this.slides[this.slideDeck].splice(slideIndex, 1);
+            Object.keys(this.slides[this.slideDeck])[0].splice(slideIndex, 1);
 
-            if (this.slides[this.slideDeck].length === 0) {
+            if (Object.keys(this.slides[this.slideDeck])[0].length === 0) {
                 this.manageSlidesDialogShow = false; // Hide the dialog if the user has deleted the last of the slides.
             }
         },
-        deleteSlideDeck: function (slideDeckKey) {
-            this.$delete(this.slides, slideDeckKey);
+        deleteSlideDeck: function (slideDeckIndex) {
+            this.slides.splice(slideDeckIndex, 1);
         },
         addSlideDeck: function () {
-            this.$set(this.slides, this.changeSlideDeckDialogText, [
-                {
-                    'link': "https://vircadia.com/",
+            var objectToPush = {
+                [vue_this.changeSlideDeckDialogText]: {
+                    'link': 'https://vircadia.com/',
                     'slide': './assets/logo.png'
                 }
-            ]);
+            }
+            this.slides.push(objectToPush);
         },
         addSlideByURL: function () {
             var objectToPush = {
@@ -791,21 +811,24 @@ export default {
                 newPosition = slideIndex + 1; // Down means higher in the array... down the list.
             }
             
-            var slideToMove = this.slides[this.slideDeck].splice(slideIndex, 1)[0];
-            this.slides[this.slideDeck].splice(newPosition, 0, slideToMove);
+            var slideToMove = Object.keys(this.slides[this.slideDeck])[0].splice(slideIndex, 1)[0];
+            Object.keys(this.slides[this.slideDeck])[0].splice(newPosition, 0, slideToMove);
         },
-        // rearrangeSlideDeck: function (slideDeckIndex, direction) {
-        //     var newPosition;
-        // 
-        //     if (direction === "up") {
-        //         newPosition = slideDeckIndex - 1; // Up means lower in the array... up the list.
-        //     } else if (direction === "down") {
-        //         newPosition = slideDeckIndex + 1; // Down means higher in the array... down the list.
-        //     }
-        // 
-        //     var slideDeckToMove = this.slides.splice(slideDeckIndex, 1)[0];
-        //     this.slides.splice(newPosition, 0, slideDeckToMove);
-        // },
+        rearrangeSlideDeck: function (slideDeckIndex, direction) {
+            var newPosition;
+
+            if (direction === "up") {
+                newPosition = slideDeckIndex - 1; // Up means lower in the array... up the list.
+            } else if (direction === "down") {
+                newPosition = slideDeckIndex + 1; // Down means higher in the array... down the list.
+            }
+            
+            var slideDeckToMove = this.slides.splice(slideDeckIndex, 1)[0];
+            this.slides.splice(newPosition, 0, slideDeckToMove);
+        },
+        getSpecifiedSlideDeck: function (slideDeck) {
+            return this.slides[slideDeck][Object.keys(this.slides[slideDeck])[0]];
+        },
         // BEGIN Import Export Data Dialog
         parseSlideDataIntoDialog: function () {
             if (JSON.stringify(this.slides)) {
