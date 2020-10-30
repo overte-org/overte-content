@@ -759,8 +759,8 @@ export default {
                 'link': this.addSlideByURLLinkField,
                 'slide': this.addSlideByURLSlideField
             }
-            this.slides[this.slideDeck].push(objectToPush);
-            vue_this.currentSlide = vue_this.slides[vue_this.slideDeck].length - 1; // The array starts at 0, so the length will always be +1, so we account for that.
+            this.computeCurrentSlideDeck.push(objectToPush);
+            this.currentSlide = this.computeCurrentSlideDeck.length - 1; // The array starts at 0, so the length will always be +1, so we account for that.
             this.addSlideByURLSlideField = '';
             this.addSlideByURLLinkField = '';
         },
