@@ -8,6 +8,9 @@
 //  Distributed under the Apache License, Version 2.0.
 //  See the accompanying file LICENSE or http://www.apache.org/licenses/LICENSE-2.0.html
 //
+//  Bugs to fix: delete doesn't work, slide decks don't start at slide 1, loading the saved slide state does not work because it triggers a slideChange event... fix that?
+//  Features to add: Image preview thumbnails, next up, and previous images... Multi-slide add for quick additions.
+//  
 -->
 
 <template>
@@ -666,11 +669,13 @@ export default {
     watch: {
         currentSlide: function (newSlide, oldSlide) {
             if (newSlide !== oldSlide && this.initialized === true) {
+                console.log("Slide CURRENT Changed... " + "Init: " + this.initialized + " -- Slides Init: " + this.slidesInitialized);
                 this.sendSlideChange(newSlide);
             }
         },
         slideDeck: function (newDeck, oldDeck) {
-            if (newDeck !== oldDeck && this.initialized === true) {
+            if (newDeck !== oldDeck && this.slidesInitialized === true) {
+                console.log("Slide DECK Changed... " + "Init: " + this.initialized + " -- Slides Init: " + this.slidesInitialized);
                 if (this.currentSlide > newDeck.length) {
                     this.currentSlide = 0;
                 }
@@ -720,10 +725,10 @@ export default {
                 this.presentationChannel = parsedUserData.presentationChannel;
             }
 
-            if (parsedUserData.currentSlideState) {
-                this.currentSlide = parsedUserData.currentSlideState.currentSlide;
-                this.slideDeck = parsedUserData.currentSlideState.slideDeck;
-            }
+            // if (parsedUserData.currentSlideState) {
+            //     this.currentSlide = parsedUserData.currentSlideState.currentSlide;
+            //     this.slideDeck = parsedUserData.currentSlideState.slideDeck;
+            // }
 
             if (parsedUserData.atp) {
                 // console.log("setting ATP: " + parsedUserData.atp.use + parsedUserData.atp.path);
@@ -888,6 +893,7 @@ export default {
             }
         },
         sendSlideChange: function (slideIndex) {
+            console.log("Slide SEND Changed... " + "Init: " + this.initialized + " -- Slides Init: " + this.slidesInitialized);
             if (this.slides[this.slideDeck]) {
                 this.sendAppMessage("web-to-script-slide-changed", {
                     'slide': this.computeCurrentSlideDeck[slideIndex],
