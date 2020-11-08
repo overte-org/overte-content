@@ -18,6 +18,7 @@
     var zoneToHandle;
     var maxFPS;
     var relative;
+    var rotation; // Can be "Quat" or "Vec3Degrees"
     var webEntitiesToLoad = [];
     var webEntitiesActive = [];
 
@@ -37,6 +38,7 @@
         ],
         "options": {
             "relative": true,
+            "rotation": "Quat",
             "maxFPS": 30,
             "zoneToHandle": ""
         }
@@ -84,6 +86,12 @@
             if (userData.options.relative) {
                 relative = userData.options.relative;
             }
+            
+            if (userData.options.rotation) {
+                rotation = userData.options.rotation;
+            } else {
+                rotation = "Quat";
+            }
 
             if (userData.webEntitiesToLoad) {
                 webEntitiesToLoad = userData.webEntitiesToLoad;
@@ -123,6 +131,10 @@
                         "w": 1
                     }
                     
+                    if (rotation === "Vec3Degrees") {
+                        webRotation = Quat.fromVec3Degrees({ x: webRotation.x, y: webRotation.y, z: webRotation.z });
+                    }
+                    
                     webRotation = Quat.multiply(loaderEntityRotation, webRotation);
                 } else {
                     webRotation = {
@@ -131,6 +143,8 @@
                         "z": webEntitiesToLoad[i].rotation[2],
                         "w": 1
                     }
+                    
+                    webRotation = Quat.fromVec3Degrees({ x: webRotation.x, y: webRotation.y, z: webRotation.z });
                 }
 
                 var webDimensions = {
