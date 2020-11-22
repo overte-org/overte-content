@@ -33,7 +33,8 @@
                 "position": [400, 22, 400],
                 "rotation": [0, 0, 0],
                 "dimensions": [2, 2],
-                "dpi": 10
+                "dpi": 10,
+                "background": true
             }
         ],
         "options": {
@@ -163,7 +164,8 @@
                     script: webEntitiesToLoad[i].script,
                     serverScripts: webEntitiesToLoad[i].serverScripts,
                     dpi: webEntitiesToLoad[i].dpi,
-                    maxFPS: maxFPS
+                    maxFPS: maxFPS,
+                    useBackground: webEntitiesToLoad[i].background
                 }, "local");
 
                 webEntitiesActive.push(webEntity);
