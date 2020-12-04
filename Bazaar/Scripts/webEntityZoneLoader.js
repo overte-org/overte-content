@@ -23,6 +23,11 @@
     var webEntitiesActive = [];
 
     // User Data Functionality
+    //
+    // Required values for web entities are:
+    // url, position, rotation, dimensions, and dpi
+    // All others are optional to help save space in userData.
+    //
 
     var defaultUserData = {
         "webEntitiesToLoad": [
@@ -100,9 +105,8 @@
 
             for (i = 0; i < webEntitiesToLoad.length; i++) {
                 var loaderEntityProps = Entities.getEntityProperties(_this.entityID, ["position", "rotation"]);
-                var webPosition;
-                var webRotation;
 
+                var webPosition;
                 if (relative === true) {
                     loaderEntityProps.position;
                     loaderEntityProps.rotation;
@@ -122,6 +126,7 @@
                     }
                 }
 
+                var webRotation;
                 if (relative === true) {
                     var loaderEntityRotation = loaderEntityProps.rotation;
                     
@@ -153,6 +158,21 @@
                     "y": webEntitiesToLoad[i].dimensions[1],
                     "z": 0.0100
                 }
+
+                var webScript = '';
+                if (webEntitiesToLoad[i].script) {
+                    webScript = webEntitiesToLoad[i].script;
+                }
+                
+                var webServerScripts = '';
+                if (webEntitiesToLoad[i].serverScripts) {
+                    webServerScripts = webEntitiesToLoad[i].serverScripts;
+                }
+                
+                var webBackground = true;
+                if (webEntitiesToLoad[i].background) {
+                    webBackground = webEntitiesToLoad[i].background;
+                }
                 
                 var webEntity = Entities.addEntity({
                     type: "Web",
@@ -161,11 +181,11 @@
                     rotation: webRotation,
                     dimensions: webDimensions,
                     sourceUrl: webEntitiesToLoad[i].url,
-                    script: webEntitiesToLoad[i].script,
-                    serverScripts: webEntitiesToLoad[i].serverScripts,
+                    script: webScript,
+                    serverScripts: webServerScripts,
                     dpi: webEntitiesToLoad[i].dpi,
                     maxFPS: maxFPS,
-                    useBackground: webEntitiesToLoad[i].background
+                    useBackground: webBackground
                 }, "local");
 
                 webEntitiesActive.push(webEntity);
