@@ -153,7 +153,7 @@ inventoryDB.info().then(function (info) {
 // DB Function to pull top level categories
 function getTcat() {
     inventoryDB.search({
-        query: 'Bazzar',
+        query: 'Bazaar',
         fields: ['parent'],
         include_docs: true
     }).then(function (res) {
