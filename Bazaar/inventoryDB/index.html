@@ -40,7 +40,7 @@
 
 <h3>How it works</h3>
 
-<p>The script searches recursively for an index.json.  The index.json tells the script what folders exist in each subfolder provided. When the app does not find an index.json in a folder it looks for a package.json file.  The package.json file tells the app what kind of resource is in this folder and provides details for accessing it.  Categories and subcategories are created from the index.json files. These categories are populated with resources based upon what is provided in the package.json files.  All this information is written to an in memory database. It's this database that we will export and upload to your file repository.</p>
+<p>The script searches recursively for an index.json.  The index.json tells the script what folders exist in each subfolder provided. When the app does not find an index.json in a folder it looks for a resource.json file.  The resource.json file tells the app what kind of resource is in this folder and provides details for accessing it.  Categories and subcategories are created from the index.json files. These categories are populated with resources based upon what is provided in the resource.json files.  All this information is written to an in memory database. It's this database that we will export and upload to your file repository.</p>
 
 <p>The database holds two types of records, folder and resource.  The fields are as below:</p>
 
@@ -67,7 +67,7 @@ var resource = {
 
 <h3>Understanding Errors</h3>
 
-</p>Watch the results of this script in the browser console. If no index.json or package.json is present you will see GET errors in the console. This is to be expected. What you do need to look for in your console are JSON errors. If you get a JSON parse error you will need to run your json file in a json validator or lint to determine why... Failure to provide properly formed json will result in inaccurate or incomplete data in the inventory app. If you have to correct your JSON, just re-run the download script afterwards and update your repository with the new GZ file. Uncaught (in promise) errors occur when you are trying to load a record that already exists. <font color=red>You will need to flush your cache before you reset this page.</font> 
+</p>Watch the results of this script in the browser console. If no index.json or resource.json is present you will see GET errors in the console. This is to be expected. What you do need to look for in your console are JSON errors. If you get a JSON parse error you will need to run your json file in a json validator or lint to determine why... Failure to provide properly formed json will result in inaccurate or incomplete data in the inventory app. If you have to correct your JSON, just re-run the download script afterwards and update your repository with the new GZ file. Uncaught (in promise) errors occur when you are trying to load a record that already exists. <font color=red>You will need to flush your cache before you reset this page.</font> 
 This will whipe the database and you will be loading it freshly.</p>
 
 <h3>Download the Database</h3>
@@ -126,9 +126,9 @@ document.getElementById("mkDBbutton").onclick = function () {
 
 // Top level index
 var folders = {
-    "_id": "bazzar",
+    "_id": "bazaar",
     "r_type": "folder",
-    "name": "Bazzar",
+    "name": "Bazaar",
     "parent": "repo",
     "type": "index",
     "path": $repo
@@ -153,7 +153,7 @@ function mkDB() {
             "_id": $id,
             "r_type": "folder",
             "name": $name,
-            "parent": "Bazzar",
+            "parent": "Bazaar",
             "type": "index",
             "path": $repo + "/" + key
         };

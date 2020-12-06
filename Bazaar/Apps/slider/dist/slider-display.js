@@ -88,8 +88,9 @@
     
     function updatePresentationChannel (newChannel) {
         Messages.unsubscribe(presentationChannel);
+        sendToWeb("script-to-web-channel", newChannel);
         presentationChannel = newChannel;
-        Messages.subscribe(presentationChannel);
+        Messages.subscribe(newChannel);
     }
     
     function handleTriggerLink (url) {
