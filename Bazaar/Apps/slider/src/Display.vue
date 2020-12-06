@@ -33,9 +33,10 @@
                         <v-img
                             :src="slide.slide"
                             @click="triggerClick(slide.link)"
-                            height="100%"
+                            height="100vh"
                             class="grey darken-4"
                             lazy-src="./assets/logo.png"
+                            contain
                         >
                             <template v-slot:placeholder>
                                 <v-row
@@ -181,6 +182,7 @@ export default {
             });
         },
         triggerClick: function (urlToPost) {
+            if (urlToPost === "") { return }
             this.sendAppMessage("web-to-script-trigger-click", { 
                 "url": urlToPost
             });

@@ -93,6 +93,8 @@ ul, #myUL {
 <div id="treecat" class="tab"><ul id="folderUL"></ul></div>
 <h3>Category Avatars</h3>
 <div id="avatars"></div>
+<br>
+<a href="index.html">Back to Index</a>
 </body>
 <!-- You can link these scripts to the repository files in your program. Example: -->
 <!-- script type="text/javascript" src="https://yourRepo.s3-us-west-1.amazonaws.com/repo/Bazaar/inventoryDB/pako.min.js"></script -->
@@ -110,12 +112,11 @@ ul, #myUL {
 //  See the accompanying file LICENSE or http://www.apache.org/licenses/LICENSE-2.0.html
 //
 //
-// https://hapticmonkey.s3-us-west-1.amazonaws.com/repo/Bazaar
 // Create in memory DB, call it "inventory"
 var inventoryDB = new PouchDB('inventory');
 
 // Import exported GZ file
-let $repo = "https://hapticmonkey.s3-us-west-1.amazonaws.com/repo/Bazaar"
+let $repo = "https://cdn-1.vircadia.com/us-e-1/Bazaar"
 data = Get($repo + "/inventoryDB/inventoryDB.gz");
 
 // Unzip import and load into inventoryDB
@@ -152,7 +153,7 @@ inventoryDB.info().then(function (info) {
 // DB Function to pull top level categories
 function getTcat() {
     inventoryDB.search({
-        query: 'Bazzar',
+        query: 'Bazaar',
         fields: ['parent'],
         include_docs: true
     }).then(function (res) {

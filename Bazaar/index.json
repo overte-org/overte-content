@@ -1,23 +1,17 @@
 {
-	"Kim": {
-		"location": "/Avatars/kim"
+	"Apps": {
+		"location": "/Apps"
 	},
-	"Mason": {
-		"location": "/Avatars/mason"
+	"Assets": {
+		"location": "/Assets"
 	},
-	"Mike": {
-		"location": "/Avatars/mike"
+	"Avatars": {
+		"location": "/Avatars"
+	},	
+	"Scripts": {
+		"location": "/Scripts"
 	},
-	"Sean": {
-		"location": "/Avatars/sean"
-	},
-	"Summer": {
-		"location": "/Avatars/summer"
-	},
-	"Tanya": {
-		"location": "/Avatars/tanya"
-	},
-    "Woody": {
-		"location": "/Avatars/woody"
+	"Worlds": {
+		"location": "/Worlds"
 	}
 }

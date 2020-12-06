@@ -8,6 +8,9 @@
 //  Distributed under the Apache License, Version 2.0.
 //  See the accompanying file LICENSE or http://www.apache.org/licenses/LICENSE-2.0.html
 //
+//  Bugs to fix: delete doesn't work, slide decks don't start at slide 1, loading the saved slide state does not work because it triggers a slideChange event... fix that?
+//  Features to add: Image preview thumbnails, next up, and previous images... Multi-slide add for quick additions.
+//  
 -->
 
 <template>
@@ -17,15 +20,16 @@
             app
         >
             <v-list>
-                <v-list-item link @click="addSlidesByURLDialogShow = !addSlidesByURLDialogShow">
+                <v-subheader>ADD</v-subheader>
+                <v-list-item :disabled="!canEdit" link @click="addSlidesByURLDialogShow = !addSlidesByURLDialogShow">
                     <v-list-item-action>
                     <v-icon>mdi-plus</v-icon>
                     </v-list-item-action>
                     <v-list-item-content>
-                        <v-list-item-title>Add Slide by URL</v-list-item-title>
+                        <v-list-item-title>Add Slide</v-list-item-title>
                     </v-list-item-content>
                 </v-list-item>
-                <v-list-item link @click="uploadSlidesDialogShow = !uploadSlidesDialogShow">
+                <v-list-item link disabled @click="uploadSlidesDialogShow = !uploadSlidesDialogShow">
                     <v-list-item-action>
                     <v-icon>mdi-upload</v-icon>
                     </v-list-item-action>
@@ -33,7 +37,8 @@
                         <v-list-item-title>Upload Slide</v-list-item-title>
                     </v-list-item-content>
                 </v-list-item>
-                <v-list-item link @click="manageSlidesDialogShow = !manageSlidesDialogShow">
+                <v-subheader>MANAGE</v-subheader>
+                <v-list-item :disabled="!canEdit" link @click="manageSlidesDialogShow = !manageSlidesDialogShow">
                     <v-list-item-action>
                     <v-icon>mdi-pencil</v-icon>
                     </v-list-item-action>
@@ -41,7 +46,16 @@
                         <v-list-item-title>Manage Slides</v-list-item-title>
                     </v-list-item-content>
                 </v-list-item>
-                <v-list-item link @click="changePresentationChannelDialogShow = !changePresentationChannelDialogShow">
+                <v-list-item link @click="changeSlideDeckDialogShow = !changeSlideDeckDialogShow">
+                    <v-list-item-action>
+                    <v-icon>mdi-database</v-icon>
+                    </v-list-item-action>
+                    <v-list-item-content>
+                        <v-list-item-title>Slide Deck</v-list-item-title>
+                    </v-list-item-content>
+                </v-list-item>
+                <v-subheader>DISPLAY</v-subheader>
+                <v-list-item disabled link @click="changePresentationChannelDialogShow = !changePresentationChannelDialogShow">
                     <v-list-item-action>
                     <v-icon>mdi-remote</v-icon>
                     </v-list-item-action>
@@ -49,12 +63,22 @@
                         <v-list-item-title>Presentation Channel</v-list-item-title>
                     </v-list-item-content>
                 </v-list-item>
-                <v-list-item link @click="changeSlideChannelDialogShow = !changeSlideChannelDialogShow">
+                <v-subheader>IMPORT/EXPORT</v-subheader>
+                <v-list-item :disabled="!canEdit" link @click="importExportDialogShow = !importExportDialogShow; parseSlideDataIntoDialog()">
                     <v-list-item-action>
-                    <v-icon>mdi-database</v-icon>
+                    <v-icon>mdi-swap-vertical-bold</v-icon>
                     </v-list-item-action>
                     <v-list-item-content>
-                        <v-list-item-title>Slide Channel</v-list-item-title>
+                        <v-list-item-title>Import / Export Data</v-list-item-title>
+                    </v-list-item-content>
+                </v-list-item>
+                <v-subheader>HELP</v-subheader>
+                <v-list-item link @click="manuallyAskToSync()">
+                    <v-list-item-action>
+                    <v-icon>mdi-sync-circle</v-icon>
+                    </v-list-item-action>
+                    <v-list-item-content>
+                        <v-list-item-title>Reload From Storage</v-list-item-title>
                     </v-list-item-content>
                 </v-list-item>
             </v-list>
@@ -68,12 +92,20 @@
             <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
             <v-toolbar-title>Presenter Panel</v-toolbar-title>
             <v-spacer></v-spacer>
-            <div v-show="slides[slideChannel].length > 0">
-                <v-btn medium fab @click="currentSlide--">
+            <div v-show="computeCurrentSlideDeck.length > 0">
+                <v-btn
+                    medium
+                    fab
+                    @click="currentSlide--"
+                >
                     <v-icon>mdi-arrow-left</v-icon>
                 </v-btn>
-                <span class="mx-4">{{ currentSlide + 1 }} / {{ slides[slideChannel].length }}</span>
-                <v-btn medium fab @click="currentSlide++">
+                <span class="mx-4">{{ currentSlide + 1 }} / {{ computeCurrentSlideDeck.length }}</span>
+                <v-btn
+                    medium
+                    fab
+                    @click="currentSlide++"
+                >
                     <v-icon>mdi-arrow-right</v-icon>
                 </v-btn>
             </div>
@@ -86,17 +118,24 @@
                 class="fill-height"
                 fluid
             >
-                <v-carousel v-model="currentSlide" height="100%">
+                <v-carousel 
+                    v-model="currentSlide" 
+                    height="100%"
+                    :hide-delimiters="!canEdit"
+                    :show-arrows="canEdit"
+                >
                     <v-carousel-item
-                        v-for="(slide, index) in slides[slideChannel]"
+                        v-for="(slide, index) in computeCurrentSlideDeck"
                         track-by="$index"
                         :key="index"
+                        height="100%"
                     >
                         <v-img
                             :src="slide.slide"
-                            height="100%"
+                            height="87vh"
                             class="grey darken-4"
                             lazy-src="./assets/logo.png"
+                            contain
                         >
                             <template v-slot:placeholder>
                                 <v-row
@@ -112,6 +151,7 @@
                 </v-carousel>
             </v-container>
         </v-main>
+
         <!-- End Main Slider Control Area -->
         
         <!-- Add Slide by URL Dialog -->
@@ -119,7 +159,7 @@
         <v-dialog v-model="addSlidesByURLDialogShow" persistent>
             <v-card>
                 <v-toolbar>
-                    <v-toolbar-title>Add Slide by URL</v-toolbar-title>
+                    <v-toolbar-title>Add Slide</v-toolbar-title>
                     <v-spacer></v-spacer>
                     <v-btn class="mx-2" color="red darken-1" @click="addSlidesByURLDialogShow = false">Close</v-btn>
                     <v-btn class="mx-2" color="green darken-1" @click="addSlidesByURLDialogShow = false; addSlideByURL()">Add</v-btn>
@@ -131,7 +171,7 @@
                     filled
                 ></v-text-field>
                 <v-text-field
-                    placeholder="Enter A Link Here (optional)"
+                    placeholder="Enter A Clickable Link Here (optional)"
                     v-model="addSlideByURLLinkField"
                     filled
                 ></v-text-field>
@@ -193,15 +233,15 @@
         <v-dialog v-model="manageSlidesDialogShow" persistent fullscreen>
             <v-card>
                 <v-toolbar>
-                    <v-toolbar-title>Manage Slides for {{ slideChannel }}</v-toolbar-title>
+                    <v-toolbar-title>Manage Slides for {{ Object.keys(slides[slideDeck])[0] }}</v-toolbar-title>
                     <v-spacer></v-spacer>
                     <v-btn class="mx-2" color="green" @click="manageSlidesDialogShow = false">Done</v-btn>
                 </v-toolbar>
                 <v-list subheader :three-line="true">
-                    <v-subheader>{{ slides[slideChannel].length }} Slides</v-subheader>
+                    <v-subheader>{{ computeCurrentSlideDeck.length }} Slides</v-subheader>
 
                     <v-list-item
-                        v-for="(slide, i) in slides[slideChannel]"
+                        v-for="(slide, i) in computeCurrentSlideDeck"
                         :key="i"
                     >
                         <v-list-item-avatar size="64">
@@ -216,14 +256,14 @@
                                 dense
                                 v-model="slide.link"
                             ></v-text-field>
-                            <v-list-item-title><span class="text-caption">Image Source</span> {{slide.slide}}</v-list-item-title>
+                            <v-list-item-title><span class="text-caption">Slide Image Source</span> {{slide.slide}}</v-list-item-title>
                         </v-list-item-content>
 
                         <v-list-item-icon>
                             <v-btn :disabled="i === 0" @click="rearrangeSlide(i, 'up')" color="blue" class="mx-2" fab medium>
                                 <v-icon>mdi-arrow-collapse-up</v-icon>
                             </v-btn>
-                            <v-btn :disabled="i === slides.length - 1" @click="rearrangeSlide(i, 'down')" color="blue" class="mx-2" fab medium>
+                            <v-btn :disabled="i === computeCurrentSlideDeck.length - 1" @click="rearrangeSlide(i, 'down')" color="blue" class="mx-2" fab medium>
                                 <v-icon>mdi-arrow-collapse-down</v-icon>
                             </v-btn>
                             <v-btn @click="confirmDeleteSlideDialogShow = true; confirmDeleteSlideDialogWhich = i" color="red" class="mx-2" fab medium>
@@ -255,7 +295,6 @@
                 ></v-text-field>
                 
                 <v-footer>
-                    <v-spacer></v-spacer>
                     <div>Current Channel: <b>{{ presentationChannel }}</b></div>
                 </v-footer>
             </v-card>
@@ -263,43 +302,57 @@
         
         <!-- Change Presentation Channel Dialog -->
         
-        <!-- Change Slide Channel Dialog -->
+        <!-- Change Slide Deck Dialog -->
         
-        <v-dialog v-model="changeSlideChannelDialogShow" persistent fullscreen>
+        <v-dialog v-model="changeSlideDeckDialogShow" persistent fullscreen>
             <v-card>
                 <v-toolbar>
-                    <v-toolbar-title>Change Slide Channel</v-toolbar-title>
+                    <v-toolbar-title>Change Slide Deck</v-toolbar-title>
                     <v-spacer></v-spacer>
-                    <v-btn class="mx-2" color="green darken-1" @click="changeSlideChannelDialogShow = false">Done</v-btn>
+                    <v-btn class="mx-2" color="green darken-1" @click="changeSlideDeckDialogShow = false">Done</v-btn>
                 </v-toolbar>
 
                 <v-list subheader>
-                    <v-subheader>{{ Object.keys(slides).length }} Slide Channels</v-subheader>
+                    <v-subheader>{{ slides.length }} Slide Decks</v-subheader>
                     <v-list-item
-                        v-for="(channel, i, index) in slides"
+                        v-for="(deck, i, index) in slides"
                         track-by="$index"
                         :key="index"
                     >
                         <v-list-item-avatar size="64">
-                            <v-img :src="channel[0].slide"></v-img>
+                            <v-img :src="getSpecifiedSlideDeck(i)[0].slide"></v-img>
                         </v-list-item-avatar>
 
                         <v-list-item-content>
-                            <v-list-item-subtitle>Channel {{ i }}</v-list-item-subtitle>
-                            <v-list-item-title>{{ slides[i][0].slide }}</v-list-item-title>
+                            <v-list-item-title>Deck <b>{{ Object.keys(slides[i])[0] }}</b></v-list-item-title>
+                            <v-list-item-subtitle>{{ getSpecifiedSlideDeck(i).length }} slides</v-list-item-subtitle>
                         </v-list-item-content>
 
                         <v-list-item-icon>
-                            <v-btn @click="changeSlideChannelDialogShow = false; slideChannel = i" color="green" class="mx-2" fab medium>
+                            <v-btn 
+                                @click="changeSlideDeckDialogShow = false; slideDeck = i; slideChannel = 0;"
+                                color="green" 
+                                class="mx-2" 
+                                fab 
+                                medium
+                            >
                                 <v-icon>mdi-cursor-default-click</v-icon>
                             </v-btn>
-                            <!-- <v-btn :disabled="index === 0" @click="rearrangeSlideChannel(i, 'up')" color="blue" class="mx-2" fab medium>
+                            <v-btn :disabled="i === 0" @click="rearrangeSlideDeck(i, 'up')" color="blue" class="mx-2" fab medium>
                                 <v-icon>mdi-arrow-collapse-up</v-icon>
                             </v-btn>
-                            <v-btn :disabled="index === Object.keys(slides).length - 1" @click="rearrangeSlideChannel(i, 'down')" color="blue" class="mx-2" fab medium>
+                            <v-btn :disabled="i === Object.keys(slides).length - 1" @click="rearrangeSlideDeck(i, 'down')" color="blue" class="mx-2" fab medium>
                                 <v-icon>mdi-arrow-collapse-down</v-icon>
-                            </v-btn> -->
-                            <v-btn :disabled="i === slideChannel || i === 'default'" @click="confirmDeleteSlideChannelDialogShow = true; confirmDeleteSlideChannelDialogWhich = i" color="red" class="mx-2" fab medium>
+                            </v-btn>
+                            <v-btn 
+                                :disabled="i === slideDeck || Object.keys(slides[i])[0] === 'default' || !canEdit" 
+                                @click="confirmDeleteSlideDeckDialogShow = true; 
+                                confirmDeleteSlideDeckDialogWhich = i" 
+                                color="red" 
+                                class="mx-2" 
+                                fab 
+                                medium
+                            >
                                 <v-icon>mdi-delete</v-icon>
                             </v-btn>
                         </v-list-item-icon>
@@ -308,21 +361,29 @@
 
                 <v-footer>
                     <v-text-field
-                        placeholder="Create new channel here"
-                        v-model="changeSlideChannelDialogText"
+                        placeholder="Create new slide deck here"
+                        v-model="changeSlideDeckDialogText"
                         filled
+                        :disabled="!canEdit"
                     >
                         <template slot="append-outer">
-                            <v-btn class="mx-2" color="green darken-1" @click="addSlideChannel()">Add</v-btn>
+                            <v-btn 
+                                class="mx-2" 
+                                color="green darken-1" 
+                                @click="addSlideDeck()"
+                                :disabled="!canEdit"
+                            >
+                                Add
+                            </v-btn>
                         </template>
                     </v-text-field>
                     <v-spacer></v-spacer>
-                    <div>Current Slide Channel: <b>{{ slideChannel }}</b></div>
+                    <div>Current Slide Deck: <b>{{ Object.keys(slides[slideDeck])[0] }}</b></div>
                 </v-footer>
             </v-card>
         </v-dialog>
         
-        <!-- Change Slide Channel Dialog -->
+        <!-- Change Slide Deck Dialog -->
         
         <!-- Confirm Delete Slide Dialog -->
         
@@ -342,29 +403,95 @@
         
         <!-- Confirm Delete Slide Dialog -->
         
-        <!-- Confirm Delete Slide Channel Dialog -->
+        <!-- Confirm Delete Slide Deck Dialog -->
         
-        <v-dialog v-model="confirmDeleteSlideChannelDialogShow" persistent>
+        <v-dialog v-model="confirmDeleteSlideDeckDialogShow" persistent>
             <v-card>
                 <v-toolbar>
-                    <v-toolbar-title>Delete Slide Channel</v-toolbar-title>
+                    <v-toolbar-title>Delete Slide Deck</v-toolbar-title>
                     <v-spacer></v-spacer>
-                    <v-btn class="mx-2" color="primary" @click="confirmDeleteSlideChannelDialogShow = false">Close</v-btn>
-                    <v-btn class="mx-2" color="red darken-1" @click="confirmDeleteSlideChannelDialogShow = false; deleteSlideChannel(confirmDeleteSlideChannelDialogWhich)">Delete</v-btn>
+                    <v-btn class="mx-2" color="primary" @click="confirmDeleteSlideDeckDialogShow = false">Close</v-btn>
+                    <v-btn class="mx-2" color="red darken-1" @click="confirmDeleteSlideDeckDialogShow = false; deleteSlideDeck(confirmDeleteSlideDeckDialogWhich)">Delete</v-btn>
                 </v-toolbar>
 
-                <v-card-title>Are you sure you want to delete the slide channel {{ confirmDeleteSlideChannelDialogWhich }}?</v-card-title>
+                <v-card-title>Are you sure you want to delete the slide deck {{ confirmDeleteSlideDeckDialogWhich }}?</v-card-title>
                 <v-card-subtitle>You cannot undo this action.</v-card-subtitle>
             </v-card>
         </v-dialog>
         
-        <!-- Confirm Delete Slide Channel Dialog -->
+        <!-- Confirm Delete Slide Deck Dialog -->
+        
+        <!-- Import Export Data Dialog -->
+
+        <v-dialog v-model="importExportDialogShow" persistent>
+            <v-card>
+                <v-toolbar>
+                    <v-toolbar-title>Import</v-toolbar-title>
+                    <v-spacer></v-spacer>
+                    <v-btn class="mx-2" color="red darken-1" @click="importExportDialogShow = false">Close</v-btn>
+                    <v-btn class="mx-2" color="green darken-1" @click="importExportDialogShow = false; importSlideDataFromDialog()">Import</v-btn>
+                </v-toolbar>
+
+                <v-textarea
+                    v-model="importExportDialogSlideData"
+                    filled
+                ></v-textarea>
+                
+                <v-footer>
+                    <div>Export the slide data by copying and pasting it into a file. Import it by pasting it in above and clicking <b>Import</b>.</div>
+                </v-footer>
+            </v-card>
+        </v-dialog>
+        
+        <!-- Import Export Data Dialog -->
+        
+        <!-- Sync Failed Dialog -->
+
+        <v-dialog v-model="syncRequiredDialogShow" persistent>
+            <v-card>
+                <v-toolbar>
+                    <v-toolbar-title>Sync Required</v-toolbar-title>
+                    <v-spacer></v-spacer>
+                    <v-btn class="mx-2" color="green darken-1" @click="manuallyAskToSync()">Sync</v-btn>
+                </v-toolbar>
+
+                <v-card-title>A user has updated the slides, please sync now.</v-card-title>
+                <!-- <v-card-subtitle>Last Received Checksum: {{ lastReceivedSlidesChecksum }}<br/>Current Checksum: {{ computeGetCurrentSlidesHash }}</v-card-subtitle>
+                <v-card-subtitle>{{ computeSlides }}</v-card-subtitle> -->
+            </v-card>
+        </v-dialog>
+        
+        <!-- Sync Requested Dialog -->
         
         <v-footer
             color="primary"
             app
         >
-            <span class="">Current Slide Channel: <b>{{ slideChannel }}</b></span>
+            <span>Current Slide Deck: <b>{{ Object.keys(slides[slideDeck])[0] }}</b></span>
+            <v-spacer></v-spacer>
+            <span v-show="false">Current Presentation Channel: <b>{{ presentationChannel }}</b></span>
+            <span v-show="canSave && canEdit">You have unsaved changes.</span>
+            <v-btn 
+                class="mx-2" 
+                color="green darken-1" 
+                @click="uploadState(slides); canSave = false;"
+                :disabled="!canSave || !canEdit"
+            >
+                Save
+            </v-btn>
+            <!-- <span v-text="isSyncing ? 'Syncing Data' : 'Synced'" class="mr-2"></span>
+            <v-progress-circular
+                v-show="isSyncing"
+                indeterminate
+                color="red"
+            ></v-progress-circular>
+            <v-icon
+                v-show="!isSyncing && isSynced"
+                large
+                color="green"
+            >
+                mdi-check-bold
+            </v-icon> -->
         </v-footer>
     </v-app>
 </template>
@@ -387,21 +514,43 @@ if (!browserDevelopment()) {
 
         receivedCommand = JSON.parse(receivedCommand);
         // alert("RECEIVED COMMAND:" + receivedCommand.command)
-        if (receivedCommand.app === "slider-client-app") {
+        if (receivedCommand.app === 'slider-client-app') {
         // We route the data based on the command given.
             if (receivedCommand.command === 'script-to-web-initialize') {
                 // alert("SLIDES RECEIVED ON APP:" + JSON.stringify(receivedCommand.data));
                 vue_this.initializeWebApp(receivedCommand.data);
             }
-            
+
             if (receivedCommand.command === 'script-to-web-channel') {
-                // alert("SLIDES RECEIVED ON APP:" + JSON.stringify(receivedCommand.data));
                 vue_this.receiveChannelUpdate(receivedCommand.data);
             }
             
             if (receivedCommand.command === 'script-to-web-update-slide-state') {
-                vue_this.updateSlideState(receivedCommand.data);
+                if (vue_this.isSynced) {
+                    vue_this.updateSlideState(receivedCommand.data);
+                }
             }
+            
+            if (receivedCommand.command === 'script-to-web-updating-from-storage') {
+                vue_this.isSyncing = true;
+            }
+            
+            if (receivedCommand.command === 'script-to-web-can-edit') {
+                vue_this.canEdit = receivedCommand.data;
+            }
+            
+            if (receivedCommand.command === 'script-to-web-latest-slides-checksum') {
+                vue_this.lastReceivedSlidesChecksum = receivedCommand.data;
+            }
+            
+            if (receivedCommand.command === 'script-to-web-needs-syncing') {
+                vue_this.syncRequiredDialogShow = true;
+                vue_this.isSynced = false;
+            }
+            
+            // if (receivedCommand.command === 'script-to-web-upload-succeeded') {
+            // 
+            // }
         }
     });
 }
@@ -413,33 +562,45 @@ export default {
     },
     data: () => ({
         drawer: null,
-        slides: {
-            'default': [
-                {
-                    'slide': './assets/logo.png',
-                    'link': "https://vircadia.com/"
-                }
-            ]
-            // 'Slide Deck 1': [
-            //     'https://wallpapertag.com/wallpaper/full/d/5/e/154983-anime-girl-wallpaper-hd-1920x1200-for-hd.jpg',
-            //     'https://wallpapertag.com/wallpaper/full/7/3/0/234884-anime-girls-wallpaper-3840x2160-ipad.jpg',
-            //     'http://getwallpapers.com/wallpaper/full/2/7/b/596546.jpg',
-            //     'https://images4.alphacoders.com/671/671041.jpg'
-            // ],
+        slides: [
+            {
+                "default": [
+                    {
+                        'link': "https://vircadia.com/",
+                        'slide': './assets/logo.png'
+                    }
+                ]
+            }
+            // {
+            //     'Slide Deck 1': [
+            //         {
+            //             'link': "https://vircadia.com/",
+            //             'slide': 'https://wallpapertag.com/wallpaper/full/d/5/e/154983-anime-girl-wallpaper-hd-1920x1200-for-hd.jpg'
+            //         },
+            //         {
+            //             'link': "https://vircadia.com/",
+            //             'slide': 'https://wallpapertag.com/wallpaper/full/7/3/0/234884-anime-girls-wallpaper-3840x2160-ipad.jpg'
+            //         },
+            //         {
+            //             'link': "https://vircadia.com/",
+            //             'slide': 'http://getwallpapers.com/wallpaper/full/2/7/b/596546.jpg'
+            //         },
+            //         {
+            //             'link': "https://vircadia.com/",
+            //             'slide': 'https://images4.alphacoders.com/671/671041.jpg'
+            //         }
+            //     ]
+            // }
             // 'Slide Deck 2': [
             //     'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapersite.com%2Fimages%2Fwallpapers%2Fquna-2560x1440-phantasy-star-online-2-4k-2336.jpg&f=1&nofb=1',
             //     'https://hdqwalls.com/wallpapers/anime-girl-aqua-blue-4k-gu.jpg',
             //     'https://images3.alphacoders.com/729/729085.jpg',
             //     'https://mangadex.org/images/groups/9766.jpg?1572281708'
             // ]
-        },
-        atp: {
-            'use': null,
-            'path': null
-        },
+        ],
         currentSlide: 0,
         presentationChannel: 'default-presentation-channel',
-        slideChannel: 'default',
+        slideDeck: 0,
         // Add Slides Dialog
         addSlidesByURLDialogShow: false,
         addSlideByURLSlideField: '',
@@ -460,74 +621,151 @@ export default {
         // Change Presentation Channel Dialog
         changePresentationChannelDialogShow: false,
         changePresentationChannelDialogText: '',
-        // Change Slide Channel Dialog
-        changeSlideChannelDialogShow: false,
-        changeSlideChannelDialogText: '',
-        // Confirm Delete Slide Channel Dialog
-        confirmDeleteSlideChannelDialogShow: false,
-        confirmDeleteSlideChannelDialogWhich: '',
+        // Change Slide Deck Dialog
+        changeSlideDeckDialogShow: false,
+        changeSlideDeckDialogText: '',
+        // Confirm Delete Slide Deck Dialog
+        confirmDeleteSlideDeckDialogShow: false,
+        confirmDeleteSlideDeckDialogWhich: '',
         // Confirm Delete Slide Dialog
         confirmDeleteSlideDialogShow: false,
-        confirmDeleteSlideDialogWhich: ''
+        confirmDeleteSlideDialogWhich: '',
+        // Import Export Data Dialog
+        importExportDialogShow: false,
+        importExportDialogSlideData: '',
+        // Sync Failed Dialog
+        syncRequiredDialogShow: false,
+        // DEBOUNCER
+        readyToSendAgain: true,
+        // Sync State
+        isSyncing: false,
+        isSynced: true,
+        lastReceivedSlidesChecksum: null,
+        // Data Handling
+        atp: {
+            'use': null,
+            'path': null
+        },
+        canSave: false,
+        canEdit: (false || browserDevelopment()),
+        initialized: false,
+        slidesInitialized: false,
+        TIMEOUT_FOR_SLIDE_INITIALIZATION: 500
     }),
+    computed: {
+        computeGetCurrentSlidesHash: function () {
+            return this.getCurrentSlidesHash();
+        },
+        computeSlides: function () {
+            return JSON.stringify(this.slides);
+        },
+        computeCurrentSlideDeck: function () {
+            return this.slides[this.slideDeck][Object.keys(this.slides[this.slideDeck])[0]];
+        },
+        viewerOnlyMode: function () {
+            return !this.canEdit;
+        }
+    },
     watch: {
         currentSlide: function (newSlide, oldSlide) {
-            if (newSlide !== oldSlide) {
+            if (newSlide !== oldSlide && this.initialized === true) {
+                console.log("Slide CURRENT Changed... " + "Init: " + this.initialized + " -- Slides Init: " + this.slidesInitialized);
                 this.sendSlideChange(newSlide);
             }
         },
-        slideChannel: function (newChannel, oldChannel) {
-            if (newChannel !== oldChannel) {
-                this.sendSlideChange(this.currentSlide)
+        slideDeck: function (newDeck, oldDeck) {
+            if (newDeck !== oldDeck && this.slidesInitialized === true) {
+                console.log("Slide DECK Changed... " + "Init: " + this.initialized + " -- Slides Init: " + this.slidesInitialized);
+                if (this.currentSlide > newDeck.length) {
+                    this.currentSlide = 0;
+                }
+                this.sendSlideChange(this.currentSlide);
             }
+        },
+        presentationChannel: function () {
+            // if (this.initialized === true) {
+            //     this.uploadState(this.slides);
+            // }
         },
         slides: {
             handler: function () {
-                this.sendSync(this.slides);
+                if (this.slidesInitialized === true) {
+                    this.slidesChanged = true;
+                    this.computeCanSave();
+                }
             },
             deep: true
+        },
+        isSyncing: function () {
+            // this.canEdit = !this.isSyncing;
+            // console.log("Is Syncing: " + this.isSyncing);
+        },
+        drawer: function (newState) {
+            if (newState === true) {
+                this.checkForEditRights();
+            }
         }
     },
     methods: {
         initializeWebApp: function (data) {
+            // We want to prevent any messages being sent out as a result of these changes...
+            this.initialized = false;
+
             // The data should already be parsed.
-            // console.log("DATA RECEIVED ON INIT:" + JSON.stringify(data));
             var parsedUserData = data.userData; 
-            
-            // We are receiving the full slides, including slideChannels within.
-            for (let i in parsedUserData.slides) {
-                this.$set(this.slides, i, parsedUserData.slides[i]);
+
+            // We are receiving the full slides, including slideDecks within.
+            if (parsedUserData.slides) {
+                this.importSlidesFromObject(parsedUserData.slides, false);
+            } else {
+                this.slidesInitialized = true;
             }
 
             if (parsedUserData.presentationChannel) {
                 this.presentationChannel = parsedUserData.presentationChannel;
             }
 
+            // if (parsedUserData.currentSlideState) {
+            //     this.currentSlide = parsedUserData.currentSlideState.currentSlide;
+            //     this.slideDeck = parsedUserData.currentSlideState.slideDeck;
+            // }
+
             if (parsedUserData.atp) {
-                // console.log("setting userData for ATP: " + parsedUserData.atp.use + parsedUserData.atp.path);
+                // console.log("setting ATP: " + parsedUserData.atp.use + parsedUserData.atp.path);
                 this.atp = parsedUserData.atp;
             }
+
+            this.completeSyncing();
         },
         deleteSlide: function (slideIndex) {
-            this.slides[this.slideChannel].splice(slideIndex, 1);
+            Object.keys(this.slides[this.slideDeck])[0].splice(slideIndex, 1);
 
-            if (this.slides[this.slideChannel].length === 0) {
+            if (Object.keys(this.slides[this.slideDeck])[0].length === 0) {
                 this.manageSlidesDialogShow = false; // Hide the dialog if the user has deleted the last of the slides.
             }
         },
-        deleteSlideChannel: function (slideChannelKey) {
-            this.$delete(this.slides, slideChannelKey);
+        deleteSlideDeck: function (slideDeckIndex) {
+            this.slides.splice(slideDeckIndex, 1);
         },
-        addSlideChannel: function () {
-            this.$set(this.slides, this.changeSlideChannelDialogText, ['./assets/logo.png']);
+        addSlideDeck: function () {
+            var objectToPush = {
+                [vue_this.changeSlideDeckDialogText]: [
+                    {
+                        'link': 'https://vircadia.com/',
+                        'slide': './assets/logo.png'
+                    }
+                ]
+            }
+            vue_this.changeSlideDeckDialogText = '';
+            this.slides.push(objectToPush);
         },
         addSlideByURL: function () {
             var objectToPush = {
-                'slide': this.addSlideByURLSlideField,
-                'link': this.addSlideByURLLinkField
+                'link': this.addSlideByURLLinkField,
+                'slide': this.addSlideByURLSlideField
             }
-            this.slides[this.slideChannel].push(objectToPush);
-            vue_this.currentSlide = vue_this.slides[vue_this.slideChannel].length - 1; // The array starts at 0, so the length will always be +1, so we account for that.
+            this.computeCurrentSlideDeck.push(objectToPush);
+            this.currentSlide = this.computeCurrentSlideDeck.length - 1; // The array starts at 0, so the length will always be +1, so we account for that.
             this.addSlideByURLSlideField = '';
             this.addSlideByURLLinkField = '';
         },
@@ -565,8 +803,12 @@ export default {
                 .done(function (result) {
                     vue_this.uploadSlidesDialogFiles = null; // Reset the file upload dialog field.
                     vue_this.uploadProcessingOverlay = false;
-                    vue_this.slides[vue_this.slideChannel].push(result.data.display_url);
-                    vue_this.currentSlide = vue_this.slides[vue_this.slideChannel].length - 1; // The array starts at 0, so the length will always be +1, so we account for that.
+                    var objectToPush = {
+                        'link': '',
+                        'slide': result.data.display_url
+                    }
+                    vue_this.slides[vue_this.slideDeck].push(objectToPush);
+                    vue_this.currentSlide = vue_this.slides[vue_this.slideDeck].length - 1; // The array starts at 0, so the length will always be +1, so we account for that.
                     // console.info('success:', result);
                     return true;
                 })
@@ -587,21 +829,53 @@ export default {
             } else if (direction === "down") {
                 newPosition = slideIndex + 1; // Down means higher in the array... down the list.
             }
-            
-            var slideToMove = this.slides[this.slideChannel].splice(slideIndex, 1)[0];
-            this.slides[this.slideChannel].splice(newPosition, 0, slideToMove);
+
+            var slideToMove = this.computeCurrentSlideDeck.splice(slideIndex, 1)[0];
+            this.computeCurrentSlideDeck.splice(newPosition, 0, slideToMove);
         },
-        // rearrangeSlideChannel: function (slideChannelIndex, direction) {
-        //     var newPosition;
-        // 
-        //     if (direction === "up") {
-        //         newPosition = slideChannelIndex - 1; // Up means lower in the array... up the list.
-        //     } else if (direction === "down") {
-        //         newPosition = slideChannelIndex + 1; // Down means higher in the array... down the list.
-        //     }
-        // 
-        // 
-        // },
+        rearrangeSlideDeck: function (slideDeckIndex, direction) {
+            var newPosition;
+
+            if (direction === "up") {
+                newPosition = slideDeckIndex - 1; // Up means lower in the array... up the list.
+            } else if (direction === "down") {
+                newPosition = slideDeckIndex + 1; // Down means higher in the array... down the list.
+            }
+            
+            var slideDeckToMove = this.slides.splice(slideDeckIndex, 1)[0];
+            this.slides.splice(newPosition, 0, slideDeckToMove);
+            this.slideDeck = newPosition;
+        },
+        getSpecifiedSlideDeck: function (slideDeck) {
+            return this.slides[slideDeck][Object.keys(this.slides[slideDeck])[0]];
+        },
+        // BEGIN Import Export Data Dialog
+        parseSlideDataIntoDialog: function () {
+            if (JSON.stringify(this.slides)) {
+                this.importExportDialogSlideData = JSON.stringify(this.slides);
+            }
+        },
+        importSlideDataFromDialog: function () {
+            if (JSON.parse(this.importExportDialogSlideData)) {
+                this.importSlidesFromObject(JSON.parse(this.importExportDialogSlideData), true);
+            }
+        },
+        // END Import Export Data Dialog
+        importSlidesFromObject: function (objectToImport, shouldUpdate) {
+            if (!shouldUpdate) {
+                this.slidesInitialized = false;
+            }
+
+            this.slideDeck = Object.getOwnPropertyNames(objectToImport)[0];
+            for (let i in objectToImport) {
+                this.$set(this.slides, i, objectToImport[i]);
+            }
+            setTimeout(
+                function(){ 
+                    vue_this.slidesInitialized = true;
+                }, 
+            vue_this.TIMEOUT_FOR_SLIDE_INITIALIZATION);
+        },
         changePresentationChannel: function () {
             this.presentationChannel = this.changePresentationChannelDialogText;
             this.changePresentationChannelDialogText = '';
@@ -611,33 +885,106 @@ export default {
         },
         updateSlideState: function (data) {
             // This function receives the message from sendSlideChange
-            // console.log("OKAY: " + this.slides[data.slideChannel]);
-            // console.log("WELL: " + this.slides[data.slideChannel][data.currentSlide]);
-            if (this.slides[data.slideChannel] && this.slides[data.slideChannel][data.currentSlide]) {
-                this.slideChannel = data.slideChannel;
+            // console.log("OKAY: " + this.slides[data.slideDeck]);
+            // console.log("WELL: " + this.slides[data.slideDeck][data.currentSlide]);
+            if (this.slides[data.slideDeck] && this.slides[data.slideDeck][data.currentSlide]) {
+                this.slideDeck = data.slideDeck;
                 this.currentSlide = data.currentSlide;
             }
         },
         sendSlideChange: function (slideIndex) {
-            if (this.slides[this.slideChannel]) {
+            console.log("Slide SEND Changed... " + "Init: " + this.initialized + " -- Slides Init: " + this.slidesInitialized);
+            if (this.slides[this.slideDeck]) {
                 this.sendAppMessage("web-to-script-slide-changed", {
-                    'slide': this.slides[this.slideChannel][slideIndex],
-                    'slideChannel': this.slideChannel,
+                    'slide': this.computeCurrentSlideDeck[slideIndex],
+                    'slideDeck': this.slideDeck,
                     'currentSlide': this.currentSlide
                 });
             }
         },
-        sendSync: function (slidesToSync) {
+        sendNoticeToUpdateState: function () {
+            this.sendAppMessage("web-to-script-notify-to-update", {});
+        },
+        checkForEditRights: function () {
+            this.sendAppMessage("web-to-script-check-for-edit-rights", {});
+        },
+        completeSyncing: function () {
+            this.initialized = true;
+            this.isSyncing = false;
+            this.syncRequiredDialogShow = false;
+            this.isSynced = true;
+        },
+        manuallyAskToSync: function () {
+            vue_this.sendAppMessage('web-to-script-request-sync', {});
+        },
+        computeCanSave: function () {
+            var allowSaving = true;
+
+            if (this.lastReceivedSlidesChecksum !== null) {
+                if (this.lastReceivedSlidesChecksum === this.getCurrentSlidesHash()) {
+                    allowSaving = false;
+                }
+            }
+
+            if (this.slidesChanged === true && allowSaving) {
+                this.slidesChanged = false;
+                this.canSave = true;
+            }
+        },
+        getCurrentSlidesHash: function () {
+            if (this.slides) {
+                return this.stringToHash(JSON.stringify(this.slides));
+            } else {
+                return 0;
+            }
+        },
+        stringToHash: function (string) {       
+            var hash = 0; 
+
+            if (string.length == 0) return hash; 
+
+            for (var i = 0; i < string.length; i++) { 
+                var char = string.charCodeAt(i); 
+                hash = ((hash << 5) - hash) + char; 
+                hash = hash & hash; 
+            } 
+
+            return hash; 
+        },
+        attemptUpload: function () {
+            if (this.readyToSendAgain) {
+                // console.log("Ready.");
+                vue_this.uploadState(this.slides);
+                this.readyToSendAgain = false;
+                setTimeout(function() {
+                    vue_this.readyToSendAgain = true;
+                }, 1000); // 1 second
+                return true;
+            } else {
+                // console.log("Not ready.");
+                return false;
+            }
+        },
+        uploadState: function (slidesToSync) {
             if (!slidesToSync) {
                 slidesToSync = this.slides;
             }
-            this.sendAppMessage("web-to-script-sync-state", { 
+            
+            this.sendNoticeToUpdateState();
+            console.log("ATP AT TIME OF UPLOAD: " + JSON.stringify(this.atp));
+            this.sendAppMessage("web-to-script-upload-state", { 
                 "slides": slidesToSync, 
                 "presentationChannel": this.presentationChannel,
+                "currentSlideState": {
+                    "currentSlide": this.currentSlide,
+                    "slideDeck": this.slideDeck
+                },
                 "atp": this.atp
             });
         },
         sendAppMessage: function(command, data) {
+            data.slidesChecksum = this.getCurrentSlidesHash();
+
             var JSONtoSend = {
                 "app": "slider-client-web",
                 "command": command,
@@ -654,8 +1001,8 @@ export default {
     },
     created: function () {
         vue_this = this;
-        
-        this.sendAppMessage("ready", "");
+
+        this.sendAppMessage("ready", {});
     }
 }
 </script>

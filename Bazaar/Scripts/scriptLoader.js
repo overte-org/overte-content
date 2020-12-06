@@ -87,7 +87,6 @@
         }
     }
 
-
     // Standard preload and unload, initialize the entity script here.
 
     this.preload = function (ourID) {
