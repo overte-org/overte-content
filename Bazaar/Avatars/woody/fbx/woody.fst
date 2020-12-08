@@ -1,7 +1,7 @@
-name = mannequin
+name = Woody
 type = body+head
 scale = 1
-filename = mannequin.fbx
+filename = woody.fbx
 texdir = textures
 joint = jointEyeLeft = LeftEye
 joint = jointRightHand = RightHand

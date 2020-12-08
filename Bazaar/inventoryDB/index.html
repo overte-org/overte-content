@@ -232,6 +232,8 @@ function parseresource($data, $path) {
     var $type = $obj.type;
     var $tags = $obj.keywords;
     let $subindex = $path + "/resource.json";
+	console.log($subindex);
+	pause
     var cat = $subindex.match(/.*\/(.*)\/(.*)\/.*$/);
     var $Parent = "f_" + cat[1];
     var $id = "r_" + cat[2];

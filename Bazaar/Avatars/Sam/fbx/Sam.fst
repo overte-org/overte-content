@@ -1,7 +1,7 @@
 name = Sean
 type = body+head
 scale = 1
-filename = https://fas-virtual-world.s3.amazonaws.com/Basinsky/Avatars/Sam/Sam.fbx
+filename = Sam.fbx
 texdir = textures
 joint = jointEyeLeft = LeftEye
 joint = jointEyeRight = RightEye

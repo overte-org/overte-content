@@ -1,7 +1,6 @@
 name = MaleFormal
 scale = 1
-filename = https://fas-virtual-world.s3.amazonaws.com/Basinsky/Avatars/FormalMan/FormalMan.fbx
-marketplaceID = {00000000-0000-0000-0000-000000000000}
+filename = FormalMan.fbx
 texdir = textures
 joint = jointLean = Spine
 joint = jointEyeRight = RightEye
