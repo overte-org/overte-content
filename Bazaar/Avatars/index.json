@@ -1,12 +1,42 @@
 {
+	"Amanda": {
+		"location": "/Avatars/Amanda"
+	},
+	"Amber": {
+		"location": "/Avatars/Amber"
+	},
+	"BlackDress": {
+		"location": "/Avatars/BlackDress"
+	},
+	"BlackDress_glasses": {
+		"location": "/Avatars/BlackDress_glasses"
+	},
+	"ButchBunny": {
+		"location": "/Avatars/ButchBunny"
+	},
+	"Femmebunny": {
+		"location": "/Avatars/Femmebunny"
+	},
+	"FormalMan": {
+		"location": "/Avatars/FormalMan"
+	},
 	"Kim": {
 		"location": "/Avatars/Kim"
-	},
+	},	
 	"Mason": {
 		"location": "/Avatars/Mason"
 	},
 	"Mike": {
 		"location": "/Avatars/Mike"
+	},
+	"PinkDress": {
+		"location": "/Avatars/PinkDress"
+	},
+	"Randy": {
+		"location": "/Avatars/Randy"
+	},
+	"Sam": {
+		"location": "/Avatars/Sam"
 	},
 	"Sean": {
 		"location": "/Avatars/Sean"
@@ -16,6 +46,9 @@
 	},
 	"Tanya": {
 		"location": "/Avatars/Tanya"
+	},
+	"Tom": {
+		"location": "/Avatars/Tom"
 	},
     "Woody": {
 		"location": "/Avatars/Woody"

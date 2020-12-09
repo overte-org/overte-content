@@ -1,25 +1,24 @@
 {
-    "name": "Woody",
+    "name": "BlackDress",
     "version": "1.0.0",
-    "description": "Woody is the default Vircadia avatar.",
+    "description": "Generic avatar.",
     "homepage": "http://www.vircadia.com",
     "bugs": "",
     "keywords": [
-        "Manniquin",
-		"Avatar",
-		"Default"
+        "Female",
+		"Avatar"
     ],
     "icon": "img/icon.png",
     "images": [
-        "img/woody.jpg"
+        "img/BlackDress.jpg"
     ],
     "author": {
-        "name": "High Fidelity",
+        "name": "Anonymous",
         "email": "",
-        "url": "http://www.highfidelity.com",
-        "license": "Apache 2.0"		
+        "url": "",
+        "license": "CC0"		
     },
-    "sublicense": [
+    "sublicense": [		
 	],	
     "contributors": [
     ],
@@ -27,8 +26,8 @@
         "type": "git",
         "url": "https://github.com/whatever/testing.git"
     },
-    "main": "fbx/woody.fst",
-    "type": "model",
+    "main": "fbx/BlackDress.fst",
+    "type": "avatar",
     "meta": {
     },
     "dependencies": {       

@@ -1,7 +1,6 @@
 name = Amanda
 scale = 1
-filename = https://fas-virtual-world.s3.amazonaws.com/Basinsky/Avatars/Amanda/Amanda.fbx
-marketplaceID = {00000000-0000-0000-0000-000000000000}
+filename = Amanda.fbx
 texdir = textures
 joint = jointEyeRight = RightEye
 joint = jointLeftHand = LeftHand

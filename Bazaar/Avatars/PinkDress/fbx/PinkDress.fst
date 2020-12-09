@@ -1,7 +1,7 @@
 name = Export Hifi Avatar
 type = body+head
 scale = 1
-filename = b34aaa7f-6027-5d39-b021-2a1c838a06b0.fbx
+filename = PinkDress.fbx
 joint = jointRoot = Hips
 joint = jointLean = Spine
 joint = jointNeck = Neck
