@@ -229,12 +229,20 @@ function sub($obj) {
 function parseresource($data, $path) {
     var $obj = JSON.parse($data);
     var $name = $obj.name;
+	var $version = $obj.version;
+	var $description = $obj.description;
+	var $image = $obj.images;
+	var $author = $obj.author.name;
+	var $license = $obj.author.license;
+	var $sublicense = $obj.sublicense;
+	var $contributor = $obj.contributors.name;
+	var $main = $obj.main;
     var $type = $obj.type;
     var $tags = $obj.keywords;
     let $subindex = $path + "/resource.json";
 	console.log($subindex);
     var cat = $subindex.match(/.*\/(.*)\/(.*)\/.*$/);
-    var $Parent = "f_" + cat[1];
+    var $Parent = cat[1];
     var $id = "r_" + cat[2];
 	var $url = $path;
 	$name = cat[2];	
@@ -245,6 +253,14 @@ function parseresource($data, $path) {
         "_id": $id,
         "r_type": "resource",
         "name": $name,
+		"version": $version,
+		"description": $description,
+		"image": $image,
+		"author": $author,
+		"license": $license,
+		"sublicense": $sublicense,
+		"contributor": $contributor,
+		"main": $main,
         "parent": $Parent,
         "type": $type,
         "path": $url,
@@ -252,9 +268,9 @@ function parseresource($data, $path) {
     };
 	$path = "";
     inventoryDB.put(resources);
-    console.log(key);
+    console.log("Resource ////////////////////////");		
     console.log(resources);
-    console.log("Item");
+    console.log("/////////////////////////////////");		
 };
 
 function parseIndex($data) {
@@ -275,9 +291,11 @@ function parseIndex($data) {
             "parent": $Parent,
             "type": "index",
             "path": $url
-        };
+        };	
         inventoryDB.put(folders);
+        console.log("Folder //////////////////////////");			
         console.log(folders);
+        console.log("/////////////////////////////////");		
     }	
     sub($obj); // more recursion ....
 };
