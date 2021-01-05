@@ -334,8 +334,9 @@ function displayAvatars(data){
 	while ($i < $length) {
 	  $aurl = data.rows[$i].doc.path;
 	  $apath = data.rows[$i].doc.path + "/resource.json";
+	  $artype = data.rows[$i].doc.r_type;  
 	  $adata = Get($apath);
-	  if (!$adata.includes("<Error>")){
+	  if (!$adata.includes("<Error>") && $artype != "folder"){
 		$aresource = JSON.parse($adata);
 		$aname = $aresource.name;
 		$adescription = $aresource.description;
