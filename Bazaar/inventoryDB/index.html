@@ -218,7 +218,7 @@ function sub($obj) {
             if ($data.includes("NoSuchKey")) {
                 console.log('Resource does not exist: ')
             } else {
-                parseresource($data, $path)
+                parseResource($data, $path)
             }
         } else {
             parseIndex($data)
@@ -226,7 +226,7 @@ function sub($obj) {
     }
 };
 
-function parseresource($data, $path) {
+function parseResource($data, $path) {
     var $obj = JSON.parse($data);
     var $name = $obj.name;
 	var $version = $obj.version;
