@@ -3,8 +3,10 @@
 <html>
 
 <head>
-<title>InventoryDB</title>
-
+    <title>InventoryDB</title>
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
 </head>
 
 <body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#ff0000">
@@ -68,7 +70,7 @@ var resource = {
 <h3>Understanding Errors</h3>
 
 </p>Watch the results of this script in the browser console. If no index.json or resource.json is present you will see GET errors in the console. This is to be expected. What you do need to look for in your console are JSON errors. If you get a JSON parse error you will need to run your json file in a json validator or lint to determine why... Failure to provide properly formed json will result in inaccurate or incomplete data in the inventory app. If you have to correct your JSON, just re-run the download script afterwards and update your repository with the new GZ file. Uncaught (in promise) errors occur when you are trying to load a record that already exists. <font color=red>You will need to flush your cache before you reset this page.</font> 
-This will whipe the database and you will be loading it freshly.</p>
+This will wipe the database and you will be loading it freshly.</p>
 
 <h3>Download the Database</h3>
 
@@ -180,7 +182,13 @@ inventoryDB.allDocs({include_docs: true}, (error, doc) => {
         a.download = 'inventoryDB.gz';
         a.href = link;
         document.body.appendChild(a);
-        a.click();		
+        a.click();
+        var destroyDB = new PouchDB('inventory');
+        destroyDB.destroy().then(function (response) {
+            console.log('Destroyed DB successfully.');
+        }).catch(function (err) {
+            console.log('Failed to destroy DB: '+ err);
+        });
 	  }
   });	
 };
@@ -302,5 +310,5 @@ function parseIndex($data) {
     sub($obj); // more recursion ....
 };
 
-</script >
+</script>
 </html>
