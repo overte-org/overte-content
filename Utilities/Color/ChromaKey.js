@@ -10,16 +10,33 @@
 // Algorithms to remove a "green" screen from the background of a video in realtime and write that to a canvas.
 //
 
-// Options
-const TIMEOUT_TO_INIT = 4000;
-var shouldFindSpecific = false;
-var videoIDToFind = 'testVideo';
-var videoPrefixToFind = 'videosource_';
-var workCanvas = 'c1';
-var finalCanvas = 'c2';
-var heightMultiplier = 0.5;
-var widthMultiplier = 0.5;
-var shouldWaitForPlay = false;
+// Main
+window.ChromaKey = {
+    options: {
+        shouldFindSpecific: false,
+        sourceVideoID: 'testVideo',
+        sourceVideoPrefix: 'videosource_',
+        processingCanvas: 'c1',
+        outputCanvas: 'c2',
+        heightMultiplier: 1.0,
+        widthMultiplier: 1.0,
+        shouldWaitForPlay: false,
+        tolerance: 0.12,
+        shouldDelayBeforeInit: true, 
+        delayBeforeInit: 4000,
+        beginRange: [195, 195, 0],
+        endRange: [210, 210, 0]
+    },
+    initialize: function() {
+        if (ChromaKey.options.shouldDelayBeforeInit) {
+            setTimeout(function () { 
+                initialize(); 
+            }, ChromaKey.options.delayBeforeInit);
+        } else {
+            initialize(); 
+        }
+    }
+}
 
 // Variables
 var videoToChroma;
@@ -33,23 +50,13 @@ var ctx2;
 var width;
 var height;
 
-// let l_r = 131,
-//     l_g = 190,
-//     l_b = 137,
-// 
-//     d_r = 74,
-//     d_g = 148,
-//     d_b = 100;
-// 
-// let tolerance = 0.5;
+function calculateDistance (c, min, max) {
+    if(c < min) return min - c;
+    if(c > max) return c - max;
 
-// function calculateDistance (c, min, max) {
-//     if(c < min) return min - c;
-//     if(c > max) return c - max;
-// 
-//     return 0;
-// }
-// 
+    return 0;
+}
+
 // function computeFrame() {
 //     ctx1.drawImage(video, 0, 0, width, height);
 //     let frame = ctx1.getImageData(0, 0, width, height);
@@ -64,7 +71,7 @@ var height;
 //                      calculateDistance(_g, d_g, l_g) +
 //                      calculateDistance(_b, d_b, l_b);
 //         difference /= (255 * 3); // convert to percent
-//         if (difference < tolerance)
+//         if (difference < ChromaKey.options.tolerance)
 //         frame.data[i * 4 + 3] = 0;
 //     }
 //     ctx2.putImageData(frame, 0, 0);
@@ -73,27 +80,29 @@ var height;
 
 function loadProcessor () {
     video = document.getElementById(videoToChroma);
-    c1 = document.getElementById(workCanvas);
+    c1 = document.getElementById(ChromaKey.options.processingCanvas);
     ctx1 = c1.getContext("2d");
-    c2 = document.getElementById(finalCanvas);
+    c2 = document.getElementById(ChromaKey.options.outputCanvas);
     ctx2 = c2.getContext("2d");
-    if (shouldWaitForPlay === true) {
+    if (ChromaKey.options.shouldWaitForPlay === true) {
         video.addEventListener("play", function() {
-            height = video.videoHeight * heightMultiplier;
-            width = video.videoWidth * widthMultiplier;
-            c1.height = height;
-            c1.width = width;
-            c2.height = height;
-            c2.width = width;
+            height = video.videoHeight * ChromaKey.options.heightMultiplier;
+            width = video.videoWidth * ChromaKey.options.widthMultiplier;
+            // console.info('setting', height, width);
+            // c1.height = height;
+            // c1.width = width;
+            // c2.height = height;
+            // c2.width = width;
             timerCallback();
         }, false);
     } else {
-        height = video.videoHeight * heightMultiplier;
-        width = video.videoWidth * widthMultiplier;
-        c1.height = height;
-        c1.width = width;
-        c2.height = height;
-        c2.width = width;
+        height = video.videoHeight * ChromaKey.options.heightMultiplier;
+        width = video.videoWidth * ChromaKey.options.widthMultiplier;
+        // console.info('setting', height, width);
+        // c1.height = height;
+        // c1.width = width;
+        // c2.height = height;
+        // c2.width = width;
         timerCallback();
     }
 }
@@ -109,9 +118,7 @@ function timerCallback () {
 }
 
 function rgbTest (r, g, b) {
-    var redTest = r > 100; // orig > 100
-    var greenTest = g > 100; // orig > 100
-    var blueTest = b < 43; // orig < 43
+
     if (redTest && greenTest && blueTest) { 
         return true;
     } else {
@@ -125,11 +132,17 @@ function computeFrame () {
     let l = frame.data.length / 4;
 
     for (let i = 0; i < l; i++) {
-        let r = frame.data[i * 4 + 0];
-        let g = frame.data[i * 4 + 1];
-        let b = frame.data[i * 4 + 2];
-
-        if (rgbTest(r, g, b)) {
+        let _r = frame.data[i * 4 + 0];
+        let _g = frame.data[i * 4 + 1];
+        let _b = frame.data[i * 4 + 2];
+        // var redTest = r > 100; // orig > 100
+        // var greenTest = g > 100; // orig > 100
+        // var blueTest = b < 43; // orig < 43
+        let difference = calculateDistance(_r, ChromaKey.options.endRange[0], ChromaKey.options.beginRange[0]) + 
+                     calculateDistance(_g, ChromaKey.options.endRange[1], ChromaKey.options.beginRange[1]) +
+                     calculateDistance(_b, ChromaKey.options.endRange[2], ChromaKey.options.beginRange[2]);
+        difference /= (255 * 3); // convert to percent
+        if (difference < ChromaKey.options.tolerance) {
             frame.data[i * 4 + 3] = 0;
         }
     }
@@ -144,15 +157,13 @@ function initialize () {
     
     for (let i = 0; i < elements.length; i++) {
         var item = elements[i];
-        if ((shouldFindSpecific && videoIDToFind === item.id) || item.id.startsWith(videoPrefixToFind)) {
+        if ((ChromaKey.options.shouldFindSpecific && ChromaKey.options.sourceVideoID === item.id) || item.id.startsWith(ChromaKey.options.sourceVideoPrefix)) {
             videoToChroma = item.id;
             loadProcessor();
             console.info('Using ID', elements[i].id, 'as source for ChromaKey.');
         }
     }
 }
-
-setTimeout(function(){ initialize(); }, TIMEOUT_TO_INIT);
 
 // Function to process alpha frames
 // function processFrame() {
