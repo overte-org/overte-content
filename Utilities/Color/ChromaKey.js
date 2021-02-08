@@ -20,12 +20,12 @@ window.ChromaKey = {
         outputCanvas: 'c2',
         heightMultiplier: 1.0,
         widthMultiplier: 1.0,
-        shouldWaitForPlay: false,
         tolerance: 0.12,
         shouldDelayBeforeInit: true, 
         delayBeforeInit: 4000,
         beginRange: [195, 195, 0],
-        endRange: [210, 210, 0]
+        endRange: [210, 210, 0],
+        elementSearchInterval: 5000,
     },
     initialize: function() {
         if (ChromaKey.options.shouldDelayBeforeInit) {
@@ -39,6 +39,8 @@ window.ChromaKey = {
 }
 
 // Variables
+var elementInterval;
+
 var videoToChroma;
 
 var video;
@@ -50,67 +52,29 @@ var ctx2;
 var width;
 var height;
 
-function calculateDistance (c, min, max) {
-    if(c < min) return min - c;
-    if(c > max) return c - max;
-
-    return 0;
-}
-
-// function computeFrame() {
-//     ctx1.drawImage(video, 0, 0, width, height);
-//     let frame = ctx1.getImageData(0, 0, width, height);
-//     let l = frame.data.length / 4;
-// 
-//     for (let i = 0; i < l; i++) {
-//         let _r = frame.data[i * 4 + 0];
-//         let _g = frame.data[i * 4 + 1];
-//         let _b = frame.data[i * 4 + 2];
-// 
-//         let difference = calculateDistance(_r, d_r, l_r) + 
-//                      calculateDistance(_g, d_g, l_g) +
-//                      calculateDistance(_b, d_b, l_b);
-//         difference /= (255 * 3); // convert to percent
-//         if (difference < ChromaKey.options.tolerance)
-//         frame.data[i * 4 + 3] = 0;
-//     }
-//     ctx2.putImageData(frame, 0, 0);
-//     return;
-// }
-
 function loadProcessor () {
     video = document.getElementById(videoToChroma);
     c1 = document.getElementById(ChromaKey.options.processingCanvas);
     ctx1 = c1.getContext("2d");
     c2 = document.getElementById(ChromaKey.options.outputCanvas);
     ctx2 = c2.getContext("2d");
-    if (ChromaKey.options.shouldWaitForPlay === true) {
-        video.addEventListener("play", function() {
-            height = video.videoHeight * ChromaKey.options.heightMultiplier;
-            width = video.videoWidth * ChromaKey.options.widthMultiplier;
-            // console.info('setting', height, width);
-            // c1.height = height;
-            // c1.width = width;
-            // c2.height = height;
-            // c2.width = width;
-            timerCallback();
-        }, false);
-    } else {
-        height = video.videoHeight * ChromaKey.options.heightMultiplier;
-        width = video.videoWidth * ChromaKey.options.widthMultiplier;
-        // console.info('setting', height, width);
-        // c1.height = height;
-        // c1.width = width;
-        // c2.height = height;
-        // c2.width = width;
-        timerCallback();
-    }
+    timerCallback();
 }
 
 function timerCallback () {
-    if (video.paused || video.ended) {
+    if (video.suspend || video.stalled || video.waiting || video.ended) {
         return;
     }
+    
+    var vidHeight = video.videoHeight * ChromaKey.options.heightMultiplier;
+    var vidWidth = video.videoWidth * ChromaKey.options.widthMultiplier;
+
+    if (vidHeight !== height || vidWidth !== width) {
+        console.info('Failed', video.videoHeight, height, video.videoWidth, width)
+        height = vidHeight;
+        width = vidWidth;
+    }
+
     computeFrame();
     setTimeout(function () {
         timerCallback();
@@ -118,12 +82,18 @@ function timerCallback () {
 }
 
 function rgbTest (r, g, b) {
-
     if (redTest && greenTest && blueTest) { 
         return true;
     } else {
         return false;
     }
+}
+
+function calculateDistance (c, min, max) {
+    if(c < min) return min - c;
+    if(c > max) return c - max;
+
+    return 0;
 }
 
 function computeFrame () {
@@ -151,17 +121,36 @@ function computeFrame () {
     return;
 }
 
-function initialize () {
-    console.info('ChromaKey initializing.');
-    var elements = document.getElementsByTagName('video');
-    
+function iterateElements (elements) {
     for (let i = 0; i < elements.length; i++) {
         var item = elements[i];
         if ((ChromaKey.options.shouldFindSpecific && ChromaKey.options.sourceVideoID === item.id) || item.id.startsWith(ChromaKey.options.sourceVideoPrefix)) {
-            videoToChroma = item.id;
-            loadProcessor();
-            console.info('Using ID', elements[i].id, 'as source for ChromaKey.');
+            return item.id;
         }
+    }
+    
+    return false;
+}
+
+function initialize () {
+    console.info('ChromaKey initializing...');
+    var elements = document.getElementsByTagName('video');
+
+    videoToChroma = iterateElements(elements);
+    
+    if (videoToChroma) {
+        loadProcessor();
+        console.info('Using ID', videoToChroma, 'as source for ChromaKey.');
+    } else {
+        elementInterval = setInterval(function () {
+            videoToChroma = iterateElements(elements);
+
+            if (videoToChroma) {
+                clearInterval(elementInterval);
+                loadProcessor();
+                console.info('Using ID', videoToChroma, 'as source for ChromaKey.');
+            }
+        }, ChromaKey.options.elementSearchInterval);
     }
 }
 
