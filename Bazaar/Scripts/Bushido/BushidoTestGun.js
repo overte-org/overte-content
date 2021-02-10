@@ -18,6 +18,7 @@ var pickID;
 var gunID;
 var pickDesktopID;
 var injector;
+var playerHUD;
 var isGunEquiped = false;
 var isShooting = false;
 var isPointing = false;    
@@ -230,7 +231,7 @@ Script.setInterval(function() {
                     Messages.sendMessage('BUSHIDO-MASTER', JSON.stringify({
                         'command': 'script-to-server-register-hit',
                         'data': {
-                            'uuid': result.objectID,
+                            'uuid': desktopResult.objectID,
                             'removeHealth': 5,
                             'preText': '',
                             'appendText': ''
@@ -289,14 +290,28 @@ function onMouseEvent(event) {
     }        
 }
 
+function onMessageReceived (channel, message, sender, localOnly) {
+    if (channel === 'BUSHIDO-MASTER') {
+        var parsedMessage = JSON.parse(message);
+
+        if (parsedMessage.command === 'server-to-script-send-combatant-info' && parsedMessage.data.uuid === MyAvatar.sessionUUID) {
+            MyAvatar.displayName = parsedMessage.data.combatant.currentHealth;
+        }
+    }
+}
+
 Script.scriptEnding.connect(function () {  
     Controller.mousePressEvent.disconnect(onMouseEvent);       
     Controller.inputEvent.disconnect(onInputEvent);       
     Controller.keyPressEvent.disconnect(keyPressEvent);
     Picks.removePick(pickID); 
-    Picks.removePick(pickDesktopID);        
+    Picks.removePick(pickDesktopID);
+    Messages.unsubscribe('BUSHIDO-MASTER');
+    Messages.messageReceived.disconnect(onMessageReceived);
 });     
 
 Controller.keyPressEvent.connect(keyPressEvent);
 Controller.mousePressEvent.connect(onMouseEvent);
 Controller.inputEvent.connect(onInputEvent);   
+Messages.subscribe('BUSHIDO-MASTER');
+Messages.messageReceived.connect(onMessageReceived);
