@@ -12,11 +12,15 @@
 
 (function () {
     var BUSHIDO_SERVER_CHANNEL = 'BUSHIDO-MASTER';
+    var BUSHIDO_LOGGING_PREFIX = 'BUSHIDO-MASTER';
     var combatants = {};
     
     function killCombatant (uuid) {
         if (combatants[uuid].type === 'entity') {
-            Entities.deleteEntity(uuid);
+            var deletedEntity = Entities.deleteEntity(uuid);
+            if (!deletedEntity) {
+                console.info(BUSHIDO_LOGGING_PREFIX, 'Failed to find entity with ID', uuid, '.');
+            }
         } else if (combatants[uuid].type === 'avatar') {
             renderHitMessage(uuid, 'DIE');
         }
@@ -26,9 +30,12 @@
     
     function renderHitMessage (uuid, text) {
         var beginPosition;
-
+        
         if (combatants[uuid].type === 'entity') {
             beginPosition = Entities.getEntityProperties(uuid, ['position']).position;
+            if (!beginPosition) {
+                console.info(BUSHIDO_LOGGING_PREFIX, 'Failed to find entity with ID', uuid, '.');
+            }
         } else if (combatants[uuid].type === 'avatar') {
             beginPosition = AvatarList.getAvatar(uuid).position;
         }
@@ -45,8 +52,21 @@
             lineHeight: 0.2,
             dynamic: true,
             localVelocity: {x: 0, y: 1, z: 0},
-            lifetime: 3.5  // Delete after 3.5 seconds
+            grab: {
+                grabbable: false
+            },
+            lifetime: 5  // Delete after 5 seconds
         });
+    }
+    
+    function sendCombatantInfo (uuid) {
+        Messages.sendMessage(BUSHIDO_SERVER_CHANNEL, JSON.stringify({
+            'command': 'server-to-script-send-combatant-info',
+            'data': {
+                'uuid': uuid,
+                'combatant': combatants[uuid]
+            }
+        }));
     }
     
     function onMessageReceived (channel, message, sender, localOnly) {
@@ -59,28 +79,36 @@
                     'maxHealth': parsedMessage.data.maxHealth,
                     'type': parsedMessage.data.type
                 };
+                
+                sendCombatantInfo(parsedMessage.data.uuid);
             }
             
             if (parsedMessage.command === 'script-to-server-register-hit') {
                 if (combatants[parsedMessage.data.uuid]) {
                     if ((combatants[parsedMessage.data.uuid].currentHealth - parsedMessage.data.removeHealth) <= 0) {
+                        sendCombatantInfo(parsedMessage.data.uuid);
                         killCombatant(parsedMessage.data.uuid);
                     } else {
                         combatants[parsedMessage.data.uuid].currentHealth = combatants[parsedMessage.data.uuid].currentHealth - parsedMessage.data.removeHealth;
+                        sendCombatantInfo(parsedMessage.data.uuid);
                         renderHitMessage(parsedMessage.data.uuid, '-' + parsedMessage.data.removeHealth);
                     }
                 }
+            }
+            
+            if (parsedMessage.command === 'script-to-server-get-combatant-info') {
+                sendCombatantInfo(parsedMessage.data.uuid);
             }
         }
     }
 
     this.unload = function (entityID) {  
-        console.log('Stopping BUSHIDO-MASTER Server.')
+        console.log(BUSHIDO_LOGGING_PREFIX, 'Stopping BUSHIDO-MASTER Server.')
         Messages.unsubscribe(BUSHIDO_SERVER_CHANNEL);
         Messages.messageReceived.disconnect(onMessageReceived);
     };
     
-    console.log('Starting BUSHIDO-MASTER Server.')
+    console.log(BUSHIDO_LOGGING_PREFIX, 'Starting BUSHIDO-MASTER Server.')
     Messages.subscribe(BUSHIDO_SERVER_CHANNEL);
     Messages.messageReceived.connect(onMessageReceived);
 })
