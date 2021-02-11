@@ -297,6 +297,10 @@ function onMessageReceived (channel, message, sender, localOnly) {
         if (parsedMessage.command === 'server-to-script-send-combatant-info' && parsedMessage.data.uuid === MyAvatar.sessionUUID) {
             MyAvatar.displayName = parsedMessage.data.combatant.currentHealth;
         }
+        
+        if (parsedMessage.command === 'server-to-script-send-combatant-death' && parsedMessage.data.uuid === MyAvatar.sessionUUID) {
+            MyAvatar.displayName = 'Dead';
+        }
     }
 }
 

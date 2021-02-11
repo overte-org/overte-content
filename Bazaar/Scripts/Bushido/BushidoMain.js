@@ -2,7 +2,7 @@
     BushidoMain.js
 
     Created by Kalila L. on Feb 8 2021
-    Copyright 2021 Vircadia and contributors.
+    Copyright 2020 Vircadia and contributors.
     
     Distributed under the Apache License, Version 2.0.
     See the accompanying file LICENSE or http://www.apache.org/licenses/LICENSE-2.0.html
@@ -17,12 +17,21 @@
     
     function killCombatant (uuid) {
         if (combatants[uuid].type === 'entity') {
-            var deletedEntity = Entities.deleteEntity(uuid);
-            if (!deletedEntity) {
-                console.info(BUSHIDO_LOGGING_PREFIX, 'Failed to find entity with ID', uuid, '.');
-            }
+            renderHitMessage(uuid, 'DIE');
+            Messages.sendMessage(BUSHIDO_SERVER_CHANNEL, JSON.stringify({
+                'command': 'server-to-script-send-combatant-death',
+                'data': {
+                    'uuid': uuid
+                }
+            }));
         } else if (combatants[uuid].type === 'avatar') {
             renderHitMessage(uuid, 'DIE');
+            Messages.sendMessage(BUSHIDO_SERVER_CHANNEL, JSON.stringify({
+                'command': 'server-to-script-send-combatant-death',
+                'data': {
+                    'uuid': uuid
+                }
+            }));
         }
         
         delete combatants[uuid];
