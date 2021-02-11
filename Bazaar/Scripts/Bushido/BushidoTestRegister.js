@@ -20,8 +20,8 @@
             	"command": "script-to-server-register-combatant",
             	"data": { 
                     "uuid": MyAvatar.sessionUUID,
-            		"currentHealth": 100,
-            		"maxHealth": 100, 
+                    "currentHealth": 100,
+                    "maxHealth": 100, 
                     "type": "avatar"
             	}
             }));
