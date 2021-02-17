@@ -111,7 +111,7 @@ Configurable variables:
 
 ## Sit Configurations
 ### Configurable adjustments in Create Mode
-- Adjust seat center - update the "Pivot" (to adjust the "registrationPoint" entity property) Ex: a stool for an avatar to sit in the middle on top, Pivot = { x: 0.5, y: 1.0, z: 0.5 }
+- Adjust seat center - update the "Pivot" (to adjust the "registrationPoint" entity property) Ex: a stool for an avatar to sit in the middle on top, Pivot = ``{ x: 0.5, y: 1.0, z: 0.5 }``
 
 ### Configurable variables in userData
 - Can click on chair to sit boolean in userData
