@@ -28,6 +28,10 @@
     // url, position, rotation, dimensions, and dpi
     // All others are optional to help save space in userData.
     //
+    // Options
+    //
+    // "loadFrom" has the options of "userData" or "[insert URL here]"
+    //
 
     var defaultUserData = {
         "webEntitiesToLoad": [
@@ -35,7 +39,7 @@
                 "url": "https://google.com/",
                 "script": "https://lol.com/script.js",
                 "serverScripts": "https://lol.com/script.js",
-                "position": [400, 22, 400],
+                "position": [1, 1, 1],
                 "rotation": [0, 0, 0],
                 "dimensions": [2, 2],
                 "dpi": 10,
@@ -46,7 +50,8 @@
             "relative": true,
             "rotation": "Quat",
             "maxFPS": 30,
-            "zoneToHandle": ""
+            "zoneToHandle": "",
+            "loadFrom": "userData"
         }
     }
     
@@ -71,6 +76,13 @@
         }
 
         return userData;
+    }
+    
+    function loadFromURL(loadFrom) {
+        var getJSON = new XMLHttpRequest();
+        getJSON.open("GET", loadFrom, false);
+        getJSON.send();
+        return JSON.parse(getJSON.responseText);
     }
     
     // Main App Functionality
@@ -99,8 +111,10 @@
                 rotation = "Quat";
             }
 
-            if (userData.webEntitiesToLoad) {
+            if (userData.options.loadFrom && userData.options.loadFrom === "userData" && userData.webEntitiesToLoad) {
                 webEntitiesToLoad = userData.webEntitiesToLoad;
+            } else {
+                webEntitiesToLoad = loadFromURL(userData.options.loadFrom);
             }
 
             for (i = 0; i < webEntitiesToLoad.length; i++) {
