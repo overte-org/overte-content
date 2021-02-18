@@ -2,39 +2,81 @@
     BushidoMain.js
 
     Created by Kalila L. on Feb 8 2021
-    Copyright 2020 Vircadia and contributors.
+    Copyright 2021 Vircadia and contributors.
     
     Distributed under the Apache License, Version 2.0.
     See the accompanying file LICENSE or http://www.apache.org/licenses/LICENSE-2.0.html
     
-    This is a server entity script that manages game logic for combat games.
+    This is a server entity script that manages state for combat mechanics in virtual worlds.
 */
 
 (function () {
-    var BUSHIDO_SERVER_CHANNEL = 'BUSHIDO-MASTER';
+    // Modules
+    var BushidoMakotoVE = Script.require('./core/BushidoMakotoVE.js');
+    
+    // Constants
+    var BUSHIDO_MASTER_SERVER_CHANNEL = 'BUSHIDO-MASTER';
     var BUSHIDO_LOGGING_PREFIX = 'BUSHIDO-MASTER';
+    
+    // Variables
     var combatants = {};
     
     function killCombatant (uuid) {
         if (combatants[uuid].type === 'entity') {
             renderHitMessage(uuid, 'DIE');
-            Messages.sendMessage(BUSHIDO_SERVER_CHANNEL, JSON.stringify({
-                'command': 'server-to-script-send-combatant-death',
+            Messages.sendMessage(BUSHIDO_MASTER_SERVER_CHANNEL, JSON.stringify({
+                'command': 'master-server-to-script-notify-combatant-death',
                 'data': {
                     'uuid': uuid
                 }
             }));
         } else if (combatants[uuid].type === 'avatar') {
             renderHitMessage(uuid, 'DIE');
-            Messages.sendMessage(BUSHIDO_SERVER_CHANNEL, JSON.stringify({
-                'command': 'server-to-script-send-combatant-death',
+            Messages.sendMessage(BUSHIDO_MASTER_SERVER_CHANNEL, JSON.stringify({
+                'command': 'master-server-to-script-notify-combatant-death',
                 'data': {
                     'uuid': uuid
                 }
             }));
         }
-        
+    }
+    
+    function removeCombatant (uuid) {
+        Messages.sendMessage(BUSHIDO_MASTER_SERVER_CHANNEL, JSON.stringify({
+            'command': 'master-server-to-script-notify-combatant-removed',
+            'data': {
+                'uuid': uuid
+            }
+        }));
+
         delete combatants[uuid];
+    }
+    
+    function registerCombatant (combatantData) {
+        combatants[combatantData.uuid] = {
+            'currentHealth': combatantData.currentHealth,
+            'maxHealth': combatantData.maxHealth,
+            'type': combatantData.type
+        };
+        
+        BushidoMakotoVE.sendCombatantsList(combatants);
+        sendCombatantInfo(combatantData.uuid);
+    }
+    
+    function requestRegisterHit (requestorID, combatantData) {
+        if (BushidoMakotoVE.requestHitValidation(requestorID, combatantData)) {
+            if ((combatants[combatantData.uuid].currentHealth - combatantData.removeHealth) <= 0) {
+                combatants[combatantData.uuid].currentHealth = 0;
+                sendCombatantInfo(combatantData.uuid);
+                killCombatant(combatantData.uuid);
+            } else {
+                combatants[combatantData.uuid].currentHealth = combatants[combatantData.uuid].currentHealth - combatantData.removeHealth;
+                sendCombatantInfo(combatantData.uuid);
+                renderHitMessage(combatantData.uuid, '-' + combatantData.removeHealth);
+            }
+        } else {
+            console.info(BUSHIDO_LOGGING_PREFIX, 'MakotoVE failed validity check for hit on', combatantData.uuid, 'from', requestorID, '.');
+        }
     }
     
     function renderHitMessage (uuid, text) {
@@ -69,8 +111,8 @@
     }
     
     function sendCombatantInfo (uuid) {
-        Messages.sendMessage(BUSHIDO_SERVER_CHANNEL, JSON.stringify({
-            'command': 'server-to-script-send-combatant-info',
+        Messages.sendMessage(BUSHIDO_MASTER_SERVER_CHANNEL, JSON.stringify({
+            'command': 'master-server-to-script-send-combatant-info',
             'data': {
                 'uuid': uuid,
                 'combatant': combatants[uuid]
@@ -79,45 +121,32 @@
     }
     
     function onMessageReceived (channel, message, sender, localOnly) {
-        if (channel === BUSHIDO_SERVER_CHANNEL) {
+        if (channel === BUSHIDO_MASTER_SERVER_CHANNEL) {
             var parsedMessage = JSON.parse(message);
 
-            if (parsedMessage.command === 'script-to-server-register-combatant') {
-                combatants[parsedMessage.data.uuid] = {
-                    'currentHealth': parsedMessage.data.currentHealth,
-                    'maxHealth': parsedMessage.data.maxHealth,
-                    'type': parsedMessage.data.type
-                };
-                
-                sendCombatantInfo(parsedMessage.data.uuid);
+            if (parsedMessage.command === 'script-to-master-server-register-combatant') {
+                registerCombatant(parsedMessage.data);
             }
             
-            if (parsedMessage.command === 'script-to-server-register-hit') {
-                if (combatants[parsedMessage.data.uuid]) {
-                    if ((combatants[parsedMessage.data.uuid].currentHealth - parsedMessage.data.removeHealth) <= 0) {
-                        sendCombatantInfo(parsedMessage.data.uuid);
-                        killCombatant(parsedMessage.data.uuid);
-                    } else {
-                        combatants[parsedMessage.data.uuid].currentHealth = combatants[parsedMessage.data.uuid].currentHealth - parsedMessage.data.removeHealth;
-                        sendCombatantInfo(parsedMessage.data.uuid);
-                        renderHitMessage(parsedMessage.data.uuid, '-' + parsedMessage.data.removeHealth);
-                    }
-                }
+            if (parsedMessage.command === 'script-to-master-server-request-hit') {
+                requestRegisterHit(parsedMessage.data);
             }
             
-            if (parsedMessage.command === 'script-to-server-get-combatant-info') {
+            if (parsedMessage.command === 'script-to-master-server-get-combatant-info') {
                 sendCombatantInfo(parsedMessage.data.uuid);
             }
         }
     }
 
     this.unload = function (entityID) {  
-        console.log(BUSHIDO_LOGGING_PREFIX, 'Stopping BUSHIDO-MASTER Server.')
-        Messages.unsubscribe(BUSHIDO_SERVER_CHANNEL);
+        console.info(BUSHIDO_LOGGING_PREFIX, 'Stopping BUSHIDO-MASTER Server.')
+        Messages.unsubscribe(BUSHIDO_MASTER_SERVER_CHANNEL);
         Messages.messageReceived.disconnect(onMessageReceived);
+        console.info(BUSHIDO_LOGGING_PREFIX, 'No longer listening on channel', BUSHIDO_MASTER_SERVER_CHANNEL, '.');
     };
     
-    console.log(BUSHIDO_LOGGING_PREFIX, 'Starting BUSHIDO-MASTER Server.')
-    Messages.subscribe(BUSHIDO_SERVER_CHANNEL);
+    console.info(BUSHIDO_LOGGING_PREFIX, 'Starting BUSHIDO-MASTER Server.')
+    Messages.subscribe(BUSHIDO_MASTER_SERVER_CHANNEL);
     Messages.messageReceived.connect(onMessageReceived);
+    console.info(BUSHIDO_LOGGING_PREFIX, 'Listening on channel', BUSHIDO_MASTER_SERVER_CHANNEL, '.');
 })

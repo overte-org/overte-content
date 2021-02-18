@@ -229,7 +229,7 @@ Script.setInterval(function() {
                     playSound("shoot");
                     createEntityHitEffect(desktopResult.intersection);
                     Messages.sendMessage('BUSHIDO-MASTER', JSON.stringify({
-                        'command': 'script-to-server-register-hit',
+                        'command': 'script-to-master-server-request-hit',
                         'data': {
                             'uuid': desktopResult.objectID,
                             'removeHealth': 5,
@@ -252,7 +252,7 @@ Script.setInterval(function() {
                     playSound("shoot");
                     createEntityHitEffect(result.intersection);
                     Messages.sendMessage('BUSHIDO-MASTER', JSON.stringify({
-                        'command': 'script-to-server-register-hit',
+                        'command': 'script-to-master-server-request-hit',
                         'data': {
                             'uuid': result.objectID,
                             'removeHealth': 5,
@@ -294,11 +294,11 @@ function onMessageReceived (channel, message, sender, localOnly) {
     if (channel === 'BUSHIDO-MASTER') {
         var parsedMessage = JSON.parse(message);
 
-        if (parsedMessage.command === 'server-to-script-send-combatant-info' && parsedMessage.data.uuid === MyAvatar.sessionUUID) {
+        if (parsedMessage.command === 'master-server-to-script-send-combatant-info' && parsedMessage.data.uuid === MyAvatar.sessionUUID) {
             MyAvatar.displayName = parsedMessage.data.combatant.currentHealth;
         }
         
-        if (parsedMessage.command === 'server-to-script-send-combatant-death' && parsedMessage.data.uuid === MyAvatar.sessionUUID) {
+        if (parsedMessage.command === 'master-server-to-script-notify-combatant-death' && parsedMessage.data.uuid === MyAvatar.sessionUUID) {
             MyAvatar.displayName = 'Dead';
         }
     }

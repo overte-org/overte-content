@@ -9,15 +9,15 @@
 */
 
 (function () {
-    var BUSHIDO_SERVER_CHANNEL = 'BUSHIDO-MASTER';
+    var BUSHIDO_MASTER_SERVER_CHANNEL = 'BUSHIDO-MASTER';
     var BUSHIDO_LOGGING_PREFIX = 'BUSHIDO-MASTER';
     var entityID;
 
     function clickDownOnEntity (clickedID, event) {
         // Signal is triggered for all entities.
         if (clickedID === entityID) {
-            Messages.sendMessage(BUSHIDO_SERVER_CHANNEL, JSON.stringify({
-            	"command": "script-to-server-register-combatant",
+            Messages.sendMessage(BUSHIDO_MASTER_SERVER_CHANNEL, JSON.stringify({
+            	"command": "script-to-master-server-register-combatant",
             	"data": { 
                     "uuid": MyAvatar.sessionUUID,
                     "currentHealth": 100,
