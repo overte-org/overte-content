@@ -177,7 +177,8 @@
                         >
                             <template v-slot:label>
                                 <div class="text-h5 font-weight-light mb-5">
-                                    Do you want a smooth experience or do you want to conserve power and resources on your computer?
+                                    Do you want a smooth experience <i>(high refresh rate)</i> or do you want to conserve power and resources <i>(low refresh rate)</i> on your computer?
+                                    <br/><b><i class="text-h6">Note: This does not apply to virtual reality headsets.</i></b>
                                 </div>
                             </template>
                             <v-radio>
@@ -187,12 +188,12 @@
                             </v-radio>
                             <v-radio>
                                 <template v-slot:label>
-                                    <div class="text-h5"><strong class="blue--text">Smooth (30 Hz)</strong> Use Average Resources - <b><i>Recommended</i></b></div>
+                                    <div class="text-h5"><strong class="blue--text">Smooth (30 Hz)</strong> Use Average Resources</div>
                                 </template>
                             </v-radio>
                             <v-radio>
                                 <template v-slot:label>
-                                    <div class="text-h5"><strong class="red--text">Very Smooth (60 Hz)</strong> Use Maximum Resources</div>
+                                    <div class="text-h5"><strong class="red--text">Very Smooth (60 Hz)</strong> Use Maximum Resources - <b><i>Recommended</i></b></div>
                                 </template>
                             </v-radio>
                         </v-radio-group>
