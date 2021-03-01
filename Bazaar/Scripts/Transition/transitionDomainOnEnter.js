@@ -1,5 +1,5 @@
 /*
-    transitionDomainOnEnter.js
+    transitionDomainOnEnter.jss
 
     Created by Kalila L. on Mar 1 2021
     Copyright 2021 Vircadia and contributors.
