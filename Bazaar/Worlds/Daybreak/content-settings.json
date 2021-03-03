@@ -1,0 +1,160 @@
+{
+    "audio_env": {
+        "attenuation_coefficients": [
+            {
+                "coefficient": "0.3",
+                "listener": "audience",
+                "source": "question"
+            },
+            {
+                "coefficient": "0.25",
+                "listener": "audience",
+                "source": "stage-l"
+            },
+            {
+                "coefficient": "0.25",
+                "listener": "audience",
+                "source": "stage-r"
+            },
+            {
+                "coefficient": "0.5",
+                "listener": "stage-r",
+                "source": "stage-l"
+            },
+            {
+                "coefficient": "0.5",
+                "listener": "stage-l",
+                "source": "stage-r"
+            },
+            {
+                "coefficient": "0.25",
+                "listener": "stage-r",
+                "source": "question"
+            },
+            {
+                "coefficient": "0.95",
+                "listener": "meditation",
+                "source": "audience"
+            },
+            {
+                "coefficient": "0.95",
+                "listener": "meditation",
+                "source": "stage-r"
+            },
+            {
+                "coefficient": "0.95",
+                "listener": "meditation",
+                "source": "stage-l"
+            },
+            {
+                "coefficient": "0.8",
+                "listener": "stage-l",
+                "source": "audience"
+            },
+            {
+                "coefficient": "0.8",
+                "listener": "stage-r",
+                "source": "audience"
+            },
+            {
+                "coefficient": "0.95",
+                "listener": "meditation",
+                "source": "question"
+            },
+            {
+                "coefficient": "0.65",
+                "listener": "global",
+                "source": "audience"
+            },
+            {
+                "coefficient": "0.5",
+                "listener": "global",
+                "source": "stage-l"
+            },
+            {
+                "coefficient": "0.5",
+                "listener": "global",
+                "source": "stage-r"
+            },
+            {
+                "coefficient": "0.7",
+                "listener": "global",
+                "source": "meditation"
+            },
+            {
+                "coefficient": "0.75",
+                "listener": "audience",
+                "source": "global"
+            },
+            {
+                "coefficient": "0.95",
+                "listener": "meditation",
+                "source": "global"
+            }
+        ],
+        "zones": {
+            "audience": {
+                "x_max": "37.01",
+                "x_min": "-0.43",
+                "y_max": "3.13",
+                "y_min": "-9.01",
+                "z_max": "71.01",
+                "z_min": "31.98"
+            },
+            "global": {
+                "x_max": "500",
+                "x_min": "-500",
+                "y_max": "500",
+                "y_min": "-500",
+                "z_max": "500",
+                "z_min": "-500"
+            },
+            "meditation": {
+                "x_max": "-6.74",
+                "x_min": "-20.94",
+                "y_max": "-0.84",
+                "y_min": "-5.22",
+                "z_max": "39.22",
+                "z_min": "18.28"
+            },
+            "question": {
+                "x_max": "16.65",
+                "x_min": "15.16",
+                "y_max": "-3.5",
+                "y_min": "-5.91",
+                "z_max": "57.14",
+                "z_min": "55.68"
+            },
+            "stage-l": {
+                "x_max": "21.96",
+                "x_min": "17.85",
+                "y_max": "-0.84",
+                "y_min": "-5.22",
+                "z_max": "60.75",
+                "z_min": "54.17"
+            },
+            "stage-r": {
+                "x_max": "26.40",
+                "x_min": "21.94",
+                "y_max": "-0.84",
+                "y_min": "-5.22",
+                "z_max": "59.31",
+                "z_min": "50.23"
+            }
+        }
+    },
+    "paths": {
+        "/": {
+            "viewpoint": "/0,-10,0"
+        }
+    },
+    "scripts": {
+        "persistent_scripts": [
+            {
+                "num_instances": "6",
+                "pool": "",
+                "url": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/playRecordingAC.js"
+            }
+        ]
+    }
+}
