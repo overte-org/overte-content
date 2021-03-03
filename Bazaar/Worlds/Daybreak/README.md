@@ -1,0 +1,1 @@
+cdn.highfidelity.com links need to be brought in, they are baked so the files next to them also need to come.

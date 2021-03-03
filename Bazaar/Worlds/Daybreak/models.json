@@ -47,7 +47,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/portal-pad-2/baked/portal-pad-2.baked.fbx?1",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/portal-pad-2/baked/portal-pad-2.baked.fbx?1",
     "animation": {
         "allowTranslation": false
     },
@@ -102,7 +102,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/dock/rope-rail.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/dock/rope-rail.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -157,7 +157,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/dock/dock-pieces.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/dock/dock-pieces.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -219,7 +219,7 @@
     "angularDamping": 0,
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/playRecordingAC.js",
+    "script": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/playRecordingAC.js",
     "scriptTimestamp": 1557437464366,
     "color": {
         "red": 240,
@@ -336,7 +336,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/dock/platform-quarter.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/dock/platform-quarter.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -410,7 +410,7 @@
     "visible": false,
     "name": "Sound Emitter Waves",
     "locked": true,
-    "userData": "{\"soundURL\":\"https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/audio/beach-tide-amplified.wav\",\"soundVolume\":4,\"refreshInterval\":100}",
+    "userData": "{\"soundURL\":\"https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/audio/beach-tide-amplified.wav\",\"soundVolume\":4,\"refreshInterval\":100}",
     "description": "Specify URL to your 48K 16bit PCM wav file & volume (0-1) in userData below",
     "position": {
         "x": -35.96817398071289,
@@ -453,9 +453,9 @@
     },
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/soundLoopEmitter.js",
+    "script": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/soundLoopEmitter.js",
     "marketplaceID": "85b89b87-07d0-4842-b364-e6a74a56c7b6",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/speaker-gizmo/baked/speakerGizmo.baked.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/speaker-gizmo/baked/speakerGizmo.baked.fbx",
     "clientOnly": false,
     "avatarEntity": false,
     "localEntity": false,
@@ -509,7 +509,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "static-mesh",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/bridge/bridge-wood-2.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/bridge/bridge-wood-2.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -565,7 +565,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "static-mesh",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/rocks-large/PBR-Rock_01.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/rocks-large/PBR-Rock_01.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -621,7 +621,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/jungle-trees/LP-Jungle-Tree-1b.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/jungle-trees/LP-Jungle-Tree-1b.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -638,7 +638,7 @@
     "visible": false,
     "name": "Sound Emitter Waves",
     "locked": true,
-    "userData": "{\"soundURL\":\"https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/audio/beach-tide-amplified.wav\",\"soundVolume\":4,\"refreshInterval\":100}",
+    "userData": "{\"soundURL\":\"https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/audio/beach-tide-amplified.wav\",\"soundVolume\":4,\"refreshInterval\":100}",
     "description": "Specify URL to your 48K 16bit PCM wav file & volume (0-1) in userData below",
     "position": {
         "x": 28.585355758666992,
@@ -681,9 +681,9 @@
     },
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/soundLoopEmitter.js",
+    "script": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/soundLoopEmitter.js",
     "marketplaceID": "85b89b87-07d0-4842-b364-e6a74a56c7b6",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/speaker-gizmo/baked/speakerGizmo.baked.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/speaker-gizmo/baked/speakerGizmo.baked.fbx",
     "clientOnly": false,
     "avatarEntity": false,
     "localEntity": false,
@@ -697,7 +697,7 @@
     "visible": false,
     "name": "Sound Emitter Pond",
     "locked": true,
-    "userData": "{\"soundURL\":\"https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/audio/pond-ambience.wav?0\",\"soundVolume\":3.5,\"refreshInterval\":100}",
+    "userData": "{\"soundURL\":\"https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/audio/pond-ambience.wav?0\",\"soundVolume\":3.5,\"refreshInterval\":100}",
     "description": "Specify URL to your 48K 16bit PCM wav file & volume (0-1) in userData below",
     "position": {
         "x": 13.871443748474121,
@@ -740,9 +740,9 @@
     },
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/soundLoopEmitter.js",
+    "script": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/soundLoopEmitter.js",
     "marketplaceID": "85b89b87-07d0-4842-b364-e6a74a56c7b6",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/speaker-gizmo/baked/speakerGizmo.baked.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/speaker-gizmo/baked/speakerGizmo.baked.fbx",
     "clientOnly": false,
     "avatarEntity": false,
     "localEntity": false,
@@ -796,7 +796,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "simple-compound",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/rocks-small/PBR-Rocks-13-small.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/rocks-small/PBR-Rocks-13-small.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -853,7 +853,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "simple-compound",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/rocks-small/PBR-Rocks-14-small.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/rocks-small/PBR-Rocks-14-small.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -909,7 +909,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/agave/Agave-2.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/agave/Agave-2.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -965,7 +965,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/jungle-shrub-1/LP-Jungle-shrub-1.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/jungle-shrub-1/LP-Jungle-shrub-1.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -1021,7 +1021,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/jungle-shrub-1/LP-Jungle-shrub-1.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/jungle-shrub-1/LP-Jungle-shrub-1.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -1077,7 +1077,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/jungle-shrub-1/LP-Jungle-shrub-1.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/jungle-shrub-1/LP-Jungle-shrub-1.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -1188,7 +1188,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/dock/dock-pieces.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/dock/dock-pieces.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -1245,7 +1245,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "static-mesh",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/bridge/bridge-wood-2.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/bridge/bridge-wood-2.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -1301,7 +1301,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/dock/dock-pieces.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/dock/dock-pieces.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -1358,7 +1358,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "simple-compound",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/rocks-small/PBR-Rocks-13-small.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/rocks-small/PBR-Rocks-13-small.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -1512,7 +1512,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/dock/rope-rail.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/dock/rope-rail.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -1568,7 +1568,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/agave/Agave-2.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/agave/Agave-2.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -1625,7 +1625,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "simple-compound",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/rocks-small/PBR-Rocks-14-small.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/rocks-small/PBR-Rocks-14-small.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -1683,7 +1683,7 @@
     "angularDamping": 0,
     "collisionMask": 23,
     "collidesWith": "static,dynamic,kinematic,otherAvatar,",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/agave/Agave.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/agave/Agave.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -1740,7 +1740,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "static-mesh",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/rocks-large/PBR-Rock_01.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/rocks-large/PBR-Rock_01.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -1965,7 +1965,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "box",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/dock/low-rail.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/dock/low-rail.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -1982,7 +1982,7 @@
     "visible": false,
     "name": "Sound Emitter Birds",
     "locked": true,
-    "userData": "{\"soundURL\":\"https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/audio/rainforest-birds.wav\",\"soundVolume\":10,\"refreshInterval\":100}",
+    "userData": "{\"soundURL\":\"https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/audio/rainforest-birds.wav\",\"soundVolume\":10,\"refreshInterval\":100}",
     "description": "Specify URL to your 48K 16bit PCM wav file & volume (0-1) in userData below",
     "position": {
         "x": 28.238536834716797,
@@ -2025,9 +2025,9 @@
     },
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/soundLoopEmitter.js",
+    "script": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/soundLoopEmitter.js",
     "marketplaceID": "85b89b87-07d0-4842-b364-e6a74a56c7b6",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/speaker-gizmo/baked/speakerGizmo.baked.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/speaker-gizmo/baked/speakerGizmo.baked.fbx",
     "clientOnly": false,
     "avatarEntity": false,
     "localEntity": false,
@@ -2068,7 +2068,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/signs/Sign-Waterfall.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/signs/Sign-Waterfall.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -2180,7 +2180,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "static-mesh",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/rocks-large/PBR-Rock_01.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/rocks-large/PBR-Rock_01.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -2238,7 +2238,7 @@
     "angularDamping": 0,
     "collisionMask": 23,
     "collidesWith": "static,dynamic,kinematic,otherAvatar,",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/agave/Agave.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/agave/Agave.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -2294,7 +2294,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/jungle-shrub-1/LP-Jungle-shrub-1.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/jungle-shrub-1/LP-Jungle-shrub-1.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -2407,7 +2407,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "simple-compound",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/rocks-small/PBR-Rocks-13-small.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/rocks-small/PBR-Rocks-13-small.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -2463,7 +2463,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/agave/Agave-2.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/agave/Agave-2.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -2688,7 +2688,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "simple-compound",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/rocks-small/PBR-Rocks-13-small.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/rocks-small/PBR-Rocks-13-small.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -2745,7 +2745,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "simple-compound",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/rocks-small/PBR-Rocks-13-small.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/rocks-small/PBR-Rocks-13-small.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -2886,7 +2886,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/signs/Sign-Daybreak.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/signs/Sign-Daybreak.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -2986,7 +2986,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "box",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/dock/low-rail.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/dock/low-rail.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -3043,7 +3043,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/grass-tuft-dark-3/grass-tuft-dark-3.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/grass-tuft-dark-3/grass-tuft-dark-3.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -3100,7 +3100,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "box",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/dock/low-rail.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/dock/low-rail.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -3157,7 +3157,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/grass-tuft-dark-3/grass-tuft-dark-3.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/grass-tuft-dark-3/grass-tuft-dark-3.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -3213,7 +3213,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/jungle-shrub-1/LP-Jungle-shrub-1.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/jungle-shrub-1/LP-Jungle-shrub-1.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -3269,7 +3269,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/jungle-shrub-1/LP-Jungle-shrub-1.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/jungle-shrub-1/LP-Jungle-shrub-1.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -3325,7 +3325,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/jungle-shrub-1/LP-Jungle-shrub-1.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/jungle-shrub-1/LP-Jungle-shrub-1.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -3662,7 +3662,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "simple-compound",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/rocks-small/PBR-Rocks-14-small.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/rocks-small/PBR-Rocks-14-small.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -3719,7 +3719,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "static-mesh",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/rocks-large/PBR-Rock_01.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/rocks-large/PBR-Rock_01.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -4295,9 +4295,9 @@
     },
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
+    "script": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
     "scriptTimestamp": 1553708732946,
-    "serverScripts": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
+    "serverScripts": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
     "color": {
         "red": 234,
         "green": 0,
@@ -4629,9 +4629,9 @@
     },
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
+    "script": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
     "scriptTimestamp": 1553708732946,
-    "serverScripts": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
+    "serverScripts": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
     "color": {
         "red": 234,
         "green": 0,
@@ -4699,9 +4699,9 @@
     },
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
+    "script": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
     "scriptTimestamp": 1553708732946,
-    "serverScripts": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
+    "serverScripts": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
     "color": {
         "red": 234,
         "green": 0,
@@ -4769,9 +4769,9 @@
     },
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
+    "script": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
     "scriptTimestamp": 1553708732946,
-    "serverScripts": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
+    "serverScripts": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
     "color": {
         "red": 234,
         "green": 0,
@@ -4839,9 +4839,9 @@
     },
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
+    "script": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
     "scriptTimestamp": 1553708732946,
-    "serverScripts": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
+    "serverScripts": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
     "color": {
         "red": 234,
         "green": 0,
@@ -4889,7 +4889,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/signs/Sign-Volcano-Stage.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/signs/Sign-Volcano-Stage.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -5608,9 +5608,9 @@
     },
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
+    "script": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
     "scriptTimestamp": 1553708732946,
-    "serverScripts": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
+    "serverScripts": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
     "color": {
         "red": 234,
         "green": 0,
@@ -5678,9 +5678,9 @@
     },
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
+    "script": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
     "scriptTimestamp": 1553708732946,
-    "serverScripts": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
+    "serverScripts": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
     "color": {
         "red": 234,
         "green": 0,
@@ -5748,9 +5748,9 @@
     },
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
+    "script": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
     "scriptTimestamp": 1553708732946,
-    "serverScripts": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
+    "serverScripts": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
     "color": {
         "red": 234,
         "green": 0,
@@ -5811,7 +5811,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "box",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/dock/platform.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/dock/platform.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -5868,7 +5868,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "box",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/dock/platform.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/dock/platform.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -5924,7 +5924,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/dock/platform-quarter.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/dock/platform-quarter.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -5980,7 +5980,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/dock/platform-quarter.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/dock/platform-quarter.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -6024,7 +6024,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/dock/platform-quarter.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/dock/platform-quarter.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -6081,7 +6081,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "box",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/dock/platform-quarter.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/dock/platform-quarter.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -6126,7 +6126,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "box",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/dock/platform.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/dock/platform.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -6183,7 +6183,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "box",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/dock/platform.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/dock/platform.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -6240,7 +6240,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "box",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/dock/platform.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/dock/platform.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -6297,7 +6297,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "box",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/dock/platform.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/dock/platform.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -6354,7 +6354,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "box",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/dock/platform.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/dock/platform.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -6410,7 +6410,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/dock/low-rail.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/dock/low-rail.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -6466,7 +6466,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/dock/low-rail.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/dock/low-rail.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -6522,7 +6522,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/dock/low-rail-half.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/dock/low-rail-half.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -6578,7 +6578,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/dock/low-rail.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/dock/low-rail.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -6634,7 +6634,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/agave/Agave-2.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/agave/Agave-2.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -6690,7 +6690,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/dock/platform-quarter.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/dock/platform-quarter.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -6746,7 +6746,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/dock/platform-quarter.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/dock/platform-quarter.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -6860,7 +6860,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/dock/low-rail.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/dock/low-rail.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -6916,7 +6916,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/agave/Agave-2.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/agave/Agave-2.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -6973,7 +6973,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "static-mesh",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/rocks-large/PBR-Rock_01.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/rocks-large/PBR-Rock_01.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -7592,9 +7592,9 @@
     },
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
+    "script": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
     "scriptTimestamp": 1553708732946,
-    "serverScripts": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
+    "serverScripts": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
     "color": {
         "red": 234,
         "green": 0,
@@ -7662,9 +7662,9 @@
     },
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
+    "script": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
     "scriptTimestamp": 1553708732946,
-    "serverScripts": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
+    "serverScripts": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
     "color": {
         "red": 234,
         "green": 0,
@@ -7732,9 +7732,9 @@
     },
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
+    "script": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
     "scriptTimestamp": 1553708732946,
-    "serverScripts": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
+    "serverScripts": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
     "color": {
         "red": 234,
         "green": 0,
@@ -7802,9 +7802,9 @@
     },
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
+    "script": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
     "scriptTimestamp": 1553708732946,
-    "serverScripts": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
+    "serverScripts": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
     "color": {
         "red": 234,
         "green": 0,
@@ -7872,9 +7872,9 @@
     },
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
+    "script": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
     "scriptTimestamp": 1553708732946,
-    "serverScripts": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
+    "serverScripts": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
     "color": {
         "red": 234,
         "green": 0,
@@ -7942,9 +7942,9 @@
     },
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
+    "script": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
     "scriptTimestamp": 1553708732946,
-    "serverScripts": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
+    "serverScripts": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
     "color": {
         "red": 234,
         "green": 0,
@@ -8012,9 +8012,9 @@
     },
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
+    "script": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
     "scriptTimestamp": 1553708732946,
-    "serverScripts": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
+    "serverScripts": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
     "color": {
         "red": 234,
         "green": 0,
@@ -8082,9 +8082,9 @@
     },
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
+    "script": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
     "scriptTimestamp": 1553708732946,
-    "serverScripts": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
+    "serverScripts": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
     "color": {
         "red": 234,
         "green": 0,
@@ -8152,9 +8152,9 @@
     },
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
+    "script": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
     "scriptTimestamp": 1553708732946,
-    "serverScripts": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
+    "serverScripts": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
     "color": {
         "red": 234,
         "green": 0,
@@ -8222,9 +8222,9 @@
     },
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
+    "script": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
     "scriptTimestamp": 1553708732946,
-    "serverScripts": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
+    "serverScripts": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
     "color": {
         "red": 234,
         "green": 0,
@@ -8324,9 +8324,9 @@
     },
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
+    "script": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
     "scriptTimestamp": 1553708732946,
-    "serverScripts": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
+    "serverScripts": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
     "color": {
         "red": 234,
         "green": 0,
@@ -8896,7 +8896,7 @@
     "angularDamping": 0,
     "collisionMask": 23,
     "collidesWith": "static,dynamic,kinematic,otherAvatar,",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/agave/Agave.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/agave/Agave.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -8913,7 +8913,7 @@
     "visible": false,
     "name": "Sound Emitter Pond",
     "locked": true,
-    "userData": "{\"soundURL\":\"https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/audio/pond-ambience.wav?0\",\"soundVolume\":3.5,\"refreshInterval\":100}",
+    "userData": "{\"soundURL\":\"https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/audio/pond-ambience.wav?0\",\"soundVolume\":3.5,\"refreshInterval\":100}",
     "description": "Specify URL to your 48K 16bit PCM wav file & volume (0-1) in userData below",
     "position": {
         "x": 49.703041076660156,
@@ -8956,9 +8956,9 @@
     },
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/soundLoopEmitter.js",
+    "script": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/soundLoopEmitter.js",
     "marketplaceID": "85b89b87-07d0-4842-b364-e6a74a56c7b6",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/speaker-gizmo/baked/speakerGizmo.baked.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/speaker-gizmo/baked/speakerGizmo.baked.fbx",
     "clientOnly": false,
     "avatarEntity": false,
     "localEntity": false,
@@ -9013,7 +9013,7 @@
     "angularDamping": 0,
     "collisionMask": 23,
     "collidesWith": "static,dynamic,kinematic,otherAvatar,",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/agave/Agave.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/agave/Agave.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -9183,7 +9183,7 @@
     "angularDamping": 0,
     "collisionMask": 23,
     "collidesWith": "static,dynamic,kinematic,otherAvatar,",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/agave/Agave.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/agave/Agave.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -9239,7 +9239,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/jungle-shrub-1/LP-Jungle-shrub-1.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/jungle-shrub-1/LP-Jungle-shrub-1.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -9295,7 +9295,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/jungle-shrub-1/LP-Jungle-shrub-1.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/jungle-shrub-1/LP-Jungle-shrub-1.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -9351,7 +9351,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/jungle-shrub-1/LP-Jungle-shrub-1.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/jungle-shrub-1/LP-Jungle-shrub-1.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -9407,7 +9407,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/jungle-shrub-1/LP-Jungle-shrub-1.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/jungle-shrub-1/LP-Jungle-shrub-1.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -9463,7 +9463,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/jungle-shrub-1/LP-Jungle-shrub-1.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/jungle-shrub-1/LP-Jungle-shrub-1.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -9520,7 +9520,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "box",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/shells/shell.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/shells/shell.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -9576,7 +9576,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/jungle-shrub-1/LP-Jungle-shrub-1.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/jungle-shrub-1/LP-Jungle-shrub-1.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -9632,7 +9632,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/jungle-shrub-1/LP-Jungle-shrub-1.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/jungle-shrub-1/LP-Jungle-shrub-1.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -9688,7 +9688,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/jungle-shrub-1/LP-Jungle-shrub-1.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/jungle-shrub-1/LP-Jungle-shrub-1.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -9744,7 +9744,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/jungle-shrub-1/LP-Jungle-shrub-1.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/jungle-shrub-1/LP-Jungle-shrub-1.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -9800,7 +9800,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/jungle-shrub-1/LP-Jungle-shrub-1.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/jungle-shrub-1/LP-Jungle-shrub-1.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -9856,7 +9856,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/jungle-shrub-1/LP-Jungle-shrub-1.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/jungle-shrub-1/LP-Jungle-shrub-1.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -9912,7 +9912,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/jungle-shrub-1/LP-Jungle-shrub-1.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/jungle-shrub-1/LP-Jungle-shrub-1.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -9968,7 +9968,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/jungle-shrub-1/LP-Jungle-shrub-1.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/jungle-shrub-1/LP-Jungle-shrub-1.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -10024,7 +10024,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/jungle-shrub-1/LP-Jungle-shrub-1.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/jungle-shrub-1/LP-Jungle-shrub-1.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -10080,7 +10080,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/jungle-shrub-1/LP-Jungle-shrub-1.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/jungle-shrub-1/LP-Jungle-shrub-1.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -10138,7 +10138,7 @@
     "angularDamping": 0,
     "collisionMask": 23,
     "collidesWith": "static,dynamic,kinematic,otherAvatar,",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/agave/Agave.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/agave/Agave.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -10194,7 +10194,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/jungle-shrub-1/LP-Jungle-shrub-1.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/jungle-shrub-1/LP-Jungle-shrub-1.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -10255,7 +10255,7 @@
     "angularDamping": 0,
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/playRecordingAC.js",
+    "script": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/playRecordingAC.js",
     "scriptTimestamp": 1557437464366,
     "color": {
         "red": 240,
@@ -10315,7 +10315,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/portal-pad-2/baked/portal-pad-2.baked.fbx?1",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/portal-pad-2/baked/portal-pad-2.baked.fbx?1",
     "animation": {
         "allowTranslation": false
     },
@@ -10372,7 +10372,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/grass-tuft-dark-3/grass-tuft-dark-3.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/grass-tuft-dark-3/grass-tuft-dark-3.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -10429,7 +10429,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/grass-tuft-dark-3/grass-tuft-dark-3.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/grass-tuft-dark-3/grass-tuft-dark-3.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -10598,7 +10598,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/grass-tuft-dark-3/grass-tuft-dark-3.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/grass-tuft-dark-3/grass-tuft-dark-3.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -10655,7 +10655,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/grass-tuft-dark-3/grass-tuft-dark-3.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/grass-tuft-dark-3/grass-tuft-dark-3.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -10672,7 +10672,7 @@
     "visible": false,
     "name": "Sound Emitter Birds",
     "locked": true,
-    "userData": "{\"soundURL\":\"https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/audio/rainforest-birds.wav\",\"soundVolume\":10,\"refreshInterval\":100}",
+    "userData": "{\"soundURL\":\"https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/audio/rainforest-birds.wav\",\"soundVolume\":10,\"refreshInterval\":100}",
     "description": "Specify URL to your 48K 16bit PCM wav file & volume (0-1) in userData below",
     "position": {
         "x": 50.877044677734375,
@@ -10715,9 +10715,9 @@
     },
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/soundLoopEmitter.js",
+    "script": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/soundLoopEmitter.js",
     "marketplaceID": "85b89b87-07d0-4842-b364-e6a74a56c7b6",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/speaker-gizmo/baked/speakerGizmo.baked.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/speaker-gizmo/baked/speakerGizmo.baked.fbx",
     "clientOnly": false,
     "avatarEntity": false,
     "localEntity": false,
@@ -10771,7 +10771,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "simple-compound",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/rocks-small/PBR-Rock-Group-1-2-small.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/rocks-small/PBR-Rock-Group-1-2-small.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -10829,7 +10829,7 @@
     "angularDamping": 0,
     "collisionMask": 23,
     "collidesWith": "static,dynamic,kinematic,otherAvatar,",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/agave/Agave.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/agave/Agave.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -10942,7 +10942,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "simple-compound",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/rocks-small/PBR-Rocks-13-small.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/rocks-small/PBR-Rocks-13-small.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -10999,7 +10999,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/grass-tuft-dark-3/grass-tuft-dark-3.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/grass-tuft-dark-3/grass-tuft-dark-3.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -11057,7 +11057,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "static-mesh",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/bridge/bridge-wood-2.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/bridge/bridge-wood-2.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -11114,7 +11114,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "simple-compound",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/rocks-small/PBR-Rocks-13-small.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/rocks-small/PBR-Rocks-13-small.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -11227,7 +11227,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "simple-compound",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/rocks-small/PBR-Rocks-20-small.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/rocks-small/PBR-Rocks-20-small.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -11284,7 +11284,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/grass-tuft-dark-3/grass-tuft-dark-3.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/grass-tuft-dark-3/grass-tuft-dark-3.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -11341,7 +11341,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/grass-tuft-dark-3/grass-tuft-dark-3.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/grass-tuft-dark-3/grass-tuft-dark-3.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -11566,7 +11566,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "static-mesh",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/rocks-large/PBR-Rock_01.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/rocks-large/PBR-Rock_01.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -11623,7 +11623,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "static-mesh",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/rocks-large/PBR-Rock_01.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/rocks-large/PBR-Rock_01.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -11667,7 +11667,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/signs/Sign-Meditation.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/signs/Sign-Meditation.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -11972,9 +11972,9 @@
     },
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
+    "script": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
     "scriptTimestamp": 1553708732946,
-    "serverScripts": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
+    "serverScripts": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
     "color": {
         "red": 234,
         "green": 0,
@@ -12042,9 +12042,9 @@
     },
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
+    "script": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
     "scriptTimestamp": 1553708732946,
-    "serverScripts": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
+    "serverScripts": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
     "color": {
         "red": 234,
         "green": 0,
@@ -12112,9 +12112,9 @@
     },
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
+    "script": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
     "scriptTimestamp": 1553708732946,
-    "serverScripts": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
+    "serverScripts": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
     "color": {
         "red": 234,
         "green": 0,
@@ -12182,9 +12182,9 @@
     },
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
+    "script": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
     "scriptTimestamp": 1553708732946,
-    "serverScripts": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
+    "serverScripts": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
     "color": {
         "red": 234,
         "green": 0,
@@ -12244,7 +12244,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "box",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/shells/shell3.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/shells/shell3.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -12260,7 +12260,7 @@
     "lastEdited": 1559089614209835,
     "visible": false,
     "name": "Sound Emitter Waves",
-    "userData": "{\"soundURL\":\"https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/audio/beach-tide-amplified.wav\",\"soundVolume\":6,\"refreshInterval\":100}",
+    "userData": "{\"soundURL\":\"https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/audio/beach-tide-amplified.wav\",\"soundVolume\":6,\"refreshInterval\":100}",
     "description": "Specify URL to your 48K 16bit PCM wav file & volume (0-1) in userData below",
     "position": {
         "x": 127.3809814453125,
@@ -12303,9 +12303,9 @@
     },
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/soundLoopEmitter.js",
+    "script": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/soundLoopEmitter.js",
     "marketplaceID": "85b89b87-07d0-4842-b364-e6a74a56c7b6",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/speaker-gizmo/baked/speakerGizmo.baked.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/speaker-gizmo/baked/speakerGizmo.baked.fbx",
     "clientOnly": false,
     "avatarEntity": false,
     "localEntity": false,
@@ -12684,9 +12684,9 @@
     },
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
+    "script": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
     "scriptTimestamp": 1553708732946,
-    "serverScripts": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
+    "serverScripts": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
     "color": {
         "red": 234,
         "green": 0,
@@ -12754,9 +12754,9 @@
     },
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
+    "script": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
     "scriptTimestamp": 1553708732946,
-    "serverScripts": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
+    "serverScripts": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
     "color": {
         "red": 234,
         "green": 0,
@@ -12824,9 +12824,9 @@
     },
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
+    "script": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
     "scriptTimestamp": 1553708732946,
-    "serverScripts": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
+    "serverScripts": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
     "color": {
         "red": 234,
         "green": 0,
@@ -12894,9 +12894,9 @@
     },
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
+    "script": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
     "scriptTimestamp": 1553708732946,
-    "serverScripts": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
+    "serverScripts": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
     "color": {
         "red": 234,
         "green": 0,
@@ -12964,9 +12964,9 @@
     },
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
+    "script": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitClient.js",
     "scriptTimestamp": 1553708732946,
-    "serverScripts": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
+    "serverScripts": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/sit/sitServer.js",
     "color": {
         "red": 234,
         "green": 0,
@@ -12986,7 +12986,7 @@
     "lastEdited": 1559089614214405,
     "visible": false,
     "name": "Sound Emitter Waves",
-    "userData": "{\"soundURL\":\"https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/audio/beach-tide-amplified.wav\",\"soundVolume\":4,\"refreshInterval\":100}",
+    "userData": "{\"soundURL\":\"https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/audio/beach-tide-amplified.wav\",\"soundVolume\":4,\"refreshInterval\":100}",
     "description": "Specify URL to your 48K 16bit PCM wav file & volume (0-1) in userData below",
     "position": {
         "x": 19.584108352661133,
@@ -13029,9 +13029,9 @@
     },
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/soundLoopEmitter.js",
+    "script": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/soundLoopEmitter.js",
     "marketplaceID": "85b89b87-07d0-4842-b364-e6a74a56c7b6",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/speaker-gizmo/baked/speakerGizmo.baked.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/speaker-gizmo/baked/speakerGizmo.baked.fbx",
     "clientOnly": false,
     "avatarEntity": false,
     "localEntity": false,
@@ -13086,7 +13086,7 @@
     "angularDamping": 0,
     "collisionMask": 23,
     "collidesWith": "static,dynamic,kinematic,otherAvatar,",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/agave/Agave.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/agave/Agave.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -13176,7 +13176,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "static-mesh",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/aircraft/Skydiving-Plane.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/aircraft/Skydiving-Plane.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -13234,7 +13234,7 @@
     "angularDamping": 0,
     "friction": 0.75,
     "shapeType": "static-mesh",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/island/Daybreak-Island-v1-grass-mat-v1ax.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/island/Daybreak-Island-v1-grass-mat-v1ax.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -13351,7 +13351,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/jungle-trees/island-trees.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/jungle-trees/island-trees.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -13470,7 +13470,7 @@
     "angularDamping": 0,
     "friction": 0.8500000238418579,
     "shapeType": "static-mesh",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/island/island.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/island/island.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -13542,7 +13542,7 @@
     },
     "ambientLight": {
         "ambientIntensity": 0.30000001192092896,
-        "ambientURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/skybox/SKY-the_sky_is_on_fire_2k.exr"
+        "ambientURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/skybox/SKY-the_sky_is_on_fire_2k.exr"
     },
     "skybox": {
         "color": {
@@ -13550,7 +13550,7 @@
             "green": 255,
             "blue": 255
         },
-        "url": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/skybox/SKY-Daybreak-4k-Eq.png"
+        "url": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/skybox/SKY-Daybreak-4k-Eq.png"
     },
     "haze": {
         "hazeRange": 2246,
@@ -13628,7 +13628,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "static-mesh",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/island/volcano2.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/island/volcano2.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -13748,7 +13748,7 @@
     "angularDamping": 0,
     "friction": 0.949999988079071,
     "shapeType": "static-mesh",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/island/island-beach-base.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/island/island-beach-base.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -13811,7 +13811,7 @@
     "angularDamping": 0,
     "collisionless": true,
     "ignoreForCollisions": true,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/island/water-creek-geo.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/island/water-creek-geo.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -13869,7 +13869,7 @@
     "angularDamping": 0,
     "collisionless": true,
     "ignoreForCollisions": true,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/island/water-creek-geo.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/island/water-creek-geo.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -13925,7 +13925,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/jungle-trees/LP-Jungle-Tree-1b.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/jungle-trees/LP-Jungle-Tree-1b.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -13981,7 +13981,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/jungle-trees/LP-Jungle-Tree-1b.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/jungle-trees/LP-Jungle-Tree-1b.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -14036,7 +14036,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/rocks-large/Rock-1A-detailed.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/rocks-large/Rock-1A-detailed.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -14092,7 +14092,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/jungle-trees/LP-Jungle-Tree-1b.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/jungle-trees/LP-Jungle-Tree-1b.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -14148,7 +14148,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/jungle-trees/LP-Jungle-Tree-1b.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/jungle-trees/LP-Jungle-Tree-1b.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -14204,7 +14204,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/jungle-trees/LP-Jungle-Tree-1b.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/jungle-trees/LP-Jungle-Tree-1b.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -14260,7 +14260,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/jungle-trees/LP-Jungle-Tree-1b.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/jungle-trees/LP-Jungle-Tree-1b.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -14316,7 +14316,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/jungle-trees/LP-Jungle-Tree-1b.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/jungle-trees/LP-Jungle-Tree-1b.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -14377,7 +14377,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/waterfall-lowpoly-non-metallic/original/waterfall-lowpoly-non-metallic.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/waterfall-lowpoly-non-metallic/original/waterfall-lowpoly-non-metallic.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -14433,7 +14433,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/dock/dock-pieces.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/dock/dock-pieces.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -14489,7 +14489,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/jungle-trees/LP-Jungle-Tree-1b.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/jungle-trees/LP-Jungle-Tree-1b.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -14546,7 +14546,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "static-mesh",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/bridge/bridge-wood-2.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/bridge/bridge-wood-2.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -14603,7 +14603,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "static-mesh",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/bridge/bridge-wood-2.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/bridge/bridge-wood-2.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -15092,9 +15092,9 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/palm-trees/PalmTrees-b_anim.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/palm-trees/PalmTrees-b_anim.fbx",
     "animation": {
-        "url": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/palm-trees/PalmTree_anim.fbx",
+        "url": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/palm-trees/PalmTree_anim.fbx",
         "allowTranslation": false,
         "fps": 35,
         "currentFrame": 57990.20703125,
@@ -15152,9 +15152,9 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/palm-trees/PalmTrees-b_anim.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/palm-trees/PalmTrees-b_anim.fbx",
     "animation": {
-        "url": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/palm-trees/PalmTree_anim.fbx",
+        "url": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/palm-trees/PalmTree_anim.fbx",
         "allowTranslation": false,
         "fps": 35,
         "currentFrame": 57994.58203125,
@@ -15212,9 +15212,9 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/palm-trees/PalmTrees-b_anim.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/palm-trees/PalmTrees-b_anim.fbx",
     "animation": {
-        "url": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/palm-trees/PalmTree_anim.fbx",
+        "url": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/palm-trees/PalmTree_anim.fbx",
         "allowTranslation": false,
         "fps": 35,
         "currentFrame": 57994.61328125,
@@ -15272,9 +15272,9 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/palm-trees/PalmTrees-b_anim.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/palm-trees/PalmTrees-b_anim.fbx",
     "animation": {
-        "url": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/palm-trees/PalmTree_anim.fbx",
+        "url": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/palm-trees/PalmTree_anim.fbx",
         "allowTranslation": false,
         "fps": 35,
         "currentFrame": 57993.6796875,
@@ -15332,9 +15332,9 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/palm-trees/PalmTrees-b_anim.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/palm-trees/PalmTrees-b_anim.fbx",
     "animation": {
-        "url": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/palm-trees/PalmTree_anim.fbx",
+        "url": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/palm-trees/PalmTree_anim.fbx",
         "allowTranslation": false,
         "fps": 35,
         "currentFrame": 57904.84375,
@@ -15565,7 +15565,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/waterfall-lowpoly-non-metallic/original/waterfall-lowpoly-non-metallic.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/waterfall-lowpoly-non-metallic/original/waterfall-lowpoly-non-metallic.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -15620,7 +15620,7 @@
         }
     },
     "shapeType": "simple-hull",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/rocks-large/Rock-5A.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/rocks-large/Rock-5A.fbx",
     "clientOnly": false,
     "avatarEntity": false,
     "localEntity": false,
@@ -15672,7 +15672,7 @@
             "w": 1
         }
     },
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/palm-trees/Tree-Palm-Royal-Low-Poly-GB.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/palm-trees/Tree-Palm-Royal-Low-Poly-GB.fbx",
     "clientOnly": false,
     "avatarEntity": false,
     "localEntity": false,
@@ -15724,7 +15724,7 @@
             "w": 1
         }
     },
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/palm-trees/Tree-Palm-Royal-Low-Poly-GB.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/palm-trees/Tree-Palm-Royal-Low-Poly-GB.fbx",
     "clientOnly": false,
     "avatarEntity": false,
     "localEntity": false,
@@ -15775,7 +15775,7 @@
             "w": 1
         }
     },
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/rocks-large/Rock-5A.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/rocks-large/Rock-5A.fbx",
     "clientOnly": false,
     "avatarEntity": false,
     "localEntity": false,
@@ -15828,9 +15828,9 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/palm-trees/PalmTrees-b_anim.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/palm-trees/PalmTrees-b_anim.fbx",
     "animation": {
-        "url": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/palm-trees/PalmTree_anim.fbx",
+        "url": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/palm-trees/PalmTree_anim.fbx",
         "allowTranslation": false,
         "fps": 35,
         "currentFrame": 57981.32421875,
@@ -15944,7 +15944,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/jungle-trees/LP-Jungle-Tree-1b.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/jungle-trees/LP-Jungle-Tree-1b.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -15999,7 +15999,7 @@
         }
     },
     "shapeType": "simple-hull",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/rocks-large/Rock-5A.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/rocks-large/Rock-5A.fbx",
     "clientOnly": false,
     "avatarEntity": false,
     "localEntity": false,
@@ -16051,7 +16051,7 @@
             "w": 1
         }
     },
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/palm-trees/Tree-Palm-Royal-Low-Poly-GB.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/palm-trees/Tree-Palm-Royal-Low-Poly-GB.fbx",
     "clientOnly": false,
     "avatarEntity": false,
     "localEntity": false,
@@ -16169,7 +16169,7 @@
     "visible": false,
     "name": "Sound Emitter Birds",
     "locked": true,
-    "userData": "{\"soundURL\":\"https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/audio/rainforest-birds.wav\",\"soundVolume\":10,\"refreshInterval\":100}",
+    "userData": "{\"soundURL\":\"https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/audio/rainforest-birds.wav\",\"soundVolume\":10,\"refreshInterval\":100}",
     "description": "Specify URL to your 48K 16bit PCM wav file & volume (0-1) in userData below",
     "position": {
         "x": 73.44819641113281,
@@ -16212,9 +16212,9 @@
     },
     "collisionless": true,
     "ignoreForCollisions": true,
-    "script": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/scripts/soundLoopEmitter.js",
+    "script": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/scripts/soundLoopEmitter.js",
     "marketplaceID": "85b89b87-07d0-4842-b364-e6a74a56c7b6",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/speaker-gizmo/baked/speakerGizmo.baked.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/speaker-gizmo/baked/speakerGizmo.baked.fbx",
     "clientOnly": false,
     "avatarEntity": false,
     "localEntity": false,
@@ -16272,7 +16272,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/waterfall-lowpoly-non-metallic/original/waterfall-lowpoly-non-metallic.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/waterfall-lowpoly-non-metallic/original/waterfall-lowpoly-non-metallic.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -16329,7 +16329,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "static-mesh",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/rocks-large/Rock-1A-detailed.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/rocks-large/Rock-1A-detailed.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -16386,7 +16386,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "static-mesh",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/rocks-large/Rock-1A-detailed.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/rocks-large/Rock-1A-detailed.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -17081,7 +17081,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/rocks-large/Rock-1A-detailed.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/rocks-large/Rock-1A-detailed.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -17137,7 +17137,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "static-mesh",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/rocks-large/PBR-Rock_01.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/rocks-large/PBR-Rock_01.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -17192,7 +17192,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/rocks-large/Rock-1A-detailed.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/rocks-large/Rock-1A-detailed.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -17280,7 +17280,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "box",
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/dock/platform.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/dock/platform.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -17335,7 +17335,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/dock/rope-rail.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/dock/rope-rail.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -17390,7 +17390,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/dock/rope-rail.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/dock/rope-rail.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -17445,7 +17445,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/dock/rope-rail.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/dock/rope-rail.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -17500,7 +17500,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/dock/rope-rail.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/dock/rope-rail.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -17555,7 +17555,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/dock/rope-rail.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/dock/rope-rail.fbx",
     "animation": {
         "allowTranslation": false
     },
@@ -17613,7 +17613,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "sourceUrl": "https://www.screenleap.com/nick_highfidelity",
+    "sourceUrl": "https://www.vircadia.com/",
     "dpi": 3,
     "maxFPS": 60,
     "clientOnly": false,
@@ -17668,7 +17668,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/Bazaar/Worlds/Daybreak/content/dock/dock-pieces.fbx",
+    "modelURL": "https://cdn-1.vircadia.com/us-e-1/Bazaar/Worlds/Daybreak/content/dock/dock-pieces.fbx",
     "animation": {
         "allowTranslation": false
     },
