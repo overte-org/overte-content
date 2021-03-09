@@ -1,5 +1,5 @@
 /*
-    transitionDomainOnEnter.jss
+    transitionDomainOnEnter.js
 
     Created by Kalila L. on Mar 1 2021
     Copyright 2021 Vircadia and contributors.
@@ -15,28 +15,23 @@
     this.entityID = null;
     var _this = this;
     
-    var transitionZone;
+    var transitionEntity;
 
     // User Data Functionality
 
     var defaultUserData = {
-        "destination": "localhost",
-        "options": {
-            "useConfirmDialog": false,
-            "confirmDialogMessage": "Would you like to go?",
-            "useZone": true,
-            "zone": {
-                "lifetime": 10, // 10 seconds after creating the zone, clear it... (this only works when in the same domain)
-                "deleteAfter": 10000, // 10 seconds after creating the zone, delete it... (this works when going to a different domain)
-                'dimensions': [5, 5, 5],
-                'hazeMode': 'enabled',
-                'haze': {
-                    'hazeAltitudeEffect': true,
-                    'hazeBaseRef': 100
-                },
-                'flyingAllowed': false
+        'destination': 'localhost',
+        'options': {
+            'useConfirmDialog': false,
+            'confirmDialogMessage': 'Would you like to go?',
+            'showEntity': true,
+            'entity': {
+                'modelURL': '#',
+                'lifetime': 10, // 10 seconds after creating the entity, delete it... (this only works when in the same domain)
+                'deleteAfter': 10000, // 10 seconds after creating the entity, delete it... (this works when going to a different domain)
+                'dimensions': [5, 5, 5]
             },
-            "delayTransition": 0 // this value is in milliseconds
+            'delayTransition': 0 // this value is in milliseconds
         }
     }
 
@@ -70,21 +65,19 @@
     // Main App Functionality
     
     function triggerTransition(userData) {
-        if (userData.options.useZone === true) {
-            transitionZone = Entities.addEntity({
-                type: 'Zone',
-                name: 'TransitionZone',
+        if (userData.options.showEntity === true) {
+            transitionEntity = Entities.addEntity({
+                type: 'Model',
+                name: 'transitionEntity',
+                modelURL: userData.options.entity.modelURL,
                 parentID: MyAvatar.SELF_ID,
                 position: MyAvatar.position,
-                lifetime: userData.options.zone.lifetime,
-                dimensions: userData.options.zone.dimensions,
+                lifetime: userData.options.entity.lifetime,
+                dimensions: userData.options.entity.dimensions,
                 userData: JSON.stringify({
-                    'deleteAfter': userData.options.zone.deleteAfter
+                    'deleteAfter': userData.options.entity.deleteAfter
                 }),
                 script: 'https://cdn-1.vircadia.com/us-e-1/Bazaar/Scripts/Transition/entitySelfDelete.js?12345',
-                hazeMode: userData.options.zone.hazeMode,
-                haze: userData.options.zone.haze,
-                flyingAllowed: userData.options.zone.flyingAllowed
             }, 'local');
         }
 
