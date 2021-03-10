@@ -55,7 +55,7 @@
         return userData;
     }
     
-    // Main App Functionality
+    // Main Script Functionality
     
     function createOverlayWebWindow(url, height, width) {
         overlayWebWindow = new OverlayWebWindow({

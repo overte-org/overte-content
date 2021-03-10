@@ -43,6 +43,8 @@
 
         return userData;
     }
+    
+    // Main Script Functionality
 
     function onMousePressOnEntity(pressedEntityID, event) {
         if (_this.entityID === pressedEntityID) {

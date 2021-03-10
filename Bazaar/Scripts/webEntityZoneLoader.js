@@ -73,7 +73,7 @@
         return userData;
     }
     
-    // Main App Functionality
+    // Main Script Functionality
     
     function destroyAllWebEntities() {
         for (i = 0; i < webEntitiesActive.length; i++) {

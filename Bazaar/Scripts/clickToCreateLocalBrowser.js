@@ -16,7 +16,7 @@
     var _this = this;
     var webViewID = null;
 
-    // Main App Functionality
+    // Main Script Functionality
 
     function onMousePressOnEntity(pressedEntityID, event) {
         if (_this.entityID === pressedEntityID && event.isPrimaryButton) {

@@ -47,6 +47,8 @@
         return userData;
     }
     
+    // Main Script Functionality
+    
     function importAndPasteEntities() {
         var userData = getAndParseUserData();
     

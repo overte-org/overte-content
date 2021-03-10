@@ -55,7 +55,7 @@
         return userData;
     }
     
-    // Main App Functionality
+    // Main Script Functionality
     
     function loadScripts(userData) {
         for (var i = 0; i < userData.scripts.length; i++) {
