@@ -21,8 +21,8 @@
         'targetWebEntity': Uuid.NULL,
         'options': {
             'levels': {
-                '10': 100, // 100 volume when 10 meters or closer.
-                '15': 50, // 50 volume when 10 meters or closer.
+                '10': 1.0, // 100 volume when 10 meters or closer.
+                '15': 0.5, // 50 volume when 10 meters or closer.
                 '25': 0 // 0 volume when 20 meters or closer.
             },
             'outOfRangeVolume': 0, // 0 volume when further than the furthest level.
