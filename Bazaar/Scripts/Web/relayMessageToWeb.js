@@ -1,5 +1,5 @@
 /*
-    emitMessageToWeb.js
+    relayMessageToWeb.js
 
     Created by Kalila L. on Mar 26 2021
     Copyright 2021 Vircadia and contributors.
