@@ -170,7 +170,7 @@
                 }
                 
                 var webBackground = true;
-                if (webEntitiesToLoad[i].background) {
+                if (typeof webEntitiesToLoad[i].background !== 'undefined' && webEntitiesToLoad[i].background !== null) {
                     webBackground = webEntitiesToLoad[i].background;
                 }
                 
