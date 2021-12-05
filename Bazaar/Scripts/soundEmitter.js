@@ -35,6 +35,9 @@
         that.soundEmitterUpdateInterval = false;
     };
 
+    var DEFAULT_START_DELAY = 0;
+    var delayTimer;
+    var hasStartedOnce = false;
 
     SoundEmitter.prototype = {
         preload: function(entityID) {
@@ -92,6 +95,9 @@
 
 
         unload: function() {
+            if (typeof(delayTimer) !== "undefined") {
+                Script.clearTimeout(delayTimer);
+            }
             that.clearCurrentSoundData();
         },
 
@@ -132,8 +138,13 @@
             var optionsChanged = false;
             var shouldRestartPlayback = false;
             var newPosition = properties.position;
+            var audioStartDelay = DEFAULT_START_DELAY;
 
             if (userData) {
+                if (typeof(userData.startDelay) !== "undefined") {
+                    audioStartDelay = userData.startDelay;
+                }
+
                 if (userData.soundURL && userData.soundURL.length > 0 && userData.soundURL !== that.soundObjectURL) {
                     console.log("Sound Emitter: User put a new sound URL into `userData`! Resetting...");
                     that.handleNewSoundURL(userData.soundURL);
@@ -159,6 +170,7 @@
                     !isNaN(userData.positionOverride.y) && !isNaN(userData.positionOverride.z)) {
                     newPosition = userData.positionOverride;
                 }
+
             } else {
                 console.log("Please specify this entity's `userData`! See README.md for instructions.");
                 that.clearCurrentSoundData();
@@ -186,7 +198,17 @@
             }
 
             if (!that.audioInjector || shouldRestartPlayback) {
-                that.audioInjector = Audio.playSound(that.soundObject, that.audioInjectorOptions);
+                if (!delayTimer) {
+                    if (hasStartedOnce === true) {
+                        that.audioInjector = Audio.playSound(that.soundObject, that.audioInjectorOptions);
+                    } else {
+                        delayTimer = Script.setTimeout(function () {
+                            that.audioInjector = Audio.playSound(that.soundObject, that.audioInjectorOptions);
+                        }, audioStartDelay);
+                    }
+
+                    hasStartedOnce = true;
+                }
             } else if (optionsChanged) {
                 that.audioInjector.setOptions(that.audioInjectorOptions);
             }
