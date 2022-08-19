@@ -13,7 +13,7 @@
 //
 
 (function() {
-    var CONFIG_WIZARD_WEB_URL = 'https://cdn-1.vircadia.com/us-e-1/DomainContent/Tutorial/Apps/configWizard/dist/index.html';
+    var CONFIG_WIZARD_WEB_URL = 'https://content.overte.org/DomainContent/Tutorial/Apps/configWizard/dist/index.html';
 
     var loaderEntityID;
     var configWizardEntityID;

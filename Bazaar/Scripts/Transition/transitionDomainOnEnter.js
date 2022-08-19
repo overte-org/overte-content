@@ -77,7 +77,7 @@
                 userData: JSON.stringify({
                     'deleteAfter': userData.options.entity.deleteAfter
                 }),
-                script: 'https://cdn-1.vircadia.com/us-e-1/Bazaar/Scripts/Transition/entitySelfDelete.js?12345',
+                script: 'https://content.overte.org/Bazaar/Scripts/Transition/entitySelfDelete.js?12345',
             }, 'local');
         }
 

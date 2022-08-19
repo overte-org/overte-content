@@ -28,4 +28,8 @@ If you find a bug and have a fix, pull requests are welcome.
 
 Moving Hosted Content
 ========
-Currently, all content in this repository is hosted at **https://cdn-1.vircadia.com/us-e-1/**. If you intend to rehost some or all of this content, then you will need to do a mass search and replace across the content you are rehosting to change from the Vircadia URL base to yours. e.g. **https://cdn-1.vircadia.com/us-e-1/** becomes **https://cdn.yourwebsite.com/**
+Currently, all content in this repository is hosted at **https://content.overte.org/**. If you intend to rehost some or all of this content, then you will need to do a mass search and replace across the content you are rehosting to change from the Overte URL base to yours. e.g. **https://content.overte.org/** becomes **https://cdn.yourwebsite.com/**
+Example command for Linux:
+```bash
+grep -RiIl 'content.overte.org' | xargs sed -i 's/content.overte.org/cdn.yourwebsite.com/g'
+```

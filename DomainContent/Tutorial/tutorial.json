@@ -41,7 +41,7 @@
       "angularDamping": 0,
       "collisionless": true,
       "ignoreForCollisions": true,
-      "script": "https://cdn-1.vircadia.com/us-e-1/DomainContent/Tutorial/Apps/configWizard/dist/wizardLoader.js",
+      "script": "https://content.overte.org/DomainContent/Tutorial/Apps/configWizard/dist/wizardLoader.js",
       "color": {
           "red": 0,
           "green": 180,
@@ -106,7 +106,7 @@
     "angularDamping": 0,
     "collisionMask": 0,
     "collidesWith": "",
-    "script": "https://cdn-1.vircadia.com/us-e-1/DomainContent/Tutorial/Scripts/portal.js",
+    "script": "https://content.overte.org/DomainContent/Tutorial/Scripts/portal.js",
     "color": {
         "red": 0,
         "green": 180,
@@ -239,7 +239,7 @@
     },
     "collisionMask": 23,
     "collidesWith": "static,dynamic,kinematic,otherAvatar,",
-    "script": "https://cdn-1.vircadia.com/us-e-1/DomainContent/Tutorial/Scripts/materialSequencer.js",
+    "script": "https://content.overte.org/DomainContent/Tutorial/Scripts/materialSequencer.js",
     "scriptTimestamp": 1601250646975,
     "materialURL": "materialData",
     "priority": 3,
@@ -248,7 +248,7 @@
         "x": 0.984375,
         "y": 0
     },
-    "materialData": "{\"materialVersion\":1,\"materials\":[{\"name\":\"baseMaterial2\",\"model\":\"hifi_pbr\",\"opacity\":0.8,\"albedo\":[1,1,1],\"roughness\":1,\"metallic\":0,\"emissive\":[0,0,0],\"scattering\":0,\"unlit\":false,\"emissiveMap\":\"https://cdn-1.vircadia.com/us-e-1/DomainContent/Tutorial/Images/gradient1.jpg\",\"albedoMap\":\"https://cdn-1.vircadia.com/us-e-1/DomainContent/Tutorial/Images/gradient1.jpg\",\"opacityMapMode\":\"OPACITY_MAP_BLEND\",\"cullFaceMode\":\"CULL_NONE\",\"defaultFallthrough\":false}]}",
+    "materialData": "{\"materialVersion\":1,\"materials\":[{\"name\":\"baseMaterial2\",\"model\":\"hifi_pbr\",\"opacity\":0.8,\"albedo\":[1,1,1],\"roughness\":1,\"metallic\":0,\"emissive\":[0,0,0],\"scattering\":0,\"unlit\":false,\"emissiveMap\":\"https://content.overte.org/DomainContent/Tutorial/Images/gradient1.jpg\",\"albedoMap\":\"https://content.overte.org/DomainContent/Tutorial/Images/gradient1.jpg\",\"opacityMapMode\":\"OPACITY_MAP_BLEND\",\"cullFaceMode\":\"CULL_NONE\",\"defaultFallthrough\":false}]}",
     "clientOnly": false,
     "avatarEntity": false,
     "localEntity": false,
@@ -303,7 +303,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "simple-hull",
-    "modelURL": "https://cdn-1.vircadia.com/us-e-1/DomainContent/Tutorial/Models/controls_sign.fbx",
+    "modelURL": "https://content.overte.org/DomainContent/Tutorial/Models/controls_sign.fbx",
     "blendshapeCoefficients": "{\n}\n",
     "animation": {
         "allowTranslation": false
@@ -485,7 +485,7 @@
             "w": 1
         }
     },
-    "script": "https://cdn-1.vircadia.com/us-e-1/DomainContent/Tutorial/Scripts/mirrorReflection.js",
+    "script": "https://content.overte.org/DomainContent/Tutorial/Scripts/mirrorReflection.js",
     "scriptTimestamp": 1601084668318,
     "shapeType": "box",
     "clientOnly": false,
@@ -500,7 +500,7 @@
     "lastEdited": 1601257171038745,
     "name": "Sound Emitter",
     "locked": true,
-    "userData": "{\"soundURL\":\"https://cdn-1.vircadia.com/us-e-1/DomainContent/Tutorial/Sounds/468407__onderwish__sci-fi-survival-dreamscape.mp3?dl=1\",\"shouldLoop\":true,\"volume\":0.18,\"refreshInterval\":100,\"grabbableKey\":{\"grabbable\":false}}",
+    "userData": "{\"soundURL\":\"https://content.overte.org/DomainContent/Tutorial/Sounds/468407__onderwish__sci-fi-survival-dreamscape.mp3?dl=1\",\"shouldLoop\":true,\"volume\":0.18,\"refreshInterval\":100,\"grabbableKey\":{\"grabbable\":false}}",
     "position": {
         "x": 18.58538055419922,
         "y": 5.378335952758789,
@@ -542,7 +542,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "script": "https://cdn-1.vircadia.com/us-e-1/usefulUtilities/soundEmitter/soundEmitter.js",
+    "script": "https://content.overte.org/usefulUtilities/soundEmitter/soundEmitter.js",
     "scriptTimestamp": 1601079357399,
     "color": {
         "red": 0,
@@ -603,10 +603,10 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "simple-compound",
-    "modelURL": "https://cdn-1.vircadia.com/us-e-1/DomainContent/Tutorial/Models/seagull-ANI.fbx",
+    "modelURL": "https://content.overte.org/DomainContent/Tutorial/Models/seagull-ANI.fbx",
     "blendshapeCoefficients": "{\n}\n",
     "animation": {
-        "url": "https://cdn-1.vircadia.com/us-e-1/DomainContent/Tutorial/Models/seagull-ANI.fbx",
+        "url": "https://content.overte.org/DomainContent/Tutorial/Models/seagull-ANI.fbx",
         "allowTranslation": false,
         "currentFrame": 68.07844543457031,
         "running": true,
@@ -665,7 +665,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/us-e-1/DomainContent/Tutorial/Models/VircadiaLogo.fbx",
+    "modelURL": "https://content.overte.org/DomainContent/Tutorial/Models/VircadiaLogo.fbx",
     "blendshapeCoefficients": "{\n}\n",
     "animation": {
         "allowTranslation": false
@@ -725,7 +725,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "static-mesh",
-    "modelURL": "https://cdn-1.vircadia.com/us-e-1/DomainContent/Tutorial/Models/cyberpunk%20light%20building.fbx",
+    "modelURL": "https://content.overte.org/DomainContent/Tutorial/Models/cyberpunk%20light%20building.fbx",
     "blendshapeCoefficients": "{\n}\n",
     "animation": {
         "allowTranslation": false
@@ -787,9 +787,9 @@
     "ignoreForCollisions": true,
     "collisionMask": 0,
     "collidesWith": "",
-    "script": "https://cdn-1.vircadia.com/us-e-1/DomainContent/Tutorial/Scripts/mirrorClient.js",
+    "script": "https://content.overte.org/DomainContent/Tutorial/Scripts/mirrorClient.js",
     "scriptTimestamp": 1601084665601,
-    "modelURL": "https://cdn-1.vircadia.com/us-e-1/DomainContent/Tutorial/Models/mirror_without_backface.baked.fbx",
+    "modelURL": "https://content.overte.org/DomainContent/Tutorial/Models/mirror_without_backface.baked.fbx",
     "blendshapeCoefficients": "{\n}\n",
     "clientOnly": false,
     "avatarEntity": false,
@@ -907,7 +907,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "static-mesh",
-    "modelURL": "https://cdn-1.vircadia.com/us-e-1/DomainContent/Tutorial/Models/bowl2.fbx",
+    "modelURL": "https://content.overte.org/DomainContent/Tutorial/Models/bowl2.fbx",
     "blendshapeCoefficients": "{\n}\n",
     "animation": {
         "allowTranslation": false
@@ -1149,7 +1149,7 @@
     "angularDamping": 0,
     "scriptTimestamp": 1598912452582,
     "shapeType": "static-mesh",
-    "modelURL": "https://cdn-1.vircadia.com/us-e-1/DomainContent/Tutorial/Models/SmallTemple5.glb",
+    "modelURL": "https://content.overte.org/DomainContent/Tutorial/Models/SmallTemple5.glb",
     "blendshapeCoefficients": "{\n}\n",
     "animation": {
         "allowTranslation": false
@@ -1421,7 +1421,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "static-mesh",
-    "modelURL": "https://cdn-1.vircadia.com/us-e-1/DomainContent/Tutorial/Models/dome2_glass.glb",
+    "modelURL": "https://content.overte.org/DomainContent/Tutorial/Models/dome2_glass.glb",
     "blendshapeCoefficients": "{\n}\n",
     "animation": {
         "allowTranslation": false
@@ -1692,7 +1692,7 @@
     },
     "ambientLight": {
         "ambientIntensity": 0.20000000298023224,
-        "ambientURL": "https://cdn-1.vircadia.com/us-e-1/DomainContent/Tutorial/Images/galaxySkybox.png"
+        "ambientURL": "https://content.overte.org/DomainContent/Tutorial/Images/galaxySkybox.png"
     },
     "skybox": {
         "color": {
@@ -1700,7 +1700,7 @@
             "green": 235,
             "blue": 235
         },
-        "url": "https://cdn-1.vircadia.com/us-e-1/DomainContent/Tutorial/Images/galaxySkybox.png"
+        "url": "https://content.overte.org/DomainContent/Tutorial/Images/galaxySkybox.png"
     },
     "haze": {
         "hazeRange": 50,
@@ -1785,7 +1785,7 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/us-e-1/DomainContent/Tutorial/Models/Trees1.glb",
+    "modelURL": "https://content.overte.org/DomainContent/Tutorial/Models/Trees1.glb",
     "blendshapeCoefficients": "{\n}\n",
     "animation": {
         "allowTranslation": false
@@ -1842,10 +1842,10 @@
     },
     "damping": 0,
     "angularDamping": 0,
-    "modelURL": "https://cdn-1.vircadia.com/us-e-1/DomainContent/Tutorial/Models/portal2.fbx",
+    "modelURL": "https://content.overte.org/DomainContent/Tutorial/Models/portal2.fbx",
     "blendshapeCoefficients": "{\n}\n",
     "animation": {
-        "url": "https://cdn-1.vircadia.com/us-e-1/DomainContent/Tutorial/Models/portal2.fbx",
+        "url": "https://content.overte.org/DomainContent/Tutorial/Models/portal2.fbx",
         "allowTranslation": false,
         "currentFrame": 57265.5,
         "running": true
@@ -1963,7 +1963,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "static-mesh",
-    "modelURL": "https://cdn-1.vircadia.com/us-e-1/DomainContent/Tutorial/Models/Planter.glb",
+    "modelURL": "https://content.overte.org/DomainContent/Tutorial/Models/Planter.glb",
     "blendshapeCoefficients": "{\n}\n",
     "animation": {
         "allowTranslation": false
@@ -2022,7 +2022,7 @@
     "damping": 0,
     "angularDamping": 0,
     "shapeType": "static-mesh",
-    "modelURL": "https://cdn-1.vircadia.com/us-e-1/DomainContent/Tutorial/Models/dome2.glb",
+    "modelURL": "https://content.overte.org/DomainContent/Tutorial/Models/dome2.glb",
     "blendshapeCoefficients": "{\n}\n",
     "animation": {
         "allowTranslation": false
