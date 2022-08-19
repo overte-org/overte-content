@@ -1,0 +1,28 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build_site:
+    runs-on: ubuntu-latest
+
+    name: Deploy content
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Deploy content
+      uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      with:
+        server: ftp.tuxfamily.org
+        username: ${{ secrets.GHA_FTP_USER }}
+        password: ${{ secrets.GHA_FTP_PASS }}
+        local-dir: ./
+        server-dir: overte/overte-repository/content/
+        exclude: |
+          **/staging/**
+          .htaccess
+          **/.git*
+          **/.git*/**
