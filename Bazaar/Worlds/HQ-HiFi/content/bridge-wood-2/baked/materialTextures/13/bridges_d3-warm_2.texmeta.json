@@ -1,8 +1,0 @@
-{
-    "compressed": {
-        "COMPRESSED_SRGB8_ALPHA8_ETC2_EAC": "bridges_d3-warm_2_COMPRESSED_SRGB8_ALPHA8_ETC2_EAC.ktx",
-        "COMPRESSED_SRGB_S3TC_DXT1_EXT": "bridges_d3-warm_2_COMPRESSED_SRGB_S3TC_DXT1_EXT.ktx"
-    },
-    "original": "bridges_d3-warm_2.jpg",
-    "uncompressed": ""
-}

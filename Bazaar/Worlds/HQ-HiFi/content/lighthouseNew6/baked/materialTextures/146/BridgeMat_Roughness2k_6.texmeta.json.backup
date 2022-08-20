@@ -1,9 +1,0 @@
-{
-    "compressed": {
-        "COMPRESSED_R11_EAC": "BridgeMat_Roughness2k_6_COMPRESSED_R11_EAC.ktx",
-        "COMPRESSED_RED_RGTC1": "BridgeMat_Roughness2k_6_COMPRESSED_RED_RGTC1.ktx"
-    },
-    "original": "BridgeMat_Roughness2k_6.png",
-    "uncompressed": "",
-    "version": 1
-}

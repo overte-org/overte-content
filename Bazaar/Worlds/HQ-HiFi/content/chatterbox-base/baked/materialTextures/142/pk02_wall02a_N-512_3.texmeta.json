@@ -1,9 +1,0 @@
-{
-    "compressed": {
-        "COMPRESSED_RG11_EAC": "pk02_wall02a_N-512_3_COMPRESSED_RG11_EAC.ktx",
-        "COMPRESSED_RG_RGTC2": "pk02_wall02a_N-512_3_COMPRESSED_RG_RGTC2.ktx"
-    },
-    "original": "pk02_wall02a_N-512_3.png",
-    "uncompressed": "",
-    "version": 1
-}
