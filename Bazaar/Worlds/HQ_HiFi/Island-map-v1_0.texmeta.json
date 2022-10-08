@@ -1,9 +1,0 @@
-{
-    "compressed": {
-        "COMPRESSED_SRGB8_ALPHA8_ETC2_EAC": "Island-map-v1_0_COMPRESSED_SRGB8_ALPHA8_ETC2_EAC.ktx",
-        "COMPRESSED_SRGB_S3TC_DXT1_EXT": "Island-map-v1_0_COMPRESSED_SRGB_S3TC_DXT1_EXT.ktx"
-    },
-    "original": "Island-map-v1_0.png",
-    "uncompressed": "",
-    "version": 1
-}

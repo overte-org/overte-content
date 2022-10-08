@@ -1,0 +1,689 @@
+{
+    "audio_env": {
+        "attenuation_coefficients": [
+            {
+                "coefficient": "0.45",
+                "listener": "birds",
+                "source": "birds"
+            },
+            {
+                "coefficient": "0.45",
+                "listener": "cacti",
+                "source": "cacti"
+            },
+            {
+                "coefficient": "0.45",
+                "listener": "cliff",
+                "source": "cliff"
+            },
+            {
+                "coefficient": "0.45",
+                "listener": "grove",
+                "source": "grove"
+            },
+            {
+                "coefficient": "0.45",
+                "listener": "beach",
+                "source": "beach"
+            },
+            {
+                "coefficient": "0.45",
+                "listener": "kites",
+                "source": "kites"
+            },
+            {
+                "coefficient": "0.45",
+                "listener": "bluff",
+                "source": "bluff"
+            },
+            {
+                "coefficient": "0.45",
+                "listener": "jetty",
+                "source": "jetty"
+            },
+            {
+                "coefficient": "0.45",
+                "listener": "studio1",
+                "source": "studio1"
+            },
+            {
+                "coefficient": "0.45",
+                "listener": "studio2",
+                "source": "studio2"
+            },
+            {
+                "coefficient": "0.45",
+                "listener": "studio3",
+                "source": "studio3"
+            },
+            {
+                "coefficient": "0.45",
+                "listener": "waterfall",
+                "source": "waterfall"
+            },
+            {
+                "coefficient": "0.45",
+                "listener": "seacave",
+                "source": "seacave"
+            },
+            {
+                "coefficient": "0.45",
+                "listener": "mezzanine",
+                "source": "mezzanine"
+            },
+            {
+                "coefficient": "1.0",
+                "listener": "waterfall",
+                "source": "bluff"
+            },
+            {
+                "coefficient": "1.0",
+                "listener": "seacave",
+                "source": "cacti"
+            },
+            {
+                "coefficient": "1.0",
+                "listener": "cacti",
+                "source": "seacave"
+            },
+            {
+                "coefficient": "1.0",
+                "listener": "bluff",
+                "source": "waterfall"
+            },
+            {
+                "coefficient": "1.0",
+                "listener": "studio2",
+                "source": "lighthouse"
+            },
+            {
+                "coefficient": "1.0",
+                "listener": "studio3",
+                "source": "lighthouse"
+            },
+            {
+                "coefficient": "0.95",
+                "listener": "studio2",
+                "source": "studio1"
+            },
+            {
+                "coefficient": "0.95",
+                "listener": "studio1",
+                "source": "studio2"
+            },
+            {
+                "coefficient": "0.98",
+                "listener": "stage",
+                "source": "birds"
+            },
+            {
+                "coefficient": "0.98",
+                "listener": "stage",
+                "source": "cacti"
+            },
+            {
+                "coefficient": "0.98",
+                "listener": "stage",
+                "source": "cliff"
+            },
+            {
+                "coefficient": "0.98",
+                "listener": "stage",
+                "source": "grove"
+            },
+            {
+                "coefficient": "0.98",
+                "listener": "stage",
+                "source": "beach"
+            },
+            {
+                "coefficient": "0.98",
+                "listener": "stage",
+                "source": "kites"
+            },
+            {
+                "coefficient": "0.98",
+                "listener": "stage",
+                "source": "jetty"
+            },
+            {
+                "coefficient": "0.98",
+                "listener": "stage",
+                "source": "bluff"
+            },
+            {
+                "coefficient": "0.98",
+                "listener": "stage",
+                "source": "waterfall"
+            },
+            {
+                "coefficient": "0.98",
+                "listener": "stage",
+                "source": "seacave"
+            },
+            {
+                "coefficient": "0.98",
+                "listener": "stage",
+                "source": "mezzanine"
+            },
+            {
+                "coefficient": "0.98",
+                "listener": "birds",
+                "source": "stage"
+            },
+            {
+                "coefficient": "0.98",
+                "listener": "cliff",
+                "source": "stage"
+            },
+            {
+                "coefficient": "0.98",
+                "listener": "cacti",
+                "source": "stage"
+            },
+            {
+                "coefficient": "0.98",
+                "listener": "grove",
+                "source": "stage"
+            },
+            {
+                "coefficient": "0.98",
+                "listener": "beach",
+                "source": "stage"
+            },
+            {
+                "coefficient": "0.98",
+                "listener": "kites",
+                "source": "stage"
+            },
+            {
+                "coefficient": "0.98",
+                "listener": "jetty",
+                "source": "stage"
+            },
+            {
+                "coefficient": "0.98",
+                "listener": "bluff",
+                "source": "stage"
+            },
+            {
+                "coefficient": "0.98",
+                "listener": "mezzanine",
+                "source": "stage"
+            },
+            {
+                "coefficient": "0.98",
+                "listener": "seacave",
+                "source": "stage"
+            },
+            {
+                "coefficient": "0.98",
+                "listener": "waterfall",
+                "source": "stage"
+            },
+            {
+                "coefficient": "0.85",
+                "listener": "studio1",
+                "source": "stage"
+            },
+            {
+                "coefficient": "0.85",
+                "listener": "studio2",
+                "source": "stage"
+            },
+            {
+                "coefficient": "0.85",
+                "listener": "studio3",
+                "source": "stage"
+            },
+            {
+                "coefficient": "1.0",
+                "listener": "bluff",
+                "source": "studio2"
+            },
+            {
+                "coefficient": "1.0",
+                "listener": "jetty",
+                "source": "studio2"
+            },
+            {
+                "coefficient": "1.0",
+                "listener": "waterfall",
+                "source": "studio2"
+            },
+            {
+                "coefficient": "1.0",
+                "listener": "studio3",
+                "source": "studio1"
+            },
+            {
+                "coefficient": "1.0",
+                "listener": "studio1",
+                "source": "studio3"
+            },
+            {
+                "coefficient": "1.0",
+                "listener": "studio2",
+                "source": "studio3"
+            },
+            {
+                "coefficient": "1.0",
+                "listener": "studio3",
+                "source": "studio2"
+            },
+            {
+                "coefficient": "1.0",
+                "listener": "kites",
+                "source": "studio1"
+            },
+            {
+                "coefficient": "1.0",
+                "listener": "kites",
+                "source": "studio2"
+            },
+            {
+                "coefficient": "1.0",
+                "listener": "kites",
+                "source": "studio3"
+            },
+            {
+                "coefficient": "1.0",
+                "listener": "bluff",
+                "source": "studio3"
+            },
+            {
+                "coefficient": "1.0",
+                "listener": "global",
+                "source": "waterfall"
+            },
+            {
+                "coefficient": "1.0",
+                "listener": "global",
+                "source": "seacave"
+            },
+            {
+                "coefficient": "1.0",
+                "listener": "global",
+                "source": "mezzanine"
+            },
+            {
+                "coefficient": "0.85",
+                "listener": "global",
+                "source": "studio1"
+            },
+            {
+                "coefficient": "0.85",
+                "listener": "global",
+                "source": "studio2"
+            },
+            {
+                "coefficient": "0.85",
+                "listener": "global",
+                "source": "studio3"
+            },
+            {
+                "coefficient": "1.0",
+                "listener": "global",
+                "source": "birds"
+            },
+            {
+                "coefficient": "1.0",
+                "listener": "global",
+                "source": "cliff"
+            },
+            {
+                "coefficient": "1.0",
+                "listener": "global",
+                "source": "cacti"
+            },
+            {
+                "coefficient": "1.0",
+                "listener": "global",
+                "source": "grove"
+            },
+            {
+                "coefficient": "1.0",
+                "listener": "global",
+                "source": "kites"
+            },
+            {
+                "coefficient": "1.0",
+                "listener": "global",
+                "source": "beach"
+            },
+            {
+                "coefficient": "1.0",
+                "listener": "global",
+                "source": "bluff"
+            },
+            {
+                "coefficient": "1.0",
+                "listener": "global",
+                "source": "jetty"
+            },
+            {
+                "coefficient": "0.2",
+                "listener": "global",
+                "source": "stage"
+            },
+            {
+                "coefficient": "1.0",
+                "listener": "birds",
+                "source": "global"
+            },
+            {
+                "coefficient": "1.0",
+                "listener": "cacti",
+                "source": "global"
+            },
+            {
+                "coefficient": "1.0",
+                "listener": "cliff",
+                "source": "global"
+            },
+            {
+                "coefficient": "1.0",
+                "listener": "grove",
+                "source": "global"
+            },
+            {
+                "coefficient": "1.0",
+                "listener": "beach",
+                "source": "global"
+            },
+            {
+                "coefficient": "1.0",
+                "listener": "kites",
+                "source": "global"
+            },
+            {
+                "coefficient": "1.0",
+                "listener": "jetty",
+                "source": "global"
+            },
+            {
+                "coefficient": "1.0",
+                "listener": "bluff",
+                "source": "global"
+            },
+            {
+                "coefficient": "0.8",
+                "listener": "studio1",
+                "source": "global"
+            },
+            {
+                "coefficient": "0.8",
+                "listener": "studio2",
+                "source": "global"
+            },
+            {
+                "coefficient": "0.85",
+                "listener": "studio3",
+                "source": "global"
+            },
+            {
+                "coefficient": "0.7",
+                "listener": "stage",
+                "source": "global"
+            },
+            {
+                "coefficient": "1.0",
+                "listener": "seacave",
+                "source": "global"
+            },
+            {
+                "coefficient": "1.0",
+                "listener": "mezzanine",
+                "source": "global"
+            },
+            {
+                "coefficient": "1.0",
+                "listener": "waterfall",
+                "source": "global"
+            },
+            {
+                "coefficient": "0.485",
+                "listener": "global",
+                "source": "global"
+            }
+        ],
+        "attenuation_per_doubling_in_distance": "0.45",
+        "zones": {
+            "beach": {
+                "x_max": "169.12",
+                "x_min": "163.09",
+                "y_max": "-96.27",
+                "y_min": "-98.47",
+                "z_max": "-352.12",
+                "z_min": "-357.98"
+            },
+            "birds": {
+                "x_max": "140.02",
+                "x_min": "134.00",
+                "y_max": "-92.91",
+                "y_min": "-95.11",
+                "z_max": "-391.51",
+                "z_min": "-397.37"
+            },
+            "bluff": {
+                "x_max": "99.55",
+                "x_min": "93.53",
+                "y_max": "-92.74",
+                "y_min": "-94.94",
+                "z_max": "-358.68",
+                "z_min": "-364.54"
+            },
+            "cacti": {
+                "x_max": "124.19",
+                "x_min": "118.16",
+                "y_max": "-92.60",
+                "y_min": "-94.80",
+                "z_max": "-396.66",
+                "z_min": "-402.51"
+            },
+            "cliff": {
+                "x_max": "108.87",
+                "x_min": "102.84",
+                "y_max": "-92.36",
+                "y_min": "-94.56",
+                "z_max": "-417.54",
+                "z_min": "-423.40"
+            },
+            "global": {
+                "x_max": "2000",
+                "x_min": "-2000",
+                "y_max": "2000",
+                "y_min": "-2000",
+                "z_max": "2000",
+                "z_min": "-2000"
+            },
+            "grove": {
+                "x_max": "162.72",
+                "x_min": "156.70",
+                "y_max": "-96.06",
+                "y_min": "-98.26",
+                "z_max": "-372.32",
+                "z_min": "-378.17"
+            },
+            "jetty": {
+                "x_max": "60.43",
+                "x_min": "54.41",
+                "y_max": "-96.03",
+                "y_min": "-98.23",
+                "z_max": "-336.55",
+                "z_min": "-342.40"
+            },
+            "kites": {
+                "x_max": "151.52",
+                "x_min": "145.49",
+                "y_max": "-94.44",
+                "y_min": "-96.64",
+                "z_max": "-333.90",
+                "z_min": "-339.76"
+            },
+            "lighthouse": {
+                "x_max": "110.17",
+                "x_min": "74.48",
+                "y_max": "-90.35",
+                "y_min": "-99.80",
+                "z_max": "-303.92",
+                "z_min": "-325.61"
+            },
+            "mezzanine": {
+                "x_max": "141.34",
+                "x_min": "130.59",
+                "y_max": "-92.48",
+                "y_min": "-95.09",
+                "z_max": "-376.58",
+                "z_min": "-386.18"
+            },
+            "seacave": {
+                "x_max": "128.48",
+                "x_min": "118.14",
+                "y_max": "-95.50",
+                "y_min": "-98.64",
+                "z_max": "-394.84",
+                "z_min": "-409.92"
+            },
+            "stage": {
+                "x_max": "143.633",
+                "x_min": "132.871",
+                "y_max": "-98.315",
+                "y_min": "-100.659",
+                "z_max": "-352.650",
+                "z_min": "-361.108"
+            },
+            "studio1": {
+                "x_max": "123.51",
+                "x_min": "110.31",
+                "y_max": "-94.69",
+                "y_min": "-98.05",
+                "z_max": "-342.49",
+                "z_min": "-349.09"
+            },
+            "studio2": {
+                "x_max": "93.83",
+                "x_min": "82.34",
+                "y_max": "-94.36",
+                "y_min": "-97.95",
+                "z_max": "-336.90",
+                "z_min": "-343.49"
+            },
+            "studio3": {
+                "x_max": "118.60",
+                "x_min": "107.77",
+                "y_max": "-94.38",
+                "y_min": "-97.80",
+                "z_max": "-331.25",
+                "z_min": "-339.30"
+            },
+            "waterfall": {
+                "x_max": "108.44",
+                "x_min": "96.68",
+                "y_max": "-95.59",
+                "y_min": "-98.50",
+                "z_max": "-365.54",
+                "z_min": "-376.61"
+            }
+        }
+    },
+    "installed_content": {
+        "creation_time": 1575663419088,
+        "name": "HQ-Island-localhost-09072020"
+    },
+    "paths": {
+        "/": {
+            "viewpoint": "/154.69,-98.296,-397.899/0,0.996917,0,0.0784577"
+        },
+        "/amphitheater": {
+            "viewpoint": "/150.552,-98.5904,-368.126/0,0.925872,0,0.377838"
+        },
+        "/amphitheatre": {
+            "viewpoint": "/150.552,-98.5904,-368.126/0,0.925872,0,0.377838"
+        },
+        "/atlantis": {
+            "viewpoint": "/138.197,-98.591,-381.02/0,4.34928e-07,0,1"
+        },
+        "/bar": {
+            "viewpoint": "/87.3302,-98.1802,-312.584/0,-0.549017,0,0.835811"
+        },
+        "/beach": {
+            "viewpoint": "/154.164,-98.7082,-355.047/0,-0.739632,0,0.673012"
+        },
+        "/birds": {
+            "viewpoint": "/137.354,-95.4187,-404.027/0,0.996493,0,0.0836765"
+        },
+        "/bluff": {
+            "viewpoint": "/104.64,-95.2367,-364.658/0,0.812083,0,0.583542"
+        },
+        "/bonfire": {
+            "viewpoint": "/154.669,-98.7367,-349.268/0,0.927836,0,-0.372988"
+        },
+        "/cabana": {
+            "viewpoint": "/156.815,-98.5912,-385.799/0,-0.596224,0,0.802818"
+        },
+        "/cacti": {
+            "viewpoint": "/130.118,-95.3565,-402.358/0,0.832923,0,0.55339"
+        },
+        "/captiol": {
+            "viewpoint": "/138.197,-98.591,-381.02/0,4.34928e-07,0,1"
+        },
+        "/cliff": {
+            "viewpoint": "/109.081,-94.8638,-412.851/0,0.182238,0,0.983254"
+        },
+        "/commons": {
+            "viewpoint": "/150.552,-98.5904,-368.126/0,0.925872,0,0.377838"
+        },
+        "/deck": {
+            "viewpoint": "/86.171,-95.2448,-325.441/0,0.975918,0,0.218138"
+        },
+        "/dock": {
+            "viewpoint": "/154.65,-97.8552,-400.732/0,-7.55303e-07,0,1"
+        },
+        "/grove": {
+            "viewpoint": "/147.412,-98.5907,-375.695/0,-0.72176,0,0.692143"
+        },
+        "/help": {
+            "viewpoint": "/152.736,-98.5933,-385.091/0,0.763797,0,0.645456"
+        },
+        "/jetty": {
+            "viewpoint": "/68.736,-98.5873,-342.81/0,0.809019,0,0.587783"
+        },
+        "/kites": {
+            "viewpoint": "/144.7,-96.9768,-345.111/0,0.973579,0,-0.22835"
+        },
+        "/lighthouse": {
+            "viewpoint": "/100.53,-98.0553,-337.452/0,0.97358,0,0.228346"
+        },
+        "/map": {
+            "viewpoint": "/138.197,-98.591,-381.02/0,4.34928e-07,0,1"
+        },
+        "/mezzanine": {
+            "viewpoint": "/134.228,-95.2356,-389.341/0,0.985111,0,-0.171921"
+        },
+        "/portal": {
+            "viewpoint": "/154.65,-97.8552,-400.732/0,-7.55303e-07,0,1"
+        },
+        "/quad": {
+            "viewpoint": "/150.552,-98.5904,-368.126/0,0.925872,0,0.377838"
+        },
+        "/seacave": {
+            "viewpoint": "/121.423,-98.5913,-387.834/0,-0.109732,0,0.993961"
+        },
+        "/studio1": {
+            "viewpoint": "/116.914,-98.5898,-355.991/0,0.983255,0,0.182233"
+        },
+        "/studio2": {
+            "viewpoint": "/98.3681,-98.0551,-334.084/0,0.472555,0,0.881301"
+        },
+        "/studio3": {
+            "viewpoint": "/103.336,-98.0406,-329.824/0,-0.495465,0,0.868628"
+        },
+        "/treehouse": {
+            "viewpoint": "/132.077,-95.8545,-345.205/0,0.961742,0,0.273956"
+        },
+        "/waterfall": {
+            "viewpoint": "/114.901,-98.588,-367.477/0,0.495459,0,0.868631"
+        }
+    }
+}

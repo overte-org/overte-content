@@ -1,9 +1,0 @@
-{
-    "compressed": {
-        "COMPRESSED_SRGB8_ALPHA8_ETC2_EAC": "control-room-E_8_COMPRESSED_SRGB8_ALPHA8_ETC2_EAC.ktx",
-        "COMPRESSED_SRGB_S3TC_DXT1_EXT": "control-room-E_8_COMPRESSED_SRGB_S3TC_DXT1_EXT.ktx"
-    },
-    "original": "control-room-E_8.png",
-    "uncompressed": "",
-    "version": 1
-}

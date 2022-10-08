@@ -1,9 +1,0 @@
-{
-    "compressed": {
-        "COMPRESSED_R11_EAC": "TowerMat_Metallic2k_5_COMPRESSED_R11_EAC.ktx",
-        "COMPRESSED_RED_RGTC1": "TowerMat_Metallic2k_5_COMPRESSED_RED_RGTC1.ktx"
-    },
-    "original": "TowerMat_Metallic2k_5.png",
-    "uncompressed": "",
-    "version": 1
-}

@@ -1,9 +1,0 @@
-{
-    "compressed": {
-        "COMPRESSED_SRGB8_ALPHA8_ETC2_EAC": "rocks-group-1a-D_2_COMPRESSED_SRGB8_ALPHA8_ETC2_EAC.ktx",
-        "COMPRESSED_SRGB_S3TC_DXT1_EXT": "rocks-group-1a-D_2_COMPRESSED_SRGB_S3TC_DXT1_EXT.ktx"
-    },
-    "original": "rocks-group-1a-D_2.png",
-    "uncompressed": "",
-    "version": 1
-}

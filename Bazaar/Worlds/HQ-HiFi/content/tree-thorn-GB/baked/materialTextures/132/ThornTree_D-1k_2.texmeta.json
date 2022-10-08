@@ -1,9 +1,0 @@
-{
-    "compressed": {
-        "COMPRESSED_SRGB8_ALPHA8_ETC2_EAC": "ThornTree_D-1k_2_COMPRESSED_SRGB8_ALPHA8_ETC2_EAC.ktx",
-        "COMPRESSED_SRGB_S3TC_DXT1_EXT": "ThornTree_D-1k_2_COMPRESSED_SRGB_S3TC_DXT1_EXT.ktx"
-    },
-    "original": "ThornTree_D-1k_2.png",
-    "uncompressed": "",
-    "version": 1
-}

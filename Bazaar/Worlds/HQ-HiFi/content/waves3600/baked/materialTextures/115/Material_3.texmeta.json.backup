@@ -1,9 +1,0 @@
-{
-    "compressed": {
-        "COMPRESSED_RG11_EAC": "Material_3_COMPRESSED_RG11_EAC.ktx",
-        "COMPRESSED_RG_RGTC2": "Material_3_COMPRESSED_RG_RGTC2.ktx"
-    },
-    "original": "Material_3.002_Normal_DirectX.png",
-    "uncompressed": "",
-    "version": 1
-}

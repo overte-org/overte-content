@@ -1,9 +1,0 @@
-{
-    "compressed": {
-        "COMPRESSED_SRGB8_ALPHA8_ETC2_EAC": "Sign-Area-1_2_COMPRESSED_SRGB8_ALPHA8_ETC2_EAC.ktx",
-        "COMPRESSED_SRGB_S3TC_DXT1_EXT": "Sign-Area-1_2_COMPRESSED_SRGB_S3TC_DXT1_EXT.ktx"
-    },
-    "original": "Sign-Area-1_2.png",
-    "uncompressed": "",
-    "version": 1
-}

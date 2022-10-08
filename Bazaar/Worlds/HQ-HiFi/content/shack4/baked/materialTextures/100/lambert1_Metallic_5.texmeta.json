@@ -1,9 +1,0 @@
-{
-    "compressed": {
-        "COMPRESSED_R11_EAC": "lambert1_Metallic_5_COMPRESSED_R11_EAC.ktx",
-        "COMPRESSED_RED_RGTC1": "lambert1_Metallic_5_COMPRESSED_RED_RGTC1.ktx"
-    },
-    "original": "lambert1_Metallic_5.png",
-    "uncompressed": "",
-    "version": 1
-}
