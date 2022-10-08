@@ -1,0 +1,2906 @@
+{
+  "DataVersion": 0,
+  "Entities": [
+    {
+    "certificateID": "MEUCIQC3SfYmoltgVdW+EGk/0D/Ek8AAlH2v/tVoiD20EHty0QIgdOv3D9ax9lIOtRiR9PHJW2sjTnqnwNFkhchTSQxTuzg=",
+    "clientOnly": 0,
+    "dimensions": {
+        "x": 1.5278526544570923,
+        "y": 5.010322093963623,
+        "z": 1.36549973487854
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 0,
+    "id": "{973ad73a-9ac8-438a-8f03-ac29d8074487}",
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502466826953853,
+    "lastEditedBy": "{53cf74c7-aaec-461a-bc07-cef2805387a5}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "modelURL": "https://content.overte.org/Bazaar/Worlds/Cyberpunk_Apartment/content/lantern/lantern.fbx",
+    "name": "jimjamzapt_Lantern",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": -2.734201431274414,
+        "y": -5.88483190536499,
+        "z": -5.221504211425781
+    },
+    "queryAACube": {
+        "scale": 5.4131550788879395,
+        "x": -5.440778732299805,
+        "y": -8.591409683227539,
+        "z": -7.928081512451172
+    },
+    "rotation": {
+        "w": 0.9238879680633545,
+        "x": -4.57763671875e-05,
+        "y": 0.3826504945755005,
+        "z": -1.52587890625e-05
+    },
+    "staticCertificateVersion": 1,
+    "type": "Model"
+},
+    {
+    "certificateID": "MEUCIQC/naamsyoGRQjK9HZuS4EEP4EyjsdIZwoPiGcyzvr84QIgZPb1/b1J4re2jJBlDaBNtcgIdtLfh/vUMsKN8tytVHM=",
+    "clientOnly": 0,
+    "description": "Specify URL to your 48K 16bit PCM wav file & volume (0-1) in userData below",
+    "dimensions": {
+        "x": 0.6446999907493591,
+        "y": 0.6438999772071838,
+        "z": 0.26570001244544983
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 0,
+    "id": "{4876a54c-5719-403d-91bd-7d315d7ac273}",
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502466826958562,
+    "lastEditedBy": "{53cf74c7-aaec-461a-bc07-cef2805387a5}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "modelURL": "https://content.overte.org/Bazaar/Worlds/Cyberpunk_Apartment/content/speakerGizmo/baked/speakerGizmo.baked.fbx",
+    "name": "City Sound Emitter",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": 11.094354629516602,
+        "y": -19.225290298461914,
+        "z": -5.315054893493652
+    },
+    "queryAACube": {
+        "scale": 0.9491268396377563,
+        "x": 10.619791030883789,
+        "y": -19.699853897094727,
+        "z": -5.789618492126465
+    },
+    "rotation": {
+        "w": 0.6755626201629639,
+        "x": -1.52587890625e-05,
+        "y": 0.7372701168060303,
+        "z": -1.52587890625e-05
+    },
+    "script": "https://content.overte.org/Bazaar/Worlds/Cyberpunk_Apartment/content/scripts/soundLoopEmitter.js",
+    "staticCertificateVersion": 1,
+    "type": "Model",
+    "userData": "{\"soundURL\":\"https://content.overte.org/Bazaar/Worlds/Cyberpunk_Apartment/content/audio/ambient-sirens.wav\",\"soundVolume\":0.45,\"refreshInterval\":100}",
+    "visible": 0
+},
+    {
+    "certificateID": "MEUCIQCeOxIRlap/iAZOAMFp+3SFZkg3tx1KS8kygQ8avKXPlwIgFDgK/mijY++mCUQAlxZRg2oxDNW3jEg/4zORns2tviY=",
+    "clientOnly": 0,
+    "collisionless": 1,
+    "dimensions": {
+        "x": 161.35845947265625,
+        "y": 0.0010000000474974513,
+        "z": 294.8251037597656
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 0,
+    "id": "{236f82fb-4844-4346-a270-a3c15df37dc0}",
+    "ignoreForCollisions": 1,
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502409895320041,
+    "lastEditedBy": "{6bc0a995-980d-4c19-a57c-580bdedf52b3}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "modelURL": "https://content.overte.org/Bazaar/Worlds/Cyberpunk_Apartment/content/haze_white2/baked/haze_white2.baked.fbx",
+    "name": "city_Haze",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": -293.61102294921875,
+        "y": -83.91441345214844,
+        "z": 80.5592041015625
+    },
+    "queryAACube": {
+        "scale": 336.09283447265625,
+        "x": -461.6574401855469,
+        "y": -251.96083068847656,
+        "z": -87.48721313476562
+    },
+    "rotation": {
+        "w": -0.0002899169921875,
+        "x": 0.7070878744125366,
+        "y": 0.7070878744125366,
+        "z": -0.0002899169921875
+    },
+    "staticCertificateVersion": 1,
+    "type": "Model"
+},
+    {
+    "certificateID": "MEYCIQCUw0+LvwIFO5V/2+vrrJuE2c+sli+tFDmVV9u8Q1FucAIhALSXcmDvTF0+hjysFej+z4gyGlqMZ0srEtuMwFQTYaBo",
+    "clientOnly": 0,
+    "dimensions": {
+        "x": 688.1638793945312,
+        "y": 45.03110885620117,
+        "z": 688.1636962890625
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 0,
+    "id": "{4dbd4292-9a85-4b0a-9da4-51800e528dd9}",
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502409895324550,
+    "lastEditedBy": "{6bc0a995-980d-4c19-a57c-580bdedf52b3}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "modelURL": "https://content.overte.org/Bazaar/Worlds/Cyberpunk_Apartment/content/FutureCity3/baked/FutureCity3.baked.fbx",
+    "name": "city_Floor",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": -5.00897216796875,
+        "y": -136.58824157714844,
+        "z": -89.9288330078125
+    },
+    "queryAACube": {
+        "scale": 974.2518310546875,
+        "x": -492.1348876953125,
+        "y": -623.7141723632812,
+        "z": -577.0547485351562
+    },
+    "rotation": {
+        "w": 1,
+        "x": -1.52587890625e-05,
+        "y": -1.52587890625e-05,
+        "z": -1.52587890625e-05
+    },
+    "shapeType": "static-mesh",
+    "staticCertificateVersion": 1,
+    "type": "Model"
+},
+    {
+    "certificateID": "MEYCIQDI+kR1Vp0clXCRGcq49Azap9UiRSQTPzA5id2OpooJQwIhAMUq3Tqw/Ho+pXK+lCy4p4hVvhw3n9px/7Luu4OmWQF1",
+    "clientOnly": 0,
+    "dimensions": {
+        "x": 142.50180053710938,
+        "y": 180.06539916992188,
+        "z": 142.50180053710938
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 0,
+    "id": "{5c7c20ea-b581-45ff-924c-225b28bca5e7}",
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502409895320981,
+    "lastEditedBy": "{6bc0a995-980d-4c19-a57c-580bdedf52b3}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "modelURL": "https://content.overte.org/Bazaar/Worlds/Cyberpunk_Apartment/content/cityEM/baked/cityEM.baked.fbx",
+    "name": "city_Buildings",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": -260.65252685546875,
+        "y": -53.02915954589844,
+        "z": 12.1707763671875
+    },
+    "queryAACube": {
+        "scale": 270.25372314453125,
+        "x": -395.7793884277344,
+        "y": -188.15602111816406,
+        "z": -122.95608520507812
+    },
+    "rotation": {
+        "w": -0.5624628067016602,
+        "x": 1.52587890625e-05,
+        "y": 0.8268406391143799,
+        "z": -4.57763671875e-05
+    },
+    "shapeType": "static-mesh",
+    "staticCertificateVersion": 1,
+    "type": "Model"
+},
+    {
+    "certificateID": "MEUCIQDAZmxeMta9K8xx9qVDdeTfMbWrFTJKqPSGMvIIT6fboAIgUwUR2FkS5euPnh/TlfWkkgkXh7qkq572XzHJ1GBcDjk=",
+    "clientOnly": 0,
+    "dimensions": {
+        "x": 688.1638793945312,
+        "y": 136.9750213623047,
+        "z": 688.1636962890625
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 1,
+    "id": "{6e8261cf-8751-4c64-929d-2f2027f7d0a8}",
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502409895322592,
+    "lastEditedBy": "{6bc0a995-980d-4c19-a57c-580bdedf52b3}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "modelURL": "https://content.overte.org/Bazaar/Worlds/Cyberpunk_Apartment/content/FutureCity3/baked/FutureCity3.baked.fbx",
+    "name": "city_Floor",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": -603.0143432617188,
+        "y": -112.59294128417969,
+        "z": 212.44140625
+    },
+    "queryAACube": {
+        "scale": 982.8026123046875,
+        "x": -1094.4156494140625,
+        "y": -603.9942626953125,
+        "z": -278.95989990234375
+    },
+    "rotation": {
+        "w": 0.3825894594192505,
+        "x": -1.52587890625e-05,
+        "y": -0.9239184856414795,
+        "z": -4.57763671875e-05
+    },
+    "shapeType": "static-mesh",
+    "staticCertificateVersion": 1,
+    "type": "Model"
+},
+    {
+    "certificateID": "MEUCIB5172HadM5GmvqKcabqTX54LjIe5Q57CWGU1H1RKnimAiEA4zIb/LHhZdwHnCz6oPOJx0QG5/qCfeMoTQgjC7ixPv4=",
+    "clientOnly": 0,
+    "collisionless": 1,
+    "dimensions": {
+        "x": 250,
+        "y": 0.0010000000474974513,
+        "z": 294.8251037597656
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 1,
+    "id": "{8bcee018-3860-4915-833a-68e63fa66c77}",
+    "ignoreForCollisions": 1,
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502409895324662,
+    "lastEditedBy": "{6bc0a995-980d-4c19-a57c-580bdedf52b3}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "modelURL": "https://content.overte.org/Bazaar/Worlds/Cyberpunk_Apartment/content/haze_white2/baked/haze_white2.baked.fbx",
+    "name": "city_Haze",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": -189.98431396484375,
+        "y": -148.00535583496094,
+        "z": -247.0455322265625
+    },
+    "queryAACube": {
+        "scale": 386.55120849609375,
+        "x": -383.2599182128906,
+        "y": -341.28094482421875,
+        "z": -440.3211364746094
+    },
+    "rotation": {
+        "w": -0.270588219165802,
+        "x": -0.653315007686615,
+        "y": -0.653315007686615,
+        "z": -0.270588219165802
+    },
+    "staticCertificateVersion": 1,
+    "type": "Model"
+},
+    {
+    "certificateID": "MEYCIQCm/fgSuwf1caf2j7KlY388Kc71Q+mi8+nl4TYkcs3gOgIhAN+TCGIq1ESJ0lzZhuGL30zIyW9PYxAkHC6a3/3MIIFD",
+    "clientOnly": 0,
+    "dimensions": {
+        "x": 191.66563415527344,
+        "y": 242.18887329101562,
+        "z": 191.66563415527344
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 1,
+    "id": "{07acc47b-9b59-44bd-abbb-13b6ec45205e}",
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502409895319635,
+    "lastEditedBy": "{6bc0a995-980d-4c19-a57c-580bdedf52b3}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "modelURL": "https://content.overte.org/Bazaar/Worlds/Cyberpunk_Apartment/content/cityEM/baked/cityEM.baked.fbx",
+    "name": "city_Buildings",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": 326.4427490234375,
+        "y": -21.967453002929688,
+        "z": 75.0367431640625
+    },
+    "queryAACube": {
+        "scale": 363.49261474609375,
+        "x": 144.69644165039062,
+        "y": -203.71376037597656,
+        "z": -106.70956420898438
+    },
+    "rotation": {
+        "w": -0.7121537923812866,
+        "x": 1.52587890625e-05,
+        "y": 0.7020523548126221,
+        "z": -4.57763671875e-05
+    },
+    "shapeType": "static-mesh",
+    "staticCertificateVersion": 1,
+    "type": "Model"
+},
+    {
+    "certificateID": "MEQCIH9s7Jna3TVG6ZvLY6BpZAxtctvmgZJMB6+SMCBj8RfDAiB1muohYQuap6VRfoLttDhujQHS/AMc7lFQvpRv5UOWDw==",
+    "clientOnly": 0,
+    "dimensions": {
+        "x": 173.4457550048828,
+        "y": 219.1662139892578,
+        "z": 173.4457550048828
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 2,
+    "id": "{331c2796-abc2-4ad2-ae88-5d8a845b0d07}",
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502409895320230,
+    "lastEditedBy": "{6bc0a995-980d-4c19-a57c-580bdedf52b3}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "modelURL": "https://content.overte.org/Bazaar/Worlds/Cyberpunk_Apartment/content/cityEM/baked/cityEM.baked.fbx",
+    "name": "city_Buildings",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": 90.618896484375,
+        "y": -51.52354431152344,
+        "z": -326.19970703125
+    },
+    "queryAACube": {
+        "scale": 328.938720703125,
+        "x": -73.8504638671875,
+        "y": -215.99290466308594,
+        "z": -490.6690673828125
+    },
+    "rotation": {
+        "w": -0.3827420473098755,
+        "x": -1.52587890625e-05,
+        "y": -0.9238879680633545,
+        "z": -4.57763671875e-05
+    },
+    "shapeType": "static-mesh",
+    "staticCertificateVersion": 1,
+    "type": "Model"
+},
+    {
+    "certificateID": "MEUCIAO5GAIMnh4TVeyx/dfs/KLXTKwJLrkFM9jJARihVCr8AiEAviOMJTUGO26087QAGWRZWFcMjkHa4X6085/sbKb9rbg=",
+    "clientOnly": 0,
+    "collisionless": 1,
+    "dimensions": {
+        "x": 250,
+        "y": 0.0010000000474974513,
+        "z": 294.8251037597656
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 2,
+    "id": "{b1f6fea9-3197-4f55-950a-1de185c27744}",
+    "ignoreForCollisions": 1,
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502409895320523,
+    "lastEditedBy": "{6bc0a995-980d-4c19-a57c-580bdedf52b3}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "modelURL": "https://content.overte.org/Bazaar/Worlds/Cyberpunk_Apartment/content/haze_white2/baked/haze_white2.baked.fbx",
+    "name": "city_Haze",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": 312.2261962890625,
+        "y": -79.60173034667969,
+        "z": 138.0389404296875
+    },
+    "queryAACube": {
+        "scale": 386.55120849609375,
+        "x": 118.95059204101562,
+        "y": -272.8773193359375,
+        "z": -55.236663818359375
+    },
+    "rotation": {
+        "w": -0.7071183323860168,
+        "x": -4.57763671875e-05,
+        "y": -4.57763671875e-05,
+        "z": -0.7071183323860168
+    },
+    "staticCertificateVersion": 1,
+    "type": "Model"
+},
+    {
+    "certificateID": "MEYCIQDD+Fik3g3O8vfgHLZA5gseVf898XxgUu/sKKi4e3RT6wIhAO92AEIH2IOOmFPmUnL+NV/VmRE2kJSHlSlDQNu1D8xe",
+    "clientOnly": 0,
+    "dimensions": {
+        "x": 142.50180053710938,
+        "y": 180.06539916992188,
+        "z": 142.50180053710938
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 3,
+    "id": "{7ecad4c5-96d8-499e-a14c-d57eb9d72265}",
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502409895321278,
+    "lastEditedBy": "{6bc0a995-980d-4c19-a57c-580bdedf52b3}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "modelURL": "https://content.overte.org/Bazaar/Worlds/Cyberpunk_Apartment/content/cityEM/baked/cityEM.baked.fbx",
+    "name": "city_Buildings",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": -81.73138427734375,
+        "y": -53.02915954589844,
+        "z": -251.52880859375
+    },
+    "queryAACube": {
+        "scale": 270.25372314453125,
+        "x": -216.85824584960938,
+        "y": -188.15602111816406,
+        "z": -386.6556701660156
+    },
+    "rotation": {
+        "w": -0.9238879680633545,
+        "x": -1.52587890625e-05,
+        "y": -0.3826810121536255,
+        "z": -4.57763671875e-05
+    },
+    "shapeType": "static-mesh",
+    "staticCertificateVersion": 1,
+    "type": "Model"
+},
+    {
+    "certificateID": "MEQCIFqs5WQHu+juQpCK2hVch47jEfp2luOd9KWt6WeXKg1iAiAEy+BFnhHmg1V7Y9C0BXnWF/hRF+GjVCGcAYxb6r7Rag==",
+    "clientOnly": 0,
+    "description": "Created by S2 and shared under CC-Zero License http://www.blendswap.com/blends/view/43162",
+    "dimensions": {
+        "x": 35.69492721557617,
+        "y": 208.63287353515625,
+        "z": 48.70643997192383
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 0,
+    "id": "{4e997882-ae3a-4485-a351-658d2041443a}",
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502409839435839,
+    "lastEditedBy": "{d96bd02b-79e8-4349-99da-90d5b9820c8e}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "modelURL": "https://content.overte.org/Bazaar/Worlds/Cyberpunk_Apartment/content/Office-Tower/baked/Office-Tower.baked.fbx",
+    "name": "Glass Office Building",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": -22.78619384765625,
+        "y": -48.26322937011719,
+        "z": 159.9505615234375
+    },
+    "queryAACube": {
+        "scale": 217.196044921875,
+        "x": -131.38421630859375,
+        "y": -156.8612518310547,
+        "z": 51.3525390625
+    },
+    "rotation": {
+        "w": 1,
+        "x": -1.52587890625e-05,
+        "y": -1.52587890625e-05,
+        "z": -1.52587890625e-05
+    },
+    "staticCertificateVersion": 1,
+    "type": "Model"
+},
+    {
+    "certificateID": "MEYCIQC0cbTSrJubVyj03OUFszmWYrvkUvrBd9urcEPNKJ54nQIhAPjAfzNoJGn8gwt2eUwWWfYresS3T6GU015dau47FaAc",
+    "clientOnly": 0,
+    "collisionless": 1,
+    "dimensions": {
+        "x": 268.451904296875,
+        "y": 0.0010000000474974513,
+        "z": 404.4407043457031
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 3,
+    "id": "{a730dcdb-681b-4185-8bd3-0c6463f8b931}",
+    "ignoreForCollisions": 1,
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502409895321806,
+    "lastEditedBy": "{6bc0a995-980d-4c19-a57c-580bdedf52b3}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "modelURL": "https://content.overte.org/Bazaar/Worlds/Cyberpunk_Apartment/content/haze_white2/baked/haze_white2.baked.fbx",
+    "name": "city_Haze",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": 518.648193359375,
+        "y": -175.08384704589844,
+        "z": -3.67138671875
+    },
+    "queryAACube": {
+        "scale": 485.4263000488281,
+        "x": 275.93505859375,
+        "y": -417.7969970703125,
+        "z": -246.38453674316406
+    },
+    "rotation": {
+        "w": -0.7071183323860168,
+        "x": -4.57763671875e-05,
+        "y": -4.57763671875e-05,
+        "z": -0.7071183323860168
+    },
+    "staticCertificateVersion": 1,
+    "type": "Model"
+},
+    {
+    "certificateID": "MEQCIDGkqwCaximH7T4x4Fg8bNALY9yrdj6ZW2BqyOdxnZ2DAiAPKKIXFumNgmDiq8Z1n6cEKulbBciS3CBc773MLtM9fQ==",
+    "clientOnly": 0,
+    "collisionless": 1,
+    "dimensions": {
+        "x": 91.69779968261719,
+        "y": 0.0010000000474974513,
+        "z": 294.8251037597656
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 4,
+    "id": "{b40d975a-8e6f-4c05-be51-8e884b5baf33}",
+    "ignoreForCollisions": 1,
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502409895321904,
+    "lastEditedBy": "{6bc0a995-980d-4c19-a57c-580bdedf52b3}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "modelURL": "https://content.overte.org/Bazaar/Worlds/Cyberpunk_Apartment/content/haze_white2/baked/haze_white2.baked.fbx",
+    "name": "city_Haze",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": -87.85760498046875,
+        "y": -126.70225524902344,
+        "z": 205.517822265625
+    },
+    "queryAACube": {
+        "scale": 308.756103515625,
+        "x": -242.23565673828125,
+        "y": -281.080322265625,
+        "z": 51.1397705078125
+    },
+    "rotation": {
+        "w": -0.5002670288085938,
+        "x": 0.49971771240234375,
+        "y": 0.49971771240234375,
+        "z": -0.5002670288085938
+    },
+    "staticCertificateVersion": 1,
+    "type": "Model"
+},
+    {
+    "certificateID": "MEQCIGmhqNoF674zG5M87/CyzNm19hUbF2mJe5kIbEV3EA0aAiBpZjsj163FKqNnkK5M8r99l+zbm1Z0Fq/uWDez0TGQnQ==",
+    "clientOnly": 0,
+    "color": {
+        "blue": 0,
+        "green": 0,
+        "red": 0
+    },
+    "dimensions": {
+        "x": 142.50180053710938,
+        "y": 52.5186767578125,
+        "z": 142.50180053710938
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 0,
+    "id": "{e0e39ba8-5073-428a-af5d-b69cb630cd8f}",
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502409895324989,
+    "lastEditedBy": "{6bc0a995-980d-4c19-a57c-580bdedf52b3}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "name": "city_Buildings",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": 157.8804931640625,
+        "y": -139.75108337402344,
+        "z": -50.3966064453125
+    },
+    "queryAACube": {
+        "scale": 208.25881958007812,
+        "x": 53.75108337402344,
+        "y": -243.8804931640625,
+        "z": -154.52601623535156
+    },
+    "rotation": {
+        "w": 0.9238574504852295,
+        "x": -1.52587890625e-05,
+        "y": 0.3826810121536255,
+        "z": -1.52587890625e-05
+    },
+    "shape": "Cube",
+    "staticCertificateVersion": 1,
+    "type": "Box"
+},
+    {
+    "certificateID": "MEYCIQCDGwCo6bOJA1ir/wFZM02G8IBDGKeWy5awdTG/OzB8CwIhAPwqKYzGKUC8CSobKMWs8Vt32MzRI9v52C/P3dpM7Npm",
+    "clientOnly": 0,
+    "color": {
+        "blue": 0,
+        "green": 0,
+        "red": 0
+    },
+    "dimensions": {
+        "x": 142.50180053710938,
+        "y": 52.5186767578125,
+        "z": 142.50180053710938
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 1,
+    "id": "{36426827-5025-4d70-87e6-eabe5d4591c3}",
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502409895316961,
+    "lastEditedBy": "{6bc0a995-980d-4c19-a57c-580bdedf52b3}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "name": "city_Buildings",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": 157.8804931640625,
+        "y": -139.75108337402344,
+        "z": -50.3966064453125
+    },
+    "queryAACube": {
+        "scale": 208.25881958007812,
+        "x": 53.75108337402344,
+        "y": -243.8804931640625,
+        "z": -154.52601623535156
+    },
+    "rotation": {
+        "w": 0.9238574504852295,
+        "x": -1.52587890625e-05,
+        "y": 0.3826810121536255,
+        "z": -1.52587890625e-05
+    },
+    "shape": "Cube",
+    "staticCertificateVersion": 1,
+    "type": "Box"
+},
+    {
+    "certificateID": "MEUCIQC9FzGnszuMufxMUBSnCRGt4WNboR2vx+vuI1WDY5v5LgIgFnShBD0VW6xcH7/cRBHyXwG2zBNvchheXcwqciNQImk=",
+    "clientOnly": 0,
+    "collisionless": 1,
+    "dimensions": {
+        "x": 68.48780059814453,
+        "y": 0.0010000000474974513,
+        "z": 294.8251037597656
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 5,
+    "id": "{d9458fcd-99d5-4a04-8665-5bf4431fde68}",
+    "ignoreForCollisions": 1,
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502409895322730,
+    "lastEditedBy": "{6bc0a995-980d-4c19-a57c-580bdedf52b3}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "modelURL": "https://content.overte.org/Bazaar/Worlds/Cyberpunk_Apartment/content/haze_white2/baked/haze_white2.baked.fbx",
+    "name": "city_Haze",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": 139.2315673828125,
+        "y": -137.45152282714844,
+        "z": -282.663818359375
+    },
+    "queryAACube": {
+        "scale": 302.6754455566406,
+        "x": -12.106155395507812,
+        "y": -288.78924560546875,
+        "z": -434.00152587890625
+    },
+    "rotation": {
+        "w": -0.65328449010849,
+        "x": -0.270618736743927,
+        "y": -0.270618736743927,
+        "z": -0.65328449010849
+    },
+    "staticCertificateVersion": 1,
+    "type": "Model"
+},
+    {
+    "certificateID": "MEYCIQDIKNi+Pad5r2kOB3ONv5+3xqbjGwm00ZSVcXgXbaJZdgIhAN+Z2FfWGyUly5mlSzuFHmfKna1Nayjb22Pk5JXfk+BC",
+    "clientOnly": 0,
+    "color": {
+        "blue": 0,
+        "green": 77,
+        "red": 232
+    },
+    "cutoff": 90,
+    "dimensions": {
+        "x": 275.3016052246094,
+        "y": 275.3016052246094,
+        "z": 275.3016052246094
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 0,
+    "falloffRadius": 60,
+    "id": "{3ada1218-d58f-46c3-8c19-c1840aec0eaf}",
+    "intensity": 20,
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502409895318682,
+    "lastEditedBy": "{6bc0a995-980d-4c19-a57c-580bdedf52b3}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "name": "city_LightsOrange",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": -283.49188232421875,
+        "y": -80.33164978027344,
+        "z": -247.169921875
+    },
+    "queryAACube": {
+        "scale": 476.8363952636719,
+        "x": -521.9100952148438,
+        "y": -318.7498474121094,
+        "z": -485.588134765625
+    },
+    "rotation": {
+        "w": 1,
+        "x": -1.52587890625e-05,
+        "y": -1.52587890625e-05,
+        "z": -1.52587890625e-05
+    },
+    "staticCertificateVersion": 1,
+    "type": "Light"
+},
+    {
+    "certificateID": "MEUCICqTmd/3fOGQXfOfZ796AIuEYKNEnqxZOwuWach8/RUlAiEA7taFPzA/ZasV4ojQb/W6pN0pHKb9pUbWN5IPDQrVOnw=",
+    "clientOnly": 0,
+    "dimensions": {
+        "x": 142.50180053710938,
+        "y": 180.06539916992188,
+        "z": 142.50180053710938
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 4,
+    "id": "{2ed82f3f-a667-420c-806d-db6945dfd4aa}",
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502409895323001,
+    "lastEditedBy": "{6bc0a995-980d-4c19-a57c-580bdedf52b3}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "modelURL": "https://content.overte.org/Bazaar/Worlds/Cyberpunk_Apartment/content/cityEM/baked/cityEM.baked.fbx",
+    "name": "city_Buildings",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": -258.54241943359375,
+        "y": -40.53337097167969,
+        "z": 174.66455078125
+    },
+    "queryAACube": {
+        "scale": 270.25372314453125,
+        "x": -393.6692810058594,
+        "y": -175.6602325439453,
+        "z": 39.537689208984375
+    },
+    "rotation": {
+        "w": 1,
+        "x": -1.52587890625e-05,
+        "y": 1.52587890625e-05,
+        "z": -7.62939453125e-05
+    },
+    "shapeType": "static-mesh",
+    "staticCertificateVersion": 1,
+    "type": "Model"
+},
+    {
+    "certificateID": "MEQCIG5La89cZcnJzFwanbNQITVe9jeGZul9bA+lyV2i2OcZAiAPET4FyGlfnAaR/UkwWl5g6B7av1rcKTvjs/aPz4Mlpg==",
+    "clientOnly": 0,
+    "dimensions": {
+        "x": 137.52647399902344,
+        "y": 173.778564453125,
+        "z": 137.52647399902344
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 5,
+    "id": "{7a92a942-fe08-44f4-9303-a8d12d5b4aea}",
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502409895323174,
+    "lastEditedBy": "{6bc0a995-980d-4c19-a57c-580bdedf52b3}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "modelURL": "https://content.overte.org/Bazaar/Worlds/Cyberpunk_Apartment/content/cityEM/baked/cityEM.baked.fbx",
+    "name": "city_Buildings",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": 223.0684814453125,
+        "y": -51.52470397949219,
+        "z": -241.5816650390625
+    },
+    "queryAACube": {
+        "scale": 260.81805419921875,
+        "x": 92.65945434570312,
+        "y": -181.93373107910156,
+        "z": -371.9906921386719
+    },
+    "rotation": {
+        "w": -0.9238574504852295,
+        "x": 1.52587890625e-05,
+        "y": -0.3828030824661255,
+        "z": -4.57763671875e-05
+    },
+    "shapeType": "static-mesh",
+    "staticCertificateVersion": 1,
+    "type": "Model"
+},
+    {
+    "certificateID": "MEQCIDBQ1F1lTS1G1WaLw4pfrVWcoQxsze+WpTJ5bHurqfNkAiBhvOP+xZy7ubHwvSOq+xrLNA7I2CxPWHZSEz3/oAm1GA==",
+    "clientOnly": 0,
+    "dimensions": {
+        "x": 142.50180053710938,
+        "y": 180.06539916992188,
+        "z": 142.50180053710938
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 6,
+    "id": "{4ec6df4a-35a1-4e3f-94ee-c9b547a0f0a2}",
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502409895323308,
+    "lastEditedBy": "{6bc0a995-980d-4c19-a57c-580bdedf52b3}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "modelURL": "https://content.overte.org/Bazaar/Worlds/Cyberpunk_Apartment/content/cityEM/baked/cityEM.baked.fbx",
+    "name": "city_Buildings",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": -192.93792724609375,
+        "y": -53.02915954589844,
+        "z": -151.6246337890625
+    },
+    "queryAACube": {
+        "scale": 270.25372314453125,
+        "x": -328.0647888183594,
+        "y": -188.15602111816406,
+        "z": -286.7514953613281
+    },
+    "rotation": {
+        "w": -0.3842068910598755,
+        "x": 4.57763671875e-05,
+        "y": 0.9232470989227295,
+        "z": -1.52587890625e-05
+    },
+    "shapeType": "static-mesh",
+    "staticCertificateVersion": 1,
+    "type": "Model"
+},
+    {
+    "certificateID": "MEUCIQCqJSuZ4uaXrK7vqv3QmLNCiBGK9gnwWHv1bVYs2hRz2wIgSpAfBOScMra6V+pOs2D1gBSsCyPTZjqfovazWKTbIoU=",
+    "clientOnly": 0,
+    "collisionless": 1,
+    "dimensions": {
+        "x": 188.29547119140625,
+        "y": 0.0010000000474974513,
+        "z": 294.8251037597656
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 6,
+    "id": "{810dfd86-9e4d-4c2b-b62b-00b17a6b810a}",
+    "ignoreForCollisions": 1,
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502409895323883,
+    "lastEditedBy": "{6bc0a995-980d-4c19-a57c-580bdedf52b3}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "modelURL": "https://content.overte.org/Bazaar/Worlds/Cyberpunk_Apartment/content/haze_white2/baked/haze_white2.baked.fbx",
+    "name": "city_Haze",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": 299.5699462890625,
+        "y": -100.95066833496094,
+        "z": -301.6168212890625
+    },
+    "queryAACube": {
+        "scale": 349.82427978515625,
+        "x": 124.65780639648438,
+        "y": -275.86279296875,
+        "z": -476.5289611816406
+    },
+    "rotation": {
+        "w": -0.65328449010849,
+        "x": -0.270618736743927,
+        "y": -0.270618736743927,
+        "z": -0.65328449010849
+    },
+    "staticCertificateVersion": 1,
+    "type": "Model"
+},
+    {
+    "certificateID": "MEUCIQClvhz7a5sQTxLMMebDZcfaK01bpGQUrW9/BhBt1Heo8AIgLehHgaHgZGY3fHHfoeY/FTAw+DJk5/I/p9aI7oiYF24=",
+    "clientOnly": 0,
+    "collisionless": 1,
+    "dimensions": {
+        "x": 161.92803955078125,
+        "y": 0.0010000000474974513,
+        "z": 294.8251037597656
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 7,
+    "id": "{5d6ef65a-b1d7-4b23-ae52-8fcfdf9461bc}",
+    "ignoreForCollisions": 1,
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502409895324031,
+    "lastEditedBy": "{6bc0a995-980d-4c19-a57c-580bdedf52b3}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "modelURL": "https://content.overte.org/Bazaar/Worlds/Cyberpunk_Apartment/content/haze_white2/baked/haze_white2.baked.fbx",
+    "name": "city_Haze",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": 268.0711669921875,
+        "y": -133.17259216308594,
+        "z": -310.0789794921875
+    },
+    "queryAACube": {
+        "scale": 336.3666687011719,
+        "x": 99.88783264160156,
+        "y": -301.3559265136719,
+        "z": -478.2623291015625
+    },
+    "rotation": {
+        "w": -0.65328449010849,
+        "x": -0.270618736743927,
+        "y": -0.270618736743927,
+        "z": -0.65328449010849
+    },
+    "staticCertificateVersion": 1,
+    "type": "Model"
+},
+    {
+    "certificateID": "MEUCIBwlkwy2xMfAfuVGEYDzESVG4AxqVGvJ+0VJrWtD0mhXAiEAncLD3F9biu5xZtYhKIrCgFzX/ksV31xBj7Y3ZcG/2A8=",
+    "clientOnly": 0,
+    "collisionless": 1,
+    "dimensions": {
+        "x": 139.87538146972656,
+        "y": 0.0010000000474974513,
+        "z": 294.8251037597656
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 8,
+    "id": "{03385ec4-718d-4004-b7cd-c4eb59c28a98}",
+    "ignoreForCollisions": 1,
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502409895324162,
+    "lastEditedBy": "{6bc0a995-980d-4c19-a57c-580bdedf52b3}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "modelURL": "https://content.overte.org/Bazaar/Worlds/Cyberpunk_Apartment/content/haze_white2/baked/haze_white2.baked.fbx",
+    "name": "city_Haze",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": -227.22943115234375,
+        "y": -134.66404724121094,
+        "z": 197.058837890625
+    },
+    "queryAACube": {
+        "scale": 326.32342529296875,
+        "x": -390.3911437988281,
+        "y": -297.82574462890625,
+        "z": 33.897125244140625
+    },
+    "rotation": {
+        "w": -0.5002670288085938,
+        "x": 0.49971771240234375,
+        "y": 0.49971771240234375,
+        "z": -0.5002670288085938
+    },
+    "staticCertificateVersion": 1,
+    "type": "Model"
+},
+    {
+    "backgroundMode": "skybox",
+    "certificateID": "MEQCIF3S3sYuEVes9blzUMxExdKI9QIfEi8Xtp6hNz4wi4DFAiBVXn9z50xPkeWEDnTsL93acpp5ECPIVUstq3LnMYYnTQ==",
+    "clientOnly": 0,
+    "dimensions": {
+        "x": 1765.740234375,
+        "y": 764.811279296875,
+        "z": 1161.5677490234375
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 0,
+    "id": "{c3127295-3b37-4cfe-8b04-15b3a0a2a60c}",
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "keyLight": {
+        "ambientIntensity": 0.30000001192092896,
+        "color": {
+            "blue": 10,
+            "green": 38,
+            "red": 140
+        },
+        "intensity": 0.6000000238418579
+    },
+    "lastEdited": 1502466826953527,
+    "lastEditedBy": "{53cf74c7-aaec-461a-bc07-cef2805387a5}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "name": "Skybox",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": -188.12091064453125,
+        "y": -16.296310424804688,
+        "z": 103.643798828125
+    },
+    "queryAACube": {
+        "scale": 2247.668701171875,
+        "x": -1311.955322265625,
+        "y": -1140.130615234375,
+        "z": -1020.1905517578125
+    },
+    "rotation": {
+        "w": -0.3835660219192505,
+        "x": -1.52587890625e-05,
+        "y": 0.9234912395477295,
+        "z": -1.52587890625e-05
+    },
+    "shapeType": "box",
+    "skybox": {
+        "url": "https://content.overte.org/Bazaar/Worlds/Cyberpunk_Apartment/content/SKYJimJamz.ktx"
+    },
+    "stage": {
+        "longitude": 200
+    },
+    "staticCertificateVersion": 1,
+    "type": "Zone"
+},
+    {
+    "certificateID": "MEQCIAfIQXdWV8/7TG0lnMlLqdr/n0P4zD6sJAOamT/vsTZBAiBNMHkdLdSYwBktRrTRhhoZvheJeTsuDuP244K14CT5CA==",
+    "clientOnly": 0,
+    "color": {
+        "blue": 0,
+        "green": 68,
+        "red": 255
+    },
+    "cutoff": 90,
+    "dimensions": {
+        "x": 257.6510009765625,
+        "y": 257.6510009765625,
+        "z": 257.6510009765625
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 1,
+    "falloffRadius": 40,
+    "id": "{8cba4f24-c5b9-4f92-9944-cfdf11990562}",
+    "intensity": 50,
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502466826955577,
+    "lastEditedBy": "{53cf74c7-aaec-461a-bc07-cef2805387a5}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "name": "city_FloorLightOrange",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": -198.56707763671875,
+        "y": -138.3002166748047,
+        "z": -48.3223876953125
+    },
+    "queryAACube": {
+        "scale": 446.2646484375,
+        "x": -421.69940185546875,
+        "y": -361.43255615234375,
+        "z": -271.4547119140625
+    },
+    "rotation": {
+        "w": 1,
+        "x": -1.52587890625e-05,
+        "y": -1.52587890625e-05,
+        "z": -1.52587890625e-05
+    },
+    "staticCertificateVersion": 1,
+    "type": "Light"
+},
+    {
+    "certificateID": "MEUCIQDTsKq4Jx+OmUEoz9EiXfS+SF8l/FBq5xLhYcj33+kuswIgDHVhEDG0vOW1//EWlfUVIDKqVv7iR3ftMY8InmWALGo=",
+    "clientOnly": 0,
+    "color": {
+        "blue": 171,
+        "green": 228,
+        "red": 255
+    },
+    "cutoff": 90,
+    "dimensions": {
+        "x": 17.507850646972656,
+        "y": 17.507850646972656,
+        "z": 17.507850646972656
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 2,
+    "falloffRadius": 20,
+    "id": "{6968e44e-a999-416f-be75-74a8ca0c72e2}",
+    "intensity": 1.600000023841858,
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502466826955487,
+    "lastEditedBy": "{53cf74c7-aaec-461a-bc07-cef2805387a5}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "name": "jimjamzapt_MainLight",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": 1.1225872039794922,
+        "y": -7.144969940185547,
+        "z": -5.130653381347656
+    },
+    "queryAACube": {
+        "scale": 30.324487686157227,
+        "x": -14.039656639099121,
+        "y": -22.307212829589844,
+        "z": -20.292896270751953
+    },
+    "rotation": {
+        "w": 1,
+        "x": -1.52587890625e-05,
+        "y": -1.52587890625e-05,
+        "z": -1.52587890625e-05
+    },
+    "staticCertificateVersion": 1,
+    "type": "Light",
+    "userData": "{\"grabbableKey\":{\"grabbable\":true}}"
+},
+    {
+    "certificateID": "MEUCIQDLzGch4fQ75WS7fLwuzpsUW9C2km79PofKwGy3/m6PEQIgJXu16/AN9swDNG2kHbiFTi4oFvAbMJFQjkhxk43eSp4=",
+    "clientOnly": 0,
+    "color": {
+        "blue": 0,
+        "green": 0,
+        "red": 232
+    },
+    "cutoff": 90,
+    "dimensions": {
+        "x": 275.80072021484375,
+        "y": 275.80072021484375,
+        "z": 275.80072021484375
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 3,
+    "falloffRadius": 40,
+    "id": "{d9f4e218-f352-479a-94e0-1c736586df41}",
+    "intensity": 15,
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502466826955393,
+    "lastEditedBy": "{53cf74c7-aaec-461a-bc07-cef2805387a5}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "name": "city_LightRed",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": -196.01605224609375,
+        "y": -53.40147399902344,
+        "z": 0.2620849609375
+    },
+    "queryAACube": {
+        "scale": 477.70086669921875,
+        "x": -434.8664855957031,
+        "y": -292.25189208984375,
+        "z": -238.58834838867188
+    },
+    "rotation": {
+        "w": 1,
+        "x": -1.52587890625e-05,
+        "y": -1.52587890625e-05,
+        "z": -1.52587890625e-05
+    },
+    "staticCertificateVersion": 1,
+    "type": "Light"
+},
+    {
+    "certificateID": "MEUCIQCvJYYV3au3pYqvt5YkO/gpQN2n3ud4HAUYmGMFvUWHOgIgIQRbLCpsi9EigzyG8rp6+4fWpGwjSo6WhS0KT67FoOM=",
+    "clientOnly": 0,
+    "color": {
+        "blue": 171,
+        "green": 228,
+        "red": 255
+    },
+    "cutoff": 90,
+    "dimensions": {
+        "x": 29.951473236083984,
+        "y": 29.951473236083984,
+        "z": 29.951473236083984
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 4,
+    "falloffRadius": 2,
+    "id": "{01df4fae-bf32-4f8e-add5-598b2e20f1c7}",
+    "intensity": 5,
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502466826955303,
+    "lastEditedBy": "{53cf74c7-aaec-461a-bc07-cef2805387a5}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "name": "jimjamzapt_AptLight",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": 8.15516471862793,
+        "y": -6.640228271484375,
+        "z": 1.4935531616210938
+    },
+    "queryAACube": {
+        "scale": 51.877471923828125,
+        "x": -17.783571243286133,
+        "y": -32.57896423339844,
+        "z": -24.44518280029297
+    },
+    "rotation": {
+        "w": 1,
+        "x": -1.52587890625e-05,
+        "y": -1.52587890625e-05,
+        "z": -1.52587890625e-05
+    },
+    "staticCertificateVersion": 1,
+    "type": "Light"
+},
+    {
+    "certificateID": "MEQCIELP0cUbZkShuPO2kJT3d3TL6AT5gd64ancw/hELuv6oAiB/ClP3qm4jAaBRDhf7P2WSpzMrzWd2Y7VHOLPVohDxMg==",
+    "clientOnly": 0,
+    "color": {
+        "blue": 212,
+        "green": 190,
+        "red": 212
+    },
+    "cutoff": 90,
+    "dimensions": {
+        "x": 13.10435676574707,
+        "y": 13.10435676574707,
+        "z": 13.10435676574707
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 5,
+    "falloffRadius": 5,
+    "id": "{68e62565-6803-4f3c-83cd-05e91e689c09}",
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502466826955206,
+    "lastEditedBy": "{53cf74c7-aaec-461a-bc07-cef2805387a5}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "name": "JimJamzApt_Light",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": -0.3798809051513672,
+        "y": -9.652667999267578,
+        "z": -0.3305239677429199
+    },
+    "queryAACube": {
+        "scale": 22.697410583496094,
+        "x": -11.728586196899414,
+        "y": -21.001373291015625,
+        "z": -11.679229736328125
+    },
+    "rotation": {
+        "w": 1,
+        "x": -1.52587890625e-05,
+        "y": -1.52587890625e-05,
+        "z": -1.52587890625e-05
+    },
+    "staticCertificateVersion": 1,
+    "type": "Light",
+    "userData": "{\"grabbableKey\":{\"grabbable\":true}}"
+},
+    {
+    "certificateID": "MEQCIHaZ/+AKj3J+OGEvzw4/ecCWY5ewnvIuVht1m2HFtTYAAiAx8JED8qX86Vup47FadsdEYzkHohB83r/V0WPjOd3qTQ==",
+    "clientOnly": 0,
+    "color": {
+        "blue": 171,
+        "green": 228,
+        "red": 255
+    },
+    "cutoff": 90,
+    "dimensions": {
+        "x": 29.951473236083984,
+        "y": 29.951473236083984,
+        "z": 29.951473236083984
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 6,
+    "falloffRadius": 2,
+    "id": "{1218cab3-05aa-4c76-868c-9002943c59e7}",
+    "intensity": 5,
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502466826958421,
+    "lastEditedBy": "{53cf74c7-aaec-461a-bc07-cef2805387a5}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "name": "jimjamzapt_AptLight",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": 1.4977283477783203,
+        "y": -6.702090263366699,
+        "z": 4.56037712097168
+    },
+    "queryAACube": {
+        "scale": 51.877471923828125,
+        "x": -24.441007614135742,
+        "y": -32.64082717895508,
+        "z": -21.378358840942383
+    },
+    "rotation": {
+        "w": 1,
+        "x": -1.52587890625e-05,
+        "y": -1.52587890625e-05,
+        "z": -1.52587890625e-05
+    },
+    "staticCertificateVersion": 1,
+    "type": "Light"
+},
+    {
+    "certificateID": "MEUCIQDsVVi1UZ53GqrN2RiLOFrGJx1PzTFgrZVRLB+1MD5nEAIgCq0R5Ipm0fe75iNfxIfW2TfHzLyvvG/8RLfO8xKIibQ=",
+    "clientOnly": 0,
+    "color": {
+        "blue": 222,
+        "green": 33,
+        "red": 146
+    },
+    "cutoff": 90,
+    "dimensions": {
+        "x": 213.69146728515625,
+        "y": 213.69146728515625,
+        "z": 213.69146728515625
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 7,
+    "falloffRadius": 40,
+    "id": "{2d3a2295-e155-4ce5-9b0e-4b4367e04a5d}",
+    "intensity": 40,
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502466826954995,
+    "lastEditedBy": "{53cf74c7-aaec-461a-bc07-cef2805387a5}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "name": "city_FloorLightPurple",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": -34.31903076171875,
+        "y": -145.53782653808594,
+        "z": 8.2044677734375
+    },
+    "queryAACube": {
+        "scale": 370.1244812011719,
+        "x": -219.3812713623047,
+        "y": -330.6000671386719,
+        "z": -176.85777282714844
+    },
+    "rotation": {
+        "w": 1,
+        "x": -1.52587890625e-05,
+        "y": -1.52587890625e-05,
+        "z": -1.52587890625e-05
+    },
+    "staticCertificateVersion": 1,
+    "type": "Light"
+},
+    {
+    "certificateID": "MEQCIGmfemkW1HtsRuM+jZCZHFuRCuMuWpVVo3OqQpIJWVVsAiBUrO9iaNmA56v+/DHHlthL+wNE4nN0gq2B7em9lp2gDA==",
+    "clientOnly": 0,
+    "color": {
+        "blue": 33,
+        "green": 13,
+        "red": 255
+    },
+    "cutoff": 90,
+    "dimensions": {
+        "x": 279.0221862792969,
+        "y": 279.0221862792969,
+        "z": 279.0221862792969
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 8,
+    "falloffRadius": 40,
+    "id": "{ec73c569-fcd6-4cee-9b01-19a091de3556}",
+    "intensity": 10,
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502466826955112,
+    "lastEditedBy": "{53cf74c7-aaec-461a-bc07-cef2805387a5}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "name": "city_FloorLightOrange",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": 70.624755859375,
+        "y": -141.1055145263672,
+        "z": -62.3873291015625
+    },
+    "queryAACube": {
+        "scale": 483.2806091308594,
+        "x": -171.0155487060547,
+        "y": -382.7458190917969,
+        "z": -304.02764892578125
+    },
+    "rotation": {
+        "w": 1,
+        "x": -1.52587890625e-05,
+        "y": -1.52587890625e-05,
+        "z": -1.52587890625e-05
+    },
+    "staticCertificateVersion": 1,
+    "type": "Light"
+},
+    {
+    "certificateID": "MEYCIQDxkBE5YZQVr/DgT2yUk4NlUGlHTCkJmBlbHcC93upqQgIhAMJ9UH93GOBM8/D6vYBMsbNyOfMMxSQzWffyNtw6Pkpk",
+    "clientOnly": 0,
+    "color": {
+        "blue": 222,
+        "green": 33,
+        "red": 146
+    },
+    "cutoff": 90,
+    "dimensions": {
+        "x": 228.57569885253906,
+        "y": 228.57569885253906,
+        "z": 228.57569885253906
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 9,
+    "falloffRadius": 8.899999618530273,
+    "id": "{1ae66168-a722-4f4e-84e4-65e7b88f3760}",
+    "intensity": 88,
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502466826954801,
+    "lastEditedBy": "{53cf74c7-aaec-461a-bc07-cef2805387a5}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "name": "city_LightPurple",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": 24.939208984375,
+        "y": -120.75523376464844,
+        "z": 71.863525390625
+    },
+    "queryAACube": {
+        "scale": 395.90472412109375,
+        "x": -173.01315307617188,
+        "y": -318.70758056640625,
+        "z": -126.08883666992188
+    },
+    "rotation": {
+        "w": 1,
+        "x": -1.52587890625e-05,
+        "y": -1.52587890625e-05,
+        "z": -1.52587890625e-05
+    },
+    "staticCertificateVersion": 1,
+    "type": "Light"
+},
+    {
+    "certificateID": "MEYCIQCgImCi/LPZuu/v6JdwLGG7z+w+FRoGY0gT0/HgLMw4oQIhAONqvuvPgefmPNVsCMeC2qZ/wT/ra+RhynWLZovxi4Mj",
+    "clientOnly": 0,
+    "color": {
+        "blue": 0,
+        "green": 0,
+        "red": 232
+    },
+    "cutoff": 90,
+    "dimensions": {
+        "x": 228.00332641601562,
+        "y": 228.00332641601562,
+        "z": 228.00332641601562
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 10,
+    "falloffRadius": 40,
+    "id": "{bf666f10-2285-4975-a4f7-92f60906e7ae}",
+    "intensity": 18,
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502466826954641,
+    "lastEditedBy": "{53cf74c7-aaec-461a-bc07-cef2805387a5}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "name": "city_LightRed",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": 46.49249267578125,
+        "y": -97.97117614746094,
+        "z": -157.5384521484375
+    },
+    "queryAACube": {
+        "scale": 394.913330078125,
+        "x": -150.96417236328125,
+        "y": -295.4278564453125,
+        "z": -354.9951171875
+    },
+    "rotation": {
+        "w": 1,
+        "x": -1.52587890625e-05,
+        "y": -1.52587890625e-05,
+        "z": -1.52587890625e-05
+    },
+    "staticCertificateVersion": 1,
+    "type": "Light"
+},
+    {
+    "certificateID": "MEUCIQD0+JzgkvNkONNKMvDQHgBJDutmqeggYEv87ThGSyFbigIgKYEe0V7aV/IqFIb8eUHQpluoZjwoi/EUAo8ZH5YtBRM=",
+    "clientOnly": 0,
+    "color": {
+        "blue": 222,
+        "green": 33,
+        "red": 146
+    },
+    "cutoff": 90,
+    "dimensions": {
+        "x": 279.063720703125,
+        "y": 279.063720703125,
+        "z": 279.063720703125
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 11,
+    "falloffRadius": 40,
+    "id": "{8d1bc69b-1ed1-4443-bb8e-3713a817e289}",
+    "intensity": 8,
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502466826954487,
+    "lastEditedBy": "{53cf74c7-aaec-461a-bc07-cef2805387a5}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "name": "city_LightPurple",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": -204.62103271484375,
+        "y": -53.40147399902344,
+        "z": -26.997314453125
+    },
+    "queryAACube": {
+        "scale": 483.3525390625,
+        "x": -446.29730224609375,
+        "y": -295.0777587890625,
+        "z": -268.673583984375
+    },
+    "rotation": {
+        "w": 1,
+        "x": -1.52587890625e-05,
+        "y": -1.52587890625e-05,
+        "z": -1.52587890625e-05
+    },
+    "staticCertificateVersion": 1,
+    "type": "Light"
+},
+    {
+    "certificateID": "MEUCIQDBeLk66JfJvzBRv2gm+qi3YSwYHJ3TNQbmWQSpYG0RgQIgeo/0uuPRrdCCvEnX6jND4/P+zTRxl3HzNbbZk7/ydWI=",
+    "clientOnly": 0,
+    "color": {
+        "blue": 220,
+        "green": 232,
+        "red": 0
+    },
+    "cutoff": 90,
+    "dimensions": {
+        "x": 254.4678955078125,
+        "y": 254.4678955078125,
+        "z": 254.4678955078125
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 12,
+    "falloffRadius": 50,
+    "id": "{1b6d7589-d0e8-46be-8d4c-de8b4623c89e}",
+    "intensity": 10,
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502466826954361,
+    "lastEditedBy": "{53cf74c7-aaec-461a-bc07-cef2805387a5}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "name": "city_LightsCyan",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": -198.68670654296875,
+        "y": -139.95469665527344,
+        "z": -160.7198486328125
+    },
+    "queryAACube": {
+        "scale": 440.7513427734375,
+        "x": -419.0623779296875,
+        "y": -360.33038330078125,
+        "z": -381.09552001953125
+    },
+    "rotation": {
+        "w": 1,
+        "x": -1.52587890625e-05,
+        "y": -1.52587890625e-05,
+        "z": -1.52587890625e-05
+    },
+    "staticCertificateVersion": 1,
+    "type": "Light"
+},
+    {
+    "certificateID": "MEYCIQCJ9wexBszcPliUSIZ/EhtGLnYF8aaViNcONwcGTfkONAIhALLb65TxbZOpoFmsNEl06+MeGXYCymPOmKH7gSdWarn0",
+    "clientOnly": 0,
+    "color": {
+        "blue": 220,
+        "green": 232,
+        "red": 0
+    },
+    "cutoff": 90,
+    "dimensions": {
+        "x": 266.43560791015625,
+        "y": 266.43560791015625,
+        "z": 266.43560791015625
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 13,
+    "falloffRadius": 50,
+    "id": "{330d15c5-60c3-41ab-bc05-e8767acdee52}",
+    "intensity": 20,
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502466826954214,
+    "lastEditedBy": "{53cf74c7-aaec-461a-bc07-cef2805387a5}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "name": "city_LightsCyan",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": 106.4072265625,
+        "y": -122.62284851074219,
+        "z": -105.1824951171875
+    },
+    "queryAACube": {
+        "scale": 461.47998046875,
+        "x": -124.332763671875,
+        "y": -353.36285400390625,
+        "z": -335.9224853515625
+    },
+    "rotation": {
+        "w": 1,
+        "x": -1.52587890625e-05,
+        "y": -1.52587890625e-05,
+        "z": -1.52587890625e-05
+    },
+    "staticCertificateVersion": 1,
+    "type": "Light"
+},
+    {
+    "certificateID": "MEUCIQD8DFxV2rlXxy082bwbY1jMZuO4VyBNPioADWQ2KGDLhgIgTg+NVFQmZYf/3M0HMfvFogIHeRZ9T7cnLi8hGeIkAms=",
+    "clientOnly": 0,
+    "color": {
+        "blue": 0,
+        "green": 77,
+        "red": 232
+    },
+    "cutoff": 90,
+    "dimensions": {
+        "x": 222.661376953125,
+        "y": 222.661376953125,
+        "z": 222.661376953125
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 14,
+    "falloffRadius": 40,
+    "id": "{802ed2a2-5d6d-41d6-ad71-1ff3c22a373d}",
+    "intensity": 3,
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502466826954058,
+    "lastEditedBy": "{53cf74c7-aaec-461a-bc07-cef2805387a5}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "name": "city_LightsOrange",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": 21.60211181640625,
+        "y": -50.41844177246094,
+        "z": -191.6324462890625
+    },
+    "queryAACube": {
+        "scale": 385.66082763671875,
+        "x": -171.22830200195312,
+        "y": -243.2488555908203,
+        "z": -384.4628601074219
+    },
+    "rotation": {
+        "w": 1,
+        "x": -1.52587890625e-05,
+        "y": -1.52587890625e-05,
+        "z": -1.52587890625e-05
+    },
+    "staticCertificateVersion": 1,
+    "type": "Light"
+},
+    {
+    "angularDamping": 0,
+    "angularVelocity": {
+        "x": 0,
+        "y": 0.017216000705957413,
+        "z": 0
+    },
+    "certificateID": "MEQCIFBFHaLtf/vG+NY9TOqwtGju3GfbqzG91prjsw9gGCEwAiBOOeDe2bsnpKf/6Dh4FVqwBiTfHKiAcuuWoOPGOTVYbw==",
+    "clientOnly": 0,
+    "dimensions": {
+        "x": 214.55325317382812,
+        "y": 33.27873229980469,
+        "z": 214.55332946777344
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 0,
+    "id": "{39cefe66-862f-4e7c-9c92-744bd0c9b501}",
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502466826955669,
+    "lastEditedBy": "{53cf74c7-aaec-461a-bc07-cef2805387a5}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "modelURL": "https://content.overte.org/Bazaar/Worlds/Cyberpunk_Apartment/content/fog/baked/fog.baked.fbx",
+    "name": "city_Fog",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": 7.20123291015625,
+        "y": -80.42802429199219,
+        "z": -4.2733154296875
+    },
+    "queryAACube": {
+        "scale": 305.2436828613281,
+        "x": -145.4206085205078,
+        "y": -233.04986572265625,
+        "z": -156.89515686035156
+    },
+    "rotation": {
+        "w": 0.998989462852478,
+        "x": -8.397798228543252e-05,
+        "y": -0.044944413006305695,
+        "z": -2.9392089345492423e-05
+    },
+    "staticCertificateVersion": 1,
+    "type": "Model"
+},
+    {
+    "angularDamping": 0,
+    "angularVelocity": {
+        "x": 0,
+        "y": -0.008619828149676323,
+        "z": 0
+    },
+    "certificateID": "MEUCIQCw4Z0a0yXDOMJEZKhZVzOCBiV4ujhbYtkaM4qtqniLsAIgddgj3mABv2RpMoAHtqOxLIQFx7cWMU8VeqSzgcIVcLE=",
+    "clientOnly": 0,
+    "dimensions": {
+        "x": 441.94500732421875,
+        "y": 196.42958068847656,
+        "z": 441.9451599121094
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 1,
+    "id": "{f8251077-8063-4a7a-950c-c95b7b803780}",
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502466826955794,
+    "lastEditedBy": "{53cf74c7-aaec-461a-bc07-cef2805387a5}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "modelURL": "https://content.overte.org/Bazaar/Worlds/Cyberpunk_Apartment/content/fog/baked/fog.baked.fbx",
+    "name": "city_Fog",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": -15.22039794921875,
+        "y": -132.48960876464844,
+        "z": -40.174560546875
+    },
+    "queryAACube": {
+        "scale": 655.1453857421875,
+        "x": -342.7930908203125,
+        "y": -460.06231689453125,
+        "z": -367.74725341796875
+    },
+    "rotation": {
+        "w": -0.3764752745628357,
+        "x": 8.978658297564834e-05,
+        "y": -0.9264267086982727,
+        "z": -0.00011354510934324935
+    },
+    "staticCertificateVersion": 1,
+    "type": "Model"
+},
+    {
+    "angularDamping": 0,
+    "angularVelocity": {
+        "x": 0,
+        "y": 0.13962633907794952,
+        "z": 0
+    },
+    "certificateID": "MEUCIQDMQHlbU9nHb15rKmP2C5fe2K2VSJAj9NpxPXP9AulfKgIgbWbgBze9n9BgZbR4X24ZWoqVndtuPuuOaPoElL3yu3Y=",
+    "clientOnly": 0,
+    "dimensions": {
+        "x": 327.6766662597656,
+        "y": 5.0994873046875,
+        "z": 327.6766662597656
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 0,
+    "id": "{ec00be15-f15e-429d-8e05-2d50e916906b}",
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502466826955946,
+    "lastEditedBy": "{53cf74c7-aaec-461a-bc07-cef2805387a5}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "modelURL": "https://content.overte.org/Bazaar/Worlds/Cyberpunk_Apartment/content/air-traffic-loop/baked/air-traffic-loop.baked.fbx?1",
+    "name": "city_Traffic",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": 240.3294677734375,
+        "y": -31.122665405273438,
+        "z": 77.2010498046875
+    },
+    "queryAACube": {
+        "scale": 463.4328308105469,
+        "x": 8.613052368164062,
+        "y": -262.8390808105469,
+        "z": -154.51536560058594
+    },
+    "rotation": {
+        "w": -0.4507090151309967,
+        "x": 5.6611112086102366e-05,
+        "y": 0.8926709890365601,
+        "z": 0.00010148395085707307
+    },
+    "staticCertificateVersion": 1,
+    "type": "Model"
+},
+    {
+    "certificateID": "MEQCIDBOZl6PH2i5V9T5Ko2fcwkdDpvbRWlWdKq06fDg1PmAAiAwgbZu2/sn8ssO47RHE2kOhDEzdX7ScjVsGGEOnq0xmQ==",
+    "clientOnly": 0,
+    "dimensions": {
+        "x": 165.65121459960938,
+        "y": 209.3170166015625,
+        "z": 165.65121459960938
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 7,
+    "id": "{a6a36eb8-28f4-4383-a3c5-6a8b3ae79dd9}",
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502466826956090,
+    "lastEditedBy": "{53cf74c7-aaec-461a-bc07-cef2805387a5}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "modelURL": "https://content.overte.org/Bazaar/Worlds/Cyberpunk_Apartment/content/cityEM/baked/cityEM.baked.fbx",
+    "name": "city_Buildings",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": 159.2005615234375,
+        "y": -31.030868530273438,
+        "z": -48.4630126953125
+    },
+    "queryAACube": {
+        "scale": 314.15643310546875,
+        "x": 2.122344970703125,
+        "y": -188.1090850830078,
+        "z": -205.54122924804688
+    },
+    "rotation": {
+        "w": 0.3826504945755005,
+        "x": -4.57763671875e-05,
+        "y": 0.9238879680633545,
+        "z": -1.52587890625e-05
+    },
+    "shapeType": "static-mesh",
+    "staticCertificateVersion": 1,
+    "type": "Model"
+},
+    {
+    "angularDamping": 0,
+    "angularVelocity": {
+        "x": 0,
+        "y": -0.0872664600610733,
+        "z": 0
+    },
+    "certificateID": "MEUCIHnUcAt33PK3wgiSmYv2LfdwNUkaGq8aOrSGl2JXGpRZAiEAn3Db5GBEZRZmZuoEJZ2j7jr+abMO5RSgee99iNXSdWs=",
+    "clientOnly": 0,
+    "dimensions": {
+        "x": 819.191650390625,
+        "y": 12.74871826171875,
+        "z": 819.191650390625
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 1,
+    "id": "{04af7272-3213-4b05-93c3-83564b2fd75a}",
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502466826958697,
+    "lastEditedBy": "{53cf74c7-aaec-461a-bc07-cef2805387a5}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "modelURL": "https://content.overte.org/Bazaar/Worlds/Cyberpunk_Apartment/content/air-traffic-loop/baked/air-traffic-loop.baked.fbx?1",
+    "name": "city_Traffic",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": 177.6219482421875,
+        "y": -77.35246276855469,
+        "z": 102.2864990234375
+    },
+    "queryAACube": {
+        "scale": 1158.58203125,
+        "x": -401.6690673828125,
+        "y": -656.6434936523438,
+        "z": -477.0045166015625
+    },
+    "rotation": {
+        "w": -0.8640560507774353,
+        "x": -0.0009110505925491452,
+        "y": 0.5033935308456421,
+        "z": -0.0012273623142391443
+    },
+    "staticCertificateVersion": 1,
+    "type": "Model"
+},
+    {
+    "angularDamping": 0,
+    "angularVelocity": {
+        "x": 0,
+        "y": 0.13882017135620117,
+        "z": 0
+    },
+    "certificateID": "MEQCIEwDWHFPa+UDtl3QHVNwqpyiRxKZZl5qmnv14vpax3rZAiAq7HgXTGXsrgRt7HuuawWOCovh6XQRR+6iDUyi4n9bxQ==",
+    "clientOnly": 0,
+    "dimensions": {
+        "x": 327.6766662597656,
+        "y": 5.0994873046875,
+        "z": 300.03369140625
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 2,
+    "id": "{e5904e0a-c0ef-44d1-85eb-d8dd3fb4f9f2}",
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502466826956381,
+    "lastEditedBy": "{53cf74c7-aaec-461a-bc07-cef2805387a5}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "modelURL": "https://content.overte.org/Bazaar/Worlds/Cyberpunk_Apartment/content/air-traffic-loop/baked/air-traffic-loop.baked.fbx?1",
+    "name": "city_Traffic",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": -0.33514404296875,
+        "y": -85.70372009277344,
+        "z": -56.989501953125
+    },
+    "queryAACube": {
+        "scale": 444.31768798828125,
+        "x": -222.49398803710938,
+        "y": -307.862548828125,
+        "z": -279.1483459472656
+    },
+    "rotation": {
+        "w": 0.2029849737882614,
+        "x": -0.00017803510127123445,
+        "y": -0.9791818857192993,
+        "z": -4.7931902372511104e-05
+    },
+    "staticCertificateVersion": 1,
+    "type": "Model"
+},
+    {
+    "angularDamping": 0,
+    "angularVelocity": {
+        "x": 0,
+        "y": -0.008726646192371845,
+        "z": 0
+    },
+    "certificateID": "MEYCIQC0mgFhTByTe+X2CxiJM8P9ki3xY2YVu2N3B4FzsjnmUwIhALrSWrOgRPx2ZSXqf8noIsO2/3bgfbsKGjegYdCl1YSu",
+    "clientOnly": 0,
+    "dimensions": {
+        "x": 478.3963928222656,
+        "y": 227.72314453125,
+        "z": 478.39654541015625
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 2,
+    "id": "{210c9ba6-9436-4ed5-94a9-9e6cee16d675}",
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502466826956532,
+    "lastEditedBy": "{53cf74c7-aaec-461a-bc07-cef2805387a5}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "modelURL": "https://content.overte.org/Bazaar/Worlds/Cyberpunk_Apartment/content/fog/baked/fog.baked.fbx",
+    "name": "city_Fog",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": 2.80206298828125,
+        "y": -110.94834899902344,
+        "z": -35.2642822265625
+    },
+    "queryAACube": {
+        "scale": 713.8516845703125,
+        "x": -354.123779296875,
+        "y": -467.87420654296875,
+        "z": -392.19012451171875
+    },
+    "rotation": {
+        "w": 0.23994837701320648,
+        "x": -7.68820900702849e-05,
+        "y": -0.9707856774330139,
+        "z": -1.195264485431835e-05
+    },
+    "staticCertificateVersion": 1,
+    "type": "Model"
+},
+    {
+    "angularDamping": 0,
+    "angularVelocity": {
+        "x": 0,
+        "y": -0.008726646192371845,
+        "z": 0
+    },
+    "certificateID": "MEUCIQDJW8W2gjbvyM5ImvIfbq9BUT5ZTzpG8ErWDDImuC6UhgIgPk0ahZNS41ScGVpEJeLkpmjj9jL4Qut7HhuS4XPcMgY=",
+    "clientOnly": 0,
+    "dimensions": {
+        "x": 523.2506103515625,
+        "y": 352.1546630859375,
+        "z": 523.2507934570312
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 3,
+    "id": "{58305c0b-622d-412e-a835-a0fef686fd04}",
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502466826956702,
+    "lastEditedBy": "{53cf74c7-aaec-461a-bc07-cef2805387a5}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "modelURL": "https://content.overte.org/Bazaar/Worlds/Cyberpunk_Apartment/content/fog/baked/fog.baked.fbx",
+    "name": "city_Fog",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": -15.21990966796875,
+        "y": -98.20457458496094,
+        "z": -40.17822265625
+    },
+    "queryAACube": {
+        "scale": 819.50927734375,
+        "x": -424.97454833984375,
+        "y": -507.959228515625,
+        "z": -449.932861328125
+    },
+    "rotation": {
+        "w": 0.19272933900356293,
+        "x": -9.027635678648949e-05,
+        "y": 0.9812520146369934,
+        "z": 0.00011316154996166006
+    },
+    "staticCertificateVersion": 1,
+    "type": "Model"
+},
+    {
+    "angularDamping": 0,
+    "angularVelocity": {
+        "x": 0,
+        "y": -0.0872664600610733,
+        "z": 0
+    },
+    "certificateID": "MEYCIQCFjNi7NyKkyEe3/SELPdEM61H1d3bpW7/gvLPCs5JcwgIhAM9vEN53LaQjD7u/yCNVR7wDxvJFamNdFrWlkgFpjHW9",
+    "clientOnly": 0,
+    "dimensions": {
+        "x": 327.6766662597656,
+        "y": 5.0994873046875,
+        "z": 327.6766662597656
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 3,
+    "id": "{7ba4d53a-35cc-4678-aca9-79d4eae77c83}",
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502466826956859,
+    "lastEditedBy": "{53cf74c7-aaec-461a-bc07-cef2805387a5}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "modelURL": "https://content.overte.org/Bazaar/Worlds/Cyberpunk_Apartment/content/air-traffic-loop/baked/air-traffic-loop.baked.fbx?1",
+    "name": "city_Traffic",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": -197.99090576171875,
+        "y": -15.724411010742188,
+        "z": -61.692138671875
+    },
+    "queryAACube": {
+        "scale": 463.4328308105469,
+        "x": -429.70733642578125,
+        "y": -247.44082641601562,
+        "z": -293.4085693359375
+    },
+    "rotation": {
+        "w": 0.9507839679718018,
+        "x": -0.00016691449854988605,
+        "y": 0.30985450744628906,
+        "z": 4.915063618682325e-05
+    },
+    "staticCertificateVersion": 1,
+    "type": "Model"
+},
+    {
+    "certificateID": "MEYCIQDdgfVymmQKqI6dv5D9unCNwt1+8e37M4akGAuebrf4sAIhAL69XHyeYexmOvIOCkyjup706rj91XpMcnxZRvCs5Cre",
+    "clientOnly": 0,
+    "dimensions": {
+        "x": 142.50180053710938,
+        "y": 180.06539916992188,
+        "z": 142.50180053710938
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 8,
+    "id": "{b1f9c31b-2548-4994-9072-46fe67b7f382}",
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502466826957012,
+    "lastEditedBy": "{53cf74c7-aaec-461a-bc07-cef2805387a5}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "modelURL": "https://content.overte.org/Bazaar/Worlds/Cyberpunk_Apartment/content/cityEM/baked/cityEM.baked.fbx",
+    "name": "city_Buildings",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": -112.28387451171875,
+        "y": -53.02915954589844,
+        "z": 78.8018798828125
+    },
+    "queryAACube": {
+        "scale": 270.25372314453125,
+        "x": -247.41073608398438,
+        "y": -188.15602111816406,
+        "z": -56.324981689453125
+    },
+    "rotation": {
+        "w": -0.9808346629142761,
+        "x": -1.52587890625e-05,
+        "y": 0.19484245777130127,
+        "z": -7.62939453125e-05
+    },
+    "shapeType": "static-mesh",
+    "staticCertificateVersion": 1,
+    "type": "Model"
+},
+    {
+    "angularDamping": 0,
+    "angularVelocity": {
+        "x": 0,
+        "y": 0.13962633907794952,
+        "z": 0
+    },
+    "certificateID": "MEUCIQC44W6HcMH8yYkdhJ+m2USSPAHRi23wYbgcnpq+cCfNLAIgNjHoMImbjLndvaJ2fPQPNgL1mu6DdsRoBgDwK/cjdGk=",
+    "clientOnly": 0,
+    "dimensions": {
+        "x": 327.6766662597656,
+        "y": 5.0994873046875,
+        "z": 327.6766662597656
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 4,
+    "id": "{2fda280f-f478-4a95-b1a6-9d7d21615ee6}",
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502466826957156,
+    "lastEditedBy": "{53cf74c7-aaec-461a-bc07-cef2805387a5}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "modelURL": "https://content.overte.org/Bazaar/Worlds/Cyberpunk_Apartment/content/air-traffic-loop/baked/air-traffic-loop.baked.fbx?1",
+    "name": "city_Traffic",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": -247.83001708984375,
+        "y": -85.70176696777344,
+        "z": -44.1851806640625
+    },
+    "queryAACube": {
+        "scale": 463.4328308105469,
+        "x": -479.54644775390625,
+        "y": -317.4181823730469,
+        "z": -275.901611328125
+    },
+    "rotation": {
+        "w": 0.560117244720459,
+        "x": -0.0001608519087312743,
+        "y": -0.8284133076667786,
+        "z": -6.629259587498382e-05
+    },
+    "staticCertificateVersion": 1,
+    "type": "Model"
+},
+    {
+    "certificateID": "MEYCIQCTEqn6B0CZFAhP8bfCt8l52NgdoSGoBhyfa7OvYLzBwwIhAMDEtKLfT9goxp9jITJ6hqex6Y9H3/XpBB4dlMGJsq4F",
+    "clientOnly": 0,
+    "dimensions": {
+        "x": 240.05307006835938,
+        "y": 303.3312683105469,
+        "z": 240.05307006835938
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 9,
+    "id": "{18077807-e989-43f8-bf45-f2b283c3eb3b}",
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502466826957302,
+    "lastEditedBy": "{53cf74c7-aaec-461a-bc07-cef2805387a5}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "modelURL": "https://content.overte.org/Bazaar/Worlds/Cyberpunk_Apartment/content/cityEM/baked/cityEM.baked.fbx",
+    "name": "city_Buildings",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": 98.977783203125,
+        "y": -53.02525329589844,
+        "z": 120.0198974609375
+    },
+    "queryAACube": {
+        "scale": 455.2590637207031,
+        "x": -128.65174865722656,
+        "y": -280.65478515625,
+        "z": -107.60963439941406
+    },
+    "rotation": {
+        "w": -0.8602273464202881,
+        "x": -1.52587890625e-05,
+        "y": 0.5099107027053833,
+        "z": -7.62939453125e-05
+    },
+    "shapeType": "static-mesh",
+    "staticCertificateVersion": 1,
+    "type": "Model"
+},
+    {
+    "angularDamping": 0,
+    "angularVelocity": {
+        "x": 0,
+        "y": 0.05235987901687622,
+        "z": 0
+    },
+    "certificateID": "MEYCIQC3mfE44qOSJPhN+etQaW5WJVsJFbvslXM0m4VSuJZPAwIhAKvjbPKm1xMOctrr0NpdOzQrvKHib0dvyFadOOxJ+sHc",
+    "clientOnly": 0,
+    "dimensions": {
+        "x": 327.6766662597656,
+        "y": 5.0994873046875,
+        "z": 327.6766662597656
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 5,
+    "id": "{c463a12b-6b32-4a17-9e79-ef901d9ea5a4}",
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502466826957443,
+    "lastEditedBy": "{53cf74c7-aaec-461a-bc07-cef2805387a5}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "modelURL": "https://content.overte.org/Bazaar/Worlds/Cyberpunk_Apartment/content/air-traffic-loop/baked/air-traffic-loop.baked.fbx?1",
+    "name": "city_Traffic",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": -184.80352783203125,
+        "y": 6.3375396728515625,
+        "z": -28.0537109375
+    },
+    "queryAACube": {
+        "scale": 463.4328308105469,
+        "x": -416.51995849609375,
+        "y": -225.37887573242188,
+        "z": -259.7701416015625
+    },
+    "rotation": {
+        "w": 0.02734903059899807,
+        "x": -0.2367851585149765,
+        "y": -0.015201928094029427,
+        "z": -0.9710580706596375
+    },
+    "staticCertificateVersion": 1,
+    "type": "Model"
+},
+    {
+    "angularDamping": 0,
+    "angularVelocity": {
+        "x": 0,
+        "y": -0.01745329238474369,
+        "z": 0
+    },
+    "certificateID": "MEUCIQDFxPxTVUwECCVNXeNwcwiMXvC2krsxE0MdqcTAJM4VTAIgQ2RJMwMA0S6FD7BYHcsGJ1kp/Flt7N1t/1BCB/zKgkk=",
+    "clientOnly": 0,
+    "dimensions": {
+        "x": 187.50433349609375,
+        "y": 100.60309600830078,
+        "z": 160.7318878173828
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 4,
+    "id": "{adc18607-781e-49a0-a53c-bcc02af994c0}",
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502466826957584,
+    "lastEditedBy": "{53cf74c7-aaec-461a-bc07-cef2805387a5}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "modelURL": "https://content.overte.org/Bazaar/Worlds/Cyberpunk_Apartment/content/fog/baked/fog.baked.fbx",
+    "name": "city_Fog",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": 5.15753173828125,
+        "y": -142.4637908935547,
+        "z": 18.5450439453125
+    },
+    "queryAACube": {
+        "scale": 266.67132568359375,
+        "x": -128.17813110351562,
+        "y": -275.7994384765625,
+        "z": -114.79061889648438
+    },
+    "rotation": {
+        "w": 0.537808358669281,
+        "x": -5.5408509069820866e-05,
+        "y": -0.8430671095848083,
+        "z": -0.0001470042043365538
+    },
+    "staticCertificateVersion": 1,
+    "type": "Model"
+},
+    {
+    "certificateID": "MEYCIQCdbC5yladHge7x3ojrtAUO+H7vcLfDkpd+CttfoVe6twIhAMzvFUvbZIjiH6f6O1dNEUE5vSZZHWn247WAzrlSxI0X",
+    "clientOnly": 0,
+    "dimensions": {
+        "x": 56.67313766479492,
+        "y": 154.32275390625,
+        "z": 43.297813415527344
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 0,
+    "id": "{947e80af-cd84-434e-979c-3e193e06ed55}",
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502466826957725,
+    "lastEditedBy": "{53cf74c7-aaec-461a-bc07-cef2805387a5}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "modelURL": "https://content.overte.org/Bazaar/Worlds/Cyberpunk_Apartment/content/EXPANSION_buildingJimJamzApt7/baked/EXPANSION_buildingJimJamzApt7.baked.fbx",
+    "name": "jimjamzapt_Apartment",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": 6.364013671875,
+        "y": -81.60566711425781,
+        "z": -16.2420654296875
+    },
+    "queryAACube": {
+        "scale": 170.00604248046875,
+        "x": -78.63900756835938,
+        "y": -166.6086883544922,
+        "z": -101.24508666992188
+    },
+    "rotation": {
+        "w": 0.7018997669219971,
+        "x": -1.52587890625e-05,
+        "y": -0.7122758626937866,
+        "z": -4.57763671875e-05
+    },
+    "shapeType": "static-mesh",
+    "staticCertificateVersion": 1,
+    "type": "Model",
+    "userData": "{\"grabbableKey\":{\"grabbable\":true}}"
+},
+    {
+    "angularDamping": 0,
+    "angularVelocity": {
+        "x": 0,
+        "y": -0.008640600368380547,
+        "z": 0
+    },
+    "certificateID": "MEYCIQDBPYk4QHrhFbo1Zkyr1tNR+/LcdqCc7p5tG0CtwiY3kgIhALI1xXo8yTQUsjj6uax6MXCey0UMWt0kKK/etkqZboVf",
+    "clientOnly": 0,
+    "dimensions": {
+        "x": 642.2251586914062,
+        "y": 289.03375244140625,
+        "z": 642.2254028320312
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 5,
+    "id": "{51c5dc8c-0d87-494a-9cf1-bec8bf1660e6}",
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502466826957868,
+    "lastEditedBy": "{53cf74c7-aaec-461a-bc07-cef2805387a5}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "modelURL": "https://content.overte.org/Bazaar/Worlds/Cyberpunk_Apartment/content/fog/baked/fog.baked.fbx",
+    "name": "city_Fog",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": -15.22576904296875,
+        "y": -179.13584899902344,
+        "z": -40.1802978515625
+    },
+    "queryAACube": {
+        "scale": 953.1249389648438,
+        "x": -491.7882385253906,
+        "y": -655.6983032226562,
+        "z": -516.7427978515625
+    },
+    "rotation": {
+        "w": 0.3480178415775299,
+        "x": -4.042836280859774e-06,
+        "y": -0.9374879598617554,
+        "z": -0.00021249288693070412
+    },
+    "staticCertificateVersion": 1,
+    "type": "Model"
+},
+    {
+    "angularDamping": 0,
+    "angularVelocity": {
+        "x": 0,
+        "y": 0.05235987901687622,
+        "z": 0
+    },
+    "certificateID": "MEYCIQChZOKyncbZOhqWvhWRci30ZY/yhm6sq5PoCz6G1EQSKQIhAKo8Yu1upYRoccisBW9wJvSaNu7sCNtqpZTAMbpZbCut",
+    "clientOnly": 0,
+    "dimensions": {
+        "x": 327.6766662597656,
+        "y": 5.0994873046875,
+        "z": 327.6766662597656
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 6,
+    "id": "{8f8deb23-418f-43a7-9154-2bbafab98dd8}",
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502466826958005,
+    "lastEditedBy": "{53cf74c7-aaec-461a-bc07-cef2805387a5}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "modelURL": "https://content.overte.org/Bazaar/Worlds/Cyberpunk_Apartment/content/air-traffic-loop/baked/air-traffic-loop.baked.fbx?1",
+    "name": "city_Traffic",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": -131.8836669921875,
+        "y": -2.3448944091796875,
+        "z": 114.3900146484375
+    },
+    "queryAACube": {
+        "scale": 463.4328308105469,
+        "x": -363.60009765625,
+        "y": -234.06130981445312,
+        "z": -117.32640075683594
+    },
+    "rotation": {
+        "w": 0.02921273373067379,
+        "x": -0.3686140477657318,
+        "y": -0.011243565939366817,
+        "z": -0.9290554523468018
+    },
+    "staticCertificateVersion": 1,
+    "type": "Model"
+},
+    {
+    "angularDamping": 0,
+    "angularVelocity": {
+        "x": 0,
+        "y": 0.01745329238474369,
+        "z": 0
+    },
+    "certificateID": "MEQCIEGqMBnVEYFM6UptGbdj7HlfzLMKybvi46EqIcu4E9N+AiAmGVwMJFdCSByxRZuzoXQOBAd47wwL8NZ+x/N8jB/i1A==",
+    "clientOnly": 0,
+    "dimensions": {
+        "x": 523.2506103515625,
+        "y": 352.1546630859375,
+        "z": 523.2507934570312
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 6,
+    "id": "{ac507fdd-c159-42a0-92be-f1215d2f0f5e}",
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502466826958107,
+    "lastEditedBy": "{53cf74c7-aaec-461a-bc07-cef2805387a5}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "modelURL": "https://content.overte.org/Bazaar/Worlds/Cyberpunk_Apartment/content/fog/baked/fog.baked.fbx",
+    "name": "city_Fog",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": -15.21990966796875,
+        "y": -91.91606140136719,
+        "z": -40.17822265625
+    },
+    "queryAACube": {
+        "scale": 819.50927734375,
+        "x": -424.97454833984375,
+        "y": -501.67071533203125,
+        "z": -449.932861328125
+    },
+    "rotation": {
+        "w": 0.7622530460357666,
+        "x": -0.0001201814302476123,
+        "y": -0.6472790837287903,
+        "z": -0.00011815743346232921
+    },
+    "staticCertificateVersion": 1,
+    "type": "Model"
+},
+    {
+    "certificateID": "MEUCIQCEGexEgPzP+IWHf4Lf6rB2jRW1aqqYnVaDXp3EDG176QIgeNlIziBCVMZIFNBQB7XfpeIT0Og/XrDLlg0XYE6wTUw=",
+    "clientOnly": 0,
+    "dimensions": {
+        "x": 1.434095025062561,
+        "y": 4.7028608322143555,
+        "z": 1.2817050218582153
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 1,
+    "id": "{75daa2cd-53ba-4114-91fa-82c3173b1e03}",
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502466826958198,
+    "lastEditedBy": "{53cf74c7-aaec-461a-bc07-cef2805387a5}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "modelURL": "https://content.overte.org/Bazaar/Worlds/Cyberpunk_Apartment/content/lantern/lantern.fbx",
+    "name": "jimjamzapt_Lantern",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": -1.3305606842041016,
+        "y": -5.28778600692749,
+        "z": -5.627662658691406
+    },
+    "queryAACube": {
+        "scale": 5.080974102020264,
+        "x": -3.8710477352142334,
+        "y": -7.828272819519043,
+        "z": -8.168149948120117
+    },
+    "rotation": {
+        "w": 0.6558480262756348,
+        "x": -1.52587890625e-05,
+        "y": -0.7549095749855042,
+        "z": -4.57763671875e-05
+    },
+    "staticCertificateVersion": 1,
+    "type": "Model"
+},
+    {
+    "certificateID": "MEQCIGD5tyWCrF9NpF4v76dJ8O7A6cJH3I74sqmHOG7n8UjbAiAu/oFntyxopQMoimvfh1TW7LmpQBrOTPbrCSFS5fVTLw==",
+    "clientOnly": 0,
+    "dimensions": {
+        "x": 1.5278526544570923,
+        "y": 5.010322093963623,
+        "z": 1.36549973487854
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 2,
+    "id": "{b827e8b9-5d15-44a6-b8a8-b80dea74d146}",
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502466826958301,
+    "lastEditedBy": "{53cf74c7-aaec-461a-bc07-cef2805387a5}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "modelURL": "https://content.overte.org/Bazaar/Worlds/Cyberpunk_Apartment/content/lantern/lantern.fbx",
+    "name": "jimjamzapt_Lantern",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": -2.598031997680664,
+        "y": -4.95300817489624,
+        "z": -4.080024719238281
+    },
+    "queryAACube": {
+        "scale": 5.4131550788879395,
+        "x": -5.304609298706055,
+        "y": -7.659585952758789,
+        "z": -6.786602020263672
+    },
+    "rotation": {
+        "w": -0.39089035987854004,
+        "x": 1.52587890625e-05,
+        "y": -0.9204699993133545,
+        "z": -4.57763671875e-05
+    },
+    "staticCertificateVersion": 1,
+    "type": "Model"
+},
+    {
+    "certificateID": "MEUCIEOLqIYKs6XAEfmbUxJmToqO5UD/UV/KZTFiz3zds8Y6AiEAg4G88dHqAi/dHpad+19UIBJLeFW6EOym4kK+utl597Y=",
+    "clientOnly": 0,
+    "color": {
+        "blue": 199,
+        "green": 116,
+        "red": 0
+    },
+    "cutoff": 90,
+    "dimensions": {
+        "x": 173.48263549804688,
+        "y": 173.48263549804688,
+        "z": 173.48263549804688
+    },
+    "editionNumber": 301,
+    "entityInstanceNumber": 15,
+    "falloffRadius": 30,
+    "id": "{fc253669-9762-40f9-8c57-4b23c6a5279a}",
+    "intensity": 8,
+    "itemArtist": "Caitlyn",
+    "itemCategories": "Environments",
+    "itemDescription": "Build your apartment in the sky... in the future!\r\n\r\nCyberpunk Apartment is a complete environment that will replace all the content in your Sandbox domain.",
+    "itemLicenseUrl": "",
+    "itemName": "Cyberpunk Apartment 2.1",
+    "lastEdited": 1502466826956230,
+    "lastEditedBy": "{53cf74c7-aaec-461a-bc07-cef2805387a5}",
+    "limitedRun": -1,
+    "locked": 1,
+    "marketplaceID": "a4143296-d7af-4e9a-a0e2-3220fc5f2eeb",
+    "name": "city_LightsBlue",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "position": {
+        "x": 36.01031494140625,
+        "y": -23.303329467773438,
+        "z": -119.9163818359375
+    },
+    "queryAACube": {
+        "scale": 300.4807434082031,
+        "x": -114.23005676269531,
+        "y": -173.543701171875,
+        "z": -270.15673828125
+    },
+    "rotation": {
+        "w": 1,
+        "x": -1.52587890625e-05,
+        "y": -1.52587890625e-05,
+        "z": -1.52587890625e-05
+    },
+    "staticCertificateVersion": 1,
+    "type": "Light"
+}],
+  "Id": "{2ae2dca4-a2a6-4857-aec7-af13b07d1a2f}",
+  "Version": -1
+}
