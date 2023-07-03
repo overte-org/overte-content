@@ -14,13 +14,14 @@ jobs:
     - uses: actions/checkout@v3
 
     - name: Deploy content
-      uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
-        server: ftp.tuxfamily.org
-        username: ${{ secrets.GHA_FTP_USER }}
-        password: ${{ secrets.GHA_FTP_PASS }}
+        server: www531.your-server.de
+        protocol: ftps
+        username: ${{ secrets.GHA_HETZNER_CONTENT_FTP_USER }}
+        password: ${{ secrets.GHA_HETZNER_CONTENT_FTP_PASS }}
         local-dir: ./
-        server-dir: overte/overte-repository/content/
+        server-dir: /
         exclude: |
           **/staging/**
           .htaccess
