@@ -6,10 +6,11 @@
 //  See the accompanying file LICENSE or http://www.apache.org/licenses/LICENSE-2.0.html
 //
 
-(function(){ 
+(function(){
+    "use strict"
 
-    var soundURL ='http://hifi-production.s3.amazonaws.com/tutorials/soundMaker/bell.wav';
-    var ringSound;
+    const soundURL ='http://hifi-production.s3.amazonaws.com/tutorials/soundMaker/bell.wav';
+    let ringSound;
 
     this.preload = function(entityID) { 
         print("preload("+entityID+")");
@@ -17,7 +18,7 @@
     }; 
 
     this.clickDownOnEntity = function(entityID, mouseEvent) { 
-        var bellPosition = Entities.getEntityProperties(entityID).position;
+        const bellPosition = Entities.getEntityProperties(entityID).position;
         print("clickDownOnEntity()...");
         Audio.playSound(ringSound,  {
             position: bellPosition,
