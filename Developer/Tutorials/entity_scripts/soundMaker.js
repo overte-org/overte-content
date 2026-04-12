@@ -9,7 +9,7 @@
 (function(){
     "use strict"
 
-    const soundURL ='http://hifi-production.s3.amazonaws.com/tutorials/soundMaker/bell.wav';
+    const soundURL ='http://content.overte.org/Developer/Tutorials/soundMaker/bell.wav';
     let ringSound;
 
     this.preload = function(entityID) { 
