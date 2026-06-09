@@ -4,7 +4,7 @@ Download
 ========
 You can download Overte from our [website](https://overte.org). 
 
-If you prefer to build from source, you can find the codebase for Overte in the [project-athena](https://github.com/overte-org/overte) repository.
+If you prefer to build from source, you can find the codebase for Overte in the [Overte](https://github.com/overte-org/overte) repository.
 
 overte-content
 ========

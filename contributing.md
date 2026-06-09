@@ -4,7 +4,7 @@ Contributing
 2. Clone your fork of the repository locally
 
   ```
-  git clone git://github.com/USERNAME/vircadia-content.git
+  git clone git://github.com/USERNAME/overte-content.git
   ```
 3. Create a new branch
   
@@ -12,14 +12,14 @@ Contributing
   git checkout -b new_branch_name 
   ```
 4. Code
-  * Follow the [coding standard](https://github.com/kasenvr/project-athena/blob/master/CODING_STANDARD.md)
+  * Follow the [coding standard](https://github.com/overte-org/overte/blob/master/CODING_STANDARD.md)
   * Install and configure [ESLINT](https://eslint.org/) for your editor to apply formatting for scripts 
 5. Commit
   * Use well formed commit messages
 6. Update your branch
   
   ```
-  git remote add upstream https://github.com/kasenvr/vircadia-content
+  git remote add upstream https://github.com/overte-org/overte-content
   git pull upstream master
   ```
   Resolve any conflicts that arise with this step.
@@ -36,7 +36,7 @@ Contributing
 
 LFS
 ===
-Certain file types in vircadia-content are tracked by [Git Large File Storage (LFS)](https://git-lfs.github.com/) Install LFS on your development machine to ensure the following file types are tracked properly: 
+Certain file types in overte-content are tracked by [Git Large File Storage (LFS)](https://git-lfs.github.com/) Install LFS on your development machine to ensure the following file types are tracked properly: 
 * OBJ
 * FBX
 * WAV
