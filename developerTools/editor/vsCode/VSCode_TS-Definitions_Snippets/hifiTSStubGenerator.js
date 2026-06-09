@@ -1,8 +1,9 @@
 //
 //  Created by Thijs Wenker and Milad Nazeri on 1/31/18
 //  Copyright 2018 High Fidelity, Inc.
+//  Copyright 2024 Overte e.V.
 //
-//  Creates Type Script Definitions for Hifi
+//  Creates TypeScript Definitions for Overte
 //
 //  Distributed under the Apache License, Version 2.0.
 //  See the accompanying file LICENSE or http://www.apache.org/licenses/LICENSE-2.0.html
@@ -98,7 +99,13 @@ function getDescription(item, scopeDepth) {
         descriptionBody += bodyParams.join("");
     }
     if (item.returns) {
-        descriptionBody += `${ident} * @returns {${item.returns[0].type.names[0]}} ${LINE_BREAK}`;
+        if (item.returns[0].type) {
+            descriptionBody += `${ident} * @returns {${item.returns[0].type.names[0]}} ${LINE_BREAK}`;
+        } else if (item.returns[0].description) {
+            descriptionBody += `${ident} * @returns ${item.returns[0].description} ${LINE_BREAK}`;
+        } else {
+            console.warn(`WARN: ${item.name} returns non-valid return type.`);
+        }
     }
     if (descriptionBody.length > 0) {
         // Takes care of the Vec3(0) and Quat(0) instances in the description
